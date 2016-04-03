@@ -1,10 +1,5 @@
 /* DERMATOS ADMIN STYLES */
 
-/*
-Primary action colour: #f45246 #f95e44 (red)
-Secondary action colour: #18b3dc #1ac5f2 (cyan)
-*/
-
 /* Fonts */
 
 @font-face {
@@ -351,12 +346,16 @@ td strong {
 
 .wp-core-ui .welcome-panel .button.button-hero:hover,
 .upload-ui .button.button-hero:hover {
-	color: #222 !important;
 }
 
 .wp-core-ui .button-group.button-large .button,
 .wp-core-ui .button.button-large {
 	line-height: 2 !important;
+}
+
+.wp-core-ui .welcome-panel h2 {
+	font-size: 18px !important;
+
 }
 
 .manage-menus {
@@ -1179,11 +1178,6 @@ ul.subsubsub {
 #screen-meta-links a.show-settings {
 }
 
-/*
-Primary action colour: #f45246 #f95e44 (red);
-Secondary action colour: #18b3dc #1ac5f2 (cyan);
-*/
-
 .wp-core-ui .button,
 .wp-core-ui .notification-dialog .button,
 .button-highlighted {
@@ -1192,7 +1186,7 @@ Secondary action colour: #18b3dc #1ac5f2 (cyan);
 	background: none;
 	background-color: #18b3dc;
 	border: none;
-	border-color: #18b3dc;
+	border-color: none !important;
 	border-radius: 0;
 	box-shadow: none;
 	text-shadow: none;
@@ -1208,7 +1202,7 @@ Secondary action colour: #18b3dc #1ac5f2 (cyan);
 .wp-core-ui .button-primary:hover,
 .button-highlighted:hover {
 	background-color: #f95e44 !important;
-	color: #222 !important;
+	/*color: #222 !important;*/ /*kok*/
 }
 
 .wp-core-ui .button-secondary {
@@ -1299,7 +1293,8 @@ Secondary action colour: #18b3dc #1ac5f2 (cyan);
 
 .wp-core-ui .button:hover {
 	background-color: #18b3dc !important;
-	color: #222 !important;
+	/*color: #222 !important;*/ /*kok*/
+	color: #fff !important;
 }
 
 .search-form {
@@ -1362,10 +1357,6 @@ body.post-php .media-button,
 body.update-core-php form.upgrade a.button {
 	padding: 4px 10px !important;
 	line-height: 1.5 !important;
-}
-
-body.update-core-php form.upgrade a.button:hover {
-
 }
 
 body.update-core-php .widefat thead td input[type="checkbox"],
@@ -1515,11 +1506,14 @@ body.appearance_page_custom-header .wrap h3 {
 	font-weight: 400 !important;
 }
 
+.wrap .add-new-h2,
 .wrap .add-new-h2:active,
 .wrap .add-new-h2:hover,
+.wrap .page-title-action,
+.wrap .page-title-action:active,
 .page-title-action:hover {
 	background-color: #1ac5f2 !important;
-	color: #222 !important;
+	border-radius: 0 !important;
 }
 
 #dashboard_quick_press .wp-media-buttons a {
@@ -1795,8 +1789,6 @@ a.frm_show_comment:hover {
 
 .pmpro_admin p.submit input.button-secondary {
 	padding: 5px;
-	color: #333;
-	background-color: #eee;
 	line-height: 1.25 !important;
 	border: 1px solid #ccc;
 	border-radius: 0;

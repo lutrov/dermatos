@@ -35,16 +35,11 @@ label {
 input[type=text], input[type=password], .ie8 .login form .input, .ie7 .login form .input {
 	margin-top: 8px !important; padding: 6px !important; font-family: "Inconsolata", monospace; font-size: 13px !important;
 }
-/*
-Primary action colour: #f45246 #f95e44 (red)
-Secondary action colour: #18b3dc #1ac5f2 (cyan)
-*/
-
 input[type=submit] {
 	background-color: #f45246 !important; color: #fff !important; font-size: 13px !important; min-width: 100px !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; text-shadow: none !important;
 }
 input[type=submit]:hover {
-	background-color: #f95e44 !important; color: #222 !important;
+	background-color: #18b3dc !important;
 }
 p.forgetmenot,
 p.submit {
