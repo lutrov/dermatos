@@ -844,6 +844,30 @@ h3.dashboard-widget-title small,
 	padding: 10px 0 !important;
 }
 
+#template {
+	padding-top: 20px !important;
+}
+
+#templateside h2 {
+	padding-top: 40px !important;
+	padding-bottom: 20px !important;
+}
+
+#templateside ul {
+	margin-left: -15px !important;
+}
+
+#templateside li {
+	padding-left: 15px !important;
+}
+
+#templateside li a {
+	padding: 0 !important;
+}
+
+#templateside .highlight {
+}
+
 /* Widgets-page */
 
 #widgets-left .sidebar-name,
@@ -1060,7 +1084,7 @@ a.menu-delete {
 
 form {
 	padding: 10px 20px 20px 20px !important;
-	background-color: #e8e8e8 !important;
+	background-color: #f0f0f0 !important;
 }
 
 form h2, form h3 {
@@ -1419,7 +1443,7 @@ a#choose-from-library-link {
 }
 
 #custom-background {
-	background-color: #e8e8e8 !important;
+	background-color: #f0f0f0 !important;
 }
 
 #custom-background .form-table tr {
@@ -1485,7 +1509,7 @@ a#choose-from-library-link {
 /* Specific Page Styles */
 
 body.appearance_page_custom-header .wrap {
-	background-color: #e8e8e8 !important;
+	background-color: #f0f0f0 !important;
 }
 
 body.appearance_page_custom-header .wrap .form-table tr {
