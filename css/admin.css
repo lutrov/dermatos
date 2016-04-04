@@ -20,7 +20,7 @@
 
 html.wp-toolbar {
 	padding-top: 0;
-	background-color: #eee;
+	background-color: #f8f8f8;
 }
 
 body.wp-admin {
@@ -41,7 +41,7 @@ input[type=search],
 input[type=tel],
 input[type=url] {
 	padding: 5px !important;
-	border: 1px solid #ccc;
+	border: 1px solid #c8c8c8;
 	box-sizing: border-box;
 }
 
@@ -116,7 +116,7 @@ table td pre {
 
 #wp-admin-bar-site-name.hover a,
 #wp-admin-bar-site-name:hover a {
-	color: #ccc !important;
+	color: #c8c8c8 !important;
 	text-shadow: none !important;
 }
 
@@ -292,6 +292,9 @@ b {
 	font: 400 12px/28px "Inconsolata";
 }
 
+a.rsswidget,
+div.sidebar-name h2,
+div.sidebar-name h3,
 #dashboard-widgets h4,
 #dashboard_plugins h5,
 #dashboard_right_now td.b,
@@ -307,9 +310,6 @@ b {
 .tablenav .displaying-num,
 .tool-box .title,
 .widefat th,
-a.rsswidget,
-div.sidebar-name h2,
-div.sidebar-name h3,
 .search {
 	font-family: "Inconsolata";
 	font-weight: 400;
@@ -360,6 +360,15 @@ td strong {
 
 .manage-menus {
 	clear: left;
+}
+
+.manage-menus form {
+	background-color: #f8f8f8 !important;
+}
+
+.nav-menus-php #post-body {
+	border: none !important;
+	padding: 10px !important;
 }
 
 #plugin-filter {
@@ -431,10 +440,10 @@ a,
 
 #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
 #adminmenu li.current a.menu-top,
-.folded #adminmenu li.wp-has-current-submenu,
-.folded #adminmenu li.current.menu-top,
 #adminmenu .wp-menu-arrow,
-#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head {
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+.folded #adminmenu li.wp-has-current-submenu,
+.folded #adminmenu li.current.menu-top {
 	background: none;
 	background-color: #18b3dc;
 	border-top-color: #18b3dc;
@@ -445,7 +454,7 @@ a,
 #adminmenu li.opensub > a.menu-top,
 #adminmenu li > a.menu-top:focus {
 	background-color: #32373c;
-	color: #f95e44;
+	color: #f45246;
 	text-shadow: none;
 }
 
@@ -690,7 +699,6 @@ p.search-box {
 }
 
 .row-actions a {
-	text-transform: uppercase;
 }
 
 /* Widgets */
@@ -701,10 +709,19 @@ p.search-box {
 .menu-item-settings {
 	background: none;
 	background-color: #fff;
-	border-color: #ccc;
+	border-color: #c8c8c8;
 	box-shadow: none;
 }
 
+.widget form {
+	margin-top: 15px !important;
+}
+
+h3.dashboard-widget-title,
+h3.dashboard-widget-title span,
+h3.dashboard-widget-title small,
+#nav-menu-header,
+#nav-menu-footer,
 .revisions-meta,
 .widget .widget-top,
 .postbox h2,
@@ -713,13 +730,8 @@ p.search-box {
 .stuffbox h3,
 .widefat thead tr th,
 .widefat tfoot tr th,
-h3.dashboard-widget-title,
-h3.dashboard-widget-title span,
-h3.dashboard-widget-title small,
 .sidebar-name,
 .manage-column.check-column,
-#nav-menu-header,
-#nav-menu-footer,
 .menu-item-handle {
 	background: none;
 	background-color: #32373c;
@@ -768,6 +780,19 @@ h3.dashboard-widget-title small,
 
 .widget-control-actions {
 	margin-top: 20px !important;
+}
+
+.widget-control-actions .alignleft {
+	margin-top: 7px !important;
+}
+
+.widget-control-actions .alignright {
+	height: 30px !important;
+	max-width: 100px;
+}
+
+.widget-control-actions a {
+	text-decoration: none;
 }
 
 .sidebar-description p.description {
@@ -888,7 +913,7 @@ h3.dashboard-widget-title small,
 #post-body-content {
 	padding: 2%;
 	width: 96%;
-	border: 1px solid #ccc;
+	border: 1px solid #c8c8c8;
 	background-color: #fff;
 	float: left;
 	border-radius: 0;
@@ -904,7 +929,6 @@ h3.dashboard-widget-title small,
 
 #delete-action {
 	margin-top: 10px !important;
-	text-transform: uppercase;
 }
 
 .misc-pub-section {
@@ -926,8 +950,6 @@ h3.dashboard-widget-title small,
 
 .misc-pub-section a {
 	margin-left: 5px;
-	font-size: 80%;
-	text-transform: uppercase !important;
 }
 
 #poststuff .inside {
@@ -989,7 +1011,7 @@ h3.dashboard-widget-title small,
 #post-body-content {
 	padding: 2%;
 	width: 96%;
-	border: 1px solid #ccc;
+	border: 1px solid #c8c8c8;
 	background-color: #fff;
 	border-radius: 0;
 	box-shadow: none;
@@ -1024,8 +1046,6 @@ h3.dashboard-widget-title small,
 }
 
 .accordion-section {
-	border-top: 1px solid #666;
-	border-bottom: 1px solid #222;
 }
 
 #wpbody .open-label span {
@@ -1040,7 +1060,7 @@ a.menu-delete {
 
 form {
 	padding: 10px 20px 20px 20px !important;
-	background-color: #fcfcfc !important;
+	background-color: #e8e8e8 !important;
 }
 
 form h2, form h3 {
@@ -1048,7 +1068,7 @@ form h2, form h3 {
 	margin-bottom: 0 !important;
 	margin-top: 20px !important;
 	padding-bottom: 8px;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 1px dotted #c8c8c8;
 	font-weight: 400 !important;
 }
 
@@ -1059,7 +1079,7 @@ form h3 {
 form .submit {
 	margin: 30px 0 5px 0 !important;
 	padding: 15px 0 5px 0 !important;
-	border-top: 1px dotted #ccc !important;
+	border-top: 1px solid #c8c8c8 !important;
 	text-align: right !important;
 }
 
@@ -1087,7 +1107,6 @@ form .form-table td,
 
 form .form-table td fieldset,
 #custom-background .form-table td fieldset {
-	/*margin-top: -4px !important;*/;
 }
 
 form .form-table td p.description,
@@ -1107,7 +1126,6 @@ form .form-table td label,
 
 form .form-table td textarea,
 #custom-background .form-table td textarea {
-	/*margin-top: 8px !important;*/;
 }
 
 form .form-table th[scope=row] + td,
@@ -1122,11 +1140,11 @@ form .form-table th[scope=row] label,
 }
 
 form .form-table th[scope=row] + td textarea,
-.form-table th[scope=row] + td select,
-.form-table th[scope=row] + td input[type=text],
 #custom-background .form-table th[scope=row] + td textarea,
 #custom-background .form-table th[scope=row] select,
-#custom-background .form-table th[scope=row] + td input[type=text] {
+#custom-background .form-table th[scope=row] + td input[type=text],
+.form-table th[scope=row] + td select,
+.form-table th[scope=row] + td input[type=text],
 	margin-top: 6px !important;
 }
 
@@ -1156,7 +1174,7 @@ form .form-table tr.show-admin-bar td label {
 }
 
 form[action*="plugins.php"] {
-	background-color: #eee !important;
+	background-color: #f8f8f8 !important;
 }
 
 ul.subsubsub {
@@ -1168,10 +1186,10 @@ ul.subsubsub {
 	font-weight: 400;
 }
 
+#your-profile #rich_editing,
 .checkbox,
 .side-info,
-.plugins tr,
-#your-profile #rich_editing {
+.plugins tr {
 	background-color: #fff;
 }
 
@@ -1197,12 +1215,15 @@ ul.subsubsub {
 .button-highlighted {
 	background-color: #f45246;
 	color: #fff !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	text-shadow: none;
 }
 
 .wp-core-ui .button-primary:hover,
 .button-highlighted:hover {
-	background-color: #f95e44 !important;
-	/*color: #222 !important;*/ /*kok*/
+	background-color: #f45246 !important;
 }
 
 .wp-core-ui .button-secondary {
@@ -1218,7 +1239,7 @@ ul.subsubsub {
 }
 
 .wp-core-ui .button-secondary:hover {
-	background-color: #1ac5fe !important;
+	background-color: #18b3dc !important;
 	color: #fff !important;
 }
 
@@ -1228,7 +1249,7 @@ ul.subsubsub {
 
 .wp-core-ui .button:disabled,
 .wp-core-ui .button[disabled] {
-	background-color: #eee !important;
+	background-color: #f8f8f8 !important;
 	color: #888 !important;
 }
 
@@ -1282,18 +1303,17 @@ ul.subsubsub {
 
 #upgrade.button,
 #upgrade.button:hover,
+#post-preview,
+#post-preview:hover,
 .upgrade .button,
 .upgrade .button:hover,
 .preview.button,
-.preview.button:hover,
-#post-preview,
-#post-preview:hover {
+.preview.button:hover {
 	line-height: 1.33 !important;
 }
 
 .wp-core-ui .button:hover {
 	background-color: #18b3dc !important;
-	/*color: #222 !important;*/ /*kok*/
 	color: #fff !important;
 }
 
@@ -1327,7 +1347,7 @@ label span.description {
 }
 
 .wp-core-ui .button-primary:hover {
-	background-color: #f95e44;
+	background-color: #f45246;
 }
 
 .button-highlighted,
@@ -1342,7 +1362,7 @@ label span.description {
 body.update-core-php form.upgrade {
 	margin-bottom: 30px !important;
 	padding: 0 !important;
-	background-color: #f0f0f0 !important;
+	background-color: #f8f8f8 !important;
 }
 
 body.update-core-php .button,
@@ -1399,7 +1419,7 @@ a#choose-from-library-link {
 }
 
 #custom-background {
-	background-color: #fcfcfc !important;
+	background-color: #e8e8e8 !important;
 }
 
 #custom-background .form-table tr {
@@ -1432,14 +1452,14 @@ a#choose-from-library-link {
 }
 
 #custom-background h2 {
-	background-color: #eee !important;
+	background-color: #f8f8f8 !important;
 	padding-bottom: 20px !important;
 }
 
 #custom-background h3 {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 1px dotted #c8c8c8;
 	font-weight: 400 !important;
 }
 
@@ -1465,7 +1485,7 @@ a#choose-from-library-link {
 /* Specific Page Styles */
 
 body.appearance_page_custom-header .wrap {
-	background-color: #fcfcfc !important;
+	background-color: #e8e8e8 !important;
 }
 
 body.appearance_page_custom-header .wrap .form-table tr {
@@ -1482,14 +1502,14 @@ body.appearance_page_custom-header .wrap .form-table td #upload-form {
 }
 
 body.appearance_page_custom-header .wrap h2 {
-	background-color: #eee !important;
+	background-color: #f8f8f8 !important;
 	padding-bottom: 20px !important;
 }
 
 body.appearance_page_custom-header .wrap h3 {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
-	border-bottom: 1px dotted #ccc;
+	border-bottom: 1px dotted #c8c8c8;
 	font-weight: 400 !important;
 }
 
@@ -1512,7 +1532,7 @@ body.appearance_page_custom-header .wrap h3 {
 .wrap .page-title-action,
 .wrap .page-title-action:active,
 .page-title-action:hover {
-	background-color: #1ac5f2 !important;
+	background-color: #18b3dc !important;
 	border-radius: 0 !important;
 }
 
@@ -1541,7 +1561,7 @@ form#quick-press .submit {
 
 body.plugin-editor-php .alignright form,
 body.widgets-php .widget-liquid-right + form {
-	background-color: #eee !important;
+	background-color: #f8f8f8 !important;
 }
 
 body.widgets-php .sidebar-name h3 {
@@ -1613,7 +1633,7 @@ h2 a.nav-tab {
 }
 
 .acf-input-table span.sub-field-instructions {
-	color: #ccc;
+	color: #c8c8c8;
 	font-family: "Inconsolata";
 	font-size: 12px;
 	font-style: italic;
@@ -1634,6 +1654,9 @@ table.acf_input tbody tr td.label label {
 /* Display Widgets Support */
 
 .dw-toggle {
+}
+
+.dw_collapse {
 }
 
 .dw_collapse p,
@@ -1665,7 +1688,7 @@ table.acf_input tbody tr td.label label {
 
 .frm_ipe_field_label.frm_primary_label.button {
 	line-height: 2.25 !important;
-	color: #ccc !important;
+	color: #c8c8c8 !important;
 }
 
 .frm_ipe_field_label.frm_primary_label.button:hover {
@@ -1735,12 +1758,12 @@ a.frm_show_comment:hover {
 
 /* Nextgen Gallery Support */
 
-.gallery_page_ngg_display_settings select,
-.gallery_page_ngg_display_settings input[type="number"],
-.gallery_page_ngg_display_settings input[type="text"],
 #ngg_page_content select,
 #ngg_page_content input[type="number"],
-#ngg_page_content input[type="text"] {
+#ngg_page_content input[type="text"],
+.gallery_page_ngg_display_settings select,
+.gallery_page_ngg_display_settings input[type="number"],
+.gallery_page_ngg_display_settings input[type="text"] {
 	height: 30px !important;
 	text-align: left !important;
 }
@@ -1766,7 +1789,7 @@ a.frm_show_comment:hover {
 /* Paid Memberships Pro Support */
 
 .pmpro_admin #posts-filter {
-	background-color: #eee !important;
+	background-color: #f8f8f8 !important;
 }
 
 .pmpro_admin a.pmpro_tag-blue,
@@ -1790,7 +1813,7 @@ a.frm_show_comment:hover {
 .pmpro_admin p.submit input.button-secondary {
 	padding: 5px;
 	line-height: 1.25 !important;
-	border: 1px solid #ccc;
+	border: 1px solid #c8c8c8;
 	border-radius: 0;
 	box-sizing: border-box;
 	text-decoration: none;
@@ -1807,8 +1830,7 @@ a.frm_show_comment:hover {
 
 .pmpro_admin .widefat td a.edit,
 .pmpro_admin .widefat td a.delete {
-	font-size: 11px !important;
-	text-transform: uppercase !important;
+	font-size: 12px !important;
 }
 
 /* Revolution Slider Support */
@@ -1840,7 +1862,6 @@ a.frm_show_comment:hover {
 }
 
 #simple-local-avatar-remove.button {
-
 }
 
 .button.hide-if-no-js,
@@ -1967,7 +1988,7 @@ a.frm_show_comment:hover {
 
 input.regular-text {
 	padding: 5px !important;
-	border: 1px solid #ccc;
+	border: 1px solid #c8c8c8;
 	box-sizing: border-box;
 	color: #333;
 	font-size: 12px;
@@ -2328,7 +2349,7 @@ input.regular-text {
 
 	h2 .nav-tab {
 		width: 100%;
-		border: 1px solid #ccc;
+		border: 1px solid #c8c8c8;
 		margin-top: 10px;
 		border-radius: 0;
 		box-sizing: border-box;
