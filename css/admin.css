@@ -107,7 +107,7 @@ table td pre {
 	text-shadow: none;
 	color: #aaa;
 	margin-left: 8px;
-	padding-top: 8px;
+	padding-top: 4px;
 }
 
 #wpadminbar #wp-admin-bar-site-name > .ab-item:before {
@@ -1614,10 +1614,18 @@ h2 a.nav-tab {
 
 /* Admin Menu Editor Support */
 
+#ws_ame_editor_heading {
+	float: none !important;
+	padding-bottom: 0 !important;
+}
+
 #ws_menu_editor .ws_main_button {
 	margin: 0 auto 10px auto;
 	width: 150px;
 	text-transform: capitalize;
+}
+#ws_editor_sidebar {
+	background-color: #f0f0f0;
 }
 
 #ws_sidebar_pro_ad,
