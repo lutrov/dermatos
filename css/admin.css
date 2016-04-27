@@ -200,11 +200,11 @@ h1 {
 }
 
 h2 {
-	font-size: 18px !important;
+	font-size: 20px !important;
 }
 
 h3 {
-	font-size: 14px !important;
+	font-size: 16px !important;
 }
 
 h4 {
@@ -350,7 +350,7 @@ td strong {
 
 .wp-core-ui .button-group.button-large .button,
 .wp-core-ui .button.button-large {
-	line-height: 2 !important;
+	line-height: 2.25 !important;
 }
 
 .wp-core-ui .welcome-panel h2 {
@@ -1675,6 +1675,16 @@ h2 a.nav-tab {
 table.acf_input tbody tr td.label label {
 	padding-top: 6px !important;
 	text-align: right !important;
+}
+
+.acf-field-object.open > .handle {
+	background-color: #32373c !important;
+	border: none !important;
+	text-shadow: none !important;
+}
+
+.acf-input .edit-field {
+	line-height: 2.25 !important;
 }
 
 /* Custom Permalinks Support */
