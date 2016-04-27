@@ -1345,6 +1345,10 @@ ul.subsubsub {
 	min-height: 20px;
 }
 
+.search-form.search-plugins {
+	background-color: #fff !important;
+}
+
 .tools a.button,
 .tools a.button:hover {
 	line-height: 2.0 !important;
@@ -2024,6 +2028,31 @@ a.frm_show_comment:hover {
 
 .wc_emails.widefat th {
 	text-align: left !important;
+}
+
+/* WP Migrate DB Support */
+
+#wpmdb-main {
+	width: 100% !important;
+}
+
+#wpmdb-sidebar {
+	display: none !important;
+}
+
+body.mp6 .wpmdb h2.nav-tab-wrapper {
+	width: 100%;
+	padding: 0;
+}
+
+body.mp6 .wrap h2 {
+	float: none;
+	clear: both;
+}
+
+body.mp6 .wpmdb .help-tab h3 {
+	clear: both;
+	text-align: left;
 }
 
 /* WP Updates Notifier Support */
