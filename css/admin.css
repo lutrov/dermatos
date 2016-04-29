@@ -1,5 +1,6 @@
 /* DERMATOS ADMIN STYLES */
 
+
 /* Fonts */
 
 @font-face {
@@ -1342,7 +1343,13 @@ ul.subsubsub {
 }
 
 .search-form {
+	padding-right: 10px !important;
+	background-color: #f8f8f8 !important;
 	min-height: 20px;
+}
+
+.search-form input[type=search] {
+	min-width: 200px;
 }
 
 .search-form.search-plugins {
@@ -1914,6 +1921,32 @@ a.frm_show_comment:hover {
 .button.hide-if-no-js:hover,
 .button.item-delete,.button.item-delete:hover {
 	line-height: 1.25 !important;
+}
+
+.edit-tags-php #col-container {
+	background-color: #f0f0f0;
+}
+
+.edit-tags-php .col-wrap h2 {
+	margin-left: 20px !important;
+	margin-top: 25px !important;
+}
+
+.edit-tags-php .col-wrap .submit {
+	text-align: left !important;
+}
+
+.edit-tags-php .col-wrap .tagcloud {
+	padding-left: 20px !important;
+	width: 95% !important;
+}
+
+.edit-tags-php .col-wrap .tagcloud h2 {
+	margin-left: 0 !important;
+}
+
+.edit-tags-php .search-form {
+	margin-top: -20px !important;
 }
 
 /* Simple Social Icons Support */
