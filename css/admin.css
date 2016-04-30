@@ -1,6 +1,5 @@
 /* DERMATOS ADMIN STYLES */
 
-
 /* Fonts */
 
 @font-face {
@@ -128,7 +127,7 @@ table td pre {
 	color: #fafafa;
 	border-radius: 0;
 	background: none;
-	background-color: #2a3442;
+	background-color: #282c30;
 }
 
 #wpadminbar #wp-admin-bar-view-site {
@@ -412,7 +411,7 @@ a,
 
 #adminmenuback,
 #adminmenuwrap {
-	background-color: #2a3442;
+	background-color: #282c30;
 	border-color: #32373c;
 }
 
@@ -424,7 +423,7 @@ a,
 
 #adminmenu,
 #adminmenu ul {
-	background-color: #2a3442;
+	background-color: #282c30;
 }
 #adminmenu .separator {
 	background-color: #666;
@@ -468,7 +467,7 @@ a,
 #adminmenu .wp-submenu,
 .folded #adminmenu a.wp-has-current-submenu:focus + .wp-submenu,
 .folded #adminmenu .wp-has-current-submenu .wp-submenu {
-	background-color: #2a3442;
+	background-color: #282c30;
 	border-color: #bbb;
 	box-shadow: none;
 	border-radius: 0;
@@ -501,7 +500,7 @@ a,
 }
 
 #adminmenu li.wp-menu-separator {
-	background-color: #2a3442;
+	background-color: #282c30;
 	border-color: #000;
 }
 
@@ -629,8 +628,8 @@ h3.dashboard-widget-title small {
 }
 
 .widefat .manage-column.check-column {
-	border-top: 1px solid #2a3442;
-	border-bottom: 1px solid #2a3442;
+	border-top: 1px solid #32373c;
+	border-bottom: 1px solid #32373c;
 	padding-top: 5px 0 !important;
 }
 
@@ -800,6 +799,10 @@ h3.dashboard-widget-title small,
 	margin-top: 10px;
 }
 
+#customize-theme-controls .accordion-section-title {
+	padding-left: 10px;
+}
+
 /* Theme info */
 
 .theme-info .theme-name {
@@ -873,7 +876,7 @@ h3.dashboard-widget-title small,
 
 #widgets-left .sidebar-name,
 #widgets-right .sidebar-name {
-	color: #2a3442;
+	color: #282c30;
 	text-shadow: none;
 	border-color: #c4c4c4;
 	box-shadow: none;
@@ -1616,11 +1619,11 @@ h2 a.nav-tab {
 
 #wp-admin-bar-my-sites-list {
 	min-width: 300px !important;
-	background-color: #2a3442 !important;
+	background-color: #282c30 !important;
 }
 
 #wp-admin-bar-my-sites-list .menupop .ab-submenu {
-	background-color: #2a3442 !important;
+	background-color: #282c30 !important;
 }
 
 /* Admin Menu Editor Support */
@@ -2215,7 +2218,7 @@ input.regular-text {
 		min-width: 0;
 		position: absolute;
 		background: none;
-		background-color: #2a3442;
+		background-color: #282c30;
 		font: 400 12px/28px "Inconsolata" !important;
 		border-top: 1px solid #666;
 		border-bottom: 1px solid #222;
@@ -2272,7 +2275,7 @@ input.regular-text {
 	#wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus {
 		color: #fafafa;
 		background: none;
-		background-color: #2a3442;
+		background-color: #282c30;
 		border-radius: 0;
 	}
 
