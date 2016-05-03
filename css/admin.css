@@ -1701,6 +1701,10 @@ table.acf_input tbody tr td.label label {
 	line-height: 2.25 !important;
 }
 
+.acf-url input[type=url] {
+    padding-left: 25px !important;
+}
+
 /* Custom Permalinks Support */
 
 #edit-slug-box {
