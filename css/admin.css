@@ -590,7 +590,7 @@ div.wp-menu-image {
 /* Content */
 
 #wpbody {
-    margin-top: -10px !important;
+    margin-top: -15px !important;
 }
 
 #wpbody-content {
@@ -601,8 +601,8 @@ div.wp-menu-image {
 }
 
 .wrap > h1 {
-	padding-top: 0 !important;
-	padding-bottom: 20px !important;
+	padding-top: 10px !important;
+	padding-bottom: 25px !important;
 }
 
 .wrap > h1 a {
@@ -1994,6 +1994,67 @@ a.frm_show_comment:hover {
 	margin-bottom: 40px;
 }
 
+/* Members Support */
+
+body.users_page_roles .widefat.members-roles-select td.column-cap,
+body.users_page_role-new .widefat.members-roles-select td.column-cap {
+	font-size: 11px !important;
+	text-transform: uppercase;
+}
+
+body.users_page_roles .widefat.members-roles-select td.column-cap strong,
+body.users_page_role-new .widefat.members-roles-select td.column-cap strong {
+	font-weight: 400;
+}
+
+body.users_page_roles ul.subsubsub,
+body.users_page_role-new ul.subsubsub {
+	padding-left: 0 !important;
+}
+
+body.users_page_roles form,
+body.users_page_role-new form {
+	padding: 0 !important;
+	background-color: #f8f8f8 !important;
+	margin-top: -10px !important;
+}
+
+body.users_page_roles form#roles,
+body.users_page_role-new form#roles {
+	padding: 0 20px 10px !important;
+	background-color: #f0f0f0 !important;
+	margin-top: -10px !important;
+}
+
+body.users_page_roles #titlewrap input[type=text],
+body.users_page_role-new #titlewrap input[type=text] {
+	height: 28px !important;
+}
+
+body.users_page_roles #publish.button-primary,
+body.users_page_role-new #publish.button-primary {
+	margin-top: 10px !important;
+}
+
+body.users_page_roles input[type=text],
+body.users_page_role-new input[type=text] {
+	border: 1px solid #d4d4d4 !important;
+}
+
+body.users_page_roles input[type=text]:focus,
+body.users_page_role-new input[type=text]:focus {
+	border: 1px solid #18b3dc !important;
+}
+
+body.users_page_roles .button-secondary,
+body.users_page_role-new .button-secondary,
+body.users_page_roles #members-add-new-cap,
+body.users_page_role-new #members-add-new-cap {
+	background-color: #18b3dc !important;
+	color: #fff !important;
+	text-shadow: none !important;
+}
+
 /* Nextgen Gallery Support */
 
 #ngg_page_content select,
@@ -2305,6 +2366,17 @@ a.frm_show_comment:hover {
 
 .wc_emails.widefat th {
 	text-align: left !important;
+}
+
+/* WP Document Revisions Support */
+
+body.post-php.document .button-primary {
+	background-color: #f45246 !important;
+	color: #fff !important;
+}
+
+body.post-php.document .button-primary:hover {
+	background-color: #18b3dc !important;
 }
 
 /* WP Migrate DB Support */
