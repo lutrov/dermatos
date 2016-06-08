@@ -41,7 +41,7 @@ input[type=search],
 input[type=tel],
 input[type=url] {
 	padding: 5px !important;
-	border: 1px solid #d4d4d4;
+	border: 1px solid #d4d4d4 !important;
 	box-shadow: none !important;
 	box-sizing: border-box;
 }
@@ -56,7 +56,7 @@ input[type=number]:focus,
 input[type=search]:focus,
 input[type=tel]:focus,
 input[type=url]:focus {
-	border: 1px solid #18b3dc;
+	border: 1px solid #18b3dc !important;
 }
 
 table td pre {
@@ -323,7 +323,7 @@ div.sidebar-name h3,
 .quicktags,
 .tablenav .displaying-num,
 .tool-box .title,
-.widefat th,
+table.widefat th,
 .search {
 	font-family: "Inconsolata";
 	font-weight: 400;
@@ -407,8 +407,8 @@ a,
 	color: #18b3dc;
 }
 
-.widefat th a,
-.widefat th a:hover {
+table.widefat th a,
+table.widefat th a:hover {
 	color: #fff !important;
 }
 
@@ -590,107 +590,105 @@ div.wp-menu-image {
 /* Content */
 
 #wpbody {
-    margin-top: -15px !important;
+    margin-top: -20px !important;
 }
 
 #wpbody-content {
 }
 
 .wrap {
-	margin: 25px 15px 0 0;
 }
 
 .wrap > h1 {
-	padding-top: 10px !important;
-	padding-bottom: 25px !important;
+	padding-bottom: 20px !important;
 }
 
 .wrap > h1 a {
 }
 
-.widefat thead tr,
-.widefat tfoot tr {
+table.widefat thead tr,
+table.widefat tfoot tr {
 	height: 40px !important;
 }
 
-.widefat {
+table.widefat {
 	border: none !important;
 }
 
-.widefat thead tr th,
-.widefat tfoot tr th {
+table.widefat thead tr th,
+table.widefat tfoot tr th {
 	border: none;
 	text-shadow: none;
 	padding: 15px 7px 15px;
 	vertical-align: top !important;
 }
 
-.widefat thead tr th,
-.widefat tfoot tr th,
+table.widefat thead tr th,
+table.widefat tfoot tr th,
 h3.dashboard-widget-title,
 h3.dashboard-widget-title span,
 h3.dashboard-widget-title small {
 	color: #fff;
 }
 
-.widefat td {
+table.widefat td {
 	padding: 10px 7px 8px;
 	vertical-align: top;
 	font-size: 12px;
 }
 
-.widefat thead .check-column,
-.widefat tfoot .check-column {
+table.widefat thead .check-column,
+table.widefat tfoot .check-column {
 	padding: 15px 0 0;
 }
 
-.widefat tbody th.check-column {
+table.widefat tbody th.check-column {
 	padding: 11px 0 20px;
 }
 
-.widefat thead th.manage-column,
-.widefat tfoot th.manage-column {
+table.widefat thead th.manage-column,
+table.widefat tfoot th.manage-column {
 }
 
-.widefat .manage-column.check-column {
+table.widefat .manage-column.check-column {
 	border-top: 1px solid #32373c;
 	border-bottom: 1px solid #32373c;
 	padding-top: 0 !important;
 }
 
-.widefat.pages thead th.manage-column.column-author,
-.widefat.pages tfoot th.manage-column.column-author,
-.widefat.posts thead th.manage-column.column-author,
-.widefat.posts tfoot th.manage-column.column-author,
-.widefat.posts thead th.manage-column.column-categories,
-.widefat.posts tfoot th.manage-column.column-categories,
-.widefat.posts thead th.manage-column.column-tags,
-.widefat.posts tfoot th.manage-column.column-tags,
-.widefat.users thead th.manage-column.column-role,
-.widefat.users tfoot th.manage-column.column-role {
+table.widefat.pages thead th.manage-column.column-author,
+table.widefat.pages tfoot th.manage-column.column-author,
+table.widefat.posts thead th.manage-column.column-author,
+table.widefat.posts tfoot th.manage-column.column-author,
+table.widefat.posts thead th.manage-column.column-categories,
+table.widefat.posts tfoot th.manage-column.column-categories,
+table.widefat.posts thead th.manage-column.column-tags,
+table.widefat.posts tfoot th.manage-column.column-tags,
+table.widefat.users thead th.manage-column.column-role,
+table.widefat.users tfoot th.manage-column.column-role {
 	padding-left: 5px !important;
 }
 
-.widefat.plugins thead th.manage-column,
-.widefat.plugins tfoot th.manage-column {
+table.widefat.plugins thead th.manage-column,
+table.widefat.plugins tfoot th.manage-column {
 	padding-left: 10px !important;
 	border: none !important;
 }
 
-.widefat thead th[scope=col],
-.widefat tfoot th[scope=col] {
+table.widefat thead th[scope=col],
+table.widefat tfoot th[scope=col] {
 	vertical-align: middle !important;
 }
 
-.widefat td.check-column input[type=checkbox] {
+table.widefat td.check-column input[type=checkbox] {
 	margin-left: 5px;
 }
 
-.widefat.striped tbody tr:nth-child(odd) {
+table.widefat.striped tbody tr:nth-child(odd) {
 	background-color: #f8f8f8 !important;
 }
 
-.users-php .widefat td.username img {
+.users-php table.widefat td.username img {
 	width: 24px !important;
 	height: 24px !important;
 }
@@ -710,6 +708,7 @@ h3.dashboard-widget-title small {
 #poststuff h2,
 .metabox-holder h2 {
 	padding: 15px 18px;
+	line-height: 1;
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -729,6 +728,10 @@ h3.dashboard-widget-title small {
 
 p.search-box {
 	margin-top: 10px;
+}
+
+body.edit-tags-php p.search-box {
+	margin-top: 0;
 }
 
 .row-actions a {
@@ -761,8 +764,8 @@ h3.dashboard-widget-title small,
 .postbox h3,
 .stuffbox h2,
 .stuffbox h3,
-.widefat thead tr th,
-.widefat tfoot tr th,
+table.widefat thead tr th,
+table.widefat tfoot tr th,
 .sidebar-name,
 .manage-column.check-column,
 .menu-item-handle {
@@ -834,6 +837,21 @@ h3.dashboard-widget-title small,
 
 #customize-theme-controls .accordion-section-title {
 	padding-left: 10px;
+}
+
+.accordion-section-title::after,
+.accordion-section-title:hover::after,
+.handlediv,
+.handlediv:focus,
+.handlediv:hover,
+.item-edit,
+.item-edit:focus,
+.item-edit:hover,
+.sidebar-name-arrow,
+.sidebar-name:hover .sidebar-name-arrow,
+.widget-action:focus,
+.widget-top:hover .widget-action {
+	color: #d4d4d4 !important;
 }
 
 /* Theme info */
@@ -937,8 +955,17 @@ h3.dashboard-widget-title small,
 	font-size: 14px !important;
 }
 
+.widgets-holder-wrap .widget-inside {
+	padding: 0 1px !important;
+	border: none !important;
+}
+
 .widgets-chooser-actions button {
 	margin: 0 2px !important;
+}
+
+.widget.open {
+	margin-left: 0 !important;
 }
 
 .widget-inside form p.description {
@@ -1030,14 +1057,18 @@ h3.dashboard-widget-title small,
 	color: #18b3dc;
 }
 
+#screen-meta-links .show-settings {
+	line-height: 1.75 !important;
+}
+
 #screen-meta {
 	background-color: #fff;
 }
 
 #screen-options-link-wrap,
 #contextual-help-link-wrap {
-	background: none;
 	background: #fff;
+	box-shadow: none !important;
 }
 
 /* Menu Page */
@@ -1106,6 +1137,13 @@ h3.dashboard-widget-title small,
 	border: none;
 }
 
+.js .postbox .handlediv {
+}
+
+.js .postbox .handlediv.button-link {
+	color: #888 !important;
+}
+
 .accordion-section {
 }
 
@@ -1120,7 +1158,7 @@ a.menu-delete {
 /* Forms & Buttons */
 
 form {
-	padding: 10px 20px 25px !important;
+	padding: 10px 20px !important;
 	background-color: #f0f0f0 !important;
 }
 
@@ -1138,8 +1176,8 @@ form h3 {
 }
 
 form .submit {
-	margin: 30px 0 25px 0 !important;
-	padding: 15px 0 5px 0 !important;
+	padding-top: 20px !important;
+	margin-bottom: 30px !important;
 	border-top: 1px solid #d4d4d4 !important;
 	text-align: right !important;
 }
@@ -1245,7 +1283,7 @@ form .form-table th[scope=row] label,
 	padding-top: 0 !important;
 }
 
-.import-php .widefat {
+.import-php table.widefat {
 	border: 1px solid #d4d4d4 !important;
 }
 
@@ -1279,6 +1317,13 @@ form .form-table tr.show-admin-bar td label {
 	margin-top: 0;
 }
 
+form.validate {
+}
+
+body.edit-tags-php form.validate {
+	padding: 0 !important;
+}
+
 #pass-strength-result {
 	width: 300px;
 }
@@ -1304,6 +1349,7 @@ ul.subsubsub {
 }
 
 #screen-meta-links a.show-settings {
+	padding: 0;
 }
 
 .wp-core-ui .button,
@@ -1434,7 +1480,8 @@ ul.subsubsub {
 }
 
 .search-form input[type=search] {
-	min-width: 200px;
+	min-width: 100px !important;
+	max-width: 200px !important;
 }
 
 .search-form.search-plugins {
@@ -1499,8 +1546,8 @@ body.update-core-php form.upgrade a.button {
 	line-height: 1.5 !important;
 }
 
-body.update-core-php .widefat thead td input[type="checkbox"],
-body.update-core-php .widefat tfoot td input[type="checkbox"] {
+body.update-core-php table.widefat thead td input[type="checkbox"],
+body.update-core-php table.widefat tfoot td input[type="checkbox"] {
 	margin-top: -4px !important;
 }
 
@@ -1644,6 +1691,11 @@ a#choose-from-library-link {
 	background: #fff !important;
 }
 
+#posts-filter + form {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
 .edit-attachment-frame .attachment-info .details,
 .edit-attachment-frame .attachment-info .settings,
 .edit-attachment-frame .attachment-info .actions,
@@ -1660,6 +1712,16 @@ a#choose-from-library-link {
 .post-type-attachment #publishing-action {
     width: 40%;
     margin-top: -12px !important;
+}
+
+table.media .column-title .has-media-icon ~ .row-actions {
+	clear: both !important;
+	margin-top: 15px !important;
+	margin-left: 0 !important;
+}
+
+table.media .column-title .filename {
+	display: none !important;
 }
 
 /* Specific Page Styles */
@@ -1757,6 +1819,16 @@ h2 a.nav-tab {
 	font-size: 12px;
 }
 
+#TB_ajaxWindowTitle {
+	font-size: 18px !important;
+	font-weight: 400 !important;
+}
+
+#gallery-settings .title, h3.media-title, h4.media-sub-title {
+	font-family: inherit;
+	padding-bottom: 10px;
+}
+
 /* Multisite Support */
 
 #wp-admin-bar-my-sites-list {
@@ -1796,15 +1868,15 @@ h2 a.nav-tab {
 	width: 250px !important;
 }
 
-.widefat.acf td.field_label,
-.widefat.acf td.field_name,
-.widefat.acf td.field_type {
+table.widefat.acf td.field_label,
+table.widefat.acf td.field_name,
+table.widefat.acf td.field_type {
 	text-align: left !important;
 	max-width: 100px !important;
 }
 
-.widefat.acf th.field_order,
-.widefat.acf td.field_order {
+table.widefat.acf th.field_order,
+table.widefat.acf td.field_order {
 	width: 13% !important;
 }
 
@@ -1875,7 +1947,7 @@ table.acf_input tbody tr td.label label {
 	width: 96.1% !important;
 }
 
-.acf-columns-2 .widefat {
+.acf-columns-2 table.widefat {
 	margin-top: 10px !important;
 }
 
@@ -1996,14 +2068,14 @@ a.frm_show_comment:hover {
 
 /* Members Support */
 
-body.users_page_roles .widefat.members-roles-select td.column-cap,
-body.users_page_role-new .widefat.members-roles-select td.column-cap {
+body.users_page_roles table.widefat.members-roles-select td.column-cap,
+body.users_page_role-new table.widefat.members-roles-select td.column-cap {
 	font-size: 11px !important;
 	text-transform: uppercase;
 }
 
-body.users_page_roles .widefat.members-roles-select td.column-cap strong,
-body.users_page_role-new .widefat.members-roles-select td.column-cap strong {
+body.users_page_roles table.widefat.members-roles-select td.column-cap strong,
+body.users_page_role-new table.widefat.members-roles-select td.column-cap strong {
 	font-weight: 400;
 }
 
@@ -2037,12 +2109,16 @@ body.users_page_role-new #publish.button-primary {
 }
 
 body.users_page_roles input[type=text],
-body.users_page_role-new input[type=text] {
+body.users_page_role-new input[type=text],
+body.post-php #members_access_error,
+body.post-new-php #members_access_error {
 	border: 1px solid #d4d4d4 !important;
 }
 
 body.users_page_roles input[type=text]:focus,
-body.users_page_role-new input[type=text]:focus {
+body.users_page_role-new input[type=text]:focus,
+body.post-php #members_access_error:focus,
+body.post-new-php #members_access_error:focus {
 	border: 1px solid #18b3dc !important;
 }
 
@@ -2127,8 +2203,8 @@ body.users_page_role-new #members-add-new-cap {
 	margin-top: 8px !important;
 }
 
-.pmpro_admin .widefat td a.edit,
-.pmpro_admin .widefat td a.delete {
+.pmpro_admin table.widefat td a.edit,
+.pmpro_admin table.widefat td a.delete {
 	font-size: 12px !important;
 }
 
@@ -2185,6 +2261,7 @@ body.users_page_role-new #members-add-new-cap {
 
 .edit-tags-php #col-container {
 	background-color: #f0f0f0;
+	padding: 0 15px !important;
 }
 
 .edit-tags-php #col-left {
@@ -2200,7 +2277,7 @@ body.users_page_role-new #members-add-new-cap {
 }
 
 .edit-tags-php .col-wrap h2 {
-	margin-left: 20px !important;
+	margin-left: 5px !important;
 	margin-top: 25px !important;
 }
 
@@ -2209,7 +2286,6 @@ body.users_page_role-new #members-add-new-cap {
 }
 
 .edit-tags-php .col-wrap .tagcloud {
-	padding-left: 20px !important;
 	width: 95% !important;
 }
 
@@ -2217,23 +2293,23 @@ body.users_page_role-new #members-add-new-cap {
 	margin-left: 0 !important;
 }
 
-.edit-tags-php .widefat .column-cb {
+.edit-tags-php table.widefat .column-cb {
 	width: 3%;
 }
 
-.edit-tags-php .widefat .column-name {
+.edit-tags-php table.widefat .column-name {
 	width: 22%;
 }
 
-.edit-tags-php .widefat .column-description {
+.edit-tags-php table.widefat .column-description {
 	width: 45%;
 }
 
-.edit-tags-php .widefat .column-slug {
+.edit-tags-php table.widefat .column-slug {
 	width: 20%;
 }
 
-.edit-tags-php .widefat .column-posts {
+.edit-tags-php table.widefat .column-posts {
 	width: 10%;
 }
 
@@ -2377,6 +2453,18 @@ body.post-php.document .button-primary {
 
 body.post-php.document .button-primary:hover {
 	background-color: #18b3dc !important;
+}
+
+body.post-php #attachment_caption,
+body.post-php #attachment_alt,
+body.post-php #attachment_content {
+	border: 1px solid #d4d4d4 !important;
+}
+
+body.post-php #attachment_caption:focus,
+body.post-php #attachment_alt:focus,
+body.post-php #attachment_content:focus {
+	border: 1px solid #18b3dc !important;
 }
 
 /* WP Migrate DB Support */
