@@ -69,7 +69,7 @@ table td pre {
 	height: 60px;
 	position: absolute;
 	background-color: #32373c;
-	font: 400 12px/28px "Inconsolata" !important;
+	font: 400 12px/28px "Inconsolata", monospace !important;
 	border-bottom: 2px solid #666;
 	min-width: 0;
 }
@@ -117,7 +117,7 @@ table td pre {
 }
 
 #wpadminbar #wp-admin-bar-site-name > a {
-	font: 700 16px "Inconsolata";
+	font: 700 16px "Inconsolata", monospace;
 	text-shadow: none;
 	color: #a8a8a8;
 	margin-left: 8px;
@@ -205,7 +205,7 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: "Inconsolata";
+	font-family: "Inconsolata", monospace;
 	font-weight: 400 !important;
 	text-transform: capitalize !important;
 }
@@ -250,7 +250,7 @@ input[type=url] {
 }
 
 body.wp-admin {
-	font-family: "Inconsolata" !important;
+	font-family: "Inconsolata", monospace !important;
 	font-weight: 400;
 	line-height: 1.6em;
 }
@@ -258,7 +258,7 @@ body.wp-admin {
 h2 .nav-tab,
 .wrap h2,
 .subtitle {
-	font-family: "Inconsolata";
+	font-family: "Inconsolata", monospace;
 	font-weight: 400;
 	margin: 15px 0 10px 0;
 }
@@ -297,13 +297,21 @@ b {
 	font-size: 12px !important;
 }
 
+#message ul {
+	list-style: disc !important;
+}
+
+#message ol {
+	list-style: numeric !important;
+}
+
 #adminmenu a.menu-top,
 #adminmenu .wp-submenu-head {
 	font-weight: 400;
 }
 
 #wpadminbar * {
-	font: 400 12px/28px "Inconsolata";
+	font: 400 12px/28px "Inconsolata", monospace;
 }
 
 a.rsswidget,
@@ -325,7 +333,7 @@ div.sidebar-name h3,
 .tool-box .title,
 table.widefat th,
 .search {
-	font-family: "Inconsolata";
+	font-family: "Inconsolata", monospace;
 	font-weight: 400;
 }
 
@@ -723,7 +731,7 @@ table.widefat.striped tbody tr:nth-child(odd) {
 }
 
 #imgedit-panel-6680 * {
-	font-family: "Inconsolata" !important;
+	font-family: "Inconsolata", monospace !important;
 }
 
 p.search-box {
@@ -1118,7 +1126,7 @@ table.widefat tfoot tr th,
 	background-color: #32373c;
 	border: none;
 	font-size: 14px;
-	font-family: "Inconsolata";
+	font-family: "Inconsolata", monospace;
 	font-weight: 400;
 	text-shadow: none;
 }
@@ -1193,7 +1201,7 @@ form .submit .button.button-primary {
 
 form .form-table th,
 #custom-background .form-table th {
-	font: 700 12px/20px "Inconsolata" !important;
+	font: 700 12px/20px "Inconsolata", monospace !important;
 	text-align: right !important;
 }
 
@@ -1285,6 +1293,10 @@ form .form-table th[scope=row] label,
 
 .import-php table.widefat {
 	border: 1px solid #d4d4d4 !important;
+}
+
+.wrap.custom form .submit {
+	margin-bottom: 0 !important;
 }
 
 form .form-table th[scope=row] + td textarea,
@@ -1658,7 +1670,7 @@ a#choose-from-library-link {
 
 .media-frame-title h1 {
 	padding-bottom: 20px;
-	font-family: "Inconsolata";
+	font-family: "Inconsolata", monospace;
 	font-size: 24px !important;
 	font-weight: 400;
 }
@@ -1671,11 +1683,11 @@ a#choose-from-library-link {
 
 .media-toolbar select,
 .media-toolbar button {
-	font-family: "Inconsolata" !important;
+	font-family: "Inconsolata", monospace !important;
 }
 
 .upload-ui .button {
-	font-family: "Inconsolata" !important;
+	font-family: "Inconsolata", monospace !important;
 }
 
 .media-toolbar select#media-attachment-filters {
@@ -1700,13 +1712,13 @@ a#choose-from-library-link {
 .edit-attachment-frame .attachment-info .settings,
 .edit-attachment-frame .attachment-info .actions,
 .edit-attachment-frame .attachment-actions .button {
-	font-family: "Inconsolata" !important;
+	font-family: "Inconsolata", monospace !important;
 	line-height: 1.75 !important;
 }
 
 .imgedit-group,
 .imgedit-submit .button {
-	font-family: "Inconsolata" !important;
+	font-family: "Inconsolata", monospace !important;
 }
 
 .post-type-attachment #publishing-action {
@@ -1894,7 +1906,7 @@ table.widefat.acf td.field_order {
 
 .acf-input-table span.sub-field-instructions {
 	color: #c8c8c8;
-	font-family: "Inconsolata";
+	font-family: "Inconsolata", monospace;
 	font-size: 12px;
 	font-style: italic;
 	text-shadow: none;
@@ -2620,7 +2632,7 @@ input.regular-text {
 		position: absolute;
 		background: none;
 		background-color: #282c30;
-		font: 400 12px/28px "Inconsolata" !important;
+		font: 400 12px/28px "Inconsolata", monospace !important;
 		border-top: 1px solid #666;
 		border-bottom: 1px solid #222;
 	}
@@ -2654,7 +2666,7 @@ input.regular-text {
 	}
 
 	#wpadminbar #wp-admin-bar-site-name > a {
-		font: 400 12px "Inconsolata";
+		font: 400 12px "Inconsolata", monospace;
 		text-shadow: none;
 		color: #a8a8a8;
 		margin-top: 7px;
@@ -2703,7 +2715,7 @@ input.regular-text {
 	#wpadminbar .quicklinks .ab-top-secondary > li > a,
 	#wpadminbar .quicklinks .ab-top-secondary > li > .ab-empty-item,
 	#wpadminbar .ab-label {
-		font: 400 0px "Inconsolata";
+		font: 400 0px "Inconsolata", monospace;
 		margin-left: 0;
 	}
 
