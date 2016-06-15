@@ -1145,10 +1145,15 @@ table.widefat tfoot tr th,
 	border: none;
 }
 
+.js .postbox {
+	margin-bottom: 20px !important;
+}
+
 .js .postbox .handlediv {
 }
 
 .js .postbox .handlediv.button-link {
+	margin-bottom: -40px !important;
 	color: #888 !important;
 }
 
