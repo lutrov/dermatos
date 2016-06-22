@@ -16,8 +16,8 @@ define('DERMATOS_FONT_FAMILY_ESCAPED', 'Roboto+Condensed');
 define('DERMATOS_FONT_WEIGHT_NORMAL', '300');
 define('DERMATOS_FONT_WEIGHT_BOLD', '400');
 define('DERMATOS_FONT_WEIGHT_EXTRA_BOLD', '700');
-define('DERMATOS_PRIMARY_HIGHLIGHT_COLOUR', 'f45246');
-define('DERMATOS_SECONDARY_HIGHLIGHT_COLOUR', '18b3dc');
+define('DERMATOS_COLOUR_HIGHLIGHT_PRIMARY', 'f45246');
+define('DERMATOS_COLOUR_HIGHLIGHT_SECONDARY', '18b3dc');
 
 //
 // Get the requested CSS filename.
@@ -40,13 +40,13 @@ if (strlen($file) > 0) {
 //
 $css = str_replace(
 	array(
-		'[[DERMATOS_FONT_FAMILY]]',
-		'[[DERMATOS_FONT_FAMILY_ESCAPED]]',
-		'[[DERMATOS_FONT_WEIGHT_NORMAL]]',
-		'[[DERMATOS_FONT_WEIGHT_BOLD]]',
-		'[[DERMATOS_FONT_WEIGHT_EXTRA_BOLD]]',
-		'[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]]',
-		'[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]]'
+		'[[FONT-FAMILY]]',
+		'[[FONT-FAMILY-ESCAPED]]',
+		'[[FONT-WEIGHT-NORMAL]]',
+		'[[FONT-WEIGHT-BOLD]]',
+		'[[FONT-WEIGHT-EXTRA-BOLD]]',
+		'[[COLOUR-HIGHLIGHT-PRIMARY]]',
+		'[[COLOUR-HIGHLIGHT-SECONDARY]]'
 	),
 	array(
 		DERMATOS_FONT_FAMILY,
@@ -54,8 +54,8 @@ $css = str_replace(
 		DERMATOS_FONT_WEIGHT_NORMAL,
 		DERMATOS_FONT_WEIGHT_BOLD,
 		DERMATOS_FONT_WEIGHT_EXTRA_BOLD,
-		DERMATOS_PRIMARY_HIGHLIGHT_COLOUR,
-		DERMATOS_SECONDARY_HIGHLIGHT_COLOUR
+		DERMATOS_COLOUR_HIGHLIGHT_PRIMARY,
+		DERMATOS_COLOUR_HIGHLIGHT_SECONDARY
 	),
 	str_replace(array("\x09", "\x0A", "\x0D", ': ', ', ', '{ ', ' {', '; ', ';}', ' }', '} ', ' !'), array(null, null, null, ':', ',', '{', '{', ';', '}', '}', '}', '!'), preg_replace(array('#/\*[^*]*\*+([^/][^*]*\*+)*/#', '#\s[\s]+#'), array(null, ' '), $css))
 );
@@ -64,7 +64,7 @@ $css = str_replace(
 // Output the correct mime type and set expiry header to 1 hour.
 //
 header('Content-type: text/css; charset: UTF-8');
-header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 3600) . ' GMT');
+// header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 3600) . ' GMT');
 
 //
 // Output the compressed CSS code.

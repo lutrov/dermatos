@@ -2,7 +2,7 @@
 
 /* Fonts */
 
-@import "https://fonts.googleapis.com/css?family=[[DERMATOS_FONT_FAMILY_ESCAPED]]:[[DERMATOS_FONT_WEIGHT_NORMAL]],[[DERMATOS_FONT_WEIGHT_BOLD]],[[DERMATOS_FONT_WEIGHT_EXTRA_BOLD]]|Roboto+Mono:300,400,700";
+@import "https://fonts.googleapis.com/css?family=[[FONT-FAMILY-ESCAPED]]:[[FONT-WEIGHT-NORMAL]],[[FONT-WEIGHT-BOLD]],[[FONT-WEIGHT-EXTRA-BOLD]]|Roboto+Mono:300,400,700";
 
 /* Basic */
 
@@ -29,7 +29,7 @@ input[type=search],
 input[type=tel],
 input[type=url] {
 	padding: 5px !important;
-	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-BOLD]] 13px "[[FONT-FAMILY]]", monospace !important;
 	border: 1px solid #d4d4d4 !important;
 	box-shadow: none !important;
 	box-sizing: border-box;
@@ -45,7 +45,7 @@ input[type=number]:focus,
 input[type=search]:focus,
 input[type=tel]:focus,
 input[type=url]:focus {
-	border: 1px solid #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	border: 1px solid #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
 table td pre {
@@ -60,10 +60,10 @@ pre, code, kbd {
 /* WP Adminbar */
 
 #wpadminbar {
-	height: 60px;
+	height: 40px;
 	position: absolute;
 	background-color: #32373c;
-	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace !important;
 	border-bottom: 2px solid #666;
 	min-width: 0;
 }
@@ -73,7 +73,7 @@ pre, code, kbd {
 }
 
 #wpadminbar .quicklinks > ul#wp-admin-bar-root-default {
-	margin: 20px 0 0 5px;
+	margin: 5px 0 0 5px !important;
 }
 
 #wpadminbar .quicklinks > ul > li {
@@ -111,7 +111,7 @@ pre, code, kbd {
 }
 
 #wpadminbar #wp-admin-bar-site-name > a {
-	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 16px "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font: [[FONT-WEIGHT-BOLD]] 16px "[[FONT-FAMILY]]", monospace;
 	text-shadow: none;
 	color: #a8a8a8;
 	margin-left: 8px;
@@ -177,7 +177,7 @@ pre, code, kbd {
 #wpadminbar .quicklinks .menupop ul li a strong,
 #wpadminbar .quicklinks .menupop.hover ul li a,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
-	color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
 #wp-admin-bar-my-sites-list .ab-item,
@@ -194,7 +194,8 @@ pre, code, kbd {
 }
 
 #wpadminbar .ab-item .username {
-	text-transform: uppercase; 
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
+	text-transform: uppercase;
 }
 
 /* Main Elements */
@@ -203,8 +204,8 @@ h1,
 h2,
 h3,
 h4 {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 	text-transform: capitalize !important;
 }
 
@@ -242,28 +243,28 @@ input[type=number],
 input[type=search],
 input[type=tel],
 input[type=url] {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-family: "[[FONT-FAMILY]]", monospace;
 	font-size: 13px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]];
+	font-weight: [[FONT-WEIGHT-BOLD]];
 }
 
 .wp-admin {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-family: "[[FONT-FAMILY]]", monospace !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 	line-height: 1.6em;
 }
 
 h2 .nav-tab,
 .wrap h2,
 .subtitle {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 	margin: 15px 0 10px 0;
 }
 
 h2.nav-tab-wrapper a {
 	margin: 15px 0 30px 0;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 h2.hndle.ui-sortable-handle {
@@ -272,8 +273,8 @@ h2.hndle.ui-sortable-handle {
 
 strong,
 b {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
 #adminmenu a.wp-has-submenu,
@@ -296,7 +297,7 @@ b {
 }
 
 .row-title {
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]];
+	font-weight: [[FONT-WEIGHT-BOLD]];
 }
 
 #message ul {
@@ -309,11 +310,11 @@ b {
 
 #adminmenu a.menu-top,
 #adminmenu .wp-submenu-head {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 #wpadminbar * {
-	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace;
 }
 
 a.rsswidget,
@@ -335,8 +336,8 @@ div.sidebar-name h3,
 .tool-box .title,
 table.widefat th,
 .search {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 #dashboard-widgets .activity-block h3 {
@@ -350,8 +351,8 @@ td strong {
 
 #titlediv #title-prompt-text {
 	margin-top: -6px !important;
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]];
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-BOLD]];
 }
 
 #titlediv #title {
@@ -414,7 +415,7 @@ a,
 #media-items a.delete-permanently,
 .plugins a.delete,
 .ui-tabs-nav a {
-	color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
 table.widefat th a,
@@ -430,7 +431,7 @@ table.widefat th a:hover {
 
 #adminmenuwrap,
 #wpcontent {
-	padding-top: 80px;
+	padding-top: 60px;
 }
 
 #adminmenushadow,
@@ -474,16 +475,16 @@ table.widefat th a:hover {
 .folded #adminmenu li.wp-has-current-submenu,
 .folded #adminmenu li.current.menu-top {
 	background: none;
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
-	border-top-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
-	border-bottom-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
+	border-top-color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
+	border-bottom-color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
 #adminmenu li.menu-top:hover,
 #adminmenu li.opensub > a.menu-top,
 #adminmenu li > a.menu-top:focus {
 	background-color: #32373c;
-	color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
+	color: #[[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	text-shadow: none;
 }
 
@@ -516,7 +517,7 @@ table.widefat th a:hover {
 
 #adminmenu .wp-submenu a:hover,
 #adminmenu .wp-submenu a:focus {
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 	color: #fff;
 }
 
@@ -596,19 +597,21 @@ div.wp-menu-image {
 .awaiting-mod,
 .update-plugins,
 .processing_count {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 /* Content */
 
 #wpbody {
-    margin-top: -20px !important;
+	margin-top: -20px !important;
 }
 
 #wpbody-content {
+	padding-bottom: 80px !important;
 }
 
 .wrap {
+	margin: 30px 20px 20px 0 !important;
 }
 
 .wrap > h1 {
@@ -722,7 +725,7 @@ table.widefat.striped tbody tr:nth-child(odd) {
 	padding: 15px 18px;
 	line-height: 1;
 	font-size: 16px;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .metabox-holder h2.hndle {
@@ -735,7 +738,7 @@ table.widefat.striped tbody tr:nth-child(odd) {
 }
 
 #imgedit-panel-6680 * {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
 }
 
 p.search-box {
@@ -1066,7 +1069,7 @@ table.widefat tfoot tr th {
 }
 
 #screen-meta-links a {
-	color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
 #screen-meta-links .show-settings {
@@ -1134,8 +1137,8 @@ table.widefat tfoot tr th {
 	background-color: #32373c;
 	border: none;
 	font-size: 14px;
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 	text-shadow: none;
 }
 
@@ -1189,7 +1192,7 @@ form h2, form h3 {
 	margin-top: 20px !important;
 	padding-bottom: 8px;
 	border-bottom: 1px dotted #d4d4d4;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 form h3 {
@@ -1209,7 +1212,7 @@ form .submit .button.button-primary {
 
 legend {
 	font-size: 15px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 .form-table th {
@@ -1237,7 +1240,7 @@ legend {
 
 form .form-table th,
 #custom-background .form-table th {
-	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px/20px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
 	text-align: right !important;
 }
 
@@ -1248,7 +1251,7 @@ form .form-table th.th-full,
 
 form .form-table th.th-full label,
 #custom-background .form-table th.th-full label {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 form .form-table td,
@@ -1457,7 +1460,7 @@ ul.subsubsub {
 }
 
 .inactive .plugin-title strong {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 #your-profile #rich_editing,
@@ -1477,20 +1480,20 @@ ul.subsubsub {
 	color: #fff;
 	text-decoration: none;
 	background: none;
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 	border: none;
 	border-color: none !important;
 	border-radius: 0;
 	box-shadow: none !important;
 	text-shadow: none;
 	line-height: 2.0 !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 
 }
 
 .wp-core-ui .button-primary,
 .button-highlighted {
-	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]];
+	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]];
 	color: #fff !important;
 	border: none !important;
 	border-radius: 0 !important;
@@ -1500,14 +1503,14 @@ ul.subsubsub {
 
 .wp-core-ui .button-primary:hover,
 .button-highlighted:hover {
-	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .wp-core-ui .button-secondary {
 	color: #fff !important;
 	text-decoration: none;
 	background: none;
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
@@ -1516,7 +1519,7 @@ ul.subsubsub {
 }
 
 .wp-core-ui .button-secondary:hover {
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 }
 
@@ -1590,7 +1593,7 @@ ul.subsubsub {
 }
 
 .wp-core-ui .button:hover {
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 }
 
@@ -1636,11 +1639,11 @@ label span.description {
 }
 
 .wp-core-ui .button-primary {
-	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]];
+	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
 .wp-core-ui .button-primary:hover {
-	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]];
+	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
 .button-highlighted,
@@ -1668,7 +1671,7 @@ label span.description {
 }
 
 .upload-php .thumbnail .filename {
-	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-NORMAL]] 13px "[[FONT-FAMILY]]", monospace !important;
 }
 
 .update-core-php form.upgrade a.button {
@@ -1770,7 +1773,7 @@ a#choose-from-library-link {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
 	border-bottom: 1px dotted #d4d4d4;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 .media-upload-form {
@@ -1788,9 +1791,9 @@ a#choose-from-library-link {
 
 .media-frame-title h1 {
 	padding-bottom: 20px;
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-family: "[[FONT-FAMILY]]", monospace;
 	font-size: 24px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .media-frame-router {
@@ -1801,11 +1804,11 @@ a#choose-from-library-link {
 
 .media-toolbar select,
 .media-toolbar button {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
 }
 
 .upload-ui .button {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
 }
 
 .media-toolbar select#media-attachment-filters {
@@ -1830,23 +1833,23 @@ a#choose-from-library-link {
 .edit-attachment-frame .attachment-info .settings,
 .edit-attachment-frame .attachment-info .actions,
 .edit-attachment-frame .attachment-actions .button {
-	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-BOLD]] 13px "[[FONT-FAMILY]]", monospace !important;
 	line-height: 1.75 !important;
 }
 
 .edit-attachment-frame .attachment-info strong {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 .attachment-details .setting span,
 .compat-item label span,
 .media-sidebar .setting span {
-	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-BOLD]] 13px "[[FONT-FAMILY]]", monospace !important;
 }
 
 .imgedit-group,
 .imgedit-submit .button {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
 }
 
 .post-type-attachment #publishing-action {
@@ -1892,20 +1895,20 @@ table.media .column-title .filename {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
 	border-bottom: 1px dotted #d4d4d4;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 .wrap .add-new-h2,
 .page-title-action {
 	line-height: 1.4 !important;
 	display: inline-block;
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 	padding: 4px 8px !important;
 	box-shadow: none !important;
 	border: none !important;
 	border-radius: none !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
 .wrap .add-new-h2,
@@ -1914,7 +1917,7 @@ table.media .column-title .filename {
 .wrap .page-title-action,
 .wrap .page-title-action:active,
 .page-title-action:hover {
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	border-radius: 0 !important;
 }
 
@@ -1961,7 +1964,7 @@ h2 a.nav-tab {
 
 #TB_ajaxWindowTitle {
 	font-size: 18px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 #gallery-settings .title, h3.media-title, h4.media-sub-title {
@@ -2034,7 +2037,7 @@ table.widefat.acf td.field_order {
 
 .acf-input-table span.sub-field-instructions {
 	color: #c8c8c8;
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-family: "[[FONT-FAMILY]]", monospace;
 	font-size: 13px;
 	font-style: italic;
 	text-shadow: none;
@@ -2216,7 +2219,7 @@ a.frm_show_comment:hover {
 
 .users_page_roles table.widefat.members-roles-select td.column-cap strong,
 .users_page_role-new table.widefat.members-roles-select td.column-cap strong {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .users_page_roles ul.subsubsub,
@@ -2259,14 +2262,14 @@ a.frm_show_comment:hover {
 .users_page_role-new input[type=text]:focus,
 .post-php #members_access_error:focus,
 .post-new-php #members_access_error:focus {
-	border: 1px solid #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	border: 1px solid #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
 .users_page_roles .button-secondary,
 .users_page_role-new .button-secondary,
 .users_page_roles #members-add-new-cap,
 .users_page_role-new #members-add-new-cap {
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 	text-shadow: none !important;
 }
@@ -2504,7 +2507,7 @@ a.frm_show_comment:hover {
 }
 
 .widget-context .context-toggle {
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .widget-context .widget-context-header h3 {
@@ -2585,12 +2588,12 @@ a.frm_show_comment:hover {
 /* WP Document Revisions Support */
 
 .post-php.document .button-primary {
-	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
 .post-php.document .button-primary:hover {
-	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
 .post-php #attachment_caption,
@@ -2602,7 +2605,7 @@ a.frm_show_comment:hover {
 .post-php #attachment_caption:focus,
 .post-php #attachment_alt:focus,
 .post-php #attachment_content:focus {
-	border: 1px solid #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+	border: 1px solid #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
 .profile-php #document_revisions_feed_key th label {
@@ -2762,7 +2765,7 @@ input.regular-text {
 		position: absolute;
 		background: none;
 		background-color: #282c30;
-		font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+		font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace !important;
 		border-top: 1px solid #666;
 		border-bottom: 1px solid #222;
 	}
@@ -2796,7 +2799,7 @@ input.regular-text {
 	}
 
 	#wpadminbar #wp-admin-bar-site-name > a {
-		font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace;
+		font: [[FONT-WEIGHT-NORMAL]] 13px "[[FONT-FAMILY]]", monospace;
 		text-shadow: none;
 		color: #a8a8a8;
 		margin-top: 7px;
@@ -2808,7 +2811,7 @@ input.regular-text {
 
 	#wp-admin-bar-site-name.hover a,
 	#wp-admin-bar-site-name:hover a {
-		color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
+		color: #[[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 		background: none !important;
 	}
 
@@ -2845,7 +2848,7 @@ input.regular-text {
 	#wpadminbar .quicklinks .ab-top-secondary > li > a,
 	#wpadminbar .quicklinks .ab-top-secondary > li > .ab-empty-item,
 	#wpadminbar .ab-label {
-		font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 0px "[[DERMATOS_FONT_FAMILY]]", monospace;
+		font: [[FONT-WEIGHT-NORMAL]] 0px "[[FONT-FAMILY]]", monospace;
 		margin-left: 0;
 	}
 
@@ -2858,7 +2861,7 @@ input.regular-text {
 	#wpadminbar .quicklinks .menupop ul li a strong,
 	#wpadminbar .quicklinks .menupop.hover ul li a,
 	#wpadminbar.nojs .quicklinks .menupop:hover ul li a {
-		color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+		color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 	}
 
 	#wpadminbar #wp-admin-bar-site-name > a {

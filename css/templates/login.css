@@ -2,7 +2,7 @@
 
 /* Fonts */
 
-@import "https://fonts.googleapis.com/css?family=[[DERMATOS_FONT_FAMILY_ESCAPED]]:[[DERMATOS_FONT_WEIGHT_NORMAL]],[[DERMATOS_FONT_WEIGHT_BOLD]],[[DERMATOS_FONT_WEIGHT_EXTRA_BOLD]]|Roboto+Mono:300,400,700";
+@import "https://fonts.googleapis.com/css?family=[[FONT-FAMILY-ESCAPED]]:[[FONT-WEIGHT-NORMAL]],[[FONT-WEIGHT-BOLD]],[[FONT-WEIGHT-EXTRA-BOLD]]|Roboto+Mono:300,400,700";
 
 /* Basic */
 
@@ -11,13 +11,13 @@
 }
 
 html {
-	background: #fff url(images/background.jpg) center center fixed;
+	background: #111 url(images/background.jpg) center center fixed;
 	background-size: cover;
 }
 
 body {
 	background: none;
-	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace !important;
 }
 
 form {
@@ -39,7 +39,7 @@ input[type=password],
 .ie7 .login form .input {
 	margin-top: 8px !important;
 	padding: 6px !important;
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-family: "[[FONT-FAMILY]]", monospace;
 	font-size: 13px !important;
 	box-shadow: none !important;
 }
@@ -54,7 +54,7 @@ input[type=submit] {
 	border-radius: 0 !important;
 	box-shadow: none !important;
 	font-size: 13px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 	text-shadow: none !important;
 }
 
@@ -98,8 +98,8 @@ p.submit {
 #backtoblog,
 #login_error,
 #login .message {
-	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 	text-align: center !important;
 }
 
@@ -108,7 +108,7 @@ p.submit {
 	margin-bottom: -20px !important;
 	color: #fff !important;
 	font-size: 15px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 #login .message br {
@@ -129,8 +129,8 @@ p.submit {
 	margin: 0;
 	color: #fff !important;
 	border-bottom: 1px dotted #bbb;
-	font-size: 12px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-size: 11px !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 	text-transform: uppercase !important;
 	letter-spacing: 1px;
 }
@@ -146,7 +146,7 @@ p.submit {
 	margin-top: -40px;
 	color: #c00 !important;
 	font-size: 12px !important;
-	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 #login_error a {
