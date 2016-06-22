@@ -1,20 +1,10 @@
 /* DERMATOS LOGIN STYLES */
 
-/* Load fonts first */
+/* Fonts */
 
-@font-face {
-	font-family: "Inconsolata";
-	src: url("fonts/inconsolata.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
+@import "https://fonts.googleapis.com/css?family=[[DERMATOS_FONT_FAMILY_ESCAPED]]:[[DERMATOS_FONT_WEIGHT_NORMAL]],[[DERMATOS_FONT_WEIGHT_BOLD]],[[DERMATOS_FONT_WEIGHT_EXTRA_BOLD]]|Roboto+Mono:300,400,700";
 
-@font-face {
-	font-family: "Inconsolata";
-	src: url("fonts/inconsolata-bold.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-}
+/* Basic */
 
 * {
 	margin: 0; padding: 0;
@@ -27,7 +17,7 @@ html {
 
 body {
 	background: none;
-	font: normal 13px/28px "Inconsolata" !important;
+	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 }
 
 form {
@@ -49,18 +39,22 @@ input[type=password],
 .ie7 .login form .input {
 	margin-top: 8px !important;
 	padding: 6px !important;
-	font-family: "Inconsolata", monospace;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
 	font-size: 13px !important;
+	box-shadow: none !important;
 }
 
 input[type=submit] {
 	background-color: #f45246 !important;
 	color: #fff !important;
-	font-size: 13px !important;
 	min-width: 100px !important;
+	height: 30px !important;
+	line-height: 30px !important;
 	border: none !important;
 	border-radius: 0 !important;
 	box-shadow: none !important;
+	font-size: 13px !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
 	text-shadow: none !important;
 }
 
@@ -68,7 +62,10 @@ input[type=submit]:hover {
 	background-color: #18b3dc !important;
 }
 
-p.forgetmenot,
+p.forgetmenot {
+	margin-top: 25px !important;
+}
+
 p.submit {
 	margin-top: 20px !important;
 }
@@ -84,9 +81,9 @@ p.submit {
 
 #login {
 	padding: 20px !important;
-	width: 480px !important;
+	width: 400px !important;
 	max-width: 85% !important;
-	margin-top: 5% !important;
+	margin-top: 2.5% !important;
 }
 
 #login h1 {
@@ -97,26 +94,21 @@ p.submit {
 	width: 100% !important;
 }
 
+#nav,
 #backtoblog,
 #login_error,
 #login .message {
-	font-family: "Inconsolata", monospace;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 	text-align: center !important;
-}
-
-#backtoblog,
-#login_error {
-	font-size: 14px !important;
 }
 
 #login .message {
 	margin-top: 30px !important;
 	margin-bottom: -20px !important;
-	padding: 0 !important;
-	color: #000 !important;
-	font-family: "Inconsolata", monospace;
-	font-size: 14px !important;
-	font-weight: normal !important;
+	color: #fff !important;
+	font-size: 15px !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 #login .message br {
@@ -135,24 +127,26 @@ p.submit {
 #nav a,
 #backtoblog a {
 	margin: 0;
-	color: #000 !important;
-	border-bottom: 1px dotted #555;
-	font-family: "Inconsolata", monospace;
-	font-size: 13px !important;
+	color: #fff !important;
+	border-bottom: 1px dotted #bbb;
+	font-size: 12px !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 	text-transform: uppercase !important;
+	letter-spacing: 1px;
 }
 
 #login_error,
 .message {
-	border: none !important;
 	background: none !important;
+	border: none !important;
 	box-shadow: none !important;
 }
 
 #login_error {
 	margin-top: -40px;
 	color: #c00 !important;
-	font-weight: normal !important;
+	font-size: 12px !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 #login_error a {

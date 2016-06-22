@@ -2,19 +2,7 @@
 
 /* Fonts */
 
-@font-face {
-	font-family: "Inconsolata";
-	src: url("fonts/inconsolata.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Inconsolata";
-	src: url("fonts/inconsolata-bold.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-}
+@import "https://fonts.googleapis.com/css?family=[[DERMATOS_FONT_FAMILY_ESCAPED]]:[[DERMATOS_FONT_WEIGHT_NORMAL]],[[DERMATOS_FONT_WEIGHT_BOLD]],[[DERMATOS_FONT_WEIGHT_EXTRA_BOLD]]|Roboto+Mono:300,400,700";
 
 /* Basic */
 
@@ -23,7 +11,7 @@ html.wp-toolbar {
 	background-color: #f8f8f8;
 }
 
-body.wp-admin {
+.wp-admin {
 	min-width: 0;
 }
 
@@ -41,6 +29,7 @@ input[type=search],
 input[type=tel],
 input[type=url] {
 	padding: 5px !important;
+	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 	border: 1px solid #d4d4d4 !important;
 	box-shadow: none !important;
 	box-sizing: border-box;
@@ -56,11 +45,16 @@ input[type=number]:focus,
 input[type=search]:focus,
 input[type=tel]:focus,
 input[type=url]:focus {
-	border: 1px solid #18b3dc !important;
+	border: 1px solid #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 }
 
 table td pre {
 	white-space: pre-wrap;
+}
+
+pre, code, kbd {
+	font-family: "Roboto Mono", monospace !important;
+	font-size: 11px !important;
 }
 
 /* WP Adminbar */
@@ -69,7 +63,7 @@ table td pre {
 	height: 60px;
 	position: absolute;
 	background-color: #32373c;
-	font: 400 12px/28px "Inconsolata", monospace !important;
+	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 	border-bottom: 2px solid #666;
 	min-width: 0;
 }
@@ -117,7 +111,7 @@ table td pre {
 }
 
 #wpadminbar #wp-admin-bar-site-name > a {
-	font: 700 16px "Inconsolata", monospace;
+	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 16px "[[DERMATOS_FONT_FAMILY]]", monospace;
 	text-shadow: none;
 	color: #a8a8a8;
 	margin-left: 8px;
@@ -183,7 +177,7 @@ table td pre {
 #wpadminbar .quicklinks .menupop ul li a strong,
 #wpadminbar .quicklinks .menupop.hover ul li a,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
-	color: #18b3dc;
+	color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 }
 
 #wp-admin-bar-my-sites-list .ab-item,
@@ -199,14 +193,18 @@ table td pre {
 #wp-admin-bar-user-actions .ab-item:hover {
 }
 
+#wpadminbar .ab-item .username {
+	text-transform: uppercase; 
+}
+
 /* Main Elements */
 
 h1,
 h2,
 h3,
 h4 {
-	font-family: "Inconsolata", monospace;
-	font-weight: 400 !important;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 	text-transform: capitalize !important;
 }
 
@@ -223,7 +221,7 @@ h3 {
 }
 
 h4 {
-	font-size: 12px !important;
+	font-size: 13px !important;
 }
 
 body,
@@ -231,7 +229,7 @@ th,
 td,
 td a,
 label {
-	font-size: 12px !important;
+	font-size: 13px !important;
 }
 
 select,
@@ -244,28 +242,28 @@ input[type=number],
 input[type=search],
 input[type=tel],
 input[type=url] {
-	font-family: "Inconsolata", monospace;
-	font-size: 12px !important;
-	font-weight: 400;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-size: 13px !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]];
 }
 
-body.wp-admin {
-	font-family: "Inconsolata", monospace !important;
-	font-weight: 400;
+.wp-admin {
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 	line-height: 1.6em;
 }
 
 h2 .nav-tab,
 .wrap h2,
 .subtitle {
-	font-family: "Inconsolata", monospace;
-	font-weight: 400;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 	margin: 15px 0 10px 0;
 }
 
 h2.nav-tab-wrapper a {
 	margin: 15px 0 30px 0;
-	font-weight: 400;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 h2.hndle.ui-sortable-handle {
@@ -274,8 +272,8 @@ h2.hndle.ui-sortable-handle {
 
 strong,
 b {
-	font-family: "Inconsolata", monospace;
-	font-weight: 700;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
 }
 
 #adminmenu a.wp-has-submenu,
@@ -294,7 +292,11 @@ b {
 .plugin-version-author-uri a,
 .row-title,
 .tagcloud a {
-	font-size: 12px !important;
+	font-size: 13px !important;
+}
+
+.row-title {
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]];
 }
 
 #message ul {
@@ -307,11 +309,11 @@ b {
 
 #adminmenu a.menu-top,
 #adminmenu .wp-submenu-head {
-	font-weight: 400;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 #wpadminbar * {
-	font: 400 12px/28px "Inconsolata", monospace;
+	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace;
 }
 
 a.rsswidget,
@@ -333,8 +335,8 @@ div.sidebar-name h3,
 .tool-box .title,
 table.widefat th,
 .search {
-	font-family: "Inconsolata", monospace;
-	font-weight: 400;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 #dashboard-widgets .activity-block h3 {
@@ -348,8 +350,8 @@ td strong {
 
 #titlediv #title-prompt-text {
 	margin-top: -6px !important;
-	font-family: "Inconsolata", monospace;
-	font-weight: 700;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]];
 }
 
 #titlediv #title {
@@ -412,7 +414,7 @@ a,
 #media-items a.delete-permanently,
 .plugins a.delete,
 .ui-tabs-nav a {
-	color: #18b3dc;
+	color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 }
 
 table.widefat th a,
@@ -472,16 +474,16 @@ table.widefat th a:hover {
 .folded #adminmenu li.wp-has-current-submenu,
 .folded #adminmenu li.current.menu-top {
 	background: none;
-	background-color: #18b3dc;
-	border-top-color: #18b3dc;
-	border-bottom-color: #18b3dc;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	border-top-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
+	border-bottom-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 }
 
 #adminmenu li.menu-top:hover,
 #adminmenu li.opensub > a.menu-top,
 #adminmenu li > a.menu-top:focus {
 	background-color: #32373c;
-	color: #f45246;
+	color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
 	text-shadow: none;
 }
 
@@ -514,7 +516,7 @@ table.widefat th a:hover {
 
 #adminmenu .wp-submenu a:hover,
 #adminmenu .wp-submenu a:focus {
-	background-color: #18b3dc;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 	color: #fff;
 }
 
@@ -529,6 +531,8 @@ table.widefat th a:hover {
 #adminmenu li.wp-menu-separator {
 	background-color: #282c30;
 	border-color: #000;
+	height: 2px !important;
+	margin: 0 !important;
 }
 
 #adminmenu div.separator {
@@ -549,12 +553,12 @@ table.widefat th a:hover {
 }
 
 #adminmenu div.wp-menu-name {
-	padding: 20px 20px 20px 44px;
+	padding: 15px 20px 15px 44px;
 }
 
 div.wp-menu-image {
 	position: relative;
-	top: 14px;
+	top: 8px;
 	left: 10px;
 }
 
@@ -592,7 +596,7 @@ div.wp-menu-image {
 .awaiting-mod,
 .update-plugins,
 .processing_count {
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 /* Content */
@@ -642,12 +646,12 @@ h3.dashboard-widget-title small {
 table.widefat td {
 	padding: 10px 7px 8px;
 	vertical-align: top;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 table.widefat thead .check-column,
 table.widefat tfoot .check-column {
-	padding: 15px 0 0;
+	padding: 15px 0 0 4px;
 }
 
 table.widefat tbody th.check-column {
@@ -718,7 +722,7 @@ table.widefat.striped tbody tr:nth-child(odd) {
 	padding: 15px 18px;
 	line-height: 1;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 .metabox-holder h2.hndle {
@@ -731,14 +735,14 @@ table.widefat.striped tbody tr:nth-child(odd) {
 }
 
 #imgedit-panel-6680 * {
-	font-family: "Inconsolata", monospace !important;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 }
 
 p.search-box {
 	margin-top: 10px;
 }
 
-body.edit-tags-php p.search-box {
+.edit-tags-php p.search-box {
 	margin-top: 0;
 }
 
@@ -772,11 +776,11 @@ h3.dashboard-widget-title small,
 .postbox h3,
 .stuffbox h2,
 .stuffbox h3,
-table.widefat thead tr th,
-table.widefat tfoot tr th,
 .sidebar-name,
 .manage-column.check-column,
-.menu-item-handle {
+.menu-item-handle,
+table.widefat thead tr th,
+table.widefat tfoot tr th {
 	background: none;
 	background-color: #32373c;
 }
@@ -998,7 +1002,7 @@ table.widefat tfoot tr th,
 .widget-title h3 {
 	padding-left: 10px !important;
 	color: #e8e8e8 !important;
-	font-size: 12px !important;
+	font-size: 13px !important;
 }
 
 .widget-title h3 span {
@@ -1062,7 +1066,7 @@ table.widefat tfoot tr th,
 }
 
 #screen-meta-links a {
-	color: #18b3dc;
+	color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 }
 
 #screen-meta-links .show-settings {
@@ -1090,6 +1094,10 @@ table.widefat tfoot tr th,
 .menu-item-handle,
 .menu-item-settings {
 	box-shadow: none;
+}
+
+.menu-item-handle .item-title {
+	font-weight: 400 !important;
 }
 
 #nav-menu-header {
@@ -1126,8 +1134,8 @@ table.widefat tfoot tr th,
 	background-color: #32373c;
 	border: none;
 	font-size: 14px;
-	font-family: "Inconsolata", monospace;
-	font-weight: 400;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 	text-shadow: none;
 }
 
@@ -1154,7 +1162,7 @@ table.widefat tfoot tr th,
 
 .js .postbox .handlediv.button-link {
 	margin-bottom: -40px !important;
-	color: #888 !important;
+	color: #808080 !important;
 }
 
 .accordion-section {
@@ -1181,7 +1189,7 @@ form h2, form h3 {
 	margin-top: 20px !important;
 	padding-bottom: 8px;
 	border-bottom: 1px dotted #d4d4d4;
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 form h3 {
@@ -1199,14 +1207,37 @@ form .submit .button.button-primary {
 	float: right !important;
 }
 
+legend {
+	font-size: 15px !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+}
+
 .form-table th {
 	width: 25% !important;
-	padding-top: 15px; !important;
+	padding: 15px 10px 15px 0 !important;
+}
+
+#adminmenu .wp-submenu li.current,
+#adminmenu .wp-submenu li.current a,
+#adminmenu .wp-submenu li.current a:hover,
+#dashboard_right_now .versions .b,
+#ed_reply_toolbar #ed_reply_strong,
+#pass-strength-result.short,
+#pass-strength-result.strong,
+#post-status-display,
+#post-visibility-display,
+.edit-comment-author,
+.feature-filter .feature-name,
+.item-controls .item-order a,
+.media-item .percent,
+.nav-tab,
+.plugins .name {
+	font-weight: 400 !important;
 }
 
 form .form-table th,
 #custom-background .form-table th {
-	font: 700 12px/20px "Inconsolata", monospace !important;
+	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px/20px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 	text-align: right !important;
 }
 
@@ -1217,12 +1248,12 @@ form .form-table th.th-full,
 
 form .form-table th.th-full label,
 #custom-background .form-table th.th-full label {
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 form .form-table td,
 #custom-background .form-table td {
-	font-size: 12px !important;
+	font-size: 13px !important;
 	font-style: normal !important;
 }
 
@@ -1238,7 +1269,7 @@ form .form-table td br,
 
 form .form-table td label,
 #custom-background .form-table td label {
-	font-size: 12px !important;
+	font-size: 13px !important;
 }
 
 form .form-table td textarea,
@@ -1247,7 +1278,7 @@ form .form-table td textarea,
 
 form .form-table th[scope=row] + td,
 #custom-background .form-table th[scope=row] + td {
-	padding-top: 12px !important;
+	padding-top: 13px !important;
 }
 
 form .form-table th[scope=row] label,
@@ -1260,9 +1291,12 @@ form .form-table th[scope=row] label,
 	padding-top: 0 !important;
 }
 
-.options-general-php .form-table fieldset {
-	padding-top: 0 !important;
-	margin-top: -5px !important;
+.options-general-php .form-table td fieldset {
+	margin-top: -8px !important;
+}
+
+.options-general-php .form-table tr:nth-of-type(6) td fieldset {
+	margin-top: 0 !important;
 }
 
 .options-reading-php .form-table label {
@@ -1283,33 +1317,101 @@ form .form-table th[scope=row] label,
 	padding-top: 15px !important;
 }
 
+.options-discussion-php .form-table th[scope=row] {
+	padding-top: 18px !important;
+}
+
+.options-discussion-php .form-table:nth-of-type(1) tr:nth-of-type(6) th[scope=row] {
+	padding-top: 12px !important;
+}
+
+.options-discussion-php table.form-table:nth-of-type(2) {
+}
+
+.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(1) th {
+	padding-top: 7px !important;
+}
+
+.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(3) fieldset {
+	margin-top: -5px !important;
+}
+
+.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(4) label,
+.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(5) label {
+	display: inline-block !important;
+	padding-top: 10px !important;
+}
+
 .options-discussion-php .form-table label {
 	padding-top: 0 !important;
 	margin-top: -5px !important;
 }
 
-.options-permalink-php .form-table label {
-	padding-top: 10px !important;
+.options-media-php .form-table th[scope=row] {
+	padding-top: 18px !important;
+}
+
+.options-media-php .form-table tr:first-child th[scope=row] {
+	padding-top: 22px !important;
+}
+
+.options-media-php .form-table:nth-of-type(1) th {
+	padding-top: 18px !important;
+}
+
+.options-media-php .form-table:nth-of-type(2) th[scope=row] {
+	padding-top: 22px !important;
 }
 
 .options-media-php .form-table label {
 	padding-top: 0 !important;
 }
 
+.options-permalink-php .form-table label {
+	padding-top: 10px !important;
+}
+
+.options-permalink-php .form-table td code {
+	display: inline-block !important;
+	margin-top: 5px !important;
+}
+
 .import-php table.widefat {
 	border: 1px solid #d4d4d4 !important;
+}
+
+.user-edit-php .form-table th label,
+.profile-php .form-table th label {
+	padding-top: 5px !important;
+}
+
+.user-edit-php .form-table td fieldset,
+.profile-php .form-table td fieldset {
+	margin-top: -7px !important;
+}
+
+.user-edit-php .form-table td button#destroy-sessions {
+	margin-top: -10px !important;
+}
+
+.user-edit-php .form-table td ul {
+	margin-top: 5px !important;
+}
+
+.user-new-php .form-table td label {
+	padding-top: 10px;
 }
 
 .wrap.custom form .submit {
 	margin-bottom: 0 !important;
 }
 
-form .form-table th[scope=row] + td textarea,
 #custom-background .form-table th[scope=row] + td textarea,
 #custom-background .form-table th[scope=row] select,
 #custom-background .form-table th[scope=row] + td input[type=text],
 .form-table th[scope=row] + td select,
 .form-table th[scope=row] + td input[type=text],
+form .form-table th[scope=row] + td textarea {
 	margin-top: 6px !important;
 }
 
@@ -1337,7 +1439,7 @@ form .form-table tr.show-admin-bar td label {
 form.validate {
 }
 
-body.edit-tags-php form.validate {
+.edit-tags-php form.validate {
 	padding: 0 !important;
 }
 
@@ -1355,7 +1457,7 @@ ul.subsubsub {
 }
 
 .inactive .plugin-title strong {
-	font-weight: 400;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 #your-profile #rich_editing,
@@ -1375,18 +1477,20 @@ ul.subsubsub {
 	color: #fff;
 	text-decoration: none;
 	background: none;
-	background-color: #18b3dc;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 	border: none;
 	border-color: none !important;
 	border-radius: 0;
 	box-shadow: none !important;
 	text-shadow: none;
 	line-height: 2.0 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
+
 }
 
 .wp-core-ui .button-primary,
 .button-highlighted {
-	background-color: #f45246;
+	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]];
 	color: #fff !important;
 	border: none !important;
 	border-radius: 0 !important;
@@ -1396,14 +1500,14 @@ ul.subsubsub {
 
 .wp-core-ui .button-primary:hover,
 .button-highlighted:hover {
-	background-color: #f45246 !important;
+	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
 }
 
 .wp-core-ui .button-secondary {
 	color: #fff !important;
 	text-decoration: none;
 	background: none;
-	background-color: #18b3dc !important;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
@@ -1412,7 +1516,7 @@ ul.subsubsub {
 }
 
 .wp-core-ui .button-secondary:hover {
-	background-color: #18b3dc !important;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 	color: #fff !important;
 }
 
@@ -1423,7 +1527,7 @@ ul.subsubsub {
 .wp-core-ui .button:disabled,
 .wp-core-ui .button[disabled] {
 	background-color: #f8f8f8 !important;
-	color: #888 !important;
+	color: #808080 !important;
 }
 
 .destroy-sessions .button,
@@ -1486,7 +1590,7 @@ ul.subsubsub {
 }
 
 .wp-core-ui .button:hover {
-	background-color: #18b3dc !important;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 	color: #fff !important;
 }
 
@@ -1514,6 +1618,11 @@ p.description, span.description {
 	display: block;
 	margin-top: 4px;
 	margin-bottom: 8px;
+	color: #808080;
+}
+
+p.description a, span.description a {
+	color: #808080;
 }
 
 textarea + br + span.description {
@@ -1527,11 +1636,11 @@ label span.description {
 }
 
 .wp-core-ui .button-primary {
-	background-color: #f45246;
+	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]];
 }
 
 .wp-core-ui .button-primary:hover {
-	background-color: #f45246;
+	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]];
 }
 
 .button-highlighted,
@@ -1543,28 +1652,32 @@ label span.description {
 	padding: 2px 18px !important;
 }
 
-body.update-core-php form.upgrade {
+.update-core-php form.upgrade {
 	margin-bottom: 30px !important;
 	padding: 0 !important;
 	background-color: #f8f8f8 !important;
 }
 
-body.update-core-php .button,
-body.upload-php .media-button,
-body.post-php .media-button,
+.update-core-php .button,
+.upload-php .media-button,
+.post-php .media-button,
 .install-now {
 	padding: 0px 10px !important;
 	display: inline-block !important;
 	color: #fff !important;
 }
 
-body.update-core-php form.upgrade a.button {
+.upload-php .thumbnail .filename {
+	font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
+}
+
+.update-core-php form.upgrade a.button {
 	padding: 4px 10px !important;
 	line-height: 1.5 !important;
 }
 
-body.update-core-php table.widefat thead td input[type="checkbox"],
-body.update-core-php table.widefat tfoot td input[type="checkbox"] {
+.update-core-php table.widefat thead td input[type="checkbox"],
+.update-core-php table.widefat tfoot td input[type="checkbox"] {
 	margin-top: -4px !important;
 }
 
@@ -1657,7 +1770,7 @@ a#choose-from-library-link {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
 	border-bottom: 1px dotted #d4d4d4;
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 .media-upload-form {
@@ -1675,9 +1788,9 @@ a#choose-from-library-link {
 
 .media-frame-title h1 {
 	padding-bottom: 20px;
-	font-family: "Inconsolata", monospace;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
 	font-size: 24px !important;
-	font-weight: 400;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 .media-frame-router {
@@ -1688,11 +1801,11 @@ a#choose-from-library-link {
 
 .media-toolbar select,
 .media-toolbar button {
-	font-family: "Inconsolata", monospace !important;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 }
 
 .upload-ui .button {
-	font-family: "Inconsolata", monospace !important;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 }
 
 .media-toolbar select#media-attachment-filters {
@@ -1717,13 +1830,23 @@ a#choose-from-library-link {
 .edit-attachment-frame .attachment-info .settings,
 .edit-attachment-frame .attachment-info .actions,
 .edit-attachment-frame .attachment-actions .button {
-	font-family: "Inconsolata", monospace !important;
+	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 	line-height: 1.75 !important;
+}
+
+.edit-attachment-frame .attachment-info strong {
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
+}
+
+.attachment-details .setting span,
+.compat-item label span,
+.media-sidebar .setting span {
+	font: [[DERMATOS_FONT_WEIGHT_BOLD]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 }
 
 .imgedit-group,
 .imgedit-submit .button {
-	font-family: "Inconsolata", monospace !important;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 }
 
 .post-type-attachment #publishing-action {
@@ -1743,46 +1866,46 @@ table.media .column-title .filename {
 
 /* Specific Page Styles */
 
-body.appearance_page_custom-header .wrap {
+.appearance_page_custom-header .wrap {
 	background-color: #f0f0f0 !important;
 }
 
-body.appearance_page_custom-header .wrap .form-table tr {
+.appearance_page_custom-header .wrap .form-table tr {
 	padding-left: 20px !important;
 }
 
-body.appearance_page_custom-header .wrap .form-table th[scope=row] {
+.appearance_page_custom-header .wrap .form-table th[scope=row] {
 	text-align: right !important;
 }
 
-body.appearance_page_custom-header .wrap .form-table td #upload-form {
+.appearance_page_custom-header .wrap .form-table td #upload-form {
 	margin: 0 !important;
 	padding: 0 !important;
 }
 
-body.appearance_page_custom-header .wrap h2 {
+.appearance_page_custom-header .wrap h2 {
 	background-color: #f8f8f8 !important;
 	padding-bottom: 20px !important;
 }
 
-body.appearance_page_custom-header .wrap h3 {
+.appearance_page_custom-header .wrap h3 {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
 	border-bottom: 1px dotted #d4d4d4;
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 .wrap .add-new-h2,
 .page-title-action {
 	line-height: 1.4 !important;
 	display: inline-block;
-	background-color: #18b3dc !important;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 	color: #fff !important;
 	padding: 4px 8px !important;
 	box-shadow: none !important;
 	border: none !important;
 	border-radius: none !important;
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_BOLD]] !important;
 }
 
 .wrap .add-new-h2,
@@ -1791,7 +1914,7 @@ body.appearance_page_custom-header .wrap h3 {
 .wrap .page-title-action,
 .wrap .page-title-action:active,
 .page-title-action:hover {
-	background-color: #18b3dc !important;
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 	border-radius: 0 !important;
 }
 
@@ -1818,12 +1941,12 @@ form#quick-press .submit {
 	border-top: none !important;
 }
 
-body.plugin-editor-php .alignright form,
-body.widgets-php .widget-liquid-right + form {
+.plugin-editor-php .alignright form,
+.widgets-php .widget-liquid-right + form {
 	background-color: #f8f8f8 !important;
 }
 
-body.widgets-php .sidebar-name h3 {
+.widgets-php .sidebar-name h3 {
 	padding-left: 5px !important;
 }
 
@@ -1833,12 +1956,12 @@ body.widgets-php .sidebar-name h3 {
 }
 
 h2 a.nav-tab {
-	font-size: 12px;
+	font-size: 13px;
 }
 
 #TB_ajaxWindowTitle {
 	font-size: 18px !important;
-	font-weight: 400 !important;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]] !important;
 }
 
 #gallery-settings .title, h3.media-title, h4.media-sub-title {
@@ -1911,8 +2034,8 @@ table.widefat.acf td.field_order {
 
 .acf-input-table span.sub-field-instructions {
 	color: #c8c8c8;
-	font-family: "Inconsolata", monospace;
-	font-size: 12px;
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-size: 13px;
 	font-style: italic;
 	text-shadow: none;
 }
@@ -1923,7 +2046,7 @@ table.acf_input tbody tr td.label label {
 }
 
 .acf-field select.location-rule-operator {
-    width: auto !important;
+	width: auto !important;
 }
 
 .acf-field-object.open > .handle {
@@ -1937,7 +2060,7 @@ table.acf_input tbody tr td.label label {
 }
 
 .acf-url input[type=url] {
-    padding-left: 25px !important;
+	padding-left: 25px !important;
 }
 
 .acf-postbox > .hndle .acf-hndle-cog {
@@ -2085,65 +2208,65 @@ a.frm_show_comment:hover {
 
 /* Members Support */
 
-body.users_page_roles table.widefat.members-roles-select td.column-cap,
-body.users_page_role-new table.widefat.members-roles-select td.column-cap {
+.users_page_roles table.widefat.members-roles-select td.column-cap,
+.users_page_role-new table.widefat.members-roles-select td.column-cap {
 	font-size: 11px !important;
 	text-transform: uppercase;
 }
 
-body.users_page_roles table.widefat.members-roles-select td.column-cap strong,
-body.users_page_role-new table.widefat.members-roles-select td.column-cap strong {
-	font-weight: 400;
+.users_page_roles table.widefat.members-roles-select td.column-cap strong,
+.users_page_role-new table.widefat.members-roles-select td.column-cap strong {
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
-body.users_page_roles ul.subsubsub,
-body.users_page_role-new ul.subsubsub {
+.users_page_roles ul.subsubsub,
+.users_page_role-new ul.subsubsub {
 	padding-left: 0 !important;
 }
 
-body.users_page_roles form,
-body.users_page_role-new form {
+.users_page_roles form,
+.users_page_role-new form {
 	padding: 0 !important;
 	background-color: #f8f8f8 !important;
 	margin-top: -10px !important;
 }
 
-body.users_page_roles form#roles,
-body.users_page_role-new form#roles {
+.users_page_roles form#roles,
+.users_page_role-new form#roles {
 	padding: 0 20px 10px !important;
 	background-color: #f0f0f0 !important;
 	margin-top: -10px !important;
 }
 
-body.users_page_roles #titlewrap input[type=text],
-body.users_page_role-new #titlewrap input[type=text] {
+.users_page_roles #titlewrap input[type=text],
+.users_page_role-new #titlewrap input[type=text] {
 	height: 28px !important;
 }
 
-body.users_page_roles #publish.button-primary,
-body.users_page_role-new #publish.button-primary {
+.users_page_roles #publish.button-primary,
+.users_page_role-new #publish.button-primary {
 	margin-top: 10px !important;
 }
 
-body.users_page_roles input[type=text],
-body.users_page_role-new input[type=text],
-body.post-php #members_access_error,
-body.post-new-php #members_access_error {
+.users_page_roles input[type=text],
+.users_page_role-new input[type=text],
+.post-php #members_access_error,
+.post-new-php #members_access_error {
 	border: 1px solid #d4d4d4 !important;
 }
 
-body.users_page_roles input[type=text]:focus,
-body.users_page_role-new input[type=text]:focus,
-body.post-php #members_access_error:focus,
-body.post-new-php #members_access_error:focus {
-	border: 1px solid #18b3dc !important;
+.users_page_roles input[type=text]:focus,
+.users_page_role-new input[type=text]:focus,
+.post-php #members_access_error:focus,
+.post-new-php #members_access_error:focus {
+	border: 1px solid #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 }
 
-body.users_page_roles .button-secondary,
-body.users_page_role-new .button-secondary,
-body.users_page_roles #members-add-new-cap,
-body.users_page_role-new #members-add-new-cap {
-	background-color: #18b3dc !important;
+.users_page_roles .button-secondary,
+.users_page_role-new .button-secondary,
+.users_page_roles #members-add-new-cap,
+.users_page_role-new #members-add-new-cap {
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 	color: #fff !important;
 	text-shadow: none !important;
 }
@@ -2165,6 +2288,7 @@ body.users_page_role-new #members-add-new-cap {
 }
 
 /* Ninja Forms Support */
+
 /* Too many changes needed, wait for them to fix things in v3 */
 
 /* P3 Plugin Profiler Support */
@@ -2222,7 +2346,7 @@ body.users_page_role-new #members-add-new-cap {
 
 .pmpro_admin table.widefat td a.edit,
 .pmpro_admin table.widefat td a.delete {
-	font-size: 12px !important;
+	font-size: 13px !important;
 }
 
 /* Revolution Slider Support */
@@ -2238,7 +2362,7 @@ body.users_page_role-new #members-add-new-cap {
 }
 
 #simple-local-avatar-photo img {
-	padding-top: 15px;
+	padding-top: 5px;
 }
 
 #simple-local-avatar.standard-text {
@@ -2380,7 +2504,7 @@ body.users_page_role-new #members-add-new-cap {
 }
 
 .widget-context .context-toggle {
-	font-weight: 400;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
 }
 
 .widget-context .widget-context-header h3 {
@@ -2417,6 +2541,15 @@ body.users_page_role-new #members-add-new-cap {
 	margin-top: 2px !important;
 }
 
+.woocommerce nav.woo-nav-tab-wrapper {
+	border-bottom: none !important;
+}
+
+.woocommerce .nav-tab {
+	margin-left: 0 !important;
+	border: 1px solid #d4d4d4 !important;
+}
+
 .forminp .wc_tax_rates.widefat th,
 .forminp .shippingrows.widefat th,
 .wc_shipping.widefat th {
@@ -2445,43 +2578,35 @@ body.users_page_role-new #members-add-new-cap {
 	vertical-align: top !important;
 }
 
-#posts-filter wp-list-table.widefat.fixed posts #is_in_stock {
-	min-width: 100px !important;
-}
-
-#posts-filter wp-list-table.widefat.fixed posts #groups {
-	min-width: 100px !important;
-}
-
-#posts-filter wp-list-table.widefat.fixed posts #woosidebars_enable {
-	min-width: 100px !important;
-}
-
 .wc_emails.widefat th {
 	text-align: left !important;
 }
 
 /* WP Document Revisions Support */
 
-body.post-php.document .button-primary {
-	background-color: #f45246 !important;
+.post-php.document .button-primary {
+	background-color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
 	color: #fff !important;
 }
 
-body.post-php.document .button-primary:hover {
-	background-color: #18b3dc !important;
+.post-php.document .button-primary:hover {
+	background-color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
 }
 
-body.post-php #attachment_caption,
-body.post-php #attachment_alt,
-body.post-php #attachment_content {
+.post-php #attachment_caption,
+.post-php #attachment_alt,
+.post-php #attachment_content {
 	border: 1px solid #d4d4d4 !important;
 }
 
-body.post-php #attachment_caption:focus,
-body.post-php #attachment_alt:focus,
-body.post-php #attachment_content:focus {
-	border: 1px solid #18b3dc !important;
+.post-php #attachment_caption:focus,
+.post-php #attachment_alt:focus,
+.post-php #attachment_content:focus {
+	border: 1px solid #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]] !important;
+}
+
+.profile-php #document_revisions_feed_key th label {
+	padding-top: 20px !important;
 }
 
 /* WP Migrate DB Support */
@@ -2494,17 +2619,17 @@ body.post-php #attachment_content:focus {
 	display: none !important;
 }
 
-body.mp6 .wpmdb h2.nav-tab-wrapper {
+.mp6 .wpmdb h2.nav-tab-wrapper {
 	width: 100%;
 	padding: 0;
 }
 
-body.mp6 .wrap h2 {
+.mp6 .wrap h2 {
 	float: none;
 	clear: both;
 }
 
-body.mp6 .wpmdb .help-tab h3 {
+.mp6 .wpmdb .help-tab h3 {
 	clear: both;
 	text-align: left;
 }
@@ -2516,7 +2641,7 @@ input.regular-text {
 	border: 1px solid #d4d4d4;
 	box-sizing: border-box;
 	color: #333;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 /* Yoast SEO Support */
@@ -2637,7 +2762,7 @@ input.regular-text {
 		position: absolute;
 		background: none;
 		background-color: #282c30;
-		font: 400 12px/28px "Inconsolata", monospace !important;
+		font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px/28px "[[DERMATOS_FONT_FAMILY]]", monospace !important;
 		border-top: 1px solid #666;
 		border-bottom: 1px solid #222;
 	}
@@ -2671,7 +2796,7 @@ input.regular-text {
 	}
 
 	#wpadminbar #wp-admin-bar-site-name > a {
-		font: 400 12px "Inconsolata", monospace;
+		font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 13px "[[DERMATOS_FONT_FAMILY]]", monospace;
 		text-shadow: none;
 		color: #a8a8a8;
 		margin-top: 7px;
@@ -2683,7 +2808,7 @@ input.regular-text {
 
 	#wp-admin-bar-site-name.hover a,
 	#wp-admin-bar-site-name:hover a {
-		color: #f45246 !important;
+		color: #[[DERMATOS_PRIMARY_HIGHLIGHT_COLOUR]] !important;
 		background: none !important;
 	}
 
@@ -2720,7 +2845,7 @@ input.regular-text {
 	#wpadminbar .quicklinks .ab-top-secondary > li > a,
 	#wpadminbar .quicklinks .ab-top-secondary > li > .ab-empty-item,
 	#wpadminbar .ab-label {
-		font: 400 0px "Inconsolata", monospace;
+		font: [[DERMATOS_FONT_WEIGHT_NORMAL]] 0px "[[DERMATOS_FONT_FAMILY]]", monospace;
 		margin-left: 0;
 	}
 
@@ -2733,7 +2858,7 @@ input.regular-text {
 	#wpadminbar .quicklinks .menupop ul li a strong,
 	#wpadminbar .quicklinks .menupop.hover ul li a,
 	#wpadminbar.nojs .quicklinks .menupop:hover ul li a {
-		color: #18b3dc;
+		color: #[[DERMATOS_SECONDARY_HIGHLIGHT_COLOUR]];
 	}
 
 	#wpadminbar #wp-admin-bar-site-name > a {

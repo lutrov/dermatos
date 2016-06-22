@@ -1,0 +1,14 @@
+/* DERMATOS PUBLIC STYLES */
+
+@import "https://fonts.googleapis.com/css?family=[[DERMATOS_FONT_FAMILY_ESCAPED]]:[[DERMATOS_FONT_WEIGHT_NORMAL]],[[DERMATOS_FONT_WEIGHT_BOLD]],[[DERMATOS_FONT_WEIGHT_EXTRA_BOLD]]|Roboto+Mono:300,400,700";
+
+#wpadminbar a,
+#wpadminbar a .ab-label {
+	font-family: "[[DERMATOS_FONT_FAMILY]]", monospace;
+	font-weight: [[DERMATOS_FONT_WEIGHT_NORMAL]];
+}
+
+#wpadminbar .ab-item .username {
+	text-transform: uppercase; 
+}
+
