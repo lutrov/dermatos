@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 3.00
+Version: 3.1
 */
 
 defined('ABSPATH') || die('Ahem.');
@@ -204,13 +204,12 @@ function dermatos_public_css() {
 }
 
 //
+// Custom admin customizer stylesheet.
 //
-//
-add_action('customize_controls_enqueue_scripts', 'dermatos_customize_enqueue');
-function dermatos_customize_enqueue() {
+add_action('customize_controls_enqueue_scripts', 'dermatos_customizer_enqueue');
+function dermatos_customizer_enqueue() {
 	wp_enqueue_style('dermatos-customizer', DERMATOS_BASE_PLUGIN_URL . '/css/style.php?file=customizer');
 }
-
 
 //
 // Disable colour scheme selector for users.
