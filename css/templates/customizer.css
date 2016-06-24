@@ -24,10 +24,6 @@
 	line-height: 2.0 !important;
 }
 
-.wp-customizer .button:hover {
-
-}
-
 .wp-customizer #save.button-primary {
 	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
@@ -50,15 +46,4 @@
 .wp-customizer button.dashicons,
 .wp-customizer button span.dashicons {
 	display: none !important;
-}
-
-
-
-
-.wp-customizer .accordion-section-title {
-	/*font-family: "[[FONT-FAMILY]]", monospace !important;*/
-}
-
-#customize-controls .customize-info .preview-notice {
-	/*font-family: "[[FONT-FAMILY]]", monospace !important;*/
 }

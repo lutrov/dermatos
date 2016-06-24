@@ -64,7 +64,7 @@ $css = str_replace(
 // Output the correct mime type and set expiry header to 1 hour.
 //
 header('Content-type: text/css; charset: UTF-8');
-header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 0) . ' GMT');
+header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 3600) . ' GMT');
 
 //
 // Output the compressed CSS code.
