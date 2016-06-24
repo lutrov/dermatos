@@ -204,6 +204,15 @@ function dermatos_public_css() {
 }
 
 //
+//
+//
+add_action('customize_controls_enqueue_scripts', 'dermatos_customize_enqueue');
+function dermatos_customize_enqueue() {
+	wp_enqueue_style('dermatos-customizer', DERMATOS_BASE_PLUGIN_URL . '/css/style.php?file=customizer');
+}
+
+
+//
 // Disable colour scheme selector for users.
 //
 add_action('admin_head', 'dermatos_disable_admin_color_schemes');

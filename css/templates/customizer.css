@@ -1,0 +1,64 @@
+/* DERMATOS CUSTOMIZER STYLES */
+
+/* Fonts */
+
+@import "https://fonts.googleapis.com/css?family=[[FONT-FAMILY-ESCAPED]]:[[FONT-WEIGHT-NORMAL]],[[FONT-WEIGHT-BOLD]],[[FONT-WEIGHT-EXTRA-BOLD]]|Roboto+Mono:300,400,700";
+
+/* Customizer */
+
+.wp-customizer * {
+	font-family: "[[FONT-FAMILY]]", monospace !important;
+}
+
+.wp-customizer .button {
+	color: #fff !important;
+	background: none;
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	border: none;
+	width: auto !important;
+	min-width: 80px !important;
+	border-radius: 0;
+	box-shadow: none;
+	text-decoration: none;
+	text-shadow: none;
+	line-height: 2.0 !important;
+}
+
+.wp-customizer .button:hover {
+
+}
+
+.wp-customizer #save.button-primary {
+	background-color: #[[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	text-shadow: none;
+}
+
+.wp-customizer #save.button-primary:hover {
+	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+}
+
+.wp-customizer h3,
+.wp-customizer label,
+.wp-customizer label span {
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
+}
+
+.wp-customizer button.dashicons,
+.wp-customizer button span.dashicons {
+	display: none !important;
+}
+
+
+
+
+.wp-customizer .accordion-section-title {
+	/*font-family: "[[FONT-FAMILY]]", monospace !important;*/
+}
+
+#customize-controls .customize-info .preview-notice {
+	/*font-family: "[[FONT-FAMILY]]", monospace !important;*/
+}

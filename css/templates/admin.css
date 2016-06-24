@@ -1302,6 +1302,44 @@ form .form-table th[scope=row] label,
 	margin-top: 0 !important;
 }
 
+.options-general-php .form-table th[scope=row] {
+	padding-top: 15px !important;
+}
+
+.options-general-php .form-table tr:nth-of-type(1) th[scope=row],
+.options-general-php .form-table tr:nth-of-type(2) th[scope=row] {
+	padding-top: 18px !important;
+}
+
+.options-general-php .form-table th[scope=row] {
+}
+
+.options-general-php .form-table tr:nth-of-type(7) th[scope=row],
+.options-general-php .form-table tr:nth-of-type(8) th[scope=row],
+.options-general-php .form-table tr:nth-of-type(11) th[scope=row],
+.options-general-php .form-table tr:nth-of-type(12) th[scope=row] {
+	padding-top: 20px !important;
+}
+
+/*kok*/
+
+.options-writing-php .form-table th[scope=row] {
+	padding-top: 20px !important;
+}
+
+.options-writing-php .form-table:nth-of-type(2) td label {
+	margin-top: 0 !important;
+}
+
+.options-reading-php .form-table th[scope=row] {
+	padding-top: 15px !important;
+}
+
+.options-reading-php .form-table tr:nth-of-type(1) th[scope=row],
+.options-reading-php .form-table tr:nth-of-type(5) th[scope=row] {
+	padding-top: 16px !important;
+}
+
 .options-reading-php .form-table label {
 	padding-top: 0 !important;
 	margin-top: 0 !important;
@@ -1363,7 +1401,15 @@ form .form-table th[scope=row] label,
 }
 
 .options-media-php .form-table:nth-of-type(2) th[scope=row] {
-	padding-top: 22px !important;
+	padding-top: 20px !important;
+}
+
+.options-media-php .form-table:nth-of-type(2) th[scope=row] + td {
+	padding-top: 10px !important;
+}
+
+.options-media-php .form-table:nth-of-type(1) th[scope=row] + td #thumbnail_crop + label {
+	margin-top: 2px !important;
 }
 
 .options-media-php .form-table label {
@@ -1371,7 +1417,7 @@ form .form-table th[scope=row] label,
 }
 
 .options-permalink-php .form-table label {
-	padding-top: 10px !important;
+	padding-top: 7px !important;
 }
 
 .options-permalink-php .form-table td code {
@@ -2272,6 +2318,14 @@ a.frm_show_comment:hover {
 	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 	text-shadow: none !important;
+}
+
+.settings_page_members-settings form .form-table th[scope="row"] {
+	padding-top: 10px !important;	
+}
+
+.settings_page_members-settings form .form-table th[scope="row"] + td {
+	padding-top: 15px !important;
 }
 
 /* Nextgen Gallery Support */
