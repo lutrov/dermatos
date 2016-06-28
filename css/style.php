@@ -18,6 +18,7 @@ define('DERMATOS_FONT_WEIGHT_BOLD', '400');
 define('DERMATOS_FONT_WEIGHT_EXTRA_BOLD', '700');
 define('DERMATOS_COLOUR_HIGHLIGHT_PRIMARY', 'f45246');
 define('DERMATOS_COLOUR_HIGHLIGHT_SECONDARY', '18b3dc');
+define('DERMATOS_CACHE_EXPIRY_SECONDS', 3600);
 
 //
 // Get the requested CSS filename.
@@ -28,10 +29,12 @@ $file = isset($_GET['file']) ? $_GET['file'] : null;
 // Read the CSS from a template.
 //
 $css = null;
+$modified = time();
 if (strlen($file) > 0) {
 	$path = sprintf('%s/templates/%s.css', dirname(__FILE__), $file);
 	if (file_exists($path)) {
 		$css = file_get_contents($path);
+		$modified = filemtime($path);
 	}
 }
 
@@ -63,8 +66,10 @@ $css = str_replace(
 //
 // Output the correct mime type and set expiry header to 1 hour.
 //
-header('Content-type: text/css; charset: UTF-8');
-// header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 3600) . ' GMT');
+header('Content-Type: text/css; charset: UTF-8');
+header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $modified) . ' GMT');
+// header('Expires: ' . gmdate('D, d M Y H:i:s', time() + DERMATOS_CACHE_EXPIRY_SECONDS) . ' GMT');
+header('Cache-Control: public');
 
 //
 // Output the compressed CSS code.

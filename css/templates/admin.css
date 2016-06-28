@@ -979,6 +979,10 @@ table.widefat tfoot tr th {
 	margin: 0 2px !important;
 }
 
+.widgets-chooser .widgets-chooser-actions {
+	text-align: right;
+}
+
 .widget.open {
 	margin-left: 0 !important;
 }
@@ -2631,6 +2635,11 @@ a.frm_show_comment:hover {
 
 .wp-list-table th {
 	vertical-align: top !important;
+}
+
+.wp-list-table .username strong a {
+	font-size: 11px !important;
+	text-transform: uppercase;
 }
 
 .wc_emails.widefat th {
