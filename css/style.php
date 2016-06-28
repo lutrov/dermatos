@@ -68,7 +68,7 @@ $css = str_replace(
 //
 header('Content-Type: text/css; charset: UTF-8');
 header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $modified) . ' GMT');
-// header('Expires: ' . gmdate('D, d M Y H:i:s', time() + DERMATOS_CACHE_EXPIRY_SECONDS) . ' GMT');
+header('Expires: ' . gmdate('D, d M Y H:i:s', time() + DERMATOS_CACHE_EXPIRY_SECONDS) . ' GMT');
 header('Cache-Control: public');
 
 //
