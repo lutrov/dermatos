@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 3.1
+Version: 3.2
 */
 
 defined('ABSPATH') || die('Ahem.');
@@ -156,7 +156,7 @@ function dermatos_login_css() {
 		} else {
 			$size = null;
 		}
-		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/css/images/logo.png); background-repeat: no-repeat; background-position: center; %s } ', $height, DERMATOS_BASE_PLUGIN_URL, $size);
+		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/css/images/logo.png) !important; background-repeat: no-repeat; background-position: center; %s } ', $height, DERMATOS_BASE_PLUGIN_URL, $size);
 	} else {
 		$style = ' background-image: none ';
 	}
@@ -226,6 +226,14 @@ function dermatos_disable_admin_color_schemes() {
 add_filter('get_user_option_admin_color', 'dermatos_change_admin_color');
 function dermatos_change_admin_color($result) {
 	return 'fresh';
+}
+
+//
+// Fix missing Woocommerce settings page heading.
+//
+add_action('woocommerce_settings_start', 'dermatos_fix_woocommerce_settings_page_heading', 11);
+function dermatos_fix_woocommerce_settings_page_heading() {
+	echo sprintf('<h1>%s</h1>', __('Settings'));
 }
 
 ?>

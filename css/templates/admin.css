@@ -28,11 +28,26 @@ input[type=number],
 input[type=search],
 input[type=tel],
 input[type=url] {
-	padding: 5px !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px "[[FONT-FAMILY]]", monospace !important;
 	border: 1px solid #d4d4d4 !important;
 	box-shadow: none !important;
 	box-sizing: border-box;
+}
+
+select {
+	padding: 0 5px !important;
+}
+
+textarea,
+input[type=text],
+input[type=password],
+input[type=file],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=url] {
+	padding: 5px !important;
 }
 
 select:focus,
@@ -598,6 +613,14 @@ div.wp-menu-image {
 .update-plugins,
 .processing_count {
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+}
+
+#wpfooter {
+	border-top: 1px dotted #d4d4d4;
+}
+
+#wpfooter p {
+	font-style: italic;
 }
 
 /* Content */
@@ -1221,7 +1244,7 @@ legend {
 
 .form-table th {
 	width: 25% !important;
-	padding: 15px 10px 15px 0 !important;
+	padding: 15px 20px 15px 0 !important;
 }
 
 #adminmenu .wp-submenu li.current,
@@ -1294,7 +1317,7 @@ form .form-table th[scope=row] label,
 	white-space: nowrap;
 }
 
-.term-php form .form-table th[scope="row"] label {
+.term-php form .form-table th[scope=row] label {
 	padding-top: 0 !important;
 }
 
@@ -1507,6 +1530,23 @@ ul.subsubsub {
 	padding-left: 20px !important;
 }
 
+ul.subsubsub li a {
+	padding: 0 5px !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+}
+
+ul.subsubsub li:first-child a {
+	padding-left: 0 !important;
+}
+
+ul.subsubsub li:last-child a {
+	padding-right: 0 !important;
+}
+
+ul.subsubsub li a.current {
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
+}
+
 .inactive .plugin-title strong {
 	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
@@ -1576,9 +1616,11 @@ ul.subsubsub {
 }
 
 .wp-core-ui .button:disabled,
-.wp-core-ui .button[disabled] {
-	background-color: #f8f8f8 !important;
+.wp-core-ui .button[disabled],
+.wp-core-ui .button[disabled]:hover {
+	background-color: #f4f4f4 !important;
 	color: #808080 !important;
+	border: 1px solid #e4e4e4 !important;
 }
 
 .destroy-sessions .button,
@@ -1594,6 +1636,10 @@ ul.subsubsub {
 
 .upgrade a.button {
 	line-height: 1.5 !important;
+}
+
+.upgrade .hint {
+	font-size: 95% !important;
 }
 
 .button.customize,
@@ -2322,11 +2368,11 @@ a.frm_show_comment:hover {
 	text-shadow: none !important;
 }
 
-.settings_page_members-settings form .form-table th[scope="row"] {
+.settings_page_members-settings form .form-table th[scope=row] {
 	padding-top: 10px !important;	
 }
 
-.settings_page_members-settings form .form-table th[scope="row"] + td {
+.settings_page_members-settings form .form-table th[scope=row] + td {
 	padding-top: 15px !important;
 }
 
@@ -2644,6 +2690,104 @@ a.frm_show_comment:hover {
 
 .wc_emails.widefat th {
 	text-align: left !important;
+}
+
+
+.woocommerce_page_wc-settings h1 {
+	padding-top: 20px; !Important;
+}
+
+.woocommerce_page_wc-settings .button-secondary {
+	line-height: 2.25 !important;
+}
+
+.woocommerce_page_wc-settings .select2-container-multi .select2-choices {
+	border: none !important;
+	padding: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table th .woocommerce-help-tip,
+.woocommerce_page_wc-settings .form-table th img.help_tip {
+	margin: 6px -20px 0 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table fieldset:first-child {
+	margin-top: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table .image_width_settings {
+	padding-top: 7px !important;
+}
+
+.woocommerce_page_wc-settings .form-table .image_width_settings label {
+	margin-top: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table th {
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc {
+	padding-top: 18px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp {
+	padding-top: 15px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp.forminp-checkbox {
+	padding-top: 26px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp.forminp-select {
+	padding-top: 12px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp.forminp-radio {
+	padding-top: 28px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp fieldset {
+	padding: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp fieldset label {
+	margin-top: -8px !important;
+	padding: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input,
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp select {
+	margin: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table .single_select_page th {
+}
+
+.woocommerce_page_wc-settings .form-table .select2-container {
+	margin-top: 5px !important;
+}
+
+.woocommerce_page_wc-settings .form-table .single_select_page th[scope=row] {
+	padding-top: 24px !important;
+}
+
+.woocommerce_page_wc-settings .form-table .single_select_page th[scope=row] .woocommerce-help-tip {
+	margin-top: 4px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th[scope=row] label {
+}
+
+.woocommerce_page_wc-settings #s2id_woocommerce_shop_page_id + select + span.description {
+	margin-top: -34px !important;
+}
+
+.woocommerce_page_wc-settings .woocommerce form .submit {
+	margin-bottom: 0 !important;
+}
+
+.wc-backbone-modal h1 {
+	font-size: 20px !important;
 }
 
 /* WP Document Revisions Support */
