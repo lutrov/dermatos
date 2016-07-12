@@ -1476,6 +1476,18 @@ form .form-table th[scope=row] label,
 	padding-top: 10px;
 }
 
+.user-new-php .form-table th[scope="row"] + td input[type=text] {
+	margin-top: 0 !important;
+}
+
+.user-new-php .form-table th[scope="row"] + td .button-secondary {
+	margin-top: 0 !important;
+}
+
+.user-new-php .form-table th[scope="row"] + td select {
+	margin-top: 1px !important;
+}
+
 .wrap.custom form .submit {
 	margin-bottom: 0 !important;
 }
