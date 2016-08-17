@@ -228,12 +228,4 @@ function dermatos_change_admin_color($result) {
 	return 'fresh';
 }
 
-//
-// Fix missing Woocommerce settings page heading.
-//
-add_action('woocommerce_settings_start', 'dermatos_fix_woocommerce_settings_page_heading', 11);
-function dermatos_fix_woocommerce_settings_page_heading() {
-	echo sprintf('<h1>%s</h1>', __('Settings'));
-}
-
 ?>

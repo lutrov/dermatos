@@ -1716,6 +1716,11 @@ ul.subsubsub li a.current {
 
 .search-form.search-plugins {
 	background-color: #fff !important;
+	padding-bottom: 30px !important;
+}
+
+.search-form.search-plugins p.search-box {
+	margin-top: 5px !important;
 }
 
 .tools a.button,
@@ -2706,7 +2711,7 @@ a.frm_show_comment:hover {
 
 
 .woocommerce_page_wc-settings h1 {
-	padding-top: 20px; !Important;
+	padding-top: 20px !important;
 }
 
 .woocommerce_page_wc-settings .button-secondary {
