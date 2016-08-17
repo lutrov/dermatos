@@ -2807,6 +2807,15 @@ a.frm_show_comment:hover {
 	font-size: 20px !important;
 }
 
+.wc_error_tip,
+.chart-tooltip,
+#tiptip_content {
+	width: 200px;
+	max-width: 200px;
+	background-color: #222;
+	font-size: 12px;
+}
+
 /* WP Document Revisions Support */
 
 .post-php.document .button-primary {
