@@ -431,6 +431,11 @@ td strong {
 	text-decoration: underline !important;
 }
 
+.widefat .trash .submitdelete {
+	font-size: 100% !important;
+	text-transform: none;
+}
+
 /* Links */
 
 a,
