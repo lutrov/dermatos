@@ -6,13 +6,8 @@
 
 /* Basic */
 
-html.wp-toolbar {
-	padding-top: 0;
-	background-color: #f8f8f8;
-}
-
-.wp-admin {
-	min-width: 0;
+body {
+	background-color: #f8f8f8 !Important;
 }
 
 p {
@@ -70,6 +65,15 @@ table td pre {
 pre, code, kbd {
 	font-family: "Roboto Mono", monospace !important;
 	font-size: 11px !important;
+}
+
+html.wp-toolbar {
+	padding-top: 0;
+	background-color: #f8f8f8;
+}
+
+.wp-admin {
+	min-width: 0;
 }
 
 /* WP Adminbar */
@@ -310,6 +314,12 @@ b {
 .row-title,
 .tagcloud a {
 	font-size: 13px !important;
+}
+
+.updated,
+.error,
+.info {
+	margin: 20px 0 !important;
 }
 
 .row-title {
@@ -1801,7 +1811,7 @@ label span.description {
 .update-core-php form.upgrade {
 	margin-bottom: 30px !important;
 	padding: 0 !important;
-	background-color: #f8f8f8 !important;
+	background-color: #fff8f8 !important;
 }
 
 .update-core-php .button,
