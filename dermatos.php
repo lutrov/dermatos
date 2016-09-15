@@ -116,7 +116,7 @@ function dermatos_change_loginform_text($text) {
 			case ($temp == 'LOST YOUR PASSWORD'):
 				$text = null;
 				if (DERMATOS_KEEP_LOST_PASSWORD_LINK) {
-					$text = sprintf('<span class="reminder">%s</span>', _x('Have you lost your password?', 'Login form'));
+					$text = sprintf('<span class="reminder">%s</span>', _x('Lost your password?', 'Login form'));
 				}
 				break;
 			case ($temp == 'A PASSWORD WILL BE E-MAILED TO YOU'):
