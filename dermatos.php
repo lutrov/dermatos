@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 3.2
+Version: 3.4
 */
 
 defined('ABSPATH') || die('Ahem.');
@@ -29,34 +29,38 @@ define('DERMATOS_BASE_PLUGIN_PATH', dirname(__FILE__));
 //
 // Filter login errors.
 //
-if (DERMATOS_KEEP_QUIET_ABOUT_LOGIN_ERRORS) {
-	add_filter('login_errors', create_function('$a', 'return null;'));
+add_filter('login_errors', 'dermatos_login_supress_errors');
+function dermatos_login_supress_errors($error) {
+	if (DERMATOS_KEEP_QUIET_ABOUT_LOGIN_ERRORS) {
+		$error = null;
+	}
+	return $error;
 }
 
 //
 // Redirect non admins to homepage instead of the dashboard.
 //
-if (DERMATOS_LOGIN_REDIRECT_NON_ADMINS) {
-	add_filter('login_redirect', 'dermatos_login_redirect_non_admins', 10, 3);
-	function dermatos_login_redirect_non_admins($location, $request, $user) {
-		global $user;
+add_filter('login_redirect', 'dermatos_login_redirect_non_admins', 10, 3);
+function dermatos_login_redirect_non_admins($location, $request, $user) {
+	global $user;
+	if (DERMATOS_LOGIN_REDIRECT_NON_ADMINS) {
 		if (isset($user->roles) && is_array($user->roles)) {
 			if (!in_array('administrator', $user->roles)) {
 				$location = home_url('/');
 			}
 		}
-		return $location;
 	}
+	return $location;
 }
 
 //
 // Remove WP submenu from the adminbar, add custom admin logo instead
 // and remove "visit site" submenu under sitename.
 //
-if (DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS) {
-	add_filter('wp_before_admin_bar_render', 'dermatos_remove_wordpress_adminbar_quicklinks');
-	function dermatos_remove_wordpress_adminbar_quicklinks() {
-		global $wp_admin_bar;
+add_filter('wp_before_admin_bar_render', 'dermatos_remove_wordpress_adminbar_quicklinks');
+function dermatos_remove_wordpress_adminbar_quicklinks() {
+	global $wp_admin_bar;
+	if (DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS) {
 		$wp_admin_bar->add_menu(
 			array('id' => 'wp-logo', 'title' => null, 'href' => null, 'meta' => array('title' => null))
 		);
@@ -72,16 +76,16 @@ if (DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS) {
 //
 // Replace the howdy greeting.
 //
-if (DERMATOS_REPLACE_ADMIN_HOWDY_GREETING) {
-	add_filter('gettext', 'dermatos_replace_howdy', 10, 3);
-	function dermatos_replace_howdy($translated, $text, $domain) {
+add_filter('gettext', 'dermatos_replace_howdy', 10, 3);
+function dermatos_replace_howdy($translated, $text, $domain) {
+	if (DERMATOS_REPLACE_ADMIN_HOWDY_GREETING) {
 		if (is_admin() && $domain == 'default') {
 			if (strpos($translated, 'Howdy') !== false) {
 				$translated = str_replace('Howdy', "G'day", $translated);
 			}
 		}
-		return $translated;
 	}
+	return $translated;
 }
 
 //
@@ -105,32 +109,38 @@ function dermatos_login_title() {
 //
 add_filter('gettext', 'dermatos_change_loginform_text');
 function dermatos_change_loginform_text($text) {
-	$temp = strtoupper(trim(strip_tags($text), '.?:'));
-	switch (true) {
-		case ($temp == 'LOST YOUR PASSWORD'):
-			$text = DERMATOS_KEEP_LOST_PASSWORD_LINK == true ? __('Lost password?') : null;
-			break;
-		case ($temp == 'A PASSWORD WILL BE E-MAILED TO YOU'):
-			$text = null;
-			break;
-		case ($temp == 'YOU ARE NOW LOGGED OUT'):
-			$text = __('You have successfully logged out.');
-			break;
-		case ($temp == 'REGISTER FOR THIS SITE'):
-			$text = __('Once your registration is approved, a password will be emailed to you.');
-			break;
-		case ($temp == 'E-MAIL'):
-			$text = __('Email');
-			break;
-		case ($temp == 'USERNAME OR EMAIL'):
-			$text = __('Username');
-			break;
-		case ($temp == 'REMEMBER ME'):
-			$text = __('Remember me on this device.');
-			break;
-		case (substr($temp, 0, 5) == 'ERROR'):
-			$text = __('Authentication failed.');
-			break;
+	global $pagenow;
+	if ($pagenow == 'wp-login.php') {
+		$temp = strtoupper(trim(strip_tags($text), '.?:'));
+		switch (true) {
+			case ($temp == 'LOST YOUR PASSWORD'):
+				$text = null;
+				if (DERMATOS_KEEP_LOST_PASSWORD_LINK) {
+					$text = sprintf('<span class="reminder">%s</span>', _x('Have you lost your password?', 'Login form'));
+				}
+				break;
+			case ($temp == 'A PASSWORD WILL BE E-MAILED TO YOU'):
+				$text = null;
+				break;
+			case ($temp == 'YOU ARE NOW LOGGED OUT'):
+				$text = _x('You have successfully logged out.', 'Login form');
+				break;
+				case ($temp == 'REGISTER FOR THIS SITE'):
+				$text = _x('Once your registration is approved, a password will be emailed to you.', 'Login form');
+				break;
+			case ($temp == 'E-MAIL'):
+				$text = _x('Email', 'Login form');
+				break;
+			case ($temp == 'USERNAME OR EMAIL'):
+				$text = _x('Username', 'Login form');
+				break;
+			case ($temp == 'REMEMBER ME'):
+				$text = _x('Remember me.', 'Login form');
+				break;
+			case (substr($temp, 0, 5) == 'ERROR'):
+				$text = _x('Authentication failed.', 'Login form');
+				break;
+		}
 	}
 	return $text;
 }
@@ -169,9 +179,12 @@ function dermatos_login_css() {
 //
 add_action('init', 'dermatos_login_rememberme_checked');
 function dermatos_login_rememberme_checked() {
-	add_filter('login_footer', 'dermatos_login_rememberme_checked_js');
-	function dermatos_login_rememberme_checked_js() {
-		echo "<script>document.getElementById('rememberme').checked=true;</script>";
+	global $pagenow;
+	if ($pagenow == 'wp-login.php') {
+		add_filter('login_footer', 'dermatos_login_rememberme_checked_js');
+		function dermatos_login_rememberme_checked_js() {
+			echo "<script>document.getElementById('rememberme').checked=true;</script>";
+		}
 	}
 }
 

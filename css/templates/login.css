@@ -144,13 +144,13 @@ p.submit {
 
 #login_error {
 	margin-top: -40px;
-	color: #c00 !important;
+	color: #f00 !important;
 	font-size: 12px !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
 #login_error a {
-	color: #c00 !important;
+	color: #f00 !important;
 }
 
 /* Responsive stuff */
@@ -158,7 +158,7 @@ p.submit {
 @media only screen and (min-device-width:320px) and (max-device-width:480px) {
 	#login {
 		margin: 0 auto;
-		max-width: 400px !important;
-		width: 400px !important;
+		max-width: 280px !important;
+		width: 280px !important;
 	}
 }
