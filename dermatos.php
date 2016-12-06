@@ -234,7 +234,7 @@ function dermatos_disable_admin_color_schemes() {
 }
 
 //
-// Force default solour scheme.
+// Force default colour scheme.
 //
 add_filter('get_user_option_admin_color', 'dermatos_change_admin_color');
 function dermatos_change_admin_color($result) {
