@@ -1135,6 +1135,11 @@ table.widefat tfoot tr th {
 
 #screen-meta-links .show-settings {
 	line-height: 1.75 !important;
+	color: #72777c !important;
+}
+
+#screen-meta-links .show-settings:hover {
+	color: #f0f0f0 !important;
 }
 
 #screen-meta {
@@ -1615,7 +1620,6 @@ ul.subsubsub li a.current {
 }
 
 #screen-meta-links a.show-settings {
-	padding: 0;
 }
 
 .wp-core-ui .button,
