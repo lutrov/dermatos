@@ -1856,6 +1856,10 @@ label span.description {
 	color: #f0f0f0 !important;
 }
 
+#plugin-information-content {
+	padding: 15px;
+}
+
 .theme-check .button {
 	margin: 0 10px 0 5px !important;
 }
