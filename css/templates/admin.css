@@ -942,6 +942,10 @@ table.widefat tfoot tr th {
 	box-shadow: none !important;
 }
 
+.theme-install-php .wp-core-ui .button-primary.theme-install {
+	line-height: 1.75 !important;
+}
+
 /* Misc */
 
 .nav-tab:hover,
@@ -1626,17 +1630,17 @@ ul.subsubsub li a.current {
 .wp-core-ui .notification-dialog .button,
 .button-highlighted {
 	color: #fff;
-	text-decoration: none;
 	background: none;
 	background-color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 	border: none;
 	border-color: none !important;
 	border-radius: 0;
 	box-shadow: none !important;
-	text-shadow: none;
 	line-height: 2.0 !important;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
-
+	text-shadow: none;
+	text-decoration: none;
+	text-align: center;
 }
 
 .wp-core-ui .button-primary,
