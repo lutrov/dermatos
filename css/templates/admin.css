@@ -215,7 +215,6 @@ html.wp-toolbar {
 
 #wpadminbar .ab-item .username {
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
-	text-transform: uppercase;
 }
 
 /* Main Elements */
@@ -360,7 +359,7 @@ div.sidebar-name h3,
 .quicktags,
 .tablenav .displaying-num,
 .tool-box .title,
-table.widefat th,
+.widefat th,
 .search {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]];
@@ -432,8 +431,6 @@ td strong {
 }
 
 .submitdelete {
-	font-size: 90% !important;
-	text-transform: uppercase;
 	text-decoration: none !important;
 }
 
@@ -459,8 +456,8 @@ a,
 	color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
-table.widefat th a,
-table.widefat th a:hover {
+.widefat th a,
+.widefat th a:hover {
 	color: #fff !important;
 }
 
@@ -671,94 +668,94 @@ div.wp-menu-image {
 .wrap > h1 a {
 }
 
-table.widefat thead tr,
-table.widefat tfoot tr {
+.widefat thead tr,
+.widefat tfoot tr {
 	height: 40px !important;
 }
 
-table.widefat {
+.widefat {
 	border: none !important;
 }
 
-table.widefat thead tr th,
-table.widefat tfoot tr th {
+.widefat thead tr th,
+.widefat tfoot tr th {
 	border: none;
 	text-shadow: none;
 	padding: 15px 7px 15px;
 	vertical-align: top !important;
 }
 
-table.widefat thead tr th,
-table.widefat tfoot tr th,
+.widefat thead tr th,
+.widefat tfoot tr th,
 h3.dashboard-widget-title,
 h3.dashboard-widget-title span,
 h3.dashboard-widget-title small {
 	color: #fff;
 }
 
-table.widefat td {
+.widefat td {
 	padding: 10px 7px 8px;
 	vertical-align: top;
 	font-size: 13px;
 }
 
-table.widefat thead .check-column,
-table.widefat tfoot .check-column {
+.widefat thead .check-column,
+.widefat tfoot .check-column {
 	padding: 15px 0 0 4px;
 }
 
-table.widefat tbody th.check-column {
+.widefat tbody th.check-column {
 	padding: 11px 0 20px;
 }
 
-table.widefat tbody tr {
+.widefat tbody tr {
 	background-color: #f4f8f8 !important;
 }
 
-table.widefat thead th.manage-column,
-table.widefat tfoot th.manage-column {
+.widefat thead th.manage-column,
+.widefat tfoot th.manage-column {
 }
 
-table.widefat .manage-column.check-column {
+.widefat .manage-column.check-column {
 	border-top: 1px solid #32373c;
 	border-bottom: 1px solid #32373c;
 	padding-top: 0 !important;
 }
 
-table.widefat.pages thead th.manage-column.column-author,
-table.widefat.pages tfoot th.manage-column.column-author,
-table.widefat.posts thead th.manage-column.column-author,
-table.widefat.posts tfoot th.manage-column.column-author,
-table.widefat.posts thead th.manage-column.column-categories,
-table.widefat.posts tfoot th.manage-column.column-categories,
-table.widefat.posts thead th.manage-column.column-tags,
-table.widefat.posts tfoot th.manage-column.column-tags,
-table.widefat.users thead th.manage-column.column-role,
-table.widefat.users tfoot th.manage-column.column-role {
+.widefat.pages thead th.manage-column.column-author,
+.widefat.pages tfoot th.manage-column.column-author,
+.widefat.posts thead th.manage-column.column-author,
+.widefat.posts tfoot th.manage-column.column-author,
+.widefat.posts thead th.manage-column.column-categories,
+.widefat.posts tfoot th.manage-column.column-categories,
+.widefat.posts thead th.manage-column.column-tags,
+.widefat.posts tfoot th.manage-column.column-tags,
+.widefat.users thead th.manage-column.column-role,
+.widefat.users tfoot th.manage-column.column-role {
 	padding-left: 5px !important;
 }
 
-table.widefat.plugins thead th.manage-column,
-table.widefat.plugins tfoot th.manage-column {
+.widefat.plugins thead th.manage-column,
+.widefat.plugins tfoot th.manage-column {
 	padding-left: 10px !important;
 	border: none !important;
 }
 
-table.widefat thead th[scope=col],
-table.widefat tfoot th[scope=col] {
+.widefat thead th[scope=col],
+.widefat tfoot th[scope=col] {
 	vertical-align: middle !important;
 }
 
-table.widefat td.check-column input[type=checkbox] {
+.widefat td.check-column input[type=checkbox] {
 	margin-left: 5px;
 }
 
-table.widefat.striped tbody tr:nth-of-type(odd) {
+.widefat.striped tbody tr:nth-of-type(odd) {
 	background-color: #e8e8e8 !important;
 	background-color: #fff !important;
 }
 
-.users-php table.widefat td.username img {
+.users-php .widefat td.username img {
 	width: 24px !important;
 	height: 24px !important;
 }
@@ -805,8 +802,6 @@ p.search-box {
 }
 
 .row-actions a {
-	font-size: 11px !important;
-	text-transform: uppercase;
 }
 
 /* Widgets */
@@ -839,8 +834,8 @@ h3.dashboard-widget-title small,
 .sidebar-name,
 .manage-column.check-column,
 .menu-item-handle,
-table.widefat thead tr th,
-table.widefat tfoot tr th {
+.widefat thead tr th,
+.widefat tfoot tr th {
 	background: none;
 	background-color: #32373c;
 }
@@ -1363,6 +1358,16 @@ form .form-table th[scope=row] label,
 	padding-top: 0 !important;
 }
 
+.options-general-php .form-table select,
+.options-writing-php .form-table select,
+.options-reading-php .form-table select,
+.options-discussion-php .form-table select,
+.options-media-php .form-table select,
+.options-permalink-php .form-table select {
+	display: block;
+	max-width: 600px;
+}
+
 .options-general-php .form-table td fieldset {
 	margin-top: -8px !important;
 }
@@ -1504,7 +1509,7 @@ form .form-table th[scope=row] label,
 	background: #f0f0f0;
 }
 
-.import-php table.widefat {
+.import-php .widefat {
 	border: 1px solid #d4d4d4 !important;
 }
 
@@ -1842,8 +1847,8 @@ label span.description {
 	line-height: 1.5 !important;
 }
 
-.update-core-php table.widefat thead td input[type="checkbox"],
-.update-core-php table.widefat tfoot td input[type="checkbox"] {
+.update-core-php .widefat thead td input[type="checkbox"],
+.update-core-php .widefat tfoot td input[type="checkbox"] {
 	margin-top: -4px !important;
 }
 
@@ -2182,15 +2187,15 @@ h2 a.nav-tab {
 	width: 250px !important;
 }
 
-table.widefat.acf td.field_label,
-table.widefat.acf td.field_name,
-table.widefat.acf td.field_type {
+.widefat.acf td.field_label,
+.widefat.acf td.field_name,
+.widefat.acf td.field_type {
 	text-align: left !important;
 	max-width: 100px !important;
 }
 
-table.widefat.acf th.field_order,
-table.widefat.acf td.field_order {
+.widefat.acf th.field_order,
+.widefat.acf td.field_order {
 	width: 13% !important;
 }
 
@@ -2260,7 +2265,7 @@ table.acf_input tbody tr td.label label {
 	width: 96.1% !important;
 }
 
-.acf-columns-2 table.widefat {
+.acf-columns-2 .widefat {
 	margin-top: 10px !important;
 }
 
@@ -2411,14 +2416,12 @@ a.frm_show_comment:hover {
 	background: #f0f0f0;
 }
 
-.users_page_roles table.widefat.members-roles-select td.column-cap,
-.users_page_role-new table.widefat.members-roles-select td.column-cap {
-	font-size: 11px !important;
-	text-transform: uppercase;
+.users_page_roles .widefat.members-roles-select td.column-cap,
+.users_page_role-new .widefat.members-roles-select td.column-cap {
 }
 
-.users_page_roles table.widefat.members-roles-select td.column-cap strong,
-.users_page_role-new table.widefat.members-roles-select td.column-cap strong {
+.users_page_roles .widefat.members-roles-select td.column-cap strong,
+.users_page_role-new .widefat.members-roles-select td.column-cap strong {
 	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
@@ -2554,8 +2557,8 @@ a.frm_show_comment:hover {
 	margin-top: 8px !important;
 }
 
-.pmpro_admin table.widefat td a.edit,
-.pmpro_admin table.widefat td a.delete {
+.pmpro_admin .widefat td a.edit,
+.pmpro_admin .widefat td a.delete {
 	font-size: 13px !important;
 }
 
@@ -2643,23 +2646,23 @@ a.frm_show_comment:hover {
 	margin-left: 0 !important;
 }
 
-.edit-tags-php table.widefat .column-cb {
+.edit-tags-php .widefat .column-cb {
 	width: 3%;
 }
 
-.edit-tags-php table.widefat .column-name {
+.edit-tags-php .widefat .column-name {
 	width: 22%;
 }
 
-.edit-tags-php table.widefat .column-description {
+.edit-tags-php .widefat .column-description {
 	width: 45%;
 }
 
-.edit-tags-php table.widefat .column-slug {
+.edit-tags-php .widefat .column-slug {
 	width: 20%;
 }
 
-.edit-tags-php table.widefat .column-posts {
+.edit-tags-php .widefat .column-posts {
 	width: 10%;
 }
 
@@ -2788,8 +2791,6 @@ a.frm_show_comment:hover {
 }
 
 .wp-list-table .username strong a {
-	font-size: 11px !important;
-	text-transform: uppercase;
 }
 
 .wc_emails.widefat th {
