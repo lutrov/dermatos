@@ -202,19 +202,21 @@ html.wp-toolbar {
 
 #wp-admin-bar-my-sites-list .ab-item,
 #wp-admin-bar-top-secondary .ab-item,
-#wp-admin-bar-query-monitor .ab-item,
-#wp-admin-bar-query-monitor .ab-label,
 #wp-admin-bar-user-actions .ab-item {
 }
 
 #wp-admin-bar-my-sites-list .ab-item:hover,
 #wp-admin-bar-top-secondary .ab-item:hover,
-#wp-admin-bar-query-monitor .ab-item:hover,
 #wp-admin-bar-user-actions .ab-item:hover {
 }
 
-#wpadminbar .ab-item .username {
-	font-weight: [[FONT-WEIGHT-BOLD]] !important;
+#wpadminbar .ab-item .display-name {
+	text-transform: uppercase;
+	font-size: 85%;
+}
+
+#wpadminbar .ab-item .avatar {
+	display: block;
 }
 
 /* Main Elements */
@@ -2791,6 +2793,8 @@ a.frm_show_comment:hover {
 }
 
 .wp-list-table .username strong a {
+	text-transform: uppercase;
+	font-size: 80%;
 }
 
 .wc_emails.widefat th {

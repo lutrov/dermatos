@@ -8,7 +8,12 @@
 	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
-#wpadminbar .ab-item .username {
-	text-transform: uppercase; 
+#wpadminbar .ab-item .display-name {
+	text-transform: uppercase;
+	font-size: 85%;
+}
+
+#wpadminbar .ab-item .avatar {
+	display: block;
 }
 
