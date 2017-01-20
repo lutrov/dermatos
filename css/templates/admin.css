@@ -1140,7 +1140,7 @@ h3.dashboard-widget-title small,
 }
 
 #screen-meta-links .show-settings:hover {
-	color: #f0f0f0 !important;
+	background-color: inherit !important;
 }
 
 #screen-meta {
@@ -2915,6 +2915,15 @@ a.frm_show_comment:hover {
 
 .woocommerce_options_panel label {
 	/* Right aligning labels makes them wonky */
+}
+
+.post-type-shop_order #order_data h2 {
+	text-shadow: none;
+	padding: 10px !important;
+}
+
+.post-type-shop_order .order_data_column h3 {
+	padding: 0 10px;
 }
 
 /* WP Document Revisions Support */
