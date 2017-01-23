@@ -2409,6 +2409,12 @@ a.frm_show_comment:hover {
 	margin-bottom: 40px;
 }
 
+/* Groups Support */
+
+.users-php .subsubsub .group {
+	background: none;
+}
+
 /* Members Support */
 
 .settings_page_members-settings form {
