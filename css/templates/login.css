@@ -83,7 +83,7 @@ p.submit {
 	padding: 20px !important;
 	width: 400px !important;
 	max-width: 85% !important;
-	margin-top: 2.5% !important;
+	margin-top: 0 !important;
 }
 
 #login h1 {
