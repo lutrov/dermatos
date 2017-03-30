@@ -154,8 +154,7 @@ function dermatos_login_css() {
 	if (file_exists($path) == true) {
 		$w = 0; $h = 0; $s = getimagesize($path);
 		if (count($s) > 2) {
-			$w = $s[0];
-			$h = $s[1];
+			$w = $s[0]; $h = $s[1];
 			if ($w > 199) {
 				$s = sprintf(' background-size: %spx %spx', intval($w * (200 / $w)), intval($h * (200 / $w)));
 			} else {
