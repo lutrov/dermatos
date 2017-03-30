@@ -164,11 +164,10 @@ function dermatos_login_css() {
 		} else {
 			$s = null;
 		}
-		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/images/site/logo.png) !important; background-repeat: no-repeat; background-position: center;%s } ', $h, DERMATOS_BASE_PLUGIN_URL, $s);
+		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/css/images/logo.png) !important; background-repeat: no-repeat; background-position: center;%s } ', $h, DERMATOS_BASE_PLUGIN_URL, $s);
 	} else {
 		$style = ' background-image: none ';
 	}
-
 	echo sprintf('<link href="%s/css/style.php?file=login" rel="stylesheet" type="text/css" media="all">', DERMATOS_BASE_PLUGIN_URL);
 	echo sprintf('<style type="text/css">%s</style>', $style);
 }
