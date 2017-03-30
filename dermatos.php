@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 3.5
+Version: 3.6
 */
 
 defined('ABSPATH') || die('Ahem.');
@@ -151,25 +151,24 @@ function dermatos_change_loginform_text($text) {
 add_filter('login_head', 'dermatos_login_css', 999);
 function dermatos_login_css() {
 	$path = DERMATOS_BASE_PLUGIN_PATH . '/css/images/logo.png';
-	if (file_exists($path)) {
-		$width = 0;
-		$height = 0;
-		$size = getimagesize($path);
-		if (count($size) > 2) {
-			$width = $size[0];
-			$height = $size[1];
-			if ($width > 480) {
-				$size = ' background-size: ' . intval($width * 0.75) . 'px ' . intval($height * 0.75) . 'px';
+	if (file_exists($path) == true) {
+		$w = 0; $h = 0; $s = getimagesize($path);
+		if (count($s) > 2) {
+			$w = $s[0];
+			$h = $s[1];
+			if ($w > 199) {
+				$s = sprintf(' background-size: %spx %spx', intval($w * (200 / $w)), intval($h * (200 / $w)));
 			} else {
-				$size = ' background-size: ' . $width . 'px ' . $height . 'px';
+				$s = sprintf(' background-size: %spx %spx', $w, $h);
 			}
 		} else {
-			$size = null;
+			$s = null;
 		}
-		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/css/images/logo.png) !important; background-repeat: no-repeat; background-position: center; %s } ', $height, DERMATOS_BASE_PLUGIN_URL, $size);
+		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/images/site/logo.png) !important; background-repeat: no-repeat; background-position: center;%s } ', $h, DERMATOS_BASE_PLUGIN_URL, $s);
 	} else {
 		$style = ' background-image: none ';
 	}
+
 	echo sprintf('<link href="%s/css/style.php?file=login" rel="stylesheet" type="text/css" media="all">', DERMATOS_BASE_PLUGIN_URL);
 	echo sprintf('<style type="text/css">%s</style>', $style);
 }
