@@ -5,7 +5,8 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 3.6
+Version: 4.0
+Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
 defined('ABSPATH') || die('Ahem.');
@@ -31,7 +32,7 @@ define('DERMATOS_BASE_PLUGIN_PATH', dirname(__FILE__));
 //
 add_filter('login_errors', 'dermatos_login_supress_errors');
 function dermatos_login_supress_errors($error) {
-	if (DERMATOS_KEEP_QUIET_ABOUT_LOGIN_ERRORS) {
+	if (apply_filters('dermatos_keep_quiet_about_login_errors_filter', DERMATOS_KEEP_QUIET_ABOUT_LOGIN_ERRORS)) {
 		$error = null;
 	}
 	return $error;
@@ -43,7 +44,7 @@ function dermatos_login_supress_errors($error) {
 add_filter('login_redirect', 'dermatos_login_redirect_non_admins', 10, 3);
 function dermatos_login_redirect_non_admins($location, $request, $user) {
 	global $user;
-	if (DERMATOS_LOGIN_REDIRECT_NON_ADMINS) {
+	if (apply_filters('dermatos_login_redirect_non_admins_filter', DERMATOS_LOGIN_REDIRECT_NON_ADMINS)) {
 		if (isset($user->roles) && is_array($user->roles)) {
 			if (!in_array('administrator', $user->roles)) {
 				$location = home_url('/');
@@ -60,7 +61,7 @@ function dermatos_login_redirect_non_admins($location, $request, $user) {
 add_filter('wp_before_admin_bar_render', 'dermatos_remove_wordpress_adminbar_quicklinks');
 function dermatos_remove_wordpress_adminbar_quicklinks() {
 	global $wp_admin_bar;
-	if (DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS) {
+	if (apply_filters('dermatos_remove_wordpress_adminbar_quicklinks_filter', DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS)) {
 		$wp_admin_bar->add_menu(
 			array('id' => 'wp-logo', 'title' => null, 'href' => null, 'meta' => array('title' => null))
 		);
@@ -78,9 +79,9 @@ function dermatos_remove_wordpress_adminbar_quicklinks() {
 //
 add_filter('gettext', 'dermatos_replace_howdy', 10, 3);
 function dermatos_replace_howdy($translated, $text, $domain) {
-	if (DERMATOS_REPLACE_ADMIN_HOWDY_GREETING) {
+	if (apply_filters('dermatos_replace_admin_howdy_greeting_filter', DERMATOS_REPLACE_ADMIN_HOWDY_GREETING)) {
 		if (is_admin() && $domain == 'default') {
-			if (strpos($translated, 'Howdy') !== false) {
+			if (strpos($translated, 'Howdy') <> false) {
 				$translated = str_replace('Howdy', "G'day", $translated);
 			}
 		}
@@ -115,7 +116,7 @@ function dermatos_change_loginform_text($text) {
 		switch (true) {
 			case ($temp == 'LOST YOUR PASSWORD'):
 				$text = null;
-				if (DERMATOS_KEEP_LOST_PASSWORD_LINK) {
+				if (apply_filters('dermatos_keep_lost_password_link_filter', DERMATOS_KEEP_LOST_PASSWORD_LINK)) {
 					$text = sprintf('<span class="reminder">%s</span>', _x('Lost your password?', 'Login form'));
 				}
 				break;
@@ -150,7 +151,7 @@ function dermatos_change_loginform_text($text) {
 //
 add_filter('login_head', 'dermatos_login_css', 999);
 function dermatos_login_css() {
-	$path = DERMATOS_BASE_PLUGIN_PATH . '/css/images/logo.png';
+	$path = sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH);
 	if (file_exists($path) == true) {
 		$w = 0; $h = 0; $s = getimagesize($path);
 		if (count($s) > 2) {
@@ -218,7 +219,7 @@ function dermatos_public_css() {
 //
 add_action('customize_controls_enqueue_scripts', 'dermatos_customizer_enqueue');
 function dermatos_customizer_enqueue() {
-	wp_enqueue_style('dermatos-customizer', DERMATOS_BASE_PLUGIN_URL . '/css/style.php?file=customizer');
+	wp_enqueue_style('dermatos-customizer', sprintf('%s/css/style.php?file=customizer', DERMATOS_BASE_PLUGIN_URL));
 }
 
 //
