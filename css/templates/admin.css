@@ -441,8 +441,6 @@ td strong {
 }
 
 .widefat .trash .submitdelete {
-	font-size: 100% !important;
-	text-transform: none;
 }
 
 /* Links */
@@ -803,7 +801,9 @@ p.search-box {
 	margin-top: 0;
 }
 
-.row-actions a {
+.row-actions > span > a {
+	font-size: 11px !important;
+	text-transform: uppercase !important;
 }
 
 /* Widgets */
@@ -972,8 +972,16 @@ h3.dashboard-widget-title small,
 	padding: 10px 0 !important;
 }
 
+.tablenav .tablenav-pages {
+	margin-bottom: 8px;
+}
+
 #template {
 	padding-top: 20px !important;
+}
+
+#template textarea {
+	font: [[FONT-WEIGHT-NORMAL]] 12px Consolas, Monaco, monospace !important;
 }
 
 #templateside h2 {
@@ -2799,8 +2807,6 @@ a.frm_show_comment:hover {
 }
 
 .wp-list-table .username strong a {
-	text-transform: uppercase;
-	font-size: 85% !important;
 }
 
 .wc_emails.widefat th {
