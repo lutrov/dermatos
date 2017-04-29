@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 4.0
+Version: 5.0
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -26,6 +26,14 @@ define('DERMATOS_THEME_CAN_OVERRIDE_ADMIN_STYLES', true);
 //
 define('DERMATOS_BASE_PLUGIN_URL', trim(plugin_dir_url(__FILE__), '/'));
 define('DERMATOS_BASE_PLUGIN_PATH', dirname(__FILE__));
+
+//
+// Convert absolute file path to qualified URL.
+//
+function dermatos_url_from_abspath($path = null) {
+	$url = str_replace(wp_normalize_path(untrailingslashit(ABSPATH)), site_url(), wp_normalize_path($path));
+	return esc_url_raw($url);
+}
 
 //
 // Filter login errors.
@@ -151,7 +159,7 @@ function dermatos_change_loginform_text($text) {
 //
 add_filter('login_head', 'dermatos_login_css', 999);
 function dermatos_login_css() {
-	$path = sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH);
+	$path = apply_filters('dermatos_login_logo_path_filter', sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path) == true) {
 		$w = 0; $h = 0; $s = getimagesize($path);
 		if (count($s) > 2) {
@@ -164,9 +172,13 @@ function dermatos_login_css() {
 		} else {
 			$s = null;
 		}
-		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s/css/images/logo.png) !important; background-repeat: no-repeat; background-position: center;%s } ', $h, DERMATOS_BASE_PLUGIN_URL, $s);
+		$style = sprintf('#login h1 a {width: 100%% !important; height: %spx !important; margin: 0 auto !important; background-image: url(%s) !important; background-repeat: no-repeat; background-position: center;%s } ', $h, dermatos_url_from_abspath($path), $s);
 	} else {
 		$style = ' background-image: none ';
+	}
+	$path = apply_filters('dermatos_login_background_path_filter', null);
+	if (strlen($path) > 0) {
+		$style = sprintf('html {background-image: url(%s)} %s', dermatos_url_from_abspath($path), $style);
 	}
 	echo sprintf('<link href="%s/css/style.php?file=login" rel="stylesheet" type="text/css" media="all">', DERMATOS_BASE_PLUGIN_URL);
 	echo sprintf('<style type="text/css">%s</style>', $style);
@@ -192,9 +204,9 @@ function dermatos_login_rememberme_checked() {
 add_filter('admin_head', 'dermatos_meta_favicon');
 add_filter('login_head', 'dermatos_meta_favicon');
 function dermatos_meta_favicon() {
-	$path = sprintf('%s/images/icon.png', DERMATOS_BASE_PLUGIN_PATH);
+	$path = apply_filters('dermatos_meta_favicon_path_filter', sprintf('%s/css/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path)) {
-		echo sprintf('<link href="%s/images/icon.png" rel="icon" type="image/png">', DERMATOS_BASE_PLUGIN_URL);
+		echo sprintf('<link href="%s" rel="icon" type="image/png">', dermatos_url_from_abspath($path));
 	}
 }
 
