@@ -32,6 +32,31 @@ This plugin provides an API to to customise the default constant values. See the
 	// ---- Change the Dermatos plugin theme can override admin styles value to false.
 	add_filter('dermatos_theme_can_override_admin_styles_filter', '__return_false');
 
+	// ---- Change the Dermatos plugin login background path.
+	add_filter('dermatos_login_background_path_filter', 'lutrov_login_background_path_filter');
+	function lutrov_login_background_path_filter($path) {
+		$path = sprintf('%s/wp-content/uploads/2017/04/login-background.jpg', ABSPATH);
+		return $path;
+	}
+
+	// ---- Change the Dermatos plugin login logo path.
+	add_filter('dermatos_login_logo_path_filter', 'lutrov_login_logo_path_filter');
+	function lutrov_login_logo_path_filter($path) {
+		$path = sprintf('%s/wp-content/uploads/2017/04/login-logo.png', ABSPATH);
+		return $path;
+	}
+
+	// ---- Change the Dermatos plugin meta favicon path.
+	add_filter('dermatos_meta_favicon_path_filter', 'lutrov_meta_favicon_path_filter');
+	function lutrov_meta_favicon_path_filter($path) {
+		$path = sprintf('%s/wp-content/uploads/2017/04/meta-favicon.png', ABSPATH);
+		return $path;
+	}
+
+
+
+dermatos_meta_favicon_path_filter
+
 Or if you're using a custom site plugin (you should be), do it via the `plugins_loaded` hook instead:
 
 	// ---- Change the Dermatos plugin constant values.
@@ -49,6 +74,24 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 		add_filter('dermatos_replace_admin_howdy_greeting_filter', '__return_false');
 		// Change the theme can override admin styles value to false.
 		add_filter('dermatos_theme_can_override_admin_styles_filter', '__return_false');
+		// ---- Change the Dermatos plugin login background path.
+		add_filter('dermatos_login_background_path_filter', 'lutrov_login_background_path_filter');
+		function lutrov_login_background_path_filter($path) {
+			$path = sprintf('%s/wp-content/uploads/2017/04/login-background.jpg', ABSPATH);
+			return $path;
+		}
+		// ---- Change the Dermatos plugin login logo path.
+		add_filter('dermatos_login_logo_path_filter', 'lutrov_login_logo_path_filter');
+		function lutrov_login_logo_path_filter($path) {
+			$path = sprintf('%s/wp-content/uploads/2017/04/login-logo.png', ABSPATH);
+			return $path;
+		}
+		// ---- Change the Dermatos plugin meta favicon path.
+		add_filter('dermatos_meta_favicon_path_filter', 'lutrov_meta_favicon_path_filter');
+		function lutrov_meta_favicon_path_filter($path) {
+			$path = sprintf('%s/wp-content/uploads/2017/04/meta-favicon.png', ABSPATH);
+			return $path;
+		}
 	}
 
 
