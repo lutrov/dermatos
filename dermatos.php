@@ -144,7 +144,7 @@ function dermatos_change_loginform_text($text) {
 				$text = _x('Username', 'Login form');
 				break;
 			case ($temp == 'REMEMBER ME'):
-				$text = _x('Remember me.', 'Login form');
+				$text = _x('Remember me', 'Login form');
 				break;
 			case (substr($temp, 0, 5) == 'ERROR'):
 				$text = _x('Authentication failed.', 'Login form');
@@ -204,7 +204,7 @@ function dermatos_login_rememberme_checked() {
 add_filter('admin_head', 'dermatos_meta_favicon');
 add_filter('login_head', 'dermatos_meta_favicon');
 function dermatos_meta_favicon() {
-	$path = apply_filters('dermatos_meta_favicon_path_filter', sprintf('%s/css/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
+	$path = apply_filters('dermatos_meta_favicon_path_filter', sprintf('%s/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path)) {
 		echo sprintf('<link href="%s" rel="icon" type="image/png">', dermatos_url_from_abspath($path));
 	}
