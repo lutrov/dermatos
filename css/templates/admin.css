@@ -2757,8 +2757,14 @@ a.frm_show_comment:hover {
 
 .woocommerce ul.subsubsub {
 	clear: left;
+	margin: 5px 0 10px 0;
 	padding-top: 0 !important;
 	padding-left: 0 !important;
+}
+
+.woocommerce .nav-tab-wrapper + ul.subsubsub,
+.woocommerce .nav-tab-wrapper + h1.screen-reader-text + ul.subsubsub {
+	margin-top: -15px !important;
 }
 
 .woocommerce .form-table fieldset {
