@@ -2517,7 +2517,6 @@ a.frm_show_comment:hover {
 }
 
 /* Ninja Forms Support */
-
 /* Too many changes needed, wait for them to fix things in v3 */
 
 /* P3 Plugin Profiler Support */
@@ -2929,6 +2928,11 @@ a.frm_show_comment:hover {
 #woocommerce-coupon-data .panel-wrap,
 #woocommerce-product-data .panel-wrap,
 .woocommerce .panel-wrap {
+}
+
+#woocommerce-product-data .hndle label:first-child {
+	margin-right: 0;
+	border-right: none;
 }
 
 .woocommerce_options_panel label {
