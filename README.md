@@ -17,8 +17,8 @@ This plugin provides an API to to customise the default constant values. See the
 	// ---- Change the Dermatos plugin keep lost password link value to false.
 	add_filter('dermatos_keep_lost_password_link_filter', '__return_false');
 
-	// ---- Change the Dermatos plugin keep quiet about login errors value to false.
-	add_filter('dermatos_keep_quiet_about_login_errors_filter', '__return_false');
+	// ---- Change the Dermatos plugin show login errors value to false.
+	add_filter('dermatos_show_login_errors_filter', '__return_false');
 
 	// ---- Change the Dermatos plugin login redirect non admins value to false.
 	add_filter('dermatos_login_redirect_non_admins_filter', '__return_false');
@@ -64,8 +64,8 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 	function custom_dermatos_filters() {
 		// Change the keep lost password link value to false.
 		add_filter('dermatos_keep_lost_password_link_filter', '__return_false');
-		// Change the keep quiet about login errors value to false.
-		add_filter('dermatos_keep_quiet_about_login_errors_filter', '__return_false');
+		// Change the show login errors value to false.
+		add_filter('dermatos_show_login_errors_filter', '__return_false');
 		// Change the login redirect non admins value to false.
 		add_filter('dermatos_login_redirect_non_admins_filter', '__return_false');
 		// Change the remove WP adminbar quicklinks value to false.
