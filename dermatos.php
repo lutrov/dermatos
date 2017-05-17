@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A modern looking admin backend &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov.
 Author URI: http://lutrov.com/
-Version: 6.0
+Version: 6.1
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -14,12 +14,12 @@ defined('ABSPATH') || die('Ahem.');
 //
 // Constants used by this plugin.
 //
-define('DERMATOS_KEEP_LOST_PASSWORD_LINK', true);
-define('DERMATOS_KEEP_QUIET_ABOUT_LOGIN_ERRORS', true);
+define('DERMATOS_SHOW_LOGIN_ERRORS', true);
 define('DERMATOS_LOGIN_REDIRECT_NON_ADMINS', true);
 define('DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS', true);
 define('DERMATOS_REPLACE_ADMIN_HOWDY_GREETING', true);
 define('DERMATOS_THEME_CAN_OVERRIDE_ADMIN_STYLES', true);
+define('DERMATOS_KEEP_LOST_PASSWORD_LINK', true);
 
 //
 // Don't touch these unless you want the sky to fall.
@@ -40,7 +40,7 @@ function dermatos_url_from_abspath($path = null) {
 //
 add_filter('login_errors', 'dermatos_login_supress_errors');
 function dermatos_login_supress_errors($error) {
-	if (apply_filters('dermatos_keep_quiet_about_login_errors_filter', DERMATOS_KEEP_QUIET_ABOUT_LOGIN_ERRORS)) {
+	if (apply_filters('dermatos_show_login_errors_filter', DERMATOS_SHOW_LOGIN_ERRORS) == false) {
 		$error = null;
 	}
 	return $error;
@@ -60,9 +60,9 @@ function dermatos_login_remove_wobble() {
 add_filter('login_redirect', 'dermatos_login_redirect_non_admins', 10, 3);
 function dermatos_login_redirect_non_admins($location, $request, $user) {
 	global $user;
-	if (apply_filters('dermatos_login_redirect_non_admins_filter', DERMATOS_LOGIN_REDIRECT_NON_ADMINS)) {
-		if (isset($user->roles) && is_array($user->roles)) {
-			if (!in_array('administrator', $user->roles)) {
+	if (apply_filters('dermatos_login_redirect_non_admins_filter', DERMATOS_LOGIN_REDIRECT_NON_ADMINS) == true) {
+		if (isset($user->roles) == true && is_array($user->roles) == true) {
+			if (in_array('administrator', $user->roles) == false) {
 				$location = home_url('/');
 			}
 		}
@@ -77,7 +77,7 @@ function dermatos_login_redirect_non_admins($location, $request, $user) {
 add_filter('wp_before_admin_bar_render', 'dermatos_remove_wordpress_adminbar_quicklinks');
 function dermatos_remove_wordpress_adminbar_quicklinks() {
 	global $wp_admin_bar;
-	if (apply_filters('dermatos_remove_wordpress_adminbar_quicklinks_filter', DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS)) {
+	if (apply_filters('dermatos_remove_wordpress_adminbar_quicklinks_filter', DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS) == true) {
 		$wp_admin_bar->add_menu(
 			array('id' => 'wp-logo', 'title' => null, 'href' => null, 'meta' => array('title' => null))
 		);
@@ -95,8 +95,8 @@ function dermatos_remove_wordpress_adminbar_quicklinks() {
 //
 add_filter('gettext', 'dermatos_replace_howdy', 10, 3);
 function dermatos_replace_howdy($translated, $text, $domain) {
-	if (apply_filters('dermatos_replace_admin_howdy_greeting_filter', DERMATOS_REPLACE_ADMIN_HOWDY_GREETING)) {
-		if (is_admin() && $domain == 'default') {
+	if (apply_filters('dermatos_replace_admin_howdy_greeting_filter', DERMATOS_REPLACE_ADMIN_HOWDY_GREETING) == true) {
+		if (is_admin() == true && $domain == 'default') {
 			if (strpos($translated, 'Howdy') <> false) {
 				$translated = str_replace('Howdy', "G'day", $translated);
 			}
@@ -132,7 +132,7 @@ function dermatos_change_loginform_text($text) {
 		switch (true) {
 			case ($temp == 'LOST YOUR PASSWORD'):
 				$text = null;
-				if (apply_filters('dermatos_keep_lost_password_link_filter', DERMATOS_KEEP_LOST_PASSWORD_LINK)) {
+				if (apply_filters('dermatos_keep_lost_password_link_filter', DERMATOS_KEEP_LOST_PASSWORD_LINK) == true) {
 					$text = sprintf('<span class="reminder">%s</span>', _x('Lost your password?', 'Login form'));
 				}
 				break;
@@ -213,7 +213,7 @@ add_filter('admin_head', 'dermatos_meta_favicon');
 add_filter('login_head', 'dermatos_meta_favicon');
 function dermatos_meta_favicon() {
 	$path = apply_filters('dermatos_meta_favicon_path_filter', sprintf('%s/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
-	if (file_exists($path)) {
+	if (file_exists($path) == true) {
 		echo sprintf('<link href="%s" rel="icon" type="image/png">', dermatos_url_from_abspath($path));
 	}
 }
