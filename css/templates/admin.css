@@ -2961,7 +2961,7 @@ a.frm_show_comment:hover {
 }
 
 .post-type-shop_order #order_data p.order_number {
-	padding: 20px 0 10px 0;
+	padding: 10px 0;
 	color: #444;
 	font-size: 14px;
 }
