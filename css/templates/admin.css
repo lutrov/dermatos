@@ -2719,6 +2719,16 @@ a.frm_show_comment:hover {
 	display: none !important;
 }
 
+/* White Label CMS Support */
+
+#wlcms-sidebar {
+	/* display: none !important; */
+}
+
+#wlcms-container {
+	/* width: 100% !important; */
+}
+
 /* Widget Context Plugin Support */
 
 .widget-context-form p.submit {
@@ -2939,9 +2949,21 @@ a.frm_show_comment:hover {
 	/* Right aligning labels makes them wonky */
 }
 
+.post-type-shop_order #order_data h2,
+.post-type-shop_order #order_data p.order_number {
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
+}
+
 .post-type-shop_order #order_data h2 {
-	text-shadow: none;
 	padding: 10px !important;
+	text-shadow: none;
+}
+
+.post-type-shop_order #order_data p.order_number {
+	padding: 20px 0 10px 0;
+	color: #444;
+	font-size: 14px;
 }
 
 .post-type-shop_order .order_data_column h3 {
