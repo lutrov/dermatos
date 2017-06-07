@@ -47,3 +47,8 @@
 .wp-customizer button span.dashicons {
 	display: none !important;
 }
+
+.wp-customizer.modal-open .button-hero {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
