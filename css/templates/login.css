@@ -11,8 +11,10 @@
 }
 
 html {
-	background: #111 url(images/background.jpg) center center fixed;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/background.jpg);
 	background-size: cover;
+	background-position: center top; 
+	background-color: #222;
 }
 
 body {
