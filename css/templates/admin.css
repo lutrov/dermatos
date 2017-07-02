@@ -210,13 +210,15 @@ html.wp-toolbar {
 #wp-admin-bar-user-actions .ab-item:hover {
 }
 
-#wpadminbar .ab-item .display-name {
+#wpadminbar #wp-admin-bar-user-info .username {
 	text-transform: uppercase;
-	font-size: 85% !important;
 }
 
 #wpadminbar .ab-item .avatar {
 	display: block;
+}
+
+#wpadminbar .ab-item .display-name {
 }
 
 /* Main Elements */
@@ -2581,6 +2583,20 @@ a.frm_show_comment:hover {
 
 .postbox.unite-postbox h3 span {
 	color: #222 !important;
+}
+
+/* Sensei Support */
+
+.sensei_page_woothemes-sensei-settings .form-table td label {
+	margin-top: 0 !important;
+}
+
+.sensei_page_woothemes-sensei-settings .form-table th {
+	padding-top: 15px !important;
+}
+
+.sensei_page_woothemes-sensei-settings .form-table td input[type=text] {
+	margin-top: -10px !important;
 }
 
 /* Simple Local Avatars Support */
