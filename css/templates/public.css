@@ -9,11 +9,12 @@
 }
 
 #wpadminbar .ab-item .display-name {
-	text-transform: uppercase;
-	font-size: 85%;
 }
 
 #wpadminbar .ab-item .avatar {
 	display: block;
 }
 
+#wpadminbar #wp-admin-bar-user-info .username {
+	text-transform: uppercase;
+}
