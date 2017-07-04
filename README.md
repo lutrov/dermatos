@@ -1,6 +1,6 @@
 # Dermatos
 
-A simple, modern looking admin &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the standard admin color schemes. Why this plugin name? Dermatos means "skin" in Greek.
+A simple, modern looking admin &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the standard admin colour schemes. Why this plugin name? Dermatos means "skin" in Greek.
 
 ## Professional Support
 
