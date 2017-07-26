@@ -10,7 +10,45 @@ body {
 	background-color: #f8f8f8 !important;
 }
 
+h1,
+h2,
+h3,
+h4 {
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+}
+
+h1 {
+	font-size: 30px !important;
+}
+
+h2 {
+	font-size: 20px !important;
+	text-transform: capitalize !important;
+}
+
+h3 {
+	font-size: 15px !important;
+	text-transform: capitalize !important;
+}
+
+h4 {
+	font-size: 13px !important;
+}
+
+body,
+th,
+td,
+td a,
+label,
 p {
+	font-size: 13px !important;
+}
+
+strong,
+b {
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
 select,
@@ -27,22 +65,11 @@ input[type=url] {
 	border: 1px solid #d4d4d4 !important;
 	box-shadow: none !important;
 	box-sizing: border-box;
+	padding: 5px !important;
 }
 
 select {
 	padding: 0 5px !important;
-}
-
-textarea,
-input[type=text],
-input[type=password],
-input[type=file],
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=tel],
-input[type=url] {
-	padding: 5px !important;
 }
 
 select:focus,
@@ -74,6 +101,9 @@ html.wp-toolbar {
 
 .wp-admin {
 	min-width: 0;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
+	line-height: 1.6em;
 }
 
 /* WP Adminbar */
@@ -117,19 +147,6 @@ html.wp-toolbar {
 	margin: 0 0;
 }
 
-#wp-admin-bar-my-account {
-	border: none !important;
-}
-
-#wp-admin-bar-wp-logo {
-	display: none;
-}
-
-#wp-admin-bar-wp-logo img {
-	vertical-align: text-top !important;
-	margin-top: 4px !important;
-}
-
 #wpadminbar #wp-admin-bar-site-name > a {
 	font: [[FONT-WEIGHT-BOLD]] 16px "[[FONT-FAMILY]]", monospace;
 	text-shadow: none;
@@ -140,12 +157,6 @@ html.wp-toolbar {
 
 #wpadminbar #wp-admin-bar-site-name > .ab-item:before {
 	top: -6px;
-}
-
-#wp-admin-bar-site-name.hover a,
-#wp-admin-bar-site-name:hover a {
-	color: #c8c8c8 !important;
-	text-shadow: none !important;
 }
 
 #wpadminbar .ab-top-menu > li:hover > .ab-item,
@@ -200,6 +211,25 @@ html.wp-toolbar {
 	color: #[[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
+#wp-admin-bar-site-name.hover a,
+#wp-admin-bar-site-name:hover a {
+	color: #c8c8c8 !important;
+	text-shadow: none !important;
+}
+
+#wp-admin-bar-my-account {
+	border: none !important;
+}
+
+#wp-admin-bar-wp-logo {
+	display: none;
+}
+
+#wp-admin-bar-wp-logo img {
+	vertical-align: text-top !important;
+	margin-top: 4px !important;
+}
+
 #wp-admin-bar-my-sites-list .ab-item,
 #wp-admin-bar-top-secondary .ab-item,
 #wp-admin-bar-user-actions .ab-item {
@@ -221,62 +251,6 @@ html.wp-toolbar {
 #wpadminbar .ab-item .display-name {
 }
 
-/* Main Elements */
-
-h1,
-h2,
-h3,
-h4 {
-	font-family: "[[FONT-FAMILY]]", monospace;
-	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
-	text-transform: capitalize !important;
-}
-
-h1 {
-	font-size: 30px !important;
-}
-
-h2 {
-	font-size: 20px !important;
-}
-
-h3 {
-	font-size: 15px !important;
-}
-
-h4 {
-	font-size: 13px !important;
-}
-
-body,
-th,
-td,
-td a,
-label {
-	font-size: 13px !important;
-}
-
-select,
-textarea,
-input[type=text],
-input[type=password],
-input[type=file],
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=tel],
-input[type=url] {
-	font-family: "[[FONT-FAMILY]]", monospace;
-	font-size: 13px !important;
-	font-weight: [[FONT-WEIGHT-BOLD]];
-}
-
-.wp-admin {
-	font-family: "[[FONT-FAMILY]]", monospace !important;
-	font-weight: [[FONT-WEIGHT-NORMAL]];
-	line-height: 1.6em;
-}
-
 h2 .nav-tab,
 .wrap h2,
 .subtitle {
@@ -286,18 +260,12 @@ h2 .nav-tab,
 }
 
 h2.nav-tab-wrapper a {
-	margin: 15px 0 30px 0;
+	margin: 15px 8px 20px 0;
 	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 h2.hndle.ui-sortable-handle {
 	font-size: 16px !important;
-}
-
-strong,
-b {
-	font-family: "[[FONT-FAMILY]]", monospace;
-	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
 #adminmenu a.wp-has-submenu,
@@ -389,7 +357,11 @@ td strong {
 	height: 2.5em;
 }
 
-.wp-core-ui .welcome-panel .button.button-hero,
+.wp-core-ui #welcome-panel .welcome-panel-content h2 {
+	font-size: 18px !important;
+}
+
+.wp-core-ui #welcome-panel .button.button-hero,
 .upload-ui .button.button-hero {
 	padding: 15px 30px !important;
 	color: #fff !important;
@@ -398,18 +370,13 @@ td strong {
 	border: none !important;
 }
 
-.wp-core-ui .welcome-panel .button.button-hero:hover,
+.wp-core-ui #welcome-panel .button.button-hero:hover,
 .upload-ui .button.button-hero:hover {
 }
 
 .wp-core-ui .button-group.button-large .button,
 .wp-core-ui .button.button-large {
 	line-height: 2.25 !important;
-}
-
-.wp-core-ui .welcome-panel h2 {
-	font-size: 18px !important;
-
 }
 
 .manage-menus {
@@ -947,9 +914,10 @@ h3.dashboard-widget-title small,
 
 /* Misc */
 
-.nav-tab:hover,
-.nav-tab-active {
-	border-color: #b8b8b8;
+.nav-tab-wrapper,
+.wrap h2.nav-tab-wrapper,
+h1.nav-tab-wrapper {
+	border-bottom: none;
 }
 
 .nav-tab-wrapper {
@@ -961,13 +929,25 @@ h3.dashboard-widget-title small,
 }
 
 .nav-tab {
-	padding-top: 2px !important;
-	padding-bottom: 2px !important;
-	height: 24px !important;
+	padding: 2px 12px;
+	height: 24px;
+	border: 1px solid #b8b8b8;
+	background-color: inherit;
+	font-size: 14px;
+	margin-right: 8px;
 }
 
 .nav-tab-active {
-	font-size: 14px !important;
+	background-color: #e8e8e8 !important;
+}
+
+.nav-tab:hover {
+	background-color: #e8e8e8;
+	border: 1px solid #b8b8b8;
+}
+
+.nav-tab-active {
+	background-color: inherit;
 }
 
 .tablenav {
@@ -1615,6 +1595,7 @@ ul.subsubsub {
 ul.subsubsub li a {
 	padding: 0 5px !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+	text-transform: capitalize;
 }
 
 ul.subsubsub li:first-of-type a {
@@ -2179,12 +2160,21 @@ h2 a.nav-tab {
 	padding-bottom: 0 !important;
 }
 
+#ws_menu_editor {
+	margin-top: 0 !important;
+}
+
 #ws_menu_editor .ws_main_button {
 	margin: 0 auto 10px auto;
 	width: 150px;
 	text-transform: capitalize;
 }
+
 #ws_editor_sidebar {
+	margin-top: -10px;
+	margin-left: 20px;
+	background-color: inherit;
+	border: none;
 }
 
 #ws_sidebar_pro_ad,
@@ -2301,8 +2291,8 @@ table.acf_input tbody tr td.label label {
 
 .dw_collapse p,
 .dw_collapse li {
-	margin-top: 5px !important;
-	margin-bottom: 5px !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 /* Email Plugin Support */
@@ -2806,7 +2796,6 @@ a.frm_show_comment:hover {
 
 .woocommerce .nav-tab {
 	margin-left: 0 !important;
-	border: 1px solid #d4d4d4 !important;
 }
 
 .forminp .wc_tax_rates.widefat th,
@@ -2844,9 +2833,8 @@ a.frm_show_comment:hover {
 	text-align: left !important;
 }
 
-
-.woocommerce_page_wc-settings h1 {
-	padding-top: 20px !important;
+.woocommerce nav.woo-nav-tab-wrapper {
+	padding-top: 0;
 }
 
 .woocommerce_page_wc-settings .button-secondary {
