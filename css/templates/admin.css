@@ -914,6 +914,10 @@ h3.dashboard-widget-title small,
 
 /* Misc */
 
+#screen-options-wrap label {
+	text-transform: capitalize;
+}
+
 .nav-tab-wrapper,
 .wrap h2.nav-tab-wrapper,
 h1.nav-tab-wrapper {
