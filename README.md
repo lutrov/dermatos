@@ -48,9 +48,6 @@ This plugin provides an API to to customise the default constant values. See the
 	}
 
 
-
-dermatos_meta_favicon_path_filter
-
 Or if you're using a custom site plugin (you should be), do it via the `plugins_loaded` hook instead:
 
 	// ---- Change the Dermatos plugin constant values.
