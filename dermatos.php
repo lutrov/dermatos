@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A simple, modern looking admin &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the standard admin colour schemes. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 6.3
+Version: 6.4
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -18,8 +18,6 @@ define('DERMATOS_SHOW_LOGIN_ERRORS', true);
 define('DERMATOS_LOGIN_REDIRECT_NON_ADMINS', true);
 define('DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS', true);
 define('DERMATOS_REPLACE_ADMIN_HOWDY_GREETING', true);
-define('DERMATOS_THEME_CAN_OVERRIDE_ADMIN_STYLES', true);
-define('DERMATOS_KEEP_LOST_PASSWORD_LINK', true);
 
 //
 // Don't touch these unless you want the sky to fall.
@@ -132,9 +130,6 @@ function dermatos_change_loginform_text($text) {
 		switch (true) {
 			case ($temp == 'LOST YOUR PASSWORD'):
 				$text = null;
-				if (apply_filters('dermatos_keep_lost_password_link_filter', DERMATOS_KEEP_LOST_PASSWORD_LINK) == true) {
-					$text = sprintf('<span class="reminder">%s</span>', _x('Lost your password?', 'Login form'));
-				}
 				break;
 			case ($temp == 'A PASSWORD WILL BE E-MAILED TO YOU'):
 				$text = null;
@@ -154,6 +149,10 @@ function dermatos_change_loginform_text($text) {
 			case ($temp == 'REMEMBER ME'):
 				$text = _x('Remember me', 'Login form');
 				break;
+			case ($temp == 'ACCOUNT DISABLED'):
+				// Cater for Disable Users plugin by Jared Atchison
+				$text = _x('Your account has been disabled.', 'Login form');
+				break;
 			case (substr($temp, 0, 5) == 'ERROR'):
 				$text = _x('Authentication failed.', 'Login form');
 				break;
@@ -165,7 +164,7 @@ function dermatos_change_loginform_text($text) {
 //
 // Add login CSS.
 //
-add_filter('login_head', 'dermatos_login_css', 999);
+add_action('login_head', 'dermatos_login_css', 999);
 function dermatos_login_css() {
 	$path = apply_filters('dermatos_login_logo_path_filter', sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path) == true) {
@@ -209,8 +208,8 @@ function dermatos_login_rememberme_checked() {
 //
 // Custom admin and login favicon.
 //
-add_filter('admin_head', 'dermatos_meta_favicon');
-add_filter('login_head', 'dermatos_meta_favicon');
+add_action('admin_head', 'dermatos_meta_favicon');
+add_action('login_head', 'dermatos_meta_favicon');
 function dermatos_meta_favicon() {
 	$path = apply_filters('dermatos_meta_favicon_path_filter', sprintf('%s/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path) == true) {
