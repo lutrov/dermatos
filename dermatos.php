@@ -14,10 +14,10 @@ defined('ABSPATH') || die('Ahem.');
 //
 // Constants used by this plugin.
 //
-define('DERMATOS_SHOW_LOGIN_ERRORS', true);
 define('DERMATOS_LOGIN_REDIRECT_NON_ADMINS', true);
 define('DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS', true);
 define('DERMATOS_REPLACE_ADMIN_HOWDY_GREETING', true);
+define('DERMATOS_SHOW_LOGIN_ERRORS', true);
 
 //
 // Don't touch these unless you want the sky to fall.
