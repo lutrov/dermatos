@@ -14,9 +14,6 @@ This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-lic
 
 This plugin provides an API to to customise the default constant values. See these examples:
 
-	// ---- Change the Dermatos plugin keep lost password link value to false.
-	add_filter('dermatos_keep_lost_password_link_filter', '__return_false');
-
 	// ---- Change the Dermatos plugin show login errors value to false.
 	add_filter('dermatos_show_login_errors_filter', '__return_false');
 
@@ -26,11 +23,8 @@ This plugin provides an API to to customise the default constant values. See the
 	// ---- Change the Dermatos plugin remove WP adminbar quicklinks value to false.
 	add_filter('dermatos_remove_wordpress_adminbar_quicklinks_filter', '__return_false');
 
-	// ---- Change the Dermatos plugin freplace howdy greeting value to false.
+	// ---- Change the Dermatos plugin replace howdy greeting value to false.
 	add_filter('dermatos_replace_admin_howdy_greeting_filter', '__return_false');
-
-	// ---- Change the Dermatos plugin theme can override admin styles value to false.
-	add_filter('dermatos_theme_can_override_admin_styles_filter', '__return_false');
 
 	// ---- Change the Dermatos plugin login background path.
 	add_filter('dermatos_login_background_path_filter', 'lutrov_login_background_path_filter');
@@ -62,8 +56,6 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 	// ---- Change the Dermatos plugin constant values.
 	add_action('plugins_loaded', 'custom_dermatos_filters');
 	function custom_dermatos_filters() {
-		// Change the keep lost password link value to false.
-		add_filter('dermatos_keep_lost_password_link_filter', '__return_false');
 		// Change the show login errors value to false.
 		add_filter('dermatos_show_login_errors_filter', '__return_false');
 		// Change the login redirect non admins value to false.
@@ -72,8 +64,6 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 		add_filter('dermatos_remove_wordpress_adminbar_quicklinks_filter', '__return_false');
 		// Change the freplace howdy greeting value to false.
 		add_filter('dermatos_replace_admin_howdy_greeting_filter', '__return_false');
-		// Change the theme can override admin styles value to false.
-		add_filter('dermatos_theme_can_override_admin_styles_filter', '__return_false');
 		// ---- Change the Dermatos plugin login background path.
 		add_filter('dermatos_login_background_path_filter', 'lutrov_login_background_path_filter');
 		function lutrov_login_background_path_filter($path) {
