@@ -506,7 +506,7 @@ a,
 .folded #adminmenu a.wp-has-current-submenu:focus + .wp-submenu,
 .folded #adminmenu .wp-has-current-submenu .wp-submenu {
 	background-color: #282c30;
-	border-color: #b8b8b8;
+	border-color: #c8c8c8;
 	box-shadow: none;
 	border-radius: 0;
 }
@@ -720,7 +720,6 @@ h3.dashboard-widget-title small {
 }
 
 .widefat.striped tbody tr:nth-of-type(odd) {
-	background-color: #e8e8e8 !important;
 	background-color: #fff !important;
 }
 
@@ -837,7 +836,7 @@ h3.dashboard-widget-title small,
 }
 
 .in-widget-title {
-	color: #b8b8b8;
+	color: #c8c8c8;
 }
 
 .widget-top .widget-title {
@@ -926,6 +925,7 @@ h1.nav-tab-wrapper {
 
 .nav-tab-wrapper {
 	height: 44px !important;
+	border-bottom: none !important;
 }
 
 .nav-tab-wrapper + p {
@@ -933,12 +933,13 @@ h1.nav-tab-wrapper {
 }
 
 .nav-tab {
+	margin-left: 0;
+	margin-right: 8px;
 	padding: 2px 12px;
 	height: 24px;
-	border: 1px solid #b8b8b8;
+	border: 1px solid #c8c8c8;
 	background-color: inherit;
 	font-size: 14px;
-	margin-right: 8px;
 }
 
 .nav-tab-active {
@@ -947,7 +948,7 @@ h1.nav-tab-wrapper {
 
 .nav-tab:hover {
 	background-color: #e8e8e8;
-	border: 1px solid #b8b8b8;
+	border: 1px solid #c8c8c8;
 }
 
 .nav-tab-active {
