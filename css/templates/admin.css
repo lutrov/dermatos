@@ -16,6 +16,7 @@ h3,
 h4 {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+	text-transform: capitalize !important;
 }
 
 h1 {
@@ -24,12 +25,11 @@ h1 {
 
 h2 {
 	font-size: 20px !important;
-	text-transform: capitalize !important;
+
 }
 
 h3 {
 	font-size: 15px !important;
-	text-transform: capitalize !important;
 }
 
 h4 {
@@ -266,6 +266,7 @@ h2.nav-tab-wrapper a {
 
 h2.hndle.ui-sortable-handle {
 	font-size: 16px !important;
+	border-bottom: 1px solid #d4d4d4;
 }
 
 #adminmenu a.wp-has-submenu,
@@ -786,6 +787,10 @@ p.search-box {
 	box-shadow: none;
 }
 
+.postbox.closed {
+	border-bottom: none;
+}
+
 .widget form {
 	margin-top: 15px !important;
 }
@@ -913,6 +918,7 @@ h3.dashboard-widget-title small,
 
 /* Misc */
 
+#screen-options-wrap legend,
 #screen-options-wrap label {
 	text-transform: capitalize;
 }
@@ -1219,10 +1225,13 @@ h1.nav-tab-wrapper {
 }
 
 .js .postbox {
-	margin-bottom: 20px !important;
+	margin-bottom: 30px !important;
 }
 
 .js .postbox .handlediv {
+	width: 16px;
+	height: 16px;
+	margin: 4px 10px -20px 0;
 }
 
 .js .postbox .handlediv.button-link {
@@ -1890,6 +1899,7 @@ label span.description {
 
 #wp-content-editor-tools {
 	padding-top: 5px !important;
+	background-color: #fff;
 }
 
 #wp-content-media-buttons {
