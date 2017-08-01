@@ -2945,6 +2945,10 @@ a.frm_show_comment:hover {
 	font-size: 20px !important;
 }
 
+.woocommerce .wc_status_table h2 {
+	color: #e8e8e8;
+}
+
 .wc_error_tip,
 .chart-tooltip,
 #tiptip_content {
