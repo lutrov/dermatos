@@ -61,7 +61,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SEONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
 p.forgetmenot {
