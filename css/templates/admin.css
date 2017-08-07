@@ -1024,22 +1024,19 @@ h1.nav-tab-wrapper {
 	margin-right: 8px;
 	padding: 2px 12px;
 	height: 24px;
-	border: 1px solid #c8c8c8;
-	background-color: inherit;
+	border: 1px solid #e8e8e8;
+	background-color: #fff;
 	font-size: 14px;
 }
 
 .nav-tab-active {
-	background-color: #e8e8e8 !important;
+	background-color: #f8f8f8;
+	border: 1px solid #e8e8e8;
 }
 
+.nav-tab-active:hover,
 .nav-tab:hover {
-	background-color: #e8e8e8;
-	border: 1px solid #c8c8c8;
-}
-
-.nav-tab-active {
-	background-color: inherit;
+	border: 1px solid #888;
 }
 
 .tablenav {
@@ -1076,6 +1073,22 @@ h1.nav-tab-wrapper {
 }
 
 #templateside .highlight {
+}
+
+.selectize-input {
+	border: 1px solid #e8e8e8;
+	border-radius: 0;
+}
+
+.selectize-input:focus {
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+	color: #444;
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-size: 13px;
 }
 
 /* Widgets-page */
@@ -1580,7 +1593,10 @@ form .form-table th[scope=row] label,
 .options-discussion-php form,
 .options-media-php form,
 .options-permalink-php form,
-.export-php form {
+.export-php form,
+.user-edit-php form,
+.user-new-php form,
+.profile-php form {
 	margin-top: 20px;
 	padding: 0 20px !important;
 	background-color: #f8f8f8;
@@ -1593,6 +1609,14 @@ form .form-table th[scope=row] label,
 
 .import-php .widefat {
 	width: 100%;
+}
+
+.user-edit-php form,
+.user-new-php form,
+.profile-php form {
+	margin-top: 20px;
+	background-color: #f8f8f8;
+	padding: 1px 20px 1px 20px !important;
 }
 
 .user-edit-php .form-table th label,
@@ -1777,7 +1801,7 @@ ul.subsubsub li a.current {
 
 .destroy-sessions .button,
 .wp-generate-pw {
-	min-width: 200px !important;
+	min-width: 160px !important;
 }
 
 .wp-core-ui p .button,
@@ -2254,6 +2278,12 @@ h2 a.nav-tab {
 
 /* Admin Menu Editor Support */
 
+.settings_page_menu_editor #ws_menu_editor {
+	margin-top: 20px;
+	background-color: #f8f8f8;
+	padding: 20px !important;
+}
+
 #ws_ame_editor_heading {
 	float: none !important;
 	padding-bottom: 0 !important;
@@ -2710,6 +2740,23 @@ a.frm_show_comment:hover {
 
 .sensei_page_woothemes-sensei-settings .form-table td input[type=text] {
 	margin-top: -10px !important;
+}
+
+/* Simple History Support */
+
+.settings_page_simple_history_settings_menu_slug form {
+	margin-top: 20px;
+	background-color: #f8f8f8;
+	padding: 1px 20px 1px 20px !important;
+}
+
+.SimpleHistoryPaginationInput {
+	line-height: 1.5 !important;
+	font-size: 13px !important;
+}
+
+.SimpleHistoryPaginationInput .SimpleHistoryPaginationLink {
+	line-height: 1 !important;
 }
 
 /* Simple Local Avatars Support */
