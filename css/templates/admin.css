@@ -1252,7 +1252,6 @@ h1.nav-tab-wrapper {
 /* Menu Page */
 
 .menu-item-handle {
-	color: #fff;
 	text-shadow: none;
 }
 
@@ -1331,7 +1330,7 @@ h1.nav-tab-wrapper {
 }
 
 a.menu-delete {
-	color: #fff !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
 /* Forms & Buttons */
@@ -3090,6 +3089,12 @@ a.frm_show_comment:hover {
 
 .woocommerce_page_wc-settings #s2id_woocommerce_shop_page_id + select + span.description {
 	margin-top: -34px !important;
+}
+
+.woocommerce_page_wc-settings .woocommerce form {
+	margin-top: 20px;
+	background-color: #f8f8f8;
+	padding: 1px 20px !important;
 }
 
 .woocommerce_page_wc-settings .woocommerce form .submit {
