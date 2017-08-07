@@ -2,10 +2,10 @@
 
 /*
 Plugin Name: Dermatos
-Description: A simple, modern looking admin &amp; login theme. It's even pretty responsive, as far as CSS can manage with the core. Please note that this plugin completely ignores the standard admin colour schemes. Why this plugin name? Dermatos means "skin" in Greek.
+Description: A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 6.4
+Version: 8.0
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
