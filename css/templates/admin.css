@@ -1247,7 +1247,6 @@ legend {
 
 form .form-table th,
 form .form-table td {
-	border: 1px dotted red;
 	vertical-align: top !important;
 	font-size: 13px !important;
 }
