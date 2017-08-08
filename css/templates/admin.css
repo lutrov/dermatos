@@ -326,7 +326,6 @@ h2.hndle.ui-sortable-handle {
 #adminmenu a.wp-not-current-submenu,
 #adminmenu .wp-submenu a,
 #collapse-menu,
-#titlewrap input,
 #titlewrap label,
 #message,
 .updated,
@@ -339,6 +338,11 @@ h2.hndle.ui-sortable-handle {
 .row-title,
 .tagcloud a {
 	font-size: 13px !important;
+}
+
+#titlewrap input {
+	font-size: 15px !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .updated,
@@ -418,6 +422,7 @@ td strong {
 .wp-core-ui #welcome-panel .button.button-hero,
 .upload-ui .button.button-hero {
 	padding: 15px 30px !important;
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 	line-height: 1.0 !important;
 	box-shadow: none !important;
@@ -438,7 +443,14 @@ td strong {
 }
 
 .manage-menus form {
-	background-color: #f8f8f8 !important;
+}
+
+.nav-menus-php label {
+	font-style: normal !important;
+}
+
+.nav-menus-php label br {
+	margin-bottom: 5px !important;
 }
 
 .nav-menus-php #post-body {
@@ -460,7 +472,6 @@ td strong {
 }
 
 .submitdelete:hover {
-	text-decoration: underline !important;
 }
 
 .widefat .trash .submitdelete {
@@ -549,9 +560,10 @@ a,
 .folded #adminmenu li.wp-has-current-submenu,
 .folded #adminmenu li.current.menu-top {
 	background: none;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]];
-	border-top-color: [[COLOUR-HIGHLIGHT-SECONDARY]];
-	border-bottom-color: [[COLOUR-HIGHLIGHT-SECONDARY]];
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	border-top-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	border-bottom-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 }
 
 #adminmenu li.menu-top:hover,
@@ -596,8 +608,8 @@ a,
 
 #adminmenu .wp-submenu a:hover,
 #adminmenu .wp-submenu a:focus {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]];
-	color: #fff;
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 }
 
 #adminmenu .wp-menu-arrow {
@@ -683,7 +695,8 @@ div.wp-menu-image::before {
 }
 
 #wpfooter {
-	border-top: 1px solid #e4e4e4;
+	background-color: #f0f0f0;
+	border-top: 1px solid #e8e8e8;
 }
 
 #wpfooter p {
@@ -714,6 +727,7 @@ div.wp-menu-image::before {
 .widefat thead tr,
 .widefat tfoot tr {
 	height: 40px !important;
+	background-color: #f0f0f0;
 }
 
 .widefat {
@@ -733,7 +747,7 @@ div.wp-menu-image::before {
 h3.dashboard-widget-title,
 h3.dashboard-widget-title span,
 h3.dashboard-widget-title small {
-	color: #fff;
+	color: #444 !important;
 }
 
 .widefat td {
@@ -871,7 +885,6 @@ p.search-box {
 }
 
 .widget form {
-	margin-top: 15px !important;
 }
 
 h3.dashboard-widget-title,
@@ -890,9 +903,6 @@ h3.dashboard-widget-title small,
 .menu-item-handle,
 .widefat thead tr th,
 .widefat tfoot tr th {
-	background: none;
-	background-color: #f0f0f0;
-	color: #444;
 }
 
 #dashboard-widgets h2 .postbox-title-action,
@@ -1007,12 +1017,11 @@ h3.dashboard-widget-title small,
 .nav-tab-wrapper,
 .wrap h2.nav-tab-wrapper,
 h1.nav-tab-wrapper {
-	border-bottom: none;
+	border-bottom: none !important;
 }
 
 .nav-tab-wrapper {
 	height: 44px !important;
-	border-bottom: none !important;
 }
 
 .nav-tab-wrapper + p {
@@ -1030,7 +1039,7 @@ h1.nav-tab-wrapper {
 }
 
 .nav-tab-active {
-	background-color: #f8f8f8;
+	background-color: #f0f0f0;
 	border: 1px solid #e8e8e8;
 }
 
@@ -1097,17 +1106,17 @@ h1.nav-tab-wrapper {
 #widgets-right .sidebar-name {
 	color: #f0f0f0;
 	text-shadow: none;
-	border-color: #e8e8e8;
 	box-shadow: none;
-	padding-left: 5px !important;
 }
 
 #available-widgets .sidebar-name {
-	padding-left: 10px !important;
 }
 
 #widgets-right .sidebar-name {
-	margin: 0 -8px 0 -8px !important;
+	margin-left: -5px !important;
+}
+#widgets-right .sidebar-description {
+	margin-left: -5px !important;
 }
 
 #widgets-right .widgets-sortables {
@@ -1118,9 +1127,8 @@ h1.nav-tab-wrapper {
 #widgets-left .sidebar-name h2,
 #widgets-right .sidebar-name h2 {
 	padding: 15px;
-	color: #fff !important;
 	text-shadow: none;
-	font-size: 14px !important;
+	font-size: 17px !important;
 }
 
 .widgets-holder-wrap .widget-inside {
@@ -1161,8 +1169,7 @@ h1.nav-tab-wrapper {
 
 .widget-title h3 {
 	padding-left: 10px !important;
-	color: #e8e8e8 !important;
-	font-size: 13px !important;
+	font-size: 15px !important;
 }
 
 .widget-title h3 span {
@@ -1171,10 +1178,8 @@ h1.nav-tab-wrapper {
 /* Post Content */
 
 #post-body-content {
-	padding: 2%;
-	width: 96%;
-	background-color: #f8f8f8 !important;
-	border: 1px solid #f8f8f8 !important;
+	padding: 0;
+	width: 100%;
 	float: left;
 	border-radius: 0;
 	box-shadow: none;
@@ -1212,13 +1217,11 @@ h1.nav-tab-wrapper {
 	margin-left: 5px;
 }
 
-#poststuff .inside {
-	margin: 12px 0 12px;
+#poststuff .postbox {
 }
 
-.postbox .inside,
-.stuffbox .inside {
-	padding: 10px;
+#poststuff .inside {
+	padding: 10px 0;
 }
 
 .tagsdiv .newtag {
@@ -1226,12 +1229,15 @@ h1.nav-tab-wrapper {
 }
 
 #screen-meta-links a {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]];
+}
+
+#screen-meta-links button {
+	background-color: #fff !important;
+	color: #444 !important;
 }
 
 #screen-meta-links .show-settings {
 	line-height: 1.75 !important;
-	color: #72777c !important;
 }
 
 #screen-meta-links .show-settings:hover {
@@ -1319,7 +1325,7 @@ h1.nav-tab-wrapper {
 
 .js .postbox .handlediv.button-link {
 	margin-bottom: -40px !important;
-	color: #808080 !important;
+	color: #888 !important;
 }
 
 .accordion-section {
@@ -1336,7 +1342,6 @@ a.menu-delete {
 /* Forms & Buttons */
 
 form {
-	padding: 10px 0 !important;
 }
 
 form h2, form h3 {
@@ -1352,25 +1357,31 @@ form h3 {
 	padding-bottom: 4px;
 }
 
-form .submit {
-	padding-top: 20px !important;
-	margin-bottom: 30px !important;
-	border-top: 1px solid #e4e4e4 !important;
-	text-align: right !important;
-}
-
-form .submit .button.button-primary {
-	float: right !important;
-}
-
 legend {
 	font-size: 15px !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
-.form-table th {
-	width: 25% !important;
-	padding: 15px 20px 15px 0 !important;
+.wrap h1 + form,
+.wrap h1 + div + form,
+.wrap h1 + div + p + form {
+	margin-top: 20px !important;
+	padding: 15px 0 !important;
+	border-top: 1px solid #e8e8e8;
+}
+
+.wrap h1 + form .submit,
+.wrap h1 + div + form .submit,
+.wrap h1 + div + p + form .submit {
+	padding-top: 25px !important;
+	border-top: 1px solid #e8e8e8 !important;
+	text-align: right !important;
+}
+
+.wrap h1 + form .submit .button-primary,
+.wrap h1 + div + form .submit .button-primary,
+.wrap h1 + div + p + form .submit .button-primary {
+	float: right !important;
 }
 
 #adminmenu .wp-submenu li.current,
@@ -1391,10 +1402,30 @@ legend {
 	font-weight: 400 !important;
 }
 
+form .form-table {
+}
+
 form .form-table th,
-#custom-background .form-table th {
+form .form-table td,
+form .form-table td fieldset label,
+form .form-table td fieldset li,
+form .form-table td fieldset p {
+	line-height: 1.2 !important;
+}
+
+form .form-table th {
+	width: 25% !important;
+	padding: 15px 10px 5px 0 !important;
+	vertical-align: top !important;
+	line-height: 1.2 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
 	text-align: right !important;
+}
+
+form .form-table th label {
+	margin: 0 !important;
+	display: inline-block !important;
+	white-space: nowrap;
 }
 
 form .form-table th.th-full,
@@ -1407,44 +1438,33 @@ form .form-table th.th-full label,
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
-form .form-table td,
-#custom-background .form-table td {
+form .form-table td {
+	padding: 10px 0 10px 10px !important;
+	vertical-align: top !important;
 	font-size: 13px !important;
 	font-style: normal !important;
 }
 
-form .form-table td p.description,
-#custom-background .form-table td p.description {
-	font-style: italic !important;
+form .form-table td p {
+	margin: 0;
 }
 
-form .form-table td br,
-#custom-background .form-table td br {
-	margin: 12px 0 !important;
+form .form-table td fieldset {
+	padding: 0 !important;
+	padding-top: 4px !important;
 }
 
-form .form-table td label,
-#custom-background .form-table td label {
+form .form-table td fieldset label {
+	display: inline-block !important;
+}
+
+form .form-table td label {
 	font-size: 13px !important;
 }
 
-form .form-table td textarea,
-#custom-background .form-table td textarea {
-}
-
-form .form-table th[scope=row] + td,
-#custom-background .form-table th[scope=row] + td {
-	padding-top: 13px !important;
-}
-
-form .form-table th[scope=row] label,
-#custom-background .form-table th[scope=row] label {
-	padding-top: 4px !important;
-	white-space: nowrap;
-}
-
-.term-php form .form-table th[scope=row] label {
-	padding-top: 0 !important;
+form .form-table td label br {
+	line-height: 0 !important;
+	margin: 0 !important;
 }
 
 .options-general-php .form-table select,
@@ -1457,135 +1477,6 @@ form .form-table th[scope=row] label,
 	max-width: 600px;
 }
 
-.options-general-php .form-table td fieldset {
-	margin-top: -8px !important;
-}
-
-.options-general-php .form-table tr:nth-of-type(6) td fieldset {
-	margin-top: 0 !important;
-}
-
-.options-general-php .form-table th[scope=row] {
-	padding-top: 15px !important;
-}
-
-.options-general-php .form-table tr:nth-of-type(1) th[scope=row],
-.options-general-php .form-table tr:nth-of-type(2) th[scope=row] {
-	padding-top: 18px !important;
-}
-
-.options-general-php .form-table th[scope=row] {
-}
-
-.options-general-php .form-table tr:nth-of-type(7) th[scope=row],
-.options-general-php .form-table tr:nth-of-type(8) th[scope=row],
-.options-general-php .form-table tr:nth-of-type(11) th[scope=row],
-.options-general-php .form-table tr:nth-of-type(12) th[scope=row] {
-	padding-top: 20px !important;
-}
-
-.options-writing-php .form-table th[scope=row] {
-	padding-top: 20px !important;
-}
-
-.options-writing-php .form-table:nth-of-type(2) td label {
-	margin-top: 0 !important;
-}
-
-.options-reading-php .form-table th[scope=row] {
-	padding-top: 15px !important;
-}
-
-.options-reading-php .form-table tr:nth-of-type(1) th[scope=row],
-.options-reading-php .form-table tr:nth-of-type(5) th[scope=row] {
-	padding-top: 16px !important;
-}
-
-.options-reading-php .form-table label {
-	padding-top: 0 !important;
-	margin-top: 0 !important;
-}
-
-.options-reading-php .form-table fieldset {
-	padding-top: 0 !important;
-	margin-top: -10px !important;
-}
-
-.options-reading-php .form-table #front-static-pages fieldset {
-	padding-top: 10px !important;
-}
-
-.options-reading-php .form-table .option-site-visibility fieldset {
-	padding-top: 15px !important;
-}
-
-.options-discussion-php .form-table th[scope=row] {
-	padding-top: 18px !important;
-}
-
-.options-discussion-php .form-table:nth-of-type(1) tr:nth-of-type(6) th[scope=row] {
-	padding-top: 12px !important;
-}
-
-.options-discussion-php table.form-table:nth-of-type(2) {
-}
-
-.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(1) th {
-	padding-top: 7px !important;
-}
-
-.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(3) fieldset {
-	margin-top: -5px !important;
-}
-
-.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(4) label,
-.options-discussion-php table.form-table:nth-of-type(2) tr:nth-of-type(5) label {
-	display: inline-block !important;
-	padding-top: 10px !important;
-}
-
-.options-discussion-php .form-table label {
-	padding-top: 0 !important;
-	margin-top: -5px !important;
-}
-
-.options-media-php .form-table th[scope=row] {
-	padding-top: 18px !important;
-}
-
-.options-media-php .form-table tr:first-of-type th[scope=row] {
-	padding-top: 22px !important;
-}
-
-.options-media-php .form-table:nth-of-type(1) th {
-	padding-top: 18px !important;
-}
-
-.options-media-php .form-table:nth-of-type(2) th[scope=row] {
-	padding-top: 20px !important;
-}
-
-.options-media-php .form-table:nth-of-type(2) th[scope=row] + td {
-	padding-top: 10px !important;
-}
-
-.options-media-php .form-table:nth-of-type(1) th[scope=row] + td #thumbnail_crop + label {
-	margin-top: 2px !important;
-}
-
-.options-media-php .form-table label {
-	padding-top: 0 !important;
-}
-
-.options-permalink-php .form-table label {
-	padding-top: 7px !important;
-}
-
-.options-permalink-php .form-table td code {
-	display: inline-block !important;
-	margin-top: 5px !important;
-}
-
 .options-general-php form,
 .options-writing-php form,
 .options-reading-php form,
@@ -1596,14 +1487,9 @@ form .form-table th[scope=row] label,
 .user-edit-php form,
 .user-new-php form,
 .profile-php form {
-	margin-top: 20px;
-	padding: 0 20px !important;
-	background-color: #f8f8f8;
-	border: 1px solid #f8f8f8;
 }
 
 .export-php form {
-	padding-top: 20px !important;
 }
 
 .import-php .widefat {
@@ -1613,19 +1499,6 @@ form .form-table th[scope=row] label,
 .user-edit-php form,
 .user-new-php form,
 .profile-php form {
-	margin-top: 20px;
-	background-color: #f8f8f8;
-	padding: 1px 20px 1px 20px !important;
-}
-
-.user-edit-php .form-table th label,
-.profile-php .form-table th label {
-	padding-top: 5px !important;
-}
-
-.user-edit-php .form-table td fieldset,
-.profile-php .form-table td fieldset {
-	margin-top: -7px !important;
 }
 
 .user-edit-php .form-table td button#destroy-sessions {
@@ -1634,10 +1507,6 @@ form .form-table th[scope=row] label,
 
 .user-edit-php .form-table td ul {
 	margin-top: 5px !important;
-}
-
-.user-new-php .form-table td label {
-	padding-top: 10px;
 }
 
 .user-new-php .form-table th[scope="row"] + td input[type=text] {
@@ -1656,15 +1525,6 @@ form .form-table th[scope=row] label,
 	margin-bottom: 0 !important;
 }
 
-#custom-background .form-table th[scope=row] + td textarea,
-#custom-background .form-table th[scope=row] select,
-#custom-background .form-table th[scope=row] + td input[type=text],
-.form-table th[scope=row] + td select,
-.form-table th[scope=row] + td input[type=text],
-form .form-table th[scope=row] + td textarea {
-	margin-top: 6px !important;
-}
-
 form .form-table th[scope=row] + td .button-secondary,
 #custom-background .form-table th[scope=row] + td .button-secondary {
 	margin-top: 10px !important;
@@ -1677,7 +1537,6 @@ form .form-table th[scope=row] + td .button-secondary,
 
 form .form-table td label {
 	display: inline-block;
-	margin-top: -8px;
 }
 
 form .form-table tr.user-rich-editing-wrap td label,
@@ -1698,7 +1557,6 @@ form.validate {
 }
 
 form[action*="plugins.php"] {
-	background-color: #f8f8f8 !important;
 }
 
 ul.subsubsub {
@@ -1740,9 +1598,9 @@ ul.subsubsub li a.current {
 .wp-core-ui .button,
 .wp-core-ui .notification-dialog .button,
 .button-highlighted {
-	color: #fff;
 	background: none;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]];
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 	border: none;
 	border-color: none !important;
 	border-radius: 0;
@@ -1756,7 +1614,7 @@ ul.subsubsub li a.current {
 
 .wp-core-ui .button-primary,
 .button-highlighted {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 	border: none !important;
 	border-radius: 0 !important;
@@ -1767,18 +1625,19 @@ ul.subsubsub li a.current {
 .wp-core-ui .button-primary:hover,
 .button-highlighted:hover {
 	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 }
 
 .wp-core-ui .button-secondary {
-	color: #fff !important;
-	text-decoration: none;
 	background: none;
 	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
-	text-shadow: none;
 	line-height: 2.0 !important;
+	text-shadow: none;
+	text-decoration: none;
 }
 
 .wp-core-ui .button-secondary:hover {
@@ -1794,13 +1653,13 @@ ul.subsubsub li a.current {
 .wp-core-ui .button[disabled],
 .wp-core-ui .button[disabled]:hover {
 	background-color: #f0f0f0 !important;
-	color: #808080 !important;
+	color: #888 !important;
 	border: 1px solid #e4e4e4 !important;
 }
 
 .destroy-sessions .button,
 .wp-generate-pw {
-	min-width: 160px !important;
+	min-width: 150px !important;
 }
 
 .wp-core-ui p .button,
@@ -1862,9 +1721,8 @@ ul.subsubsub li a.current {
 	min-width: 100px !important;
 }
 
-.wp-core-ui .button:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	color: #fff !important;
+#add-new-comment .button {
+	margin-top: 10px;
 }
 
 .search-form {
@@ -1893,14 +1751,17 @@ ul.subsubsub li a.current {
 
 p.description, span.description {
 	display: block;
-	margin-top: 4px;
-	margin-bottom: 8px;
-	color: #808080;
+	margin: 10px 0 !important;
+	color: #888;
 	line-height: 1.2;
 }
 
+h2 + p.description {
+	margin-top: 10px;
+}
+
 p.description a, span.description a {
-	color: #808080;
+	color: #888;
 }
 
 textarea + br + span.description {
@@ -1925,7 +1786,8 @@ label span.description {
 .update-core-php form.upgrade {
 	margin-bottom: 30px !important;
 	padding: 0 !important;
-	background-color: #fff8f8 !important;
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 }
 
 .update-core-php .button,
@@ -1934,12 +1796,8 @@ label span.description {
 .install-now {
 	padding: 0px 10px !important;
 	display: inline-block !important;
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
-}
-
-.importer-action .install-now {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	padding: 0 !important;
 }
 
 .upload-php .thumbnail .filename {
@@ -2000,8 +1858,6 @@ label span.description {
 }
 
 #wp-content-media-buttons {
-	padding-left: 5px !important;
-	padding-top: 0 !important;
 }
 
 a#choose-from-library-link {
@@ -2013,10 +1869,6 @@ a#choose-from-library-link {
 
 #custom-background .form-table tr {
 	padding-left: 20px !important;
-}
-
-#custom-background .form-table td fieldset {
-	margin-top: 8px !important;
 }
 
 #custom-background .form-table td #upload-form {
@@ -2041,8 +1893,6 @@ a#choose-from-library-link {
 }
 
 #custom-background h2 {
-	background-color: #f8f8f8 !important;
-	padding-bottom: 20px !important;
 }
 
 #custom-background h3 {
@@ -2099,7 +1949,6 @@ a#choose-from-library-link {
 .wp-filter {
 	margin: 0 !important;
 	padding: 0 !important;
-	background-color: #f8f8f8 !important;
 	border: none !important;
 	box-shadow: none !important;
 }
@@ -2108,8 +1957,6 @@ a#choose-from-library-link {
 }
 
 #posts-filter + form {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
 }
 
 .edit-attachment-frame .attachment-info .details,
@@ -2178,8 +2025,6 @@ table.media .column-title .filename {
 }
 
 .appearance_page_custom-header .wrap h2 {
-	background-color: #f8f8f8 !important;
-	padding-bottom: 20px !important;
 }
 
 .appearance_page_custom-header .wrap h3 {
@@ -2214,7 +2059,8 @@ table.media .column-title .filename {
 }
 
 #dashboard_quick_press .wp-media-buttons a {
-	color: #fff;
+	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: #fff !important;
 }
 
 a#post-preview,
@@ -2238,7 +2084,6 @@ form#quick-press .submit {
 
 .plugin-editor-php .alignright form,
 .widgets-php .widget-liquid-right + form {
-	background-color: #f8f8f8 !important;
 }
 
 .widgets-php .sidebar-name h3 {
@@ -2278,9 +2123,6 @@ h2 a.nav-tab {
 /* Admin Menu Editor Support */
 
 .settings_page_menu_editor #ws_menu_editor {
-	margin-top: 20px;
-	background-color: #f8f8f8;
-	padding: 20px !important;
 }
 
 #ws_ame_editor_heading {
@@ -2294,8 +2136,8 @@ h2 a.nav-tab {
 
 #ws_menu_editor .ws_main_button {
 	margin: 0 auto 10px auto;
-	width: 150px;
 	text-transform: capitalize;
+	width: 100px;
 }
 
 #ws_editor_sidebar {
@@ -2350,7 +2192,6 @@ h2 a.nav-tab {
 }
 
 table.acf_input tbody tr td.label label {
-	padding-top: 6px !important;
 	text-align: right !important;
 }
 
@@ -2427,9 +2268,6 @@ table.acf_input tbody tr td.label label {
 /* Easy Social Sharing Support */
 
 .settings_page_easy-social-sharing form {
-	background-color: #f8f8f8;
-	padding: 1px 20px 0 20px !important;
-	margin-top: 20px;
 }
 
 /* Email Plugin Support */
@@ -2444,10 +2282,6 @@ table.acf_input tbody tr td.label label {
 }
 
 .email_page_email-email form {
-	margin-top: 20px;
-	padding: 0 20px !important;
-	border: 1px solid #f8f8f8;
-	background: #f8f8f8;
 }
 
 .email_page_email-email form .submit {
@@ -2555,10 +2389,6 @@ a.frm_show_comment:hover {
 /* Members Support */
 
 .settings_page_members-settings form {
-	margin-top: 20px;
-	padding: 0 20px !important;
-	border: 1px solid #f8f8f8;
-	background: #f8f8f8;
 }
 
 .users_page_roles .widefat.members-roles-select td.column-cap,
@@ -2577,9 +2407,6 @@ a.frm_show_comment:hover {
 
 .users_page_roles form,
 .users_page_role-new form {
-	padding: 0 !important;
-	background-color: #f8f8f8 !important;
-	margin-top: -10px !important;
 }
 
 .users_page_roles form#roles,
@@ -2621,14 +2448,6 @@ a.frm_show_comment:hover {
 	text-shadow: none !important;
 }
 
-.settings_page_members-settings form .form-table th[scope=row] {
-	padding-top: 10px !important;	
-}
-
-.settings_page_members-settings form .form-table th[scope=row] + td {
-	padding-top: 15px !important;
-}
-
 /* Nextgen Gallery Support */
 
 #ngg_page_content select,
@@ -2639,10 +2458,6 @@ a.frm_show_comment:hover {
 .gallery_page_ngg_display_settings input[type="text"] {
 	height: 30px !important;
 	text-align: left !important;
-}
-
-.widget-top h3 {
-	color: #fff !important;
 }
 
 /* Ninja Forms Support */
@@ -2662,7 +2477,6 @@ a.frm_show_comment:hover {
 /* Paid Memberships Pro Support */
 
 .pmpro_admin #posts-filter {
-	background-color: #f8f8f8 !important;
 }
 
 .pmpro_admin a.pmpro_tag-blue,
@@ -2710,10 +2524,17 @@ a.frm_show_comment:hover {
 
 .compat-attachment-fields {
 	margin-top: 20px;
+	width: 100%;
 }
 
 .compat-attachment-fields tr {
 	vertical-align: top;
+}
+
+.compat-attachment-fields th {
+}
+
+.compat-attachment-fields th label .alignleft {
 }
 
 .compat-field-enable-media-replace td p {
@@ -2729,24 +2550,12 @@ a.frm_show_comment:hover {
 
 /* Sensei Support */
 
-.sensei_page_woothemes-sensei-settings .form-table td label {
-	margin-top: 0 !important;
-}
-
-.sensei_page_woothemes-sensei-settings .form-table th {
-	padding-top: 15px !important;
-}
-
 .sensei_page_woothemes-sensei-settings .form-table td input[type=text] {
-	margin-top: -10px !important;
 }
 
 /* Simple History Support */
 
 .settings_page_simple_history_settings_menu_slug form {
-	margin-top: 20px;
-	background-color: #f8f8f8;
-	padding: 1px 20px 1px 20px !important;
 }
 
 .SimpleHistoryPaginationInput {
@@ -2790,7 +2599,6 @@ a.frm_show_comment:hover {
 }
 
 .edit-tags-php form {
-	padding-bottom: 5px !important;
 }
 
 .edit-tags-php form .submit .button.button-primary {
@@ -2804,7 +2612,7 @@ a.frm_show_comment:hover {
 }
 
 .edit-tags-php #col-container {
-	padding: 0 15px !important;
+	/*padding: 0 15px !important;*/
 }
 
 .edit-tags-php #col-left {
@@ -2816,7 +2624,6 @@ a.frm_show_comment:hover {
 }
 
 .edit-tags-php #col-left form {
-	padding-right: 0 !important;
 }
 
 .edit-tags-php .col-wrap h2 {
@@ -2862,7 +2669,6 @@ a.frm_show_comment:hover {
 
 .term-php form,
 .edit-php form {
-	padding-bottom: 5px !important;
 }
 
 .term-php form textarea {
@@ -2870,7 +2676,6 @@ a.frm_show_comment:hover {
 }
 
 .plugins-php form {
-	padding-bottom: 10px !important;
 }
 
 /* Simple Social Icons Support */
@@ -2952,11 +2757,9 @@ a.frm_show_comment:hover {
 }
 
 .woocommerce .form-table fieldset {
-	margin-top: 6px !important;
 }
 
 .woocommerce .form-table fieldset:first-of-type {
-	margin-top: 2px !important;
 }
 
 .woocommerce nav.woo-nav-tab-wrapper {
@@ -2980,7 +2783,6 @@ a.frm_show_comment:hover {
 }
 
 .forminp.forminp-checkbox fieldset:first-of-type {
-	margin-top: 6px !important;
 }
 
 .forminp .shippingrows.widefat .button,
@@ -3021,7 +2823,6 @@ a.frm_show_comment:hover {
 }
 
 .woocommerce_page_wc-settings .form-table fieldset:first-of-type {
-	margin-top: 0 !important;
 }
 
 .woocommerce_page_wc-settings .form-table .image_width_settings {
@@ -3036,32 +2837,24 @@ a.frm_show_comment:hover {
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc {
-	padding-top: 18px !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp {
-	padding-top: 15px !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp.forminp-checkbox {
-	padding-top: 26px !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp.forminp-select {
-	padding-top: 12px !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp.forminp-radio {
-	padding-top: 28px !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp fieldset {
-	padding: 0 !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp fieldset label {
-	margin-top: -8px !important;
-	padding: 0 !important;
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input,
@@ -3077,7 +2870,6 @@ a.frm_show_comment:hover {
 }
 
 .woocommerce_page_wc-settings .form-table .single_select_page th[scope=row] {
-	padding-top: 24px !important;
 }
 
 .woocommerce_page_wc-settings .form-table .single_select_page th[scope=row] .woocommerce-help-tip {
@@ -3092,9 +2884,6 @@ a.frm_show_comment:hover {
 }
 
 .woocommerce_page_wc-settings .woocommerce form {
-	margin-top: 20px;
-	background-color: #f8f8f8;
-	padding: 1px 20px !important;
 }
 
 .woocommerce_page_wc-settings .woocommerce form .submit {
@@ -3202,7 +2991,7 @@ a.frm_show_comment:hover {
 }
 
 .profile-php #document_revisions_feed_key th label {
-	padding-top: 20px !important;
+	/*padding-top: 20px !important;*/
 }
 
 /* WP Migrate DB Support */
