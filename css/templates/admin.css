@@ -1260,8 +1260,8 @@ form .form-table td fieldset p {
 }
 
 form .form-table th {
-	width: 20% !important;
-	padding: 15px 10px 5px 0 !important;
+	width: 25% !important;
+	padding: 15px 15px 5px 0 !important;
 	line-height: 1.2 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
 	text-align: right !important;
@@ -1284,7 +1284,11 @@ form .form-table th.th-full label,
 }
 
 form .form-table td {
-	font-style: normal !important;
+	width: 75% !important;
+	padding: 15px 0 5px 15px !important;
+	line-height: 1.2 !important;
+	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
+	text-align: left !important;
 }
 
 form .form-table td fieldset {
@@ -2693,35 +2697,86 @@ a.frm_show_comment:hover {
 	padding: 0 !important;
 }
 
+.woocommerce_page_wc-settings .form-table th {
+	text-transform: capitalize;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp .wc_gateways th.sort {
+	width: 10% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp .wc_gateways th.name {
+	width: 40% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp .wc_gateways th.id {
+	width: 30% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp .wc_gateways th.status {
+	width: 20% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table .wc-emails .wc-email-settings-table-status {
+	width: 10% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table .wc-emails .wc-email-settings-table-name {
+	width: 40% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table .wc-emails .wc-email-settings-table-email_type {
+	width: 20% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table .wc-emails .wc-email-settings-table-recipient {
+	width: 20% !important;
+	text-align: left;
+}
+
+.woocommerce_page_wc-settings .form-table .wc-emails .wc-email-settings-table-actions {
+	width: 10% !important;
+	text-align: left;
+}
+
 .woocommerce_page_wc-settings .form-table th .woocommerce-help-tip,
 .woocommerce_page_wc-settings .form-table th img.help_tip {
 	margin: 6px -20px 0 0 !important;
 }
 
-.woocommerce_page_wc-settings .form-table .image_width_settings {
-	padding-top: 7px !important;
-}
-
-.woocommerce_page_wc-settings .form-table .image_width_settings label {
-	margin-top: 0 !important;
-}
-
-.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input,
-.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp select {
-	margin: 0 !important;
-}
-
 .woocommerce_page_wc-settings .form-table td.forminp {
-	padding-top: 5px !important;
 }
 
 .woocommerce_page_wc-settings .form-table td.forminp-text {
+	padding-top: 11px !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp-number {
 	padding-top: 12px !important;
 }
 
 .woocommerce_page_wc-settings .form-table td.forminp-select {
-	padding-top: 12px !important;
+	padding-top: 14px !important;
+}
 
+.woocommerce_page_wc-settings .form-table td.forminp-select > select {
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp select#woocommerce_ppec_paypal_landing_page + .select2-container--default,
+.woocommerce_page_wc-settings .form-table td.forminp select#woocommerce_ppec_paypal_paymentaction + .select2-container--default,
+.woocommerce_page_wc-settings .form-table td.forminp select#woocommerce_ppec_paypal_subtotal_mismatch_behavior + .select2-container--default {
+	margin-top: 4px !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp select#woocommerce_myaccount_page_id + .select2-container--default {
+	margin-top: -2px !important;
 }
 
 .woocommerce_page_wc-settings .form-table td.forminp-checkbox {
@@ -2736,12 +2791,41 @@ a.frm_show_comment:hover {
 	margin-top: 0 !important;
 }
 
+.woocommerce_page_wc-settings .form-table td.forminp span.description {
+}
+
 .woocommerce_page_wc-settings .form-table td.image_width_settings {
 	padding-top: 10px !important;
 }
 
+.woocommerce_page_wc-settings .form-table .image_width_settings label {
+	margin-top: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input[type=text] {
+	margin-top: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp fieldset {
+	margin-top: -4px !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp fieldset label {
+	margin-top: 8px !important;
+}
+
 .woocommerce_page_wc-settings .form-table .select2-container {
-	margin-top: 5px !important;
+}
+
+.woocommerce_page_wc-settings .form-table .select2-container--default .select2-selection--single {
+	margin-top: -5px !important;
+	border: 1px solid #e8e8e8;
+	border-radius: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table .select2-container .select2-selection--single .select2-selection__arrow {
+	right: 2px;
+	height: 22px;
 }
 
 .woocommerce_page_wc-settings .form-table .single_select_page th[scope=row] .woocommerce-help-tip {
