@@ -461,11 +461,6 @@ a,
 	color: [[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
-.widefat th a,
-.widefat th a:hover {
-	color: #444 !important;
-}
-
 /* Side Menu */
 
 #adminmenuwrap,
@@ -686,24 +681,6 @@ div.wp-menu-image::before {
 	padding: 10px 0 !important;
 }
 
-.widefat thead tr,
-.widefat tfoot tr {
-	height: 40px !important;
-	background-color: #f0f0f0;
-}
-
-.widefat {
-	border: 1px solid #e8e8e8 !important;
-}
-
-.widefat thead tr th,
-.widefat tfoot tr th {
-	border: none;
-	text-shadow: none;
-	padding: 15px 7px 15px;
-	vertical-align: top !important;
-}
-
 .widefat thead tr th,
 .widefat tfoot tr th,
 h3.dashboard-widget-title,
@@ -712,67 +689,6 @@ h3.dashboard-widget-title small {
 	color: #444 !important;
 }
 
-.widefat td {
-	padding: 10px 7px 8px;
-	vertical-align: top;
-	font-size: 13px;
-}
-
-.widefat thead .check-column,
-.widefat tfoot .check-column {
-	padding: 15px 0 0 4px;
-}
-
-.widefat tbody th.check-column {
-	padding: 11px 0 20px;
-}
-
-.widefat tbody tr {
-	background-color: #f8f8f8 !important;
-}
-
-.widefat .manage-column.check-column {
-	border-top: 1px solid #f0f0f0;
-	border-bottom: 1px solid #f0f0f0;
-	padding-top: 0 !important;
-}
-
-.widefat.pages thead th.manage-column.column-author,
-.widefat.pages tfoot th.manage-column.column-author,
-.widefat.posts thead th.manage-column.column-author,
-.widefat.posts tfoot th.manage-column.column-author,
-.widefat.posts thead th.manage-column.column-categories,
-.widefat.posts tfoot th.manage-column.column-categories,
-.widefat.posts thead th.manage-column.column-tags,
-.widefat.posts tfoot th.manage-column.column-tags,
-.widefat.users thead th.manage-column.column-role,
-.widefat.users tfoot th.manage-column.column-role {
-	padding-left: 5px !important;
-}
-
-.widefat.plugins thead th.manage-column,
-.widefat.plugins tfoot th.manage-column {
-	padding-left: 10px !important;
-	border: none !important;
-}
-
-.widefat thead th[scope=col],
-.widefat tfoot th[scope=col] {
-	vertical-align: middle !important;
-}
-
-.widefat td.check-column input[type=checkbox] {
-	margin-left: 5px;
-}
-
-.widefat.striped tbody tr:nth-of-type(odd) {
-	background-color: #fff !important;
-}
-
-.users-php .widefat td.username img {
-	width: 24px !important;
-	height: 24px !important;
-}
 
 .sorting-indicator::before {
 	color: #888 !important;
@@ -951,14 +867,15 @@ p.search-box {
 	text-transform: capitalize;
 }
 
+h1.nav-tab-wrapper,
 .nav-tab-wrapper,
-.wrap h2.nav-tab-wrapper,
-h1.nav-tab-wrapper {
+.wrap h2.nav-tab-wrapper {
 	border-bottom: none !important;
 }
 
 .nav-tab-wrapper {
-	height: 44px !important;
+	height: 24px !important;
+	margin: 10px 0 30px 0 !important;
 }
 
 .nav-tab-wrapper + p {
@@ -970,19 +887,38 @@ h1.nav-tab-wrapper {
 	margin-right: 8px;
 	padding: 2px 12px;
 	height: 24px;
-	border: 1px solid #e8e8e8;
+	border: 1px solid #e4e4e4;
 	background-color: #fff;
-	font-size: 14px;
+	color: #444 !important;
 }
 
-.nav-tab-active {
-	background-color: #f0f0f0;
-	border: 1px solid #e8e8e8;
-}
-
+.nav-tab-active,
 .nav-tab-active:hover,
 .nav-tab:hover {
-	border: 1px solid #888;
+	background-color: #fff;
+	border: 1px solid [[COLOUR-HIGHLIGHT-SECONDARY]];
+}
+
+ul.subsubsub {
+	padding-top: 10px !important;
+}
+
+ul.subsubsub li a {
+	padding: 0 5px !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+	text-transform: capitalize;
+}
+
+ul.subsubsub li:first-of-type a {
+	padding-left: 0 !important;
+}
+
+ul.subsubsub li:last-of-type a {
+	padding-right: 0 !important;
+}
+
+ul.subsubsub li a.current {
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
 .tablenav {
@@ -1043,6 +979,7 @@ h1.nav-tab-wrapper {
 #widgets-right .sidebar-name {
 	margin-left: -5px !important;
 }
+
 #widgets-right .sidebar-description {
 	margin-left: -5px !important;
 }
@@ -1308,22 +1245,11 @@ legend {
 	float: right !important;
 }
 
-#adminmenu .wp-submenu li.current,
-#adminmenu .wp-submenu li.current a,
-#adminmenu .wp-submenu li.current a:hover,
-#dashboard_right_now .versions .b,
-#ed_reply_toolbar #ed_reply_strong,
-#pass-strength-result.short,
-#pass-strength-result.strong,
-#post-status-display,
-#post-visibility-display,
-.edit-comment-author,
-.feature-filter .feature-name,
-.item-controls .item-order a,
-.media-item .percent,
-.nav-tab,
-.plugins .name {
-	font-weight: 400 !important;
+form .form-table th,
+form .form-table td {
+	border: 1px dotted red;
+	vertical-align: top !important;
+	font-size: 13px !important;
 }
 
 form .form-table th,
@@ -1335,9 +1261,8 @@ form .form-table td fieldset p {
 }
 
 form .form-table th {
-	width: 25% !important;
+	width: 20% !important;
 	padding: 15px 10px 5px 0 !important;
-	vertical-align: top !important;
 	line-height: 1.2 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
 	text-align: right !important;
@@ -1360,26 +1285,27 @@ form .form-table th.th-full label,
 }
 
 form .form-table td {
-	padding: 10px 0 10px 10px !important;
-	vertical-align: top !important;
-	font-size: 13px !important;
 	font-style: normal !important;
-}
-
-form .form-table td p {
-	margin: 0;
 }
 
 form .form-table td fieldset {
 	padding: 0 !important;
-	padding-top: 4px !important;
+}
+
+form .form-table td fieldset li > label > select {
+	margin-top: 10px !important;
 }
 
 form .form-table td fieldset label {
 	display: inline-block !important;
 }
 
+form .form-table td p {
+	margin: 0;
+}
+
 form .form-table td label {
+	display: inline-block;
 	font-size: 13px !important;
 }
 
@@ -1388,6 +1314,17 @@ form .form-table td label br {
 	margin: 0 !important;
 }
 
+form .form-table td > input[type=text],
+form .form-table td > input[type=url] {
+	margin-top: -4px;
+}
+
+form .form-table td > input[type=number],
+form .form-table td > select {
+	margin-top: -2px;
+}
+
+/*
 .options-general-php .form-table select,
 .options-writing-php .form-table select,
 .options-reading-php .form-table select,
@@ -1397,9 +1334,36 @@ form .form-table td label br {
 	display: block;
 	max-width: 600px;
 }
+*/
 
-.import-php .widefat {
-	width: 100%;
+.options-discussion-php .form-table td label[for=comment_max_links] {
+	display: inline-block;
+	margin-top: -5px !important;
+}
+
+.options-discussion-php .form-table td label[for=blacklist_keys] {
+	display: inline-block;
+	margin-top: 1px !important;
+}
+
+.options-discussion-php .form-table td.defaultavatarpicker fieldset {
+	margin-top: 2px !important;
+}
+
+.options-media-php .form-table td {
+	padding-top: 10px !important;
+}
+
+.options-media-php .form-table tr:first-of-type td {
+	padding-top: 13px !important;
+}
+
+.options-permalink-php .form-table.permalink-structure td {
+	padding-top: 18px !important;
+}
+
+.options-permalink-php .form-table.permalink-structure tr:last-of-type td {
+	padding-top: 15px !important;
 }
 
 .user-edit-php .form-table td button#destroy-sessions {
@@ -1408,6 +1372,19 @@ form .form-table td label br {
 
 .user-edit-php .form-table td ul {
 	margin-top: 5px !important;
+}
+
+.user-edit-php .form-table .user-email-wrap th,
+.user-edit-php .form-table .user-url-wrap th {
+	padding-top: 20px !important;
+}
+
+.user-edit-php .form-table .user-googleplus-wrap th {
+	padding-top: 18px !important;
+}
+
+.user-new-php .form-table th {
+	padding-top: 20px !important;
 }
 
 .user-new-php .form-table th[scope="row"] + td input[type=text] {
@@ -1420,6 +1397,12 @@ form .form-table td label br {
 
 .user-new-php .form-table th[scope="row"] + td select {
 	margin-top: 1px !important;
+}
+
+.user-new-php form .form-table td > input[type=checkbox],
+.user-new-php form .form-table td > input[type=checkbox] + label {
+	margin-top: 7px;
+	display: inline-block;
 }
 
 .wrap.custom form .submit {
@@ -1436,10 +1419,6 @@ form .form-table th[scope=row] + td .button-secondary,
 	line-height: 1 !important;
 }
 
-form .form-table td label {
-	display: inline-block;
-}
-
 form .form-table tr.user-rich-editing-wrap td label,
 form .form-table tr.user-comment-shortcuts-wrap td label,
 form .form-table tr.show-admin-bar td label {
@@ -1450,30 +1429,124 @@ form .form-table tr.show-admin-bar td label {
 	padding: 0 !important;
 }
 
+/* Tables */
+
+.widefat th a,
+.widefat th a:hover {
+	color: #444 !important;
+}
+
+.widefat thead tr,
+.widefat tfoot tr {
+	height: 40px !important;
+	background-color: #f0f0f0;
+}
+
+.widefat {
+	border: 1px solid #e8e8e8 !important;
+}
+
+.widefat thead tr th,
+.widefat tfoot tr th {
+	border: none;
+	text-shadow: none;
+	padding: 15px 7px 15px;
+	vertical-align: top !important;
+}
+
+.widefat td {
+	padding: 10px 7px 8px;
+	vertical-align: top;
+	font-size: 13px;
+}
+
+.widefat thead .check-column,
+.widefat tfoot .check-column {
+	padding: 15px 0 0 4px;
+}
+
+.widefat tbody th.check-column {
+	padding: 11px 0 20px;
+}
+
+.widefat tbody tr {
+	background-color: #f8f8f8 !important;
+}
+
+.widefat .manage-column.check-column {
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	padding-top: 0 !important;
+}
+
+.widefat.pages thead th.manage-column.column-author,
+.widefat.pages tfoot th.manage-column.column-author,
+.widefat.posts thead th.manage-column.column-author,
+.widefat.posts tfoot th.manage-column.column-author,
+.widefat.posts thead th.manage-column.column-categories,
+.widefat.posts tfoot th.manage-column.column-categories,
+.widefat.posts thead th.manage-column.column-tags,
+.widefat.posts tfoot th.manage-column.column-tags,
+.widefat.users thead th.manage-column.column-role,
+.widefat.users tfoot th.manage-column.column-role {
+	padding-left: 5px !important;
+}
+
+.widefat.plugins thead th.manage-column,
+.widefat.plugins tfoot th.manage-column {
+	padding-left: 10px !important;
+	border: none !important;
+}
+
+.widefat thead th[scope=col],
+.widefat tfoot th[scope=col] {
+	vertical-align: middle !important;
+}
+
+.widefat td.check-column input[type=checkbox] {
+	margin-left: 5px;
+}
+
+.widefat.striped tbody tr:nth-of-type(odd) {
+	background-color: #fff !important;
+}
+
+.users-php .widefat td.username img {
+	width: 24px !important;
+	height: 24px !important;
+}
+
+.import-php .widefat {
+	width: 100%;
+}
+
+.update-core-php .widefat thead td input[type="checkbox"],
+.update-core-php .widefat tfoot td input[type="checkbox"] {
+	margin-top: -4px !important;
+}
+
+/* Misc */
+
+#adminmenu .wp-submenu li.current,
+#adminmenu .wp-submenu li.current a,
+#adminmenu .wp-submenu li.current a:hover,
+#dashboard_right_now .versions .b,
+#ed_reply_toolbar #ed_reply_strong,
+#pass-strength-result.short,
+#pass-strength-result.strong,
+#post-status-display,
+#post-visibility-display,
+.edit-comment-author,
+.feature-filter .feature-name,
+.item-controls .item-order a,
+.media-item .percent,
+.nav-tab,
+.plugins .name {
+	font-weight: 400 !important;
+}
+
 #pass-strength-result {
 	width: 300px;
-}
-
-ul.subsubsub {
-	padding-top: 10px !important;
-}
-
-ul.subsubsub li a {
-	padding: 0 5px !important;
-	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
-	text-transform: capitalize;
-}
-
-ul.subsubsub li:first-of-type a {
-	padding-left: 0 !important;
-}
-
-ul.subsubsub li:last-of-type a {
-	padding-right: 0 !important;
-}
-
-ul.subsubsub li a.current {
-	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
 .inactive .plugin-title strong {
@@ -1643,13 +1716,13 @@ ul.subsubsub li a.current {
 
 p.description, span.description {
 	display: block;
-	margin: 10px 0 !important;
+	margin: 5px 0 !important;
 	color: #888;
 	line-height: 1.2;
 }
 
 h2 + p.description {
-	margin-top: 10px;
+	margin-top: 10px !important;
 }
 
 p.description a, span.description a {
@@ -1699,11 +1772,6 @@ label span.description {
 .update-core-php form.upgrade a.button {
 	padding: 4px 10px !important;
 	line-height: 1.5 !important;
-}
-
-.update-core-php .widefat thead td input[type="checkbox"],
-.update-core-php .widefat tfoot td input[type="checkbox"] {
-	margin-top: -4px !important;
 }
 
 #update-plugins-table,
@@ -1982,7 +2050,8 @@ h2 a.nav-tab {
 
 #ws_ame_editor_heading {
 	float: none !important;
-	padding-bottom: 0 !important;
+	padding-bottom: 20px !important;
+	border-bottom: 1px solid #e8e8e8;
 }
 
 #ws_menu_editor {
@@ -1992,7 +2061,7 @@ h2 a.nav-tab {
 #ws_menu_editor .ws_main_button {
 	margin: 0 auto 10px auto;
 	text-transform: capitalize;
-	width: 100px;
+	width: 120px;
 }
 
 #ws_editor_sidebar {
@@ -2005,6 +2074,12 @@ h2 a.nav-tab {
 #ws_sidebar_pro_ad,
 #ws-pro-version-notice {
 	display: none !important;
+}
+
+.settings_page_menu_editor .submit {
+	padding-top: 25px !important;
+	border-top: 1px solid #e8e8e8 !important;
+	text-align: right !important;
 }
 
 /* Advanced Custom Fields Support */
@@ -2112,6 +2187,16 @@ table.acf_input tbody tr td.label label {
 .dw_collapse li {
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+
+/* Easy Social Sharing Support */
+
+.nav-tab-wrapper.ess-nav-tab-wrapper {
+	margin: 0 !important;
+}
+
+.forminp-multiselect {
+	padding-top: 5px !important;
 }
 
 /* Email Plugin Support */
@@ -2276,6 +2361,10 @@ a.frm_show_comment:hover {
 	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	color: #fff !important;
 	text-shadow: none !important;
+}
+
+.settings_page_members-settings .wp-filter {
+	display: none !Important;
 }
 
 /* Nextgen Gallery Support */
@@ -2588,6 +2677,10 @@ a.frm_show_comment:hover {
 	text-align: left !important;
 }
 
+.user-edit-php #fieldset-billing.form-table th {
+	padding-top: 18px !important;
+}
+
 .woocommerce nav.woo-nav-tab-wrapper {
 	padding-top: 0;
 }
@@ -2617,6 +2710,35 @@ a.frm_show_comment:hover {
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input,
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp select {
 	margin: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp {
+	padding-top: 5px !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp-text {
+	padding-top: 12px !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp-select {
+	padding-top: 12px !important;
+
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp-checkbox {
+	padding-top: 12px !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.forminp-checkbox fieldset {
+	padding-top: 2px !important;
+}
+
+.woocommerce_page_wc-settings .form-table fieldset p.description {
+	margin-top: 0 !important;
+}
+
+.woocommerce_page_wc-settings .form-table td.image_width_settings {
+	padding-top: 10px !important;
 }
 
 .woocommerce_page_wc-settings .form-table .select2-container {
@@ -2699,6 +2821,14 @@ a.frm_show_comment:hover {
 
 .post-type-shop_order .order_data_column h3 {
 	padding: 0 10px;
+}
+
+.options-permalink-php .form-table.wc-permalink-structure td {
+	padding-top: 18px !important;
+}
+
+.options-permalink-php .form-table.wc-permalink-structure tr:last-of-type td {
+	padding-top: 15px !important;
 }
 
 /* WP Document Revisions Support */
