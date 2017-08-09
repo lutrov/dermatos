@@ -1082,6 +1082,10 @@ ul.subsubsub li a.current {
 	padding: 10px 0;
 }
 
+.post-php #poststuff .inside {
+	padding: 10px 20px;
+}
+
 .tagsdiv .newtag {
 	width: 176px;
 }
