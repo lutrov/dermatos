@@ -1,10 +1,10 @@
 /* DERMATOS ADMIN STYLES */
 
-/* Fonts */
+/* Load Fonts */
 
 @import "https://fonts.googleapis.com/css?family=[[FONT-FAMILY-ESCAPED]]:[[FONT-WEIGHT-NORMAL]],[[FONT-WEIGHT-BOLD]],[[FONT-WEIGHT-EXTRA-BOLD]]|Roboto+Mono:300,400,700";
 
-/* Basic */
+/* Main Admin Styles */
 
 body {
 	background-color: #fff !important;
@@ -47,7 +47,6 @@ p {
 
 strong,
 b {
-	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
@@ -117,17 +116,8 @@ pre, code, kbd {
 
 html.wp-toolbar {
 	padding-top: 0;
-	background-color: #f8f8f8;
+	background-color: #f8f800;
 }
-
-.wp-admin {
-	min-width: 0;
-	font-family: "[[FONT-FAMILY]]", monospace !important;
-	font-weight: [[FONT-WEIGHT-NORMAL]];
-	line-height: 1.6em;
-}
-
-/* WP Adminbar */
 
 #wpadminbar {
 	height: 40px;
@@ -135,9 +125,14 @@ html.wp-toolbar {
 	position: fixed;
 	background-color: #f0f0f0;
 	color: #444;
-	font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace !important;
+	font: [[FONT-WEIGHT-NORMAL]] 13px/26px "[[FONT-FAMILY]]", monospace !important;
 	border-bottom: 1px solid #e8e8e8;
 	min-width: 0;
+}
+
+#wpadminbar * {
+	font: [[FONT-WEIGHT-NORMAL]] 13px/26px "[[FONT-FAMILY]]", monospace;
+	box-shadow: none !important;
 }
 
 #wpadminbar ul > li {
@@ -256,27 +251,26 @@ html.wp-toolbar {
 	color: [[COLOUR-HIGHLIGHT-SECONDARY]];
 }
 
-#wp-admin-bar-site-name.hover a,
-#wp-admin-bar-site-name:hover a {
+#wpadminbar #wp-admin-bar-site-name.hover a,
+#wpadminbar #wp-admin-bar-site-name:hover a {
 	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 	text-shadow: none !important;
 }
 
-#wp-admin-bar-my-account {
+#wpadminbar #wp-admin-bar-my-account {
 	border: none !important;
 }
 
-#wp-admin-bar-wp-logo {
+#wpadminbar #wp-admin-bar-wp-logo {
 	display: none;
 }
 
-#wp-admin-bar-wp-logo img {
+#wpadminbar #wp-admin-bar-wp-logo img {
 	vertical-align: text-top !important;
 	margin-top: 4px !important;
 }
 
-#wp-admin-bar-user-actions {
-	box-shadow: none !important;
+#wpadminbar #wp-admin-bar-user-actions {
 }
 
 #wpadminbar #wp-admin-bar-user-info .username {
@@ -350,10 +344,6 @@ h2.hndle.ui-sortable-handle {
 #adminmenu a.menu-top,
 #adminmenu .wp-submenu-head {
 	font-weight: [[FONT-WEIGHT-NORMAL]];
-}
-
-#wpadminbar * {
-	font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace;
 }
 
 a.rsswidget,
@@ -448,8 +438,6 @@ td strong {
 	text-decoration: none !important;
 }
 
-/* Links */
-
 a,
 #adminmenu a,
 #the-comment-list p.comment-author strong a,
@@ -460,8 +448,6 @@ a,
 .ui-tabs-nav a {
 	color: [[COLOUR-HIGHLIGHT-SECONDARY]];
 }
-
-/* Side Menu */
 
 #adminmenuwrap,
 #wpcontent {
@@ -666,8 +652,6 @@ div.wp-menu-image::before {
 	font-style: italic;
 }
 
-/* Content */
-
 #wpbody {
 	margin-top: -20px !important;
 }
@@ -742,8 +726,6 @@ p.search-box {
 	text-transform: uppercase !important;
 }
 
-/* Widgets */
-
 #widget-list .widget-top,
 .widget,
 .postbox,
@@ -778,9 +760,9 @@ p.search-box {
 .stuffbox h3 {
 	margin-top: 0;
 	border-bottom-color: #e8e8e8;
+	color: #444;
 	text-shadow: none;
 	box-shadow: none;
-	color: #444;
 }
 
 .in-widget-title {
@@ -840,8 +822,6 @@ p.search-box {
 	color: #444 !important;
 }
 
-/* Theme info */
-
 .theme-info .theme-name {
 	font-size: 28px !important;
 }
@@ -859,8 +839,6 @@ p.search-box {
 .theme-install-php .wp-core-ui .button-primary.theme-install {
 	line-height: 1.75 !important;
 }
-
-/* Misc */
 
 #screen-options-wrap legend,
 #screen-options-wrap label {
@@ -967,8 +945,6 @@ ul.subsubsub li a.current {
 	font-size: 13px;
 }
 
-/* Widgets-page */
-
 #widgets-left .sidebar-name,
 #widgets-right .sidebar-name {
 	color: #f0f0f0;
@@ -1037,16 +1013,14 @@ ul.subsubsub li a.current {
 	font-size: 15px !important;
 }
 
-/* Post Content */
-
 #post-body-content {
 	padding: 0;
+	margin-bottom: 20px;
 	width: 100%;
 	float: left;
 	border-radius: 0;
 	box-shadow: none;
 	box-sizing: border-box;
-	margin-bottom: 20px;
 }
 
 #publish.button-primary {
@@ -1114,8 +1088,6 @@ ul.subsubsub li a.current {
 	background-color: #fff;
 	box-shadow: none !important;
 }
-
-/* Menu Page */
 
 .menu-item-handle {
 	text-shadow: none;
@@ -1196,8 +1168,6 @@ a.menu-delete {
 	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
-/* Forms & Buttons */
-
 form h2,
 form h3 {
 	clear: both !important;
@@ -1215,6 +1185,13 @@ form h3 {
 legend {
 	font-size: 15px !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+}
+
+.wp-admin {
+	min-width: 0;
+	font-family: "[[FONT-FAMILY]]", monospace !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
+	line-height: 1.6em;
 }
 
 .wrap h1 + form,
@@ -1265,6 +1242,7 @@ form .form-table th {
 	line-height: 1.2 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
 	text-align: right !important;
+	text-transform: capitalize;
 }
 
 form .form-table th label {
@@ -1284,7 +1262,6 @@ form .form-table th.th-full label,
 }
 
 form .form-table td {
-	width: 75% !important;
 	padding: 15px 0 5px 15px !important;
 	line-height: 1.2 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
@@ -1394,6 +1371,10 @@ form .form-table td > select {
 	margin-top: 0 !important;
 }
 
+.user-new-php form .form-table td > input[type=url] {
+	margin-top: 0 !important;
+}
+
 .user-new-php .form-table th[scope="row"] + td .button-secondary {
 	margin-top: 0 !important;
 }
@@ -1431,8 +1412,6 @@ form .form-table tr.show-admin-bar td label {
 .edit-tags-php form.validate {
 	padding: 0 !important;
 }
-
-/* Tables */
 
 .widefat th a,
 .widefat th a:hover {
@@ -1527,8 +1506,6 @@ form .form-table tr.show-admin-bar td label {
 .update-core-php .widefat tfoot td input[type="checkbox"] {
 	margin-top: -4px !important;
 }
-
-/* Misc */
 
 #adminmenu .wp-submenu li.current,
 #adminmenu .wp-submenu li.current a,
@@ -1945,8 +1922,6 @@ table.media .column-title .filename {
 	display: none !important;
 }
 
-/* Specific Page Styles */
-
 .appearance_page_custom-header .wrap .form-table tr {
 	padding-left: 20px !important;
 }
@@ -2038,14 +2013,12 @@ h2 a.nav-tab {
 	padding-bottom: 10px;
 }
 
-/* Multisite Support */
-
-#wp-admin-bar-my-sites-list {
+#wpadminbar #wp-admin-bar-my-sites-list {
 	min-width: 300px !important;
 	background-color: #f0f0f0 !important;
 }
 
-#wp-admin-bar-my-sites-list .menupop .ab-submenu {
+#wpadminbar #wp-admin-bar-my-sites-list .menupop .ab-submenu {
 	background-color: #f0f0f0 !important;
 }
 
@@ -2217,7 +2190,6 @@ table.acf_input tbody tr td.label label {
 	margin-bottom: 0 !important;
 }
 
-
 /* Formidable Forms Support */
 
 .frm_pro_installed .button-secondary,
@@ -2383,6 +2355,7 @@ a.frm_show_comment:hover {
 }
 
 /* Ninja Forms Support */
+
 /* Too many changes needed, wait for them to fix things in v3 */
 
 /* P3 Plugin Profiler Support */
@@ -2587,16 +2560,6 @@ a.frm_show_comment:hover {
 	display: none !important;
 }
 
-/* White Label CMS Support */
-
-#wlcms-sidebar {
-	/* display: none !important; */
-}
-
-#wlcms-container {
-	/* width: 100% !important; */
-}
-
 /* Widget Context Plugin Support */
 
 .widget-context-form p.submit {
@@ -2678,10 +2641,6 @@ a.frm_show_comment:hover {
 
 .wc_emails.widefat th {
 	text-align: left !important;
-}
-
-.user-edit-php #fieldset-billing.form-table th {
-	padding-top: 18px !important;
 }
 
 .woocommerce nav.woo-nav-tab-wrapper {
@@ -2838,6 +2797,16 @@ a.frm_show_comment:hover {
 
 .woocommerce_page_wc-settings .woocommerce form .submit {
 	margin-bottom: 0 !important;
+}
+
+.user-edit-php #fieldset-billing.form-table th,
+.user-edit-php #fieldset-shipping.form-table th {
+	padding-top: 15px !important;
+}
+
+.user-edit-php #fieldset-billing.form-table td select#billing_country + .select2-container,
+.user-edit-php #fieldset-shipping.form-table td select#shipping_country + .select2-container {
+	margin-top: -5px !important;
 }
 
 .wc-backbone-modal h1 {
@@ -3095,7 +3064,7 @@ input.regular-text {
 		background: none;
 		background-color: #f0f0f0;
 		color: #444;
-		font: [[FONT-WEIGHT-NORMAL]] 13px/28px "[[FONT-FAMILY]]", monospace !important;
+		font: [[FONT-WEIGHT-NORMAL]] 13px/26px "[[FONT-FAMILY]]", monospace !important;
 		border-top: 1px solid #f0f0f0;
 		border-bottom: 1px solid #e8e8e8;
 	}
@@ -3135,12 +3104,12 @@ input.regular-text {
 		margin-top: 7px;
 	}
 
-	#wp-admin-bar-site-name .ab-sub-wrapper {
+	#wpadminbar #wp-admin-bar-site-name .ab-sub-wrapper {
 		display: none !important;
 	}
 
-	#wp-admin-bar-site-name.hover a,
-	#wp-admin-bar-site-name:hover a {
+	#wpadminbar #wp-admin-bar-site-name.hover a,
+	#wpadminbar #wp-admin-bar-site-name:hover a {
 		color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 		background: none !important;
 	}
@@ -3196,12 +3165,12 @@ input.regular-text {
 		padding-top: 0;
 	}
 
-	#wp-admin-bar-comments,
-	#wp-admin-bar-updates {
+	#wpadminbar #wp-admin-bar-comments,
+	#wpadminbar #wp-admin-bar-updates {
 		display: none;
 	}
 
-	#wp-admin-bar-mobile {
+	#wpadminbar #wp-admin-bar-mobile {
 		display: block;
 		float: left;
 	}
