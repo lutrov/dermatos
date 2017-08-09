@@ -1325,18 +1325,6 @@ form .form-table td > select {
 	margin-top: -2px;
 }
 
-/*
-.options-general-php .form-table select,
-.options-writing-php .form-table select,
-.options-reading-php .form-table select,
-.options-discussion-php .form-table select,
-.options-media-php .form-table select,
-.options-permalink-php .form-table select {
-	display: block;
-	max-width: 600px;
-}
-*/
-
 .options-discussion-php .form-table td label[for=comment_max_links] {
 	display: inline-block;
 	margin-top: -5px !important;
@@ -2219,6 +2207,20 @@ table.acf_input tbody tr td.label label {
 	display: none;
 }
 
+.post-php #major-publishing-actions {
+	border: none !important;
+	background-color: inherit;
+}
+
+.post-php #misc-publishing-actions .timestamp-wrap label input {
+	margin: 0 !important;
+	padding: 0 5px !important;
+}
+
+.post-php #misc-publishing-actions .save-post-status {
+	line-height: 2 !important;
+}
+
 .email_page_email-email form .submit {
 	margin-bottom: 0 !important;
 }
@@ -2890,22 +2892,28 @@ a.frm_show_comment:hover {
 .post-type-shop_order #order_data h2,
 .post-type-shop_order #order_data p.order_number {
 	font-family: "[[FONT-FAMILY]]", monospace;
-	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .post-type-shop_order #order_data h2 {
-	padding: 10px !important;
+	padding: 10px 0 !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 	text-shadow: none;
 }
 
 .post-type-shop_order #order_data p.order_number {
 	padding: 10px 0;
 	color: #444;
+	font-weight: [[FONT-WEIGHT-BOLD]];
 	font-size: 14px;
 }
 
 .post-type-shop_order .order_data_column h3 {
 	padding: 0 10px;
+}
+
+.post-type-shop_order .save_order {
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
 }
 
 .options-permalink-php .form-table.wc-permalink-structure td {
