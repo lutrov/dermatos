@@ -412,6 +412,27 @@ td strong {
 	clear: left;
 }
 
+.nav-menus-php .wrap h2.nav-tab-wrapper {
+	margin-top: 20px !important;
+	border-top: 1px solid #e8e8e8 !important;
+}
+
+.nav-menus-php .wrap form .widefat {
+	margin: 5px 0 25px 0 !important;
+}
+
+.nav-menus-php .manage-menus {
+	padding: 0 !important;
+	background-color: #fff !important;
+	border: none !important;
+}
+
+.nav-menus-php .button-controls {
+	padding-top: 25px !important;
+	border-top: 1px solid #e8e8e8 !important;
+	text-align: right !important;
+}
+
 .nav-menus-php label {
 	font-style: normal !important;
 }
@@ -2041,8 +2062,6 @@ h2 a.nav-tab {
 }
 
 #ws_editor_sidebar {
-	margin-top: -10px;
-	margin-left: 20px;
 	background-color: inherit;
 	border: none;
 }
@@ -2052,10 +2071,24 @@ h2 a.nav-tab {
 	display: none !important;
 }
 
+#ws_menu_editor .ws_basic_container {
+	float: right !important;
+}
+
 .settings_page_menu_editor .submit {
 	padding-top: 25px !important;
 	border-top: 1px solid #e8e8e8 !important;
 	text-align: right !important;
+}
+
+.settings_page_menu_editor #submit {
+	display: inline-block !important;
+	margin-top: -35px !important;
+	margin-bottom: 0 !important;
+}
+
+.settings_page_menu_editor #ame-plugin-visibility-editor {
+	margin-top: -20px !important;
 }
 
 /* Advanced Custom Fields Support */
