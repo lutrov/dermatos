@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 8.0
+Version: 8.2
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -187,8 +187,8 @@ function dermatos_login_css() {
 	if (strlen($path) > 0) {
 		$style = sprintf('html {background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(%s); background-size: cover; background-position: center top; background-color: #222} %s', dermatos_url_from_abspath($path), $style);
 	}
-	echo sprintf('<link href="%s/css/style.php?file=login" rel="stylesheet" type="text/css" media="all">', DERMATOS_BASE_PLUGIN_URL);
-	echo sprintf('<style type="text/css">%s</style>', $style);
+	echo sprintf('<link href="%s/css/style.php?file=login" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
+	echo sprintf('<style media="screen and (min-width:960px)" type="text/css">%s</style>', $style);
 }
 
 //
@@ -222,7 +222,7 @@ function dermatos_meta_favicon() {
 //
 add_action('admin_head', 'dermatos_admin_css', 999);
 function dermatos_admin_css() {
-	echo sprintf('<link href="%s/css/style.php?file=admin" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
+	echo sprintf('<link href="%s/css/style.php?file=admin" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
 }
 
 //
@@ -230,7 +230,7 @@ function dermatos_admin_css() {
 //
 add_action('wp_head', 'dermatos_public_css', 999);
 function dermatos_public_css() {
-	echo sprintf('<link href="%s/css/style.php?file=public" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
+	echo sprintf('<link href="%s/css/style.php?file=public" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
 }
 
 //
