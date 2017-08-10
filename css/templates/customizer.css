@@ -6,6 +6,13 @@
 
 /* Customizer */
 
+* {
+	box-shadow: none !important;
+	box-sizing: border-box !important;
+	border-radius: 0 !important;
+	text-shadow: none !important;
+}
+
 .wp-customizer * {
 	font-family: "[[FONT-FAMILY]]", monospace !important;
 }
@@ -14,23 +21,18 @@
 	color: #fff !important;
 	background: none;
 	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	border: none;
 	width: auto !important;
 	min-width: 80px !important;
-	border-radius: 0;
-	box-shadow: none;
+	height: 30px !important;
+	line-height: 1 !important;
 	text-decoration: none;
-	text-shadow: none;
-	line-height: 2.0 !important;
+	border: none;
 }
 
 .wp-customizer #save.button-primary {
 	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 	border: none !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	text-shadow: none;
 }
 
 .wp-customizer #save.button-primary:hover {
@@ -51,4 +53,8 @@
 .wp-customizer.modal-open .button-hero {
 	padding-top: 8px;
 	padding-bottom: 8px;
+}
+
+.wp-customizer #customize-footer-actions button {
+	color: #444 !important;
 }
