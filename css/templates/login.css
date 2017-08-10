@@ -7,7 +7,12 @@
 /* Basic */
 
 * {
-	margin: 0; padding: 0;
+	margin: 0;
+	box-shadow: none !important;
+	box-sizing: border-box !important;
+	border-radius: 0 !important;
+	text-shadow: none !important;
+	padding: 0;
 }
 
 html {
@@ -27,11 +32,10 @@ form {
 	padding: 30px !important;
 	background: #f0f0f0 !important;
 	border: none !important;
-	box-sizing: border-box !important;
 }
 
 label {
-	color: #333 !important;
+	color: #444 !important;
 	font-size: 13px !important;
 }
 
@@ -43,7 +47,6 @@ input[type=password],
 	padding: 6px !important;
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-size: 13px !important;
-	box-shadow: none !important;
 }
 
 input[type=submit] {
@@ -51,13 +54,10 @@ input[type=submit] {
 	color: #fff !important;
 	min-width: 100px !important;
 	height: 30px !important;
-	line-height: 30px !important;
+	line-height: 1 !important;
 	border: none !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
 	font-size: 13px !important;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
-	text-shadow: none !important;
 }
 
 input[type=submit]:hover {
@@ -140,7 +140,6 @@ p.submit {
 	margin-bottom: -20px !important;
 	background: none !important;
 	border: none !important;
-	box-shadow: none !important;
 }
 
 #login_error {
