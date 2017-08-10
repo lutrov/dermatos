@@ -152,13 +152,3 @@ p.submit {
 #login_error a {
 	color: #fff !important;
 }
-
-/* Responsive stuff */
-
-@media only screen and (min-device-width:320px) and (max-device-width:480px) {
-	#login {
-		margin: 0 auto;
-		max-width: 280px !important;
-		width: 280px !important;
-	}
-}
