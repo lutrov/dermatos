@@ -119,6 +119,10 @@ textarea:disabled {
 	border: 1px solid #e4e4e4 !important;
 }
 
+label {
+	text-transform: capitalize !important;
+}
+
 table td pre {
 	white-space: pre-wrap;
 }
@@ -621,6 +625,7 @@ a,
 #adminmenu .awaiting-mod,
 #adminmenu .update-plugins {
 	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border-radius: 50% !important;
 }
 
 div.wp-menu-image {
@@ -1072,19 +1077,20 @@ ul.subsubsub li a.current {
 	padding: 10px;
 }
 
+#post .inside {
+	padding: 10px 0;
+}
+
+.post-php #poststuff .inside,
+.post-new-php #poststuff .inside {
+	padding: 10px 20px;
+}
+
 .wp-switch-editor {
 	background-color: #f8f8f8 !important;
 	color: #444 !important;
 	line-height: 1 !important;
 	border: 1px solid #e4e4e4 !important;
-}
-
-#post .inside {
-	padding: 10px 0;
-}
-
-.post-php #poststuff .inside {
-	padding: 10px 20px;
 }
 
 .tagsdiv .newtag {
@@ -1264,13 +1270,14 @@ form .form-table th {
 	line-height: 1.2 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px/20px "[[FONT-FAMILY]]", monospace !important;
 	text-align: right !important;
-	text-transform: capitalize;
 }
 
 form .form-table th label {
 	margin: 0 !important;
 	display: inline-block !important;
 	white-space: nowrap;
+	text-transform: capitalize;
+
 }
 
 form .form-table th.th-full,
@@ -1754,6 +1761,7 @@ label span.description {
 .update-core-php .button,
 .upload-php .media-button,
 .post-php .media-button,
+.post-new-php .media-button,
 .install-now {
 	padding: 0px 10px !important;
 	display: inline-block !important;
@@ -2220,21 +2228,25 @@ table.acf_input tbody tr td.label label {
 	display: none;
 }
 
-.post-php.post-type-email #edit-slug-box {
+.post-php.post-type-email #edit-slug-box,
+.post-new-php.post-type-email #edit-slug-box {
 	display: none;
 }
 
-.post-php #major-publishing-actions {
+.post-php #major-publishing-actions,
+.post-new-php #major-publishing-actions {
 	border: none !important;
 	background-color: inherit;
 }
 
-.post-php #misc-publishing-actions .timestamp-wrap label input {
+.post-php #misc-publishing-actions .timestamp-wrap label input,
+.post-new-php #misc-publishing-actions .timestamp-wrap label input {
 	margin: 0 !important;
 	padding: 0 5px !important;
 }
 
-.post-php #misc-publishing-actions .save-post-status {
+.post-php #misc-publishing-actions .save-post-status,
+.post-new-php #misc-publishing-actions .save-post-status {
 	line-height: 2 !important;
 }
 
@@ -2717,10 +2729,6 @@ a.frm_show_comment:hover {
 	padding: 0 !important;
 }
 
-.woocommerce_page_wc-settings .form-table th {
-	text-transform: capitalize;
-}
-
 .woocommerce_page_wc-settings .form-table td.forminp .wc_gateways th.sort {
 	width: 10% !important;
 	text-align: left;
@@ -2932,24 +2940,32 @@ a.frm_show_comment:hover {
 
 /* WP Document Revisions Support */
 
-.post-php.document .button-primary {
+.post-php.document .button-primary,
+.post-new-php.document .button-primary {
 	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
-.post-php.document .button-primary:hover {
+.post-php.document .button-primary:hover,
+.post-new-php.document .button-primary:hover {
 	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
 .post-php #attachment_caption,
+.post-new-php #attachment_caption,
 .post-php #attachment_alt,
-.post-php #attachment_content {
+.post-new-php #attachment_alt,
+.post-php #attachment_content,
+.post-new-php #attachment_content {
 	border: 1px solid #e4e4e4 !important;
 }
 
 .post-php #attachment_caption:focus,
+.post-new-php #attachment_caption:focus,
 .post-php #attachment_alt:focus,
-.post-php #attachment_content:focus {
+.post-new-php #attachment_alt:focus,
+.post-php #attachment_content:focus,
+.post-new-php #attachment_content:focus {
 	border: 1px solid [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
 }
 
