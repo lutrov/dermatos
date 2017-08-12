@@ -1363,6 +1363,34 @@ form .form-table td > select {
 	padding-top: 15px !important;
 }
 
+.tools-php .card {
+	max-width: none !important;
+}
+
+.export-php .wrap h1 {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.export-php form .submit {
+	padding-top: 25px !important;
+	border-top: 1px solid #e4e4e4 !important;
+	text-align: right !important;
+}
+
+.import-php .importer-action a {
+	font-size: 11px !important;
+	text-transform: uppercase !important;
+	padding: 0 2px !important;
+}
+
+.import-php .importer-action .install-now {
+	background-color: inherit !important;
+	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	padding-left: 0 !important;
+}
+
 .user-edit-php .form-table td button#destroy-sessions {
 	margin-top: -10px !important;
 }
