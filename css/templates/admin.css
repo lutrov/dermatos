@@ -1827,6 +1827,28 @@ label span.description {
 	margin: 0 10px 0 5px !important;
 }
 
+.themes-php .filter-count .count, .title-count {
+	font-size: 13px;
+}
+
+.themes-php .theme-browser .theme .theme-name {
+	height: 40px;
+	padding: 0 15px;
+	background-color: #f0f0f0;
+	color: #444;
+	line-height: 40px;
+}
+
+.themes-php .theme-browser .theme .theme-actions {
+	height: 40px;
+	padding: 6px 10px 6px 5px;
+	line-height: 40px;
+}
+
+.themes-php .theme-browser .theme.active .theme-actions {
+	background-color: inherit;
+}
+
 .imgedit-submit-btn {
 	margin-left: 5px !important;
 }
@@ -2419,6 +2441,14 @@ a.frm_show_comment:hover {
 	height: 28px !important;
 }
 
+.users_page_roles #edit-slug-box {
+	padding-left: 10px;
+}
+
+.users_page_roles #tabcapsdiv {
+	background-color: #fff;
+}
+
 .users_page_roles #publish.button-primary,
 .users_page_role-new #publish.button-primary {
 	margin-top: 10px !important;
@@ -2447,7 +2477,7 @@ a.frm_show_comment:hover {
 }
 
 .settings_page_members-settings .wp-filter {
-	display: none !Important;
+	display: none !important;
 }
 
 /* Nextgen Gallery Support */
