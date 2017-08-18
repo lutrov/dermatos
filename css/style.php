@@ -9,7 +9,7 @@
 //////////////////////////////////////////////////////////////////////////////
 
 //
-// Define constants used by this script.
+// Constants used by this script.
 //
 define('DERMATOS_COLOUR_HIGHLIGHT_PRIMARY', '#d71900');
 define('DERMATOS_COLOUR_HIGHLIGHT_SECONDARY', '#0078d7');
