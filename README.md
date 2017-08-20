@@ -47,15 +47,15 @@ This plugin provides an API to to customise the default constant values. See the
 		return $path;
 	}
 
-	// ---- Change the Dermatos plugin primary highlight colour.
-	add_filter('dermatos_colour_highlight_primary_filter', 'lutrov_dermatos_colour_highlight_primary_filter')
-	function lutrov_dermatos_colour_highlight_primary_filter($value) {
+	// ---- Change the Dermatos plugin highlight accent colour.
+	add_filter('dermatos_colour_highlight_accent_filter', 'lutrov_dermatos_colour_highlight_accent_filter')
+	function lutrov_dermatos_colour_highlight_accent_filter($value) {
 		return 'blue';
 	}
 
-	// ---- Change the Dermatos plugin secondary highlight colour.
-	add_filter('dermatos_colour_highlight_secondary_filter', 'lutrov_dermatos_colour_highlight_secondary_filter')
-	function lutrov_dermatos_colour_highlight_secondary_filter($value) {
+	// ---- Change the Dermatos plugin highlight primary colour.
+	add_filter('dermatos_colour_highlight_primary_filter', 'lutrov_dermatos_colour_highlight_primary_filter')
+	function lutrov_dermatos_colour_highlight_primary_filter($value) {
 		return 'green';
 	}
 
@@ -126,15 +126,15 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 			$path = sprintf('%s/wp-content/uploads/2017/04/meta-favicon.png', ABSPATH);
 			return $path;
 		}
-		// ---- Change the Dermatos plugin primary highlight colour.
+		// ---- Change the Dermatos plugin highlight primary colour.
 		add_filter('dermatos_colour_highlight_primary_filter', 'lutrov_dermatos_colour_highlight_primary_filter');
 		function lutrov_dermatos_colour_highlight_primary_filter($value) {
-			return '#4444ff';
-		}
-		// ---- Change the Dermatos plugin secondary highlight colour.
-		add_filter('dermatos_colour_highlight_secondary_filter', 'lutrov_dermatos_colour_highlight_secondary_filter');
-		function lutrov_dermatos_colour_highlight_secondary_filter($value) {
 			return '#44ff44';
+		}
+		// ---- Change the Dermatos plugin highlight accent colour.
+		add_filter('dermatos_colour_highlight_accent_filter', 'lutrov_dermatos_colour_highlight_accent_filter');
+		function lutrov_dermatos_colour_highlight_accent_filter($value) {
+			return '#4444ff';
 		}
 		// ---- Change the Dermatos plugin font family.
 		add_filter('dermatos_font_family_filter', 'lutrov_dermatos_font_family_filter');
