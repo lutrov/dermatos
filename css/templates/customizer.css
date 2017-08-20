@@ -20,7 +20,7 @@
 .wp-customizer .button {
 	color: #fff !important;
 	background: none;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	width: auto !important;
 	min-width: 80px !important;
 	height: 30px !important;
@@ -30,13 +30,13 @@
 }
 
 .wp-customizer #save.button-primary {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	color: #fff !important;
 	border: none !important;
 }
 
 .wp-customizer #save.button-primary:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .wp-customizer h3,
