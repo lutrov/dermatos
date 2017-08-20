@@ -11,8 +11,8 @@
 //
 // Constants used by this script.
 //
-define('DERMATOS_COLOUR_HIGHLIGHT_PRIMARY', '#d71900');
-define('DERMATOS_COLOUR_HIGHLIGHT_SECONDARY', '#0078d7');
+define('DERMATOS_COLOUR_HIGHLIGHT_PRIMARY', '#0078d7');
+define('DERMATOS_COLOUR_HIGHLIGHT_ACCENT', '#d71900');
 define('DERMATOS_FONT_FAMILY', 'Roboto Condensed');
 define('DERMATOS_FONT_FAMILY_ESCAPED', 'Roboto+Condensed');
 define('DERMATOS_FONT_WEIGHT_NORMAL', '300');
@@ -61,7 +61,7 @@ if (strlen($file) > 0) {
 $css = str_replace(
 	array(
 		'[[COLOUR-HIGHLIGHT-PRIMARY]]',
-		'[[COLOUR-HIGHLIGHT-SECONDARY]]',
+		'[[COLOUR-HIGHLIGHT-ACCENT]]',
 		'[[FONT-FAMILY]]',
 		'[[FONT-FAMILY-ESCAPED]]',
 		'[[FONT-WEIGHT-NORMAL]]',
@@ -70,7 +70,7 @@ $css = str_replace(
 	),
 	array(
 		apply_filters('dermatos_colour_highlight_primary_filter', DERMATOS_COLOUR_HIGHLIGHT_PRIMARY),
-		apply_filters('dermatos_colour_highlight_secondary_filter', DERMATOS_COLOUR_HIGHLIGHT_SECONDARY),
+		apply_filters('dermatos_colour_highlight_accent_filter', DERMATOS_COLOUR_HIGHLIGHT_ACCENT),
 		apply_filters('dermatos_font_family_filter', DERMATOS_FONT_FAMILY),
 		apply_filters('dermatos_font_family_escaped_filter', DERMATOS_FONT_FAMILY_ESCAPED),
 		apply_filters('dermatos_font_weight_normal_filter', DERMATOS_FONT_WEIGHT_NORMAL),
