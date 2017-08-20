@@ -76,6 +76,7 @@ input[type=month],
 input[type=number],
 select,
 textarea {
+	color: #444 !important;
 	padding: 5px !important;
 	border: 1px solid #e4e4e4 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px "[[FONT-FAMILY]]", monospace !important;
@@ -108,7 +109,7 @@ input[type=month]:focus,
 input[type=number]:focus,
 select:focus,
 textarea:focus {
-	border: 1px solid [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	border: 1px solid #888 !important;
 }
 
 input:disabled,
@@ -206,7 +207,7 @@ html.wp-toolbar {
 }
 
 #wpadminbar #wp-admin-bar-site-name > .ab-item:hover::before {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 #wpadminbar .ab-top-menu > li:hover > .ab-item,
@@ -226,13 +227,13 @@ html.wp-toolbar {
 #wpadminbar .quicklinks .menupop ul li a strong,
 #wpadminbar .quicklinks .menupop.hover ul li a,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 #wpadminbar .ab-top-menu > li > .ab-item:hover,
 #wpadminbar .ab-top-menu > li > .ab-item:hover .ab-icon::before,
 #wpadminbar .ab-top-menu > li > .ab-item:hover .ab-label {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 #wpadminbar .menupop .ab-sub-wrapper,
@@ -262,12 +263,12 @@ html.wp-toolbar {
 #wpadminbar .quicklinks .menupop ul li a strong,
 #wpadminbar .quicklinks .menupop.hover ul li a,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]];
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
 #wpadminbar #wp-admin-bar-site-name.hover a,
 #wpadminbar #wp-admin-bar-site-name:hover a {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 #wpadminbar #wp-admin-bar-my-account {
@@ -326,6 +327,12 @@ h2.hndle.ui-sortable-handle {
 .row-title,
 .tagcloud a {
 	font-size: 13px !important;
+}
+
+.notice,
+.error,
+.updated {
+	background-color: #f0f0f0 !important;
 }
 
 #titlewrap input {
@@ -396,7 +403,7 @@ td strong {
 
 #titlediv #title {
 	line-height: 100%;
-	height: 2.5em;
+	height: 2em;
 }
 
 .wp-core-ui #welcome-panel .welcome-panel-content h2 {
@@ -406,15 +413,21 @@ td strong {
 .wp-core-ui #welcome-panel .button.button-hero,
 .upload-ui .button.button-hero {
 	padding: 15px 30px !important;
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	color: #fff !important;
 	line-height: 1 !important;
 	border: none !important;
 }
 
+.wp-core-ui #welcome-panel .button.button-hero:hover,
+.upload-ui .button.button-hero:hover {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
+}
+
 .wp-core-ui .button-group.button-large .button,
 .wp-core-ui .button.button-large {
-	line-height: 2.25 !important;
+	/*line-height: 2.25 !important;*/
 }
 
 .manage-menus {
@@ -486,7 +499,7 @@ a,
 #media-items a.delete-permanently,
 .plugins a.delete,
 .ui-tabs-nav a {
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]];
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
 #adminmenuwrap,
@@ -546,9 +559,9 @@ a,
 .folded #adminmenu li.wp-has-current-submenu,
 .folded #adminmenu li.current.menu-top {
 	background: none;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	border-top-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	border-bottom-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border-top-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border-bottom-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
@@ -556,7 +569,7 @@ a,
 #adminmenu li.opensub > a.menu-top,
 #adminmenu li > a.menu-top:focus {
 	background-color: #f0f0f0;
-	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 }
 
 #adminmenu .wp-submenu .wp-submenu-head {
@@ -588,7 +601,7 @@ a,
 
 #adminmenu .wp-submenu a:hover,
 #adminmenu .wp-submenu a:focus {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
@@ -624,7 +637,7 @@ a,
 
 #adminmenu .awaiting-mod,
 #adminmenu .update-plugins {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	border-radius: 50% !important;
 }
 
@@ -894,14 +907,15 @@ h1.nav-tab-wrapper,
 	border: 1px solid #e4e4e4;
 	background-color: #fff;
 	color: #444 !important;
-	line-height: 1 !important;
+	line-height: 1.25 !important;
 }
 
 .nav-tab-active,
 .nav-tab-active:hover,
 .nav-tab:hover {
 	background-color: #fff;
-	border: 1px solid [[COLOUR-HIGHLIGHT-SECONDARY]];
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 ul.subsubsub {
@@ -1115,6 +1129,7 @@ ul.subsubsub li a.current {
 #contextual-help-link button {
 	background-color: #fff !important;
 	color: #444 !important;
+	border-top: none !important;
 	border-right: 1px solid #e4e4e4 !important;
 	border-bottom: 1px solid #e4e4e4 !important;
 	border-left: 1px solid #e4e4e4 !important;
@@ -1193,7 +1208,7 @@ ul.subsubsub li a.current {
 }
 
 a.menu-delete {
-	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	color: [[COLOUR-HIGHLIGHT-ACCENT]];
 }
 
 form h2,
@@ -1387,7 +1402,7 @@ form .form-table td > select {
 
 .import-php .importer-action .install-now {
 	background-color: inherit !important;
-	color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	padding-left: 0 !important;
 }
 
@@ -1461,7 +1476,17 @@ form .form-table tr.show-admin-bar td label {
 
 .select2-container .select2-selection--single,
 .select2-container .select2-selection--multiple {
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e4e4e4 !important;
+	color: #444 !important;
+}
+
+.select2-container .select2-selection--single:focus,
+.select2-container .select2-selection--multiple:focus {
+	border: 1px solid #888 !important;
+}
+
+.select2-container .select2-selection__placeholder {
+	color: #444 !important;
 }
 
 .select2-container .select2-selection--single .select2-selection__arrow,
@@ -1606,48 +1631,51 @@ form .form-table tr.show-admin-bar td label {
 }
 
 .wp-core-ui .button,
-.wp-core-ui .notification-dialog .button,
-.button-highlighted {
+.wp-core-ui .button-secondary,
+.wp-core-ui .notification-dialog .button {
 	background: none;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	color: #fff !important;
-	border: none;
-	border-color: none !important;
-	line-height: 2.0 !important;
+	background-color: transparent !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
+	line-height: 2 !important;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 	text-decoration: none;
 	text-align: center;
 }
 
-.wp-core-ui .button-primary,
-.button-highlighted {
+.wp-core-ui .button:hover,
+.wp-core-ui .button:active,
+.wp-core-ui .button-secondary:hover,
+.wp-core-ui .button-secondary:active,
+.wp-core-ui .notification-dialog .button:hover,
+.wp-core-ui .notification-dialog .button:active {
 	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
-	border: none !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.wp-core-ui .button-primary,
+.wp-core-ui .button-highlighted {
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
+	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 }
 
 .wp-core-ui .button-primary:hover,
-.button-highlighted:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+.wp-core-ui .button-primary:active,
+.wp-core-ui .button-highlighted:hover,
+.wp-core-ui .button-highlighted:active {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
-}
-
-.wp-core-ui .button-secondary {
-	background: none;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	color: #fff !important;
-	border: none;
-	line-height: 2.0 !important;
-	text-decoration: none;
-}
-
-.wp-core-ui .button-secondary:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .button-primary {
 	min-width: 100px !important;
+}
+
+.button.preview {
+	max-width: 100px !important;
 }
 
 .wp-core-ui .button:disabled,
@@ -1661,7 +1689,7 @@ form .form-table tr.show-admin-bar td label {
 .wp-core-ui p .button,
 .wp-core-ui p .button:hover {
 	vertical-align: middle;
-	line-height: 2.0 !important;
+	line-height: 2 !important;
 }
 
 .upgrade a.button {
@@ -1702,7 +1730,7 @@ form .form-table tr.show-admin-bar td label {
 .save.button-primary:hover,
 .cancel.button-secondary,
 .cancel.button-secondary:hover {
-	line-height: 2.0 !important;
+	line-height: 2 !important;
 }
 
 #upgrade.button,
@@ -1713,7 +1741,7 @@ form .form-table tr.show-admin-bar td label {
 .upgrade .button:hover,
 .preview.button,
 .preview.button:hover {
-	line-height: 1.33 !important;
+	line-height: 1.25 !important;
 	min-width: 100px !important;
 }
 
@@ -1742,7 +1770,7 @@ form .form-table tr.show-admin-bar td label {
 
 .tools a.button,
 .tools a.button:hover {
-	line-height: 2.0 !important;
+	line-height: 2 !important;
 }
 
 p.description, span.description {
@@ -1779,10 +1807,18 @@ label span.description {
 	padding: 2px 18px !important;
 }
 
+.theme-about + .theme-actions a.button {
+	padding: 0 18px !important;
+}
+
+.theme-about + .theme-actions a.button.delete-theme {
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
 .update-core-php form.upgrade {
 	margin-bottom: 30px !important;
 	padding: 0 !important;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
@@ -1793,7 +1829,7 @@ label span.description {
 .install-now {
 	padding: 0px 10px !important;
 	display: inline-block !important;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
@@ -1847,6 +1883,16 @@ label span.description {
 
 .themes-php .theme-browser .theme.active .theme-actions {
 	background-color: inherit;
+}
+
+.themes-php .theme-actions a.button.activate {
+	background-color: #f0f0f0 !important;
+}
+
+.themes-php .theme-actions a.button.activate:hover,
+.themes-php .theme-actions a.button.activate:active {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
 }
 
 .imgedit-submit-btn {
@@ -1985,6 +2031,10 @@ a#choose-from-library-link {
 	margin-bottom: 10px;
 }
 
+.post-type-attachment #delete-action {
+	margin-top: 5px !important;
+}
+
 table.media .column-title .has-media-icon ~ .row-actions {
 	clear: both !important;
 	margin-top: 15px !important;
@@ -2016,34 +2066,33 @@ table.media .column-title .filename {
 }
 
 .wrap .add-new-h2,
-.page-title-action {
+.wrap .page-title-action {
 	line-height: 1.4 !important;
 	display: inline-block;
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
-	color: #fff !important;
+	background-color: transparent !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	padding: 4px 8px !important;
-	border: none !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 	text-transform: capitalize;
 }
 
-.wrap .add-new-h2,
 .wrap .add-new-h2:active,
 .wrap .add-new-h2:hover,
-.wrap .page-title-action,
-.wrap .page-title-action:active,
-.page-title-action:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+.wrap .page-title-action:hover,
+.wrap .page-title-action:active {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
 }
 
 #dashboard_quick_press .wp-media-buttons a {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
 a#post-preview,
 a#insert-media-button {
-	padding: 5px 10px !important;
+	padding: 5px !important;
 }
 
 .button.insert-media.add_media,
@@ -2308,7 +2357,7 @@ table.acf_input tbody tr td.label label {
 
 .frm_pro_installed .button-secondary,
 .frm_pro_installed .button-secondary:hover {
-	line-height: 2.0 !important;
+	line-height: 2 !important;
 }
 
 .frm_pro_installed div:first-of-type strong {
@@ -2361,7 +2410,7 @@ table.acf_input tbody tr td.label label {
 .alignleft.actions a.button:hover,
 a.frm_show_comment,
 a.frm_show_comment:hover {
-	line-height: 2.0 !important;
+	line-height: 2 !important;
 }
 
 .frm_show_comment {
@@ -2465,14 +2514,14 @@ a.frm_show_comment:hover {
 .users_page_role-new input[type=text]:focus,
 .post-php #members_access_error:focus,
 .post-new-php #members_access_error:focus {
-	border: 1px solid [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .users_page_roles .button-secondary,
 .users_page_role-new .button-secondary,
 .users_page_roles #members-add-new-cap,
 .users_page_role-new #members-add-new-cap {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	color: #fff !important;
 }
 
@@ -2746,6 +2795,24 @@ a.frm_show_comment:hover {
 	margin-left: 0 !important;
 }
 
+.woocommerce.panel-wrap {
+}
+
+.woocommerce #order_data {
+	padding: 0 5px !important;
+}
+
+.woocommerce #order_data h2 {
+	margin-top: 0 !important;
+}
+
+#woocommerce-order-items .inside {
+	padding: 0 !important;
+}
+
+#woocommerce-order-notes ul.order_notes li.system-note .note_content {
+}
+
 .forminp .wc_tax_rates.widefat th,
 .forminp .shippingrows.widefat th,
 .wc_shipping.widefat th {
@@ -2776,6 +2843,16 @@ a.frm_show_comment:hover {
 
 .woocommerce nav.woo-nav-tab-wrapper {
 	padding-top: 0;
+}
+
+.woocommerce_page_wc-settings .wrap form .submit {
+	padding-top: 25px !important;
+	border-top: 1px solid #e4e4e4 !important;
+	text-align: right !important;
+}
+
+.woocommerce_page_wc-settings .wrap .submit .button-primary {
+	float: right !important;
 }
 
 .woocommerce_page_wc-settings .button-secondary {
@@ -3000,13 +3077,13 @@ a.frm_show_comment:hover {
 
 .post-php.document .button-primary,
 .post-new-php.document .button-primary {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	color: #fff !important;
 }
 
 .post-php.document .button-primary:hover,
 .post-new-php.document .button-primary:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .post-php #attachment_caption,
@@ -3024,11 +3101,10 @@ a.frm_show_comment:hover {
 .post-new-php #attachment_alt:focus,
 .post-php #attachment_content:focus,
 .post-new-php #attachment_content:focus {
-	border: 1px solid [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .profile-php #document_revisions_feed_key th label {
-	/*padding-top: 20px !important;*/
 }
 
 /* WP Migrate DB Support */
@@ -3075,4 +3151,3 @@ input.regular-text {
 .wpseo_content_cell #sidebar br + br + strong {
 	display: none !important;
 }
-
