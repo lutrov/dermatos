@@ -50,7 +50,7 @@ input[type=password],
 }
 
 input[type=submit] {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	color: #fff !important;
 	min-width: 100px !important;
 	height: 30px !important;
@@ -61,7 +61,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-	background-color: [[COLOUR-HIGHLIGHT-SECONDARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 p.forgetmenot {
