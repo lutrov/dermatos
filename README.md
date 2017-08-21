@@ -47,16 +47,22 @@ This plugin provides an API to to customise the default constant values. See the
 		return $path;
 	}
 
+	// ---- Change the Dermatos plugin highlight primary colour.
+	add_filter('dermatos_colour_highlight_primary_filter', 'lutrov_dermatos_colour_highlight_primary_filter')
+	function lutrov_dermatos_colour_highlight_primary_filter($value) {
+		return 'green';
+	}
+
 	// ---- Change the Dermatos plugin highlight accent colour.
 	add_filter('dermatos_colour_highlight_accent_filter', 'lutrov_dermatos_colour_highlight_accent_filter')
 	function lutrov_dermatos_colour_highlight_accent_filter($value) {
 		return 'blue';
 	}
 
-	// ---- Change the Dermatos plugin highlight primary colour.
-	add_filter('dermatos_colour_highlight_primary_filter', 'lutrov_dermatos_colour_highlight_primary_filter')
-	function lutrov_dermatos_colour_highlight_primary_filter($value) {
-		return 'green';
+	// ---- Change the Dermatos plugin delete action colour.
+	add_filter('dermatos_colour_delete_action_filter', 'lutrov_dermatos_colour_delete_action_filter')
+	function lutrov_dermatos_colour_delete_action_filter($value) {
+		return 'red';
 	}
 
 	// ---- Change the Dermatos plugin font family.
@@ -135,6 +141,11 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 		add_filter('dermatos_colour_highlight_accent_filter', 'lutrov_dermatos_colour_highlight_accent_filter');
 		function lutrov_dermatos_colour_highlight_accent_filter($value) {
 			return '#4444ff';
+		}
+		// ---- Change the Dermatos plugin delete action colour.
+		add_filter('dermatos_colour_delete_action_filter', 'lutrov_dermatos_colour_delete_action_filter')
+		function lutrov_dermatos_colour_delete_action_filter($value) {
+			return 'red';
 		}
 		// ---- Change the Dermatos plugin font family.
 		add_filter('dermatos_font_family_filter', 'lutrov_dermatos_font_family_filter');
