@@ -546,6 +546,7 @@ td strong {
 }
 
 .submitdelete {
+	color: [[COLOUR-DELETE-ACTION]] !important;
 	text-decoration: none !important;
 	text-transform: uppercase;
 }
@@ -1160,19 +1161,23 @@ ul.subsubsub li a.current {
 }
 
 .post-php .submitdelete,
-.post-php .submitdelete:hover,
-.post-php .submitdelete:active,
-.nav-menus-php .submitdelete,
-.nav-menus-php .submitdelete:hover,
-.nav-menus-php .submitdelete:active {
+.nav-menus-php .submitdelete {
 	padding: 4px 12px !important;
 	background-color: transparent !important;
-	color: #a00 !important;
-	border: 1px solid #a00 !important;
+	color: [[COLOUR-DELETE-ACTION]] !important;
+	border: 1px solid [[COLOUR-DELETE-ACTION]] !important;
 	text-decoration: none !important;
 	text-transform: none !important;
 	height: 28px !important;
 	line-height: 26px !important;
+}
+
+.post-php .submitdelete:hover,
+.post-php .submitdelete:active,
+.nav-menus-php .submitdelete:hover,
+.nav-menus-php .submitdelete:active {
+	background-color: [[COLOUR-DELETE-ACTION]] !important;
+	color: #fff !important;
 }
 
 .wp-switch-editor {
@@ -1829,13 +1834,17 @@ label span.description {
 .theme-about + .theme-actions a.button {
 }
 
-.theme-about + .theme-actions a.button.delete-theme,
-.theme-about + .theme-actions a.button.delete-theme:hover,
-.theme-about + .theme-actions a.button.delete-theme:active {
+.theme-about + .theme-actions a.button.delete-theme {
 	padding: 0 18px !important;
 	background-color: transparent !important;
-	color: #a00 !important;
-	border: 1px solid #a00 !important;
+	color: [[COLOUR-DELETE-ACTION]] !important;
+	border: 1px solid [[COLOUR-DELETE-ACTION]] !important;
+}
+
+.theme-about + .theme-actions a.button.delete-theme:hover,
+.theme-about + .theme-actions a.button.delete-theme:active {
+	background-color: [[COLOUR-DELETE-ACTION]] !important;
+	color: #fff !important;
 }
 
 .update-core-php form.upgrade {
