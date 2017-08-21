@@ -489,6 +489,10 @@ td strong {
 .wp-core-ui .button.button-large {
 }
 
+.wp-core-ui.iframe.update-php {
+	background-color: #fff !important;
+}
+
 .manage-menus {
 	clear: left;
 }
