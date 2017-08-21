@@ -128,9 +128,69 @@ table td pre {
 	white-space: pre-wrap;
 }
 
-pre, code, kbd {
+pre,
+code,
+kbd {
 	font-family: "Roboto Mono", monospace !important;
 	font-size: 11px !important;
+}
+
+.wp-core-ui .button,
+.wp-core-ui .button-secondary,
+.wp-core-ui .notification-dialog .button {
+	background: none;
+	background-color: transparent !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
+	font-weight: [[FONT-WEIGHT-BOLD]] !important;
+	text-decoration: none;
+	text-align: center;
+	text-transform: capitalize;
+	height: 28px !important;
+	line-height: 26px !important;
+}
+
+.wp-core-ui .button:hover,
+.wp-core-ui .button:active,
+.wp-core-ui .button-secondary:hover,
+.wp-core-ui .button-secondary:active,
+.wp-core-ui .notification-dialog .button:hover,
+.wp-core-ui .notification-dialog .button:active {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.wp-core-ui .button-primary,
+.wp-core-ui .button-highlighted {
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
+	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-ACCENT]] !important;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:active,
+.wp-core-ui .button-highlighted:hover,
+.wp-core-ui .button-highlighted:active {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.button-primary {
+	min-width: 100px !important;
+}
+
+.button.preview {
+	max-width: 100px !important;
+}
+
+.wp-core-ui .button:disabled,
+.wp-core-ui .button[disabled],
+.wp-core-ui .button[disabled]:hover {
+	background-color: #f0f0f0 !important;
+	color: #888 !important;
+	border: 2px solid #e4e4e4 !important;
 }
 
 html.wp-toolbar {
@@ -293,9 +353,9 @@ html.wp-toolbar {
 	display: block;
 }
 
-h2 .nav-tab,
 .wrap h2,
-.subtitle {
+.subtitle,
+h2 .nav-tab {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]];
 	margin: 15px 0 10px 0;
@@ -427,7 +487,6 @@ td strong {
 
 .wp-core-ui .button-group.button-large .button,
 .wp-core-ui .button.button-large {
-	/*line-height: 2.25 !important;*/
 }
 
 .manage-menus {
@@ -1630,62 +1689,6 @@ form .form-table tr.show-admin-bar td label {
 	background-color: #fff;
 }
 
-.wp-core-ui .button,
-.wp-core-ui .button-secondary,
-.wp-core-ui .notification-dialog .button {
-	background: none;
-	background-color: transparent !important;
-	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
-	line-height: 2 !important;
-	font-weight: [[FONT-WEIGHT-BOLD]] !important;
-	text-decoration: none;
-	text-align: center;
-}
-
-.wp-core-ui .button:hover,
-.wp-core-ui .button:active,
-.wp-core-ui .button-secondary:hover,
-.wp-core-ui .button-secondary:active,
-.wp-core-ui .notification-dialog .button:hover,
-.wp-core-ui .notification-dialog .button:active {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-	color: #fff !important;
-	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-}
-
-.wp-core-ui .button-primary,
-.wp-core-ui .button-highlighted {
-	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
-	color: #fff !important;
-	border: 1px solid [[COLOUR-HIGHLIGHT-ACCENT]] !important;
-}
-
-.wp-core-ui .button-primary:hover,
-.wp-core-ui .button-primary:active,
-.wp-core-ui .button-highlighted:hover,
-.wp-core-ui .button-highlighted:active {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-	color: #fff !important;
-	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-}
-
-.button-primary {
-	min-width: 100px !important;
-}
-
-.button.preview {
-	max-width: 100px !important;
-}
-
-.wp-core-ui .button:disabled,
-.wp-core-ui .button[disabled],
-.wp-core-ui .button[disabled]:hover {
-	background-color: #f0f0f0 !important;
-	color: #888 !important;
-	border: 1px solid #e4e4e4 !important;
-}
-
 .wp-core-ui p .button,
 .wp-core-ui p .button:hover {
 	vertical-align: middle;
@@ -1812,7 +1815,7 @@ label span.description {
 }
 
 .theme-about + .theme-actions a.button.delete-theme {
-	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
 .update-core-php form.upgrade {
