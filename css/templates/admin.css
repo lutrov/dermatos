@@ -1159,6 +1159,22 @@ ul.subsubsub li a.current {
 	padding: 10px 20px;
 }
 
+.post-php .submitdelete,
+.post-php .submitdelete:hover,
+.post-php .submitdelete:active,
+.nav-menus-php .submitdelete,
+.nav-menus-php .submitdelete:hover,
+.nav-menus-php .submitdelete:active {
+	padding: 4px 12px !important;
+	background-color: transparent !important;
+	color: #a00 !important;
+	border: 1px solid #a00 !important;
+	text-decoration: none !important;
+	text-transform: none !important;
+	height: 28px !important;
+	line-height: 26px !important;
+}
+
 .wp-switch-editor {
 	background-color: #f8f8f8 !important;
 	color: #444 !important;
@@ -1811,11 +1827,15 @@ label span.description {
 }
 
 .theme-about + .theme-actions a.button {
-	padding: 0 18px !important;
 }
 
-.theme-about + .theme-actions a.button.delete-theme {
-	border: px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+.theme-about + .theme-actions a.button.delete-theme,
+.theme-about + .theme-actions a.button.delete-theme:hover,
+.theme-about + .theme-actions a.button.delete-theme:active {
+	padding: 0 18px !important;
+	background-color: transparent !important;
+	color: #a00 !important;
+	border: 1px solid #a00 !important;
 }
 
 .update-core-php form.upgrade {
