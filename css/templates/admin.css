@@ -1850,8 +1850,6 @@ label span.description {
 .update-core-php form.upgrade {
 	margin-bottom: 30px !important;
 	padding: 0 !important;
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-	color: #fff !important;
 }
 
 .update-core-php .button,
@@ -1861,8 +1859,6 @@ label span.description {
 .install-now {
 	padding: 0px 10px !important;
 	display: inline-block !important;
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-	color: #fff !important;
 }
 
 .upload-php .thumbnail .filename {
