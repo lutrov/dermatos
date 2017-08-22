@@ -475,6 +475,7 @@ td strong {
 	padding: 15px 30px !important;
 	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	color: #fff !important;
+	height: auto !important;
 	line-height: 1 !important;
 	border: none !important;
 }
