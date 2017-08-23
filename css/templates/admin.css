@@ -135,6 +135,10 @@ kbd {
 	font-size: 11px !important;
 }
 
+body.iframe {
+	background-color: #fff !important;
+}
+
 .wp-core-ui .button,
 .wp-core-ui .button-secondary,
 .wp-core-ui .notification-dialog .button {
@@ -488,10 +492,6 @@ td strong {
 
 .wp-core-ui .button-group.button-large .button,
 .wp-core-ui .button.button-large {
-}
-
-.wp-core-ui.iframe.update-php {
-	background-color: #fff !important;
 }
 
 .manage-menus {
