@@ -24,7 +24,7 @@ h3,
 h4 {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 h1 {
@@ -121,7 +121,7 @@ textarea:disabled {
 }
 
 label {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 table td pre {
@@ -135,6 +135,7 @@ kbd {
 	font-size: 11px !important;
 }
 
+iframe,
 body.iframe {
 	background-color: #fff !important;
 }
@@ -149,7 +150,7 @@ body.iframe {
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 	text-decoration: none;
 	text-align: center;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 	height: 28px !important;
 	line-height: 26px !important;
 }
@@ -187,6 +188,12 @@ body.iframe {
 
 .button.preview {
 	max-width: 100px !important;
+}
+
+.button.hide-if-no-js,
+.button.hide-if-no-js:hover,
+.button.item-delete,.button.item-delete:hover {
+	line-height: 1.25 !important;
 }
 
 .wp-core-ui .button:disabled,
@@ -827,10 +834,6 @@ p.search-box {
 	margin-top: 5px;
 }
 
-.edit-tags-php p.search-box {
-	margin-top: 0;
-}
-
 .row-actions > span > a {
 	font-size: 11px !important;
 	text-transform: uppercase !important;
@@ -990,7 +993,7 @@ ul.subsubsub {
 ul.subsubsub li a {
 	padding: 0 5px !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 
 ul.subsubsub li:first-of-type a {
@@ -1145,7 +1148,7 @@ ul.subsubsub li a.current {
 .misc-pub-section #post-status-display,
 .misc-pub-section #post-visibility-display,
 .misc-pub-section #timestamp {
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 
 .misc-pub-section a {
@@ -1163,6 +1166,14 @@ ul.subsubsub li a.current {
 .post-php #poststuff .inside,
 .post-new-php #poststuff .inside {
 	padding: 10px 20px;
+}
+
+.post-php #poststuff .inside #new-post-slug {
+	margin-right: 2px !important;
+}
+
+.post-php #poststuff .inside #edit-slug-buttons .button-small {
+	height: 24px !important;
 }
 
 .post-php .submitdelete,
@@ -1185,6 +1196,82 @@ ul.subsubsub li a.current {
 	color: #fff !important;
 }
 
+
+.edit-tags-php form.validate {
+	padding: 0 !important;
+}
+
+.edit-tags-php p.search-box {
+	margin-top: 0;
+}
+
+.edit-tags-php form .submit .button.button-primary {
+	float: left !important;
+}
+
+.edit-tags-php .search-form {
+	margin-top: -20px !important;
+	margin-bottom: 10px !important;
+	padding-right: 0 !important
+}
+
+.edit-tags-php #col-container {
+	/*padding: 0 15px !important;*/
+}
+
+.edit-tags-php #col-left {
+	width: 33% !important;
+}
+
+.edit-tags-php #col-right {
+	width: 67% !important;
+}
+
+.edit-tags-php .col-wrap h2 {
+	margin-left: 5px !important;
+	margin-top: 25px !important;
+}
+
+.edit-tags-php .col-wrap .submit {
+	text-align: left !important;
+}
+
+.edit-tags-php .col-wrap .tagcloud {
+	width: 95% !important;
+}
+
+.edit-tags-php .col-wrap .tagcloud h2 {
+	margin-left: 0 !important;
+}
+
+.edit-tags-php .widefat .column-cb {
+	width: 3%;
+}
+
+.edit-tags-php .widefat .column-name {
+	width: 22%;
+}
+
+.edit-tags-php .widefat .column-description {
+	width: 45%;
+}
+
+.edit-tags-php .widefat .column-slug {
+	width: 20%;
+}
+
+.edit-tags-php .widefat .column-posts {
+	width: 10%;
+}
+
+.edit-tags-php form textarea {
+	min-height: 200px;
+}
+
+.term-php form textarea {
+	height: 200px;
+}
+
 .wp-switch-editor {
 	background-color: #f8f8f8 !important;
 	color: #444 !important;
@@ -1202,7 +1289,7 @@ ul.subsubsub li a.current {
 
 #screen-options-wrap legend,
 #screen-options-wrap label {
-	text-transform: capitalize;
+	/*text-transform: capitalize !important;*/
 }
 
 #screen-options-link-wrap,
@@ -1375,9 +1462,8 @@ form .form-table th {
 form .form-table th label {
 	margin: 0 !important;
 	display: inline-block !important;
+	/*text-transform: capitalize !important;*/
 	white-space: nowrap;
-	text-transform: capitalize;
-
 }
 
 form .form-table th.th-full,
@@ -1547,7 +1633,7 @@ form .form-table th[scope=row] + td .button-secondary,
 #custom-background .form-table th[scope=row] + td .button-secondary {
 	margin-top: 10px !important;
 	padding: 5px !important;
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 	text-align: center !important;
 	min-width: 100px !important;
 	line-height: 1 !important;
@@ -1583,10 +1669,6 @@ form .form-table tr.show-admin-bar td label {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background-color: #f8f8f8;
 	border: 1px solid #e4e4e4;
-}
-
-.edit-tags-php form.validate {
-	padding: 0 !important;
 }
 
 .widefat th a,
@@ -2107,7 +2189,7 @@ table.media .column-title .filename {
 	padding: 4px 8px !important;
 	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 }
 
 .wrap .add-new-h2:active,
@@ -2188,7 +2270,7 @@ h2 a.nav-tab {
 
 #ws_menu_editor .ws_main_button {
 	margin: 0 auto 10px auto;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 	width: 120px;
 }
 
@@ -2581,7 +2663,7 @@ a.frm_show_comment:hover {
 
 /* Ninja Forms Support */
 
-/* Too many changes needed, wait for them to fix things in v3 */
+/* Too many changes needed, wait for them to fix things in v3.x */
 
 /* P3 Plugin Profiler Support */
 
@@ -2660,101 +2742,6 @@ a.frm_show_comment:hover {
 
 .SimpleHistoryPaginationInput .SimpleHistoryPaginationLink {
 	line-height: 1 !important;
-}
-
-/* Simple Local Avatars Support */
-
-#simple-local-avatar-photo {
-	vertical-align: top !important;
-}
-
-#simple-local-avatar-photo img {
-	padding-top: 5px;
-}
-
-#simple-local-avatar.standard-text {
-	display: block;
-	margin-top: -40px !important;
-}
-
-#simple-local-avatar-media.button,
-#simple-local-avatar-remove.button {
-	display: inline-block;
-	margin-top: -30px;
-	line-height: 2.25 !important;
-}
-
-.button.hide-if-no-js,
-.button.hide-if-no-js:hover,
-.button.item-delete,.button.item-delete:hover {
-	line-height: 1.25 !important;
-}
-
-.edit-tags-php form .submit .button.button-primary {
-	float: left !important;
-}
-
-.edit-tags-php .search-form {
-	margin-top: -20px !important;
-	margin-bottom: 10px !important;
-	padding-right: 0 !important
-}
-
-.edit-tags-php #col-container {
-	/*padding: 0 15px !important;*/
-}
-
-.edit-tags-php #col-left {
-	width: 33% !important;
-}
-
-.edit-tags-php #col-right {
-	width: 67% !important;
-}
-
-.edit-tags-php .col-wrap h2 {
-	margin-left: 5px !important;
-	margin-top: 25px !important;
-}
-
-.edit-tags-php .col-wrap .submit {
-	text-align: left !important;
-}
-
-.edit-tags-php .col-wrap .tagcloud {
-	width: 95% !important;
-}
-
-.edit-tags-php .col-wrap .tagcloud h2 {
-	margin-left: 0 !important;
-}
-
-.edit-tags-php .widefat .column-cb {
-	width: 3%;
-}
-
-.edit-tags-php .widefat .column-name {
-	width: 22%;
-}
-
-.edit-tags-php .widefat .column-description {
-	width: 45%;
-}
-
-.edit-tags-php .widefat .column-slug {
-	width: 20%;
-}
-
-.edit-tags-php .widefat .column-posts {
-	width: 10%;
-}
-
-.edit-tags-php form textarea {
-	min-height: 200px;
-}
-
-.term-php form textarea {
-	height: 200px;
 }
 
 /* Simple Social Icons Support */
@@ -3109,6 +3096,20 @@ a.frm_show_comment:hover {
 
 .options-permalink-php .form-table.wc-permalink-structure tr:last-of-type td {
 	padding-top: 15px !important;
+}
+
+/* WP Crontrol Support */
+
+.tools_page_crontrol_admin_manage_page .wrap h1 {
+	margin-bottom: 30px !important;
+	padding-bottom: 20px !important;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.tools_page_crontrol_admin_manage_page .submit {
+	padding-top: 25px !important;
+	border-top: 1px solid #e4e4e4 !important;
+	text-align: right !important;
 }
 
 /* WP Document Revisions Support */
