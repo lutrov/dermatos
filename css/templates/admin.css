@@ -209,6 +209,10 @@ html.wp-toolbar {
 	background-color: #f8f800;
 }
 
+#wpwrap {
+	background-color: #fff !important;
+}
+
 #wpadminbar {
 	height: 40px;
 	position: absolute;
