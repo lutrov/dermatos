@@ -1046,18 +1046,6 @@ ul.subsubsub li a.current {
 	padding: 0 !important;
 }
 
-.selectize-input {
-	border: 1px solid #e0e0e0;
-}
-
-.selectize-dropdown,
-.selectize-input,
-.selectize-input input {
-	color: #444;
-	font-family: "[[FONT-FAMILY]]", monospace;
-	font-size: 13px;
-}
-
 #widgets-left .sidebar-name,
 #widgets-right .sidebar-name {
 	color: #f0f0f0;
@@ -1679,6 +1667,22 @@ form .form-table tr.show-admin-bar td label {
 
 .select2-container .select2-selection--single .select2-selection__rendered {
 	line-height: 28px !important;
+}
+
+.selectize-dropdown,
+.selectize-input,
+.selectize-input input {
+	color: #444;
+	font-family: "[[FONT-FAMILY]]", monospace;
+	font-size: 13px;
+}
+
+.selectize-input {
+	border: 1px solid #e0e0e0;
+}
+
+.selectize-input input {
+	border: none !important;
 }
 
 .widefat th a,
