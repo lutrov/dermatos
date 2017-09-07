@@ -78,7 +78,7 @@ select,
 textarea {
 	color: #444 !important;
 	padding: 5px !important;
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 	font: [[FONT-WEIGHT-BOLD]] 13px "[[FONT-FAMILY]]", monospace !important;
 }
 
@@ -117,7 +117,7 @@ select:disabled,
 textarea:disabled {
 	background-color: #ededed !important;
 	color: #444 !important;
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 }
 
 label {
@@ -201,7 +201,7 @@ body.iframe {
 .wp-core-ui .button[disabled]:hover {
 	background-color: #f0f0f0 !important;
 	color: #888 !important;
-	border: 2px solid #e4e4e4 !important;
+	border: 2px solid #e0e0e0 !important;
 }
 
 html.wp-toolbar {
@@ -220,7 +220,7 @@ html.wp-toolbar {
 	background-color: #f0f0f0;
 	color: #444;
 	font: [[FONT-WEIGHT-NORMAL]] 13px/26px "[[FONT-FAMILY]]", monospace !important;
-	border-bottom: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e0e0e0;
 	min-width: 0;
 }
 
@@ -323,8 +323,8 @@ html.wp-toolbar {
 
 #wpadminbar .quicklinks .ab-top-secondary > li {
 	border-top: 1px solid #f0f0f0;
-	border-bottom: 1px solid #e4e4e4;
-	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
 	border-left: 1px solid #f0f0f0;
 	float: right;
 }
@@ -383,7 +383,7 @@ h2.nav-tab-wrapper a {
 
 h2.hndle.ui-sortable-handle {
 	font-size: 16px !important;
-	border-bottom: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 #adminmenu a.wp-has-submenu,
@@ -511,7 +511,7 @@ td strong {
 
 .nav-menus-php .wrap h2.nav-tab-wrapper {
 	margin-top: 20px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 }
 
 .nav-menus-php .wrap form .widefat {
@@ -526,7 +526,7 @@ td strong {
 
 .nav-menus-php .button-controls {
 	padding-top: 25px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
 }
 
@@ -592,14 +592,14 @@ a,
 #adminmenuback,
 #adminmenuwrap {
 	background-color: #f0f0f0 !important;
-	border-color: #e4e4e4 !important;
+	border-color: #e0e0e0 !important;
 	color: #444;
 }
 
 #adminmenu a.menu-top,
 #adminmenu .wp-submenu .wp-submenu-head {
 	border-top-color: #f0f0f0;
-	border-bottom-color: #e4e4e4;
+	border-bottom-color: #e0e0e0;
 }
 
 #adminmenu,
@@ -610,7 +610,7 @@ a,
 #adminmenu .separator {
 	margin-top: 5px;
 	margin-bottom: 0;
-	background-color: #e4e4e4;
+	background-color: #e0e0e0;
 }
 
 #adminmenu .opensub .wp-submenu li.current a,
@@ -658,7 +658,7 @@ a,
 .folded #adminmenu a.wp-has-current-submenu:focus + .wp-submenu,
 .folded #adminmenu .wp-has-current-submenu .wp-submenu {
 	background-color: #f0f0f0;
-	border-color: #e4e4e4;
+	border-color: #e0e0e0;
 }
 
 #adminmenu .wp-submenu li,
@@ -686,7 +686,7 @@ a,
 }
 
 #adminmenu li.wp-menu-open {
-	border-color: #e4e4e4;
+	border-color: #e0e0e0;
 }
 
 #adminmenu li.wp-menu-open .wp-menu-image::before,
@@ -766,7 +766,7 @@ div.wp-menu-image::before {
 
 #wpfooter {
 	background-color: #f0f0f0;
-	border-top: 1px solid #e4e4e4;
+	border-top: 1px solid #e0e0e0;
 }
 
 #wpfooter p {
@@ -849,7 +849,7 @@ p.search-box {
 .menu-item-settings {
 	background: none;
 	background-color: #fff;
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e0e0e0;
 }
 
 .postbox {
@@ -879,7 +879,7 @@ p.search-box {
 .stuffbox h2,
 .stuffbox h3 {
 	margin-top: 0;
-	border-bottom-color: #e4e4e4;
+	border-bottom-color: #e0e0e0;
 	color: #444;
 }
 
@@ -976,7 +976,7 @@ h1.nav-tab-wrapper,
 	margin-left: 0;
 	margin-right: 8px;
 	height: 28px;
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e0e0e0;
 	background-color: #fff;
 	color: #444 !important;
 	line-height: 1.25 !important;
@@ -1046,7 +1046,7 @@ ul.subsubsub li a.current {
 }
 
 .selectize-input {
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e0e0e0;
 }
 
 .selectize-dropdown,
@@ -1280,7 +1280,7 @@ ul.subsubsub li a.current {
 	background-color: #f8f8f8 !important;
 	color: #444 !important;
 	line-height: 1 !important;
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 }
 
 .tagsdiv .newtag {
@@ -1288,7 +1288,7 @@ ul.subsubsub li a.current {
 }
 
 #screen-meta {
-	border-color: #e4e4e4;
+	border-color: #e0e0e0;
 }
 
 #screen-options-wrap legend,
@@ -1306,9 +1306,9 @@ ul.subsubsub li a.current {
 	background-color: #fff !important;
 	color: #444 !important;
 	border-top: none !important;
-	border-right: 1px solid #e4e4e4 !important;
-	border-bottom: 1px solid #e4e4e4 !important;
-	border-left: 1px solid #e4e4e4 !important;
+	border-right: 1px solid #e0e0e0 !important;
+	border-bottom: 1px solid #e0e0e0 !important;
+	border-left: 1px solid #e0e0e0 !important;
 }
 
 #screen-meta-links .show-settings {
@@ -1393,7 +1393,7 @@ form h3 {
 	margin-bottom: 0 !important;
 	margin-top: 20px !important;
 	padding-bottom: 8px;
-	border-bottom: 1px dotted #e4e4e4;
+	border-bottom: 1px dotted #e0e0e0;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
@@ -1420,7 +1420,7 @@ legend {
 .wrap h1 + a + hr + form {
 	margin-top: 20px !important;
 	padding: 15px 0 !important;
-	border-top: 1px solid #e4e4e4;
+	border-top: 1px solid #e0e0e0;
 }
 
 .wrap h1 + form .submit,
@@ -1429,7 +1429,7 @@ legend {
 .wrap h1 + hr + form .submit,
 .wrap h1 + a + hr + form .submit {
 	padding-top: 25px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
 }
 
@@ -1560,12 +1560,12 @@ form .form-table td > select {
 .export-php .wrap h1 {
 	padding-bottom: 20px;
 	margin-bottom: 20px;
-	border-bottom: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 .export-php form .submit {
 	padding-top: 25px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
 }
 
@@ -1651,7 +1651,7 @@ form .form-table tr.show-admin-bar td label {
 
 .select2-container .select2-selection--single,
 .select2-container .select2-selection--multiple {
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 	color: #444 !important;
 }
 
@@ -1672,7 +1672,7 @@ form .form-table tr.show-admin-bar td label {
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background-color: #f8f8f8;
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e0e0e0;
 }
 
 .widefat th a,
@@ -1687,7 +1687,7 @@ form .form-table tr.show-admin-bar td label {
 }
 
 .widefat {
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 }
 
 .widefat thead tr th,
@@ -2068,7 +2068,7 @@ a#choose-from-library-link {
 #custom-background h3 {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
-	border-bottom: 1px dotted #e4e4e4;
+	border-bottom: 1px dotted #e0e0e0;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
@@ -2180,7 +2180,7 @@ table.media .column-title .filename {
 .appearance_page_custom-header .wrap h3 {
 	margin: 20px 20px 0 20px !important;
 	padding-bottom: 4px;
-	border-bottom: 1px dotted #e4e4e4;
+	border-bottom: 1px dotted #e0e0e0;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
@@ -2265,7 +2265,7 @@ h2 a.nav-tab {
 #ws_ame_editor_heading {
 	float: none !important;
 	padding-bottom: 20px !important;
-	border-bottom: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 #ws_menu_editor {
@@ -2294,7 +2294,7 @@ h2 a.nav-tab {
 
 .settings_page_menu_editor .submit {
 	padding-top: 25px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
 }
 
@@ -2631,7 +2631,7 @@ a.frm_show_comment:hover {
 .users_page_role-new input[type=text],
 .post-php #members_access_error,
 .post-new-php #members_access_error {
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 }
 
 .users_page_roles input[type=text]:focus,
@@ -2698,7 +2698,7 @@ a.frm_show_comment:hover {
 .pmpro_admin p.submit input.button-secondary {
 	padding: 5px;
 	line-height: 1.25 !important;
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e0e0e0;
 	text-decoration: none;
 	min-width: 80px;
 }
@@ -2876,7 +2876,7 @@ a.frm_show_comment:hover {
 
 .woocommerce_page_wc-settings .wrap form .submit {
 	padding-top: 25px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
 }
 
@@ -3028,7 +3028,7 @@ a.frm_show_comment:hover {
 }
 
 .woocommerce .wc_status_table h2 {
-	color: #e4e4e4;
+	color: #e0e0e0;
 }
 
 .wc_error_tip,
@@ -3107,12 +3107,12 @@ a.frm_show_comment:hover {
 .tools_page_crontrol_admin_manage_page .wrap h1 {
 	margin-bottom: 30px !important;
 	padding-bottom: 20px !important;
-	border-bottom: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 .tools_page_crontrol_admin_manage_page .submit {
 	padding-top: 25px !important;
-	border-top: 1px solid #e4e4e4 !important;
+	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
 }
 
@@ -3135,7 +3135,7 @@ a.frm_show_comment:hover {
 .post-new-php #attachment_alt,
 .post-php #attachment_content,
 .post-new-php #attachment_content {
-	border: 1px solid #e4e4e4 !important;
+	border: 1px solid #e0e0e0 !important;
 }
 
 .post-php #attachment_caption:focus,
@@ -3179,7 +3179,7 @@ a.frm_show_comment:hover {
 
 input.regular-text {
 	padding: 5px !important;
-	border: 1px solid #e4e4e4;
+	border: 1px solid #e0e0e0;
 	color: #333;
 	font-size: 13px;
 }
