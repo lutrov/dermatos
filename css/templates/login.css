@@ -119,13 +119,13 @@ p.submit {
 
 #nav {
 	margin: 36px auto -12px auto !important;
-	color: #fff;
+	color: transparent;
 	text-align: center! important;
 }
 
 #nav a,
 #backtoblog a {
-	margin: 0;
+	margin: 0 2px;
 	color: #fff !important;
 	border-bottom: 1px dotted #bbb;
 	font-size: 11px !important;
