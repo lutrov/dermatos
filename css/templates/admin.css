@@ -2622,6 +2622,7 @@ a.frm_show_comment:hover {
 .llms-nav-tab-wrapper .llms-nav-item .llms-nav-link {
 	color: #222;
 	border: 1px solid #e0e0e0;
+	font-size: 13px;
 	text-transform: none;
 	padding: 4px 8px;
 	letter-spacing: 0;
@@ -2655,21 +2656,53 @@ a.frm_show_comment:hover {
 	letter-spacing: 0;
 }
 
-.llms-button-primary {
+.llms-button-action,
+.llms-button-danger,
+.llms-button-primary,
+.llms-button-secondary {
 	height: 28px;
 	line-height: 1;
-	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
-	color: #fff !important;
-	border: 1px solid [[COLOUR-HIGHLIGHT-ACCENT]] !important;
-	font-size: 13px;
 	padding: 4px 16px;
+	font-size: 13px;
+}
+
+.llms-button-primary {
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]];
+	color: #fff;
+	border: 1px solid [[COLOUR-HIGHLIGHT-ACCENT]];
 }
 
 .llms-button-primary:hover {
-	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
-	color: #fff !important;
-	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	color: #fff;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
 }
+
+.llms-button-secondary {
+	background-color: transparent;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
+}
+
+button#copy-for-support {
+	margin-right: 10px;
+}
+
+.llms-button-secondary:hover {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	color: #fff;
+}
+
+.wrap h1 + .llms-options-page-contents {
+	margin-top: 20px !important;
+	padding: 15px 0 !important;
+	border-top: 1px solid #e0e0e0;
+}
+
+.lifterlms_page_llms-import td .widefat {
+	border: none !important;
+}
+
 
 /* Members Support */
 
