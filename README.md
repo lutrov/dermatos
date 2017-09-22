@@ -1,6 +1,6 @@
 # Dermatos
 
-A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
+A clean and simple admin theme which requires no configuration and allows basic branding. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 
 ## Professional Support
 
@@ -15,16 +15,22 @@ This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-lic
 This plugin provides an API to to customise the default constant values. See these examples:
 
 	// ---- Change the Dermatos plugin show login errors value to false.
-	add_filter('dermatos_show_login_errors_filter', '__return_false');
+	add_filter('dermatos_login_show_errors_filter', '__return_false');
+
+	// ---- Change the Dermatos plugin allow logins via username value to false.
+	add_filter('dermatos_login_allow_username_filter', '__return_false');
+
+	// ---- Change the Dermatos plugin login lost password link value to false.
+	add_filter('dermatos_login_hide_lost_password_link_filter', '__return_false');
 
 	// ---- Change the Dermatos plugin login redirect non admins value to false.
 	add_filter('dermatos_login_redirect_non_admins_filter', '__return_false');
 
 	// ---- Change the Dermatos plugin remove WP adminbar quicklinks value to false.
-	add_filter('dermatos_remove_wordpress_adminbar_quicklinks_filter', '__return_false');
+	add_filter('dermatos_remove_adminbar_wordpress_quicklinks_filter', '__return_false');
 
-	// ---- Change the Dermatos plugin replace howdy greeting value to false.
-	add_filter('dermatos_replace_admin_howdy_greeting_filter', '__return_false');
+	// ---- Change the Dermatos plugin admin replace strings value to false.
+	add_filter('dermatos_admin_replace_strings_filter', '__return_false');
 
 	// ---- Change the Dermatos plugin login background path.
 	add_filter('dermatos_login_background_path_filter', 'lutrov_dermatos_login_background_path_filter');
@@ -101,19 +107,34 @@ This plugin provides an API to to customise the default constant values. See the
 		return '86400';
 	}
 
-Or if you're using a custom site plugin (you should be), do it via the `plugins_loaded` hook instead:
+	// ---- Change the Dermatos plugin replacement strings array.
+	add_filter('dermatos_admin_replacement_strings_array_filter', 'lutrov_dermatos_admin_replacement_strings_array_filter');
+	function lutrov_dermatos_admin_replacement_strings_array_filter($array) {
+		return array(
+			'WooCommerce' => 'Woocommerce',
+			'WordPress' => 'Wordpress',
+			'Howdy' => 'Hello',
+			'AdWords' => 'Adwords'
+		);
+	}
+
+Or if you're using a custom site plugin (as you should be), do it via the `plugins_loaded` hook instead:
 
 	// ---- Change the Dermatos plugin constant values.
 	add_action('plugins_loaded', 'lutrov_custom_dermatos_filters');
 	function lutrov_custom_dermatos_filters() {
 		// Change the show login errors value to false.
-		add_filter('dermatos_show_login_errors_filter', '__return_false');
-		// Change the login redirect non admins value to false.
+		add_filter('dermatos_login_show_errors_filter', '__return_false');
+		// ---- Change the Dermatos plugin allow logins via username value to false.
+		add_filter('dermatos_login_allow_username_filter', '__return_false');
+		// ---- Change the Dermatos plugin login lost password link value to false.
+		add_filter('dermatos_login_hide_lost_password_link_filter', '__return_false');
+		// Change the Dermatos plugin login redirect non admins value to false.
 		add_filter('dermatos_login_redirect_non_admins_filter', '__return_false');
-		// Change the remove WP adminbar quicklinks value to false.
-		add_filter('dermatos_remove_wordpress_adminbar_quicklinks_filter', '__return_false');
-		// Change the freplace howdy greeting value to false.
-		add_filter('dermatos_replace_admin_howdy_greeting_filter', '__return_false');
+		// Change the Dermatos plugin remove WP adminbar quicklinks value to false.
+		add_filter('dermatos_remove_adminbar_wordpress_quicklinks_filter', '__return_false');
+		// ---- Change the Dermatos plugin admin replace strings value to false.
+		add_filter('dermatos_admin_replace_strings_filter', '__return_false');
 		// ---- Change the Dermatos plugin login background path.
 		add_filter('dermatos_login_background_path_filter', 'lutrov_dermatos_login_background_path_filter');
 		function lutrov_dermatos_login_background_path_filter($path) {
@@ -176,6 +197,17 @@ Or if you're using a custom site plugin (you should be), do it via the `plugins_
 		add_filter('dermatos_cache_expiry_seconds_filter', 'lutrov_dermatos_cache_expiry_seconds_filter');
 		function lutrov_dermatos_cache_expiry_seconds_filter($value) {
 			return '86400';
+		}
+
+		// ---- Change the Dermatos plugin replacement strings array.
+		add_filter('dermatos_admin_replacement_strings_array_filter', 'lutrov_dermatos_admin_replacement_strings_array_filter');
+		function lutrov_dermatos_admin_replacement_strings_array_filter($array) {
+			return array(
+				'WooCommerce' => 'Woocommerce',
+				'WordPress' => 'Wordpress',
+				'Howdy' => 'Hello',
+				'AdWords' => 'Adwords'
+			);
 		}
 	}
 
