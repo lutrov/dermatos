@@ -123,6 +123,7 @@ textarea:disabled {
 
 label {
 	/*text-transform: capitalize !important;*/
+	white-space: normal;
 }
 
 table td pre {
@@ -1657,7 +1658,7 @@ form .form-table tr.show-admin-bar td label {
 .select2-container .select2-selection--single .select2-selection__arrow,
 .select2-container .select2-selection--multiple .select2-selection__arrow {
 	right: 2px;
-	height: 28px;
+	height: 18px;
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
@@ -2601,6 +2602,75 @@ a.frm_show_comment:hover {
 	background: none;
 }
 
+/* Lifter LMS Support */
+
+#llms-form-wrapper {
+	padding-top: 25px !important;
+	border-top: 1px solid #e0e0e0 !important;
+	text-align: right !important;
+}
+
+.llms-nav-tab-wrapper {
+	margin: 10px 0 20px 0 !important;
+	background-color: inherit;
+}
+
+.llms-nav-tab-wrapper .llms-nav-item {
+	padding-right: 10px;
+}
+
+.llms-nav-tab-wrapper .llms-nav-item .llms-nav-link {
+	color: #222;
+	border: 1px solid #e0e0e0;
+	text-transform: none;
+	padding: 4px 8px;
+	letter-spacing: 0;
+}
+
+.llms-nav-tab-wrapper .llms-nav-item.llms-active .llms-nav-link {
+	background-color: #fff;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.llms-nav-tab-wrapper .llms-nav-item:hover .llms-nav-link {
+	color: #fff;
+}
+
+.llms-widget {
+	padding: 0;
+}
+
+.llms-widget .llms-label {
+	clear: both !important;
+	margin-bottom: 0 !important;
+	margin-top: 20px !important;
+	padding-bottom: 8px;
+	color: inherit;
+	border-bottom: 1px dotted #e0e0e0;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+	font-size: 20px !important;
+	text-align: left;
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+.llms-button-primary {
+	height: 28px;
+	line-height: 1;
+	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
+	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-ACCENT]] !important;
+	font-size: 13px;
+	padding: 4px 16px;
+}
+
+.llms-button-primary:hover {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	color: #fff !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
 /* Members Support */
 
 .users_page_roles .widefat.members-roles-select td.column-cap strong,
@@ -2739,6 +2809,49 @@ a.frm_show_comment:hover {
 
 .compat-field-enable-media-replace td p {
 	margin-top: 0;
+}
+
+/* Restrict Content Pro Support */
+
+.toplevel_page_rcp-members,
+.restrict_page_rcp-member-levels,
+.restrict_page_rcp-discounts,
+.restrict_page_rcp-payments,
+.restrict_page_rcp-reports,
+.restrict_page_rcp-settings,
+.restrict_page_rcp-export,
+.restrict_page_rcp-tools {
+}
+
+.toplevel_page_rcp-members h1,
+.restrict_page_rcp-member-levels h1,
+.restrict_page_rcp-discounts h1,
+.restrict_page_rcp-payments h1,
+.restrict_page_rcp-reports h1,
+.restrict_page_rcp-settings h1,
+.restrict_page_rcp-export h1,
+.restrict_page_rcp-tools h1 {
+	margin-bottom: 0px !important;
+	padding-bottom: 20px !important;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.toplevel_page_rcp-members form .submit,
+.restrict_page_rcp-member-levels form .submit,
+.restrict_page_rcp-discounts form .submit,
+.restrict_page_rcp-payments form .submit,
+.restrict_page_rcp-reports form .submit,
+.restrict_page_rcp-settings form .submit,
+.restrict_page_rcp-export form .submit,
+.restrict_page_rcp-tools form .submit {
+	padding-top: 25px !important;
+	border-top: 1px solid #e0e0e0 !important;
+	text-align: right !important;
+}
+
+.restrict_page_rcp-settings form .form-table th h2,
+.restrict_page_rcp-settings form .form-table th h3 {
+	text-align: left !important;
 }
 
 /* Revolution Slider Support */
