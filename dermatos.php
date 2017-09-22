@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 8.2
+Version: 9.0
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -14,16 +14,77 @@ defined('ABSPATH') || die('Ahem.');
 //
 // Constants used by this plugin.
 //
+define('DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS', true);
+define('DERMATOS_ADMIN_REMOVE_SCHEME_FROM_URLS', true);
+define('DERMATOS_ADMIN_REMOVE_SERVER_NAME_FROM_URLS', true);
+define('DERMATOS_ADMIN_REPLACE_STRINGS', true);
+define('DERMATOS_LOGIN_ALLOW_USERNAME', true);
+define('DERMATOS_LOGIN_HIDE_LOST_PASSWORD_LINK', true);
 define('DERMATOS_LOGIN_REDIRECT_NON_ADMINS', true);
-define('DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS', true);
-define('DERMATOS_REPLACE_ADMIN_HOWDY_GREETING', true);
-define('DERMATOS_SHOW_LOGIN_ERRORS', true);
+define('DERMATOS_LOGIN_SHOW_ERRORS', true);
+define('DERMATOS_REMOVE_ADMINBAR_WORDPRESS_QUICKLINKS', true);
 
 //
 // Don't touch these unless you want the sky to fall.
 //
 define('DERMATOS_BASE_PLUGIN_URL', trim(plugin_dir_url(__FILE__), '/'));
 define('DERMATOS_BASE_PLUGIN_PATH', dirname(__FILE__));
+
+//
+// Default replacement strings.
+//
+function dermatos_replacement_strings() {
+	$strings = array(
+		"WordPress" => "Wordpress",
+		"WordCamp" => "Wordcamp",
+		"WooThemes" => "Woothemes",
+		"WooSwipe" => "Wooswipe",
+		"WooCommerce" => "Woocommerce",
+		"StudioPress" => "Studiopress",
+		"SearchWP" => "Search WP",
+		"PayPal" => "Paypal",
+		"NextGEN" => "Nextgen",
+		"MarketPress" => "Marketpress",
+		"MailPoet" => "Mailpoet",
+		"MailChimp" => "Mailchimp",
+		"LifterLMS" => "Lifter LMS",
+		"LearnPress" => "Learnpress",
+		"LearnDash" => "Learndash",
+		"LayerSlider" => "Layerslider",
+		"Howdy" => "G'day",
+		"GeneratePress" => "Generatepress",
+		"eWAY" => "Eway",
+		"eNews" => "Enews",
+		"eCommerce" => "Ecommerce",
+		"eChecks" => "Echecks",
+		"eBay" => "Ebay",
+		"EasyCart" => "Easycart",
+		"E-mail" => "Email",
+		"e-mail" => "email",
+		"E-commerce" => "Ecommerce",
+		"e-commerce" => "ecommerce",
+		"CustomPress" => "Custompress",
+		"cPanel" => "Cpanel",
+		"BuddyPress" => "Buddypress",
+		"bbPress" => "Bbpress",
+		"BackUpWordPress" => "Backup Wordpress",
+		"AdWords" => "Adwords",
+	);
+	return $strings;
+}
+
+//
+// Reliably test if a plugin is active.
+//
+function dermatos_is_plugin_active($plugin) {
+	if (is_multisite() == true) {
+		$plugins = get_site_option('active_sitewide_plugins');
+		if (isset($plugins[$plugin]) == true) {
+			return true;
+		}
+	}
+	return (in_array($plugin, get_option('active_plugins')) == true);
+}
 
 //
 // Convert absolute file path to qualified URL.
@@ -38,7 +99,7 @@ function dermatos_url_from_abspath($path = null) {
 //
 add_filter('login_errors', 'dermatos_login_supress_errors');
 function dermatos_login_supress_errors($error) {
-	if (apply_filters('dermatos_show_login_errors_filter', DERMATOS_SHOW_LOGIN_ERRORS) == false) {
+	if (apply_filters('dermatos_login_show_errors_filter', DERMATOS_LOGIN_SHOW_ERRORS) == false) {
 		$error = null;
 	}
 	return $error;
@@ -69,13 +130,12 @@ function dermatos_login_redirect_non_admins($location, $request, $user) {
 }
 
 //
-// Remove WP submenu from the adminbar, add custom admin logo instead
-// and remove "visit site" submenu under sitename.
+// Remove WP submenu from the adminbar, add custom admin logo instead and remove "visit site" submenu under sitename.
 //
-add_filter('wp_before_admin_bar_render', 'dermatos_remove_wordpress_adminbar_quicklinks');
-function dermatos_remove_wordpress_adminbar_quicklinks() {
+add_filter('wp_before_admin_bar_render', 'dermatos_remove_adminbar_wordpress_quicklinks');
+function dermatos_remove_adminbar_wordpress_quicklinks() {
 	global $wp_admin_bar;
-	if (apply_filters('dermatos_remove_wordpress_adminbar_quicklinks_filter', DERMATOS_REMOVE_WORDPRESS_ADMINBAR_QUICKLINKS) == true) {
+	if (apply_filters('dermatos_remove_adminbar_wordpress_quicklinks_filter', DERMATOS_REMOVE_ADMINBAR_WORDPRESS_QUICKLINKS) == true) {
 		$wp_admin_bar->add_menu(
 			array('id' => 'wp-logo', 'title' => null, 'href' => null, 'meta' => array('title' => null))
 		);
@@ -86,21 +146,6 @@ function dermatos_remove_wordpress_adminbar_quicklinks() {
 		$wp_admin_bar->remove_menu('support-forums');
 		$wp_admin_bar->remove_menu('feedback');
 	}
-}
-
-//
-// Replace the howdy greeting.
-//
-add_filter('gettext', 'dermatos_replace_howdy', 10, 3);
-function dermatos_replace_howdy($translated, $text, $domain) {
-	if (apply_filters('dermatos_replace_admin_howdy_greeting_filter', DERMATOS_REPLACE_ADMIN_HOWDY_GREETING) == true) {
-		if (is_admin() == true && $domain == 'default') {
-			if (strpos($translated, 'Howdy') <> false) {
-				$translated = str_replace('Howdy', "G'day", $translated);
-			}
-		}
-	}
-	return $translated;
 }
 
 //
@@ -129,7 +174,9 @@ function dermatos_change_loginform_text($text) {
 		$temp = strtoupper(trim(strip_tags($text), '.?:'));
 		switch (true) {
 			case ($temp == 'LOST YOUR PASSWORD'):
-				$text = null;
+				if (apply_filters('dermatos_login_hide_lost_password_link_filter', DERMATOS_LOGIN_HIDE_LOST_PASSWORD_LINK) == true) {
+					$text = null;
+				}
 				break;
 			case ($temp == 'A PASSWORD WILL BE E-MAILED TO YOU'):
 				$text = null;
@@ -137,7 +184,7 @@ function dermatos_change_loginform_text($text) {
 			case ($temp == 'YOU ARE NOW LOGGED OUT'):
 				$text = _x('You have successfully logged out.', 'Login form');
 				break;
-				case ($temp == 'REGISTER FOR THIS SITE'):
+			case ($temp == 'REGISTER FOR THIS SITE'):
 				$text = _x('Once your registration is approved, a password will be emailed to you.', 'Login form');
 				break;
 			case ($temp == 'E-MAIL'):
@@ -189,6 +236,31 @@ function dermatos_login_css() {
 	}
 	echo sprintf('<link href="%s/css/style.php?file=login" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
 	echo sprintf('<style media="screen and (min-width:960px)" type="text/css">%s</style>', $style);
+}
+
+//
+// Maybe allow login via usernames instead of email addresses only.
+//
+add_action('init', 'dermatos_maybe_allow_logins_via_username_action');
+function dermatos_maybe_allow_logins_via_username_action() {
+	if (apply_filters('dermatos_login_allow_username_filter', DERMATOS_LOGIN_ALLOW_USERNAME) == false) {
+		// Remove the default WP login authentication filter
+		remove_filter('authenticate', 'wp_authenticate_username_password', 20, 3);
+		// Add the custom WP login authentication filter
+		add_filter('authenticate', 'dermatos_authenticate_username_password_filter', 20, 3);
+		function dermatos_authenticate_username_password_filter($user, $username, $password) {
+			if (filter_var($username, FILTER_VALIDATE_EMAIL) == $username) {
+				$user = get_user_by('email', sanitize_email($username));
+				if (isset($user->user_login) == true) {
+					$username = $user->user_login;
+				}
+			} else {
+				$username = null;
+			}
+			$user = wp_authenticate_username_password(null, $username, $password);
+			return $user;
+		}
+	}
 }
 
 //
@@ -256,6 +328,139 @@ function dermatos_disable_admin_color_schemes() {
 add_filter('get_user_option_admin_color', 'dermatos_change_admin_color');
 function dermatos_change_admin_color($result) {
 	return 'fresh';
+}
+
+//
+//  Output buffering functions.
+//
+function dermatos_buffer_callback($html) {
+	$html = dermatos_hack_woocommerce_admin_headers($html);
+	$html = dermatos_hack_lifterlms_admin_headers($html);
+	if (apply_filters('dermatos_admin_replace_strings_filter', DERMATOS_ADMIN_REPLACE_STRINGS) == true) {
+		$html = dermatos_replace_strings($html);
+	}
+	return trim($html);
+}
+
+//
+// Replace all global strings.
+//
+function dermatos_replace_strings($html) {
+	$strings = apply_filters('dermatos_admin_replacement_strings_array_filter', dermatos_replacement_strings());
+	if (count($strings) > 0) {
+		$temp = array();
+		$i = 0;
+		foreach ($strings as $key => $value) {
+			$temp['from'][$i] = sprintf('#\b(%s)\b#', $key);
+			$temp['to'][$i] = $value;
+			$i++;
+		}
+		$html = preg_replace($temp['from'], $temp['to'], $html, -1, $count);
+		$html = str_replace(array(':</label>', ':</th>'), array('</label>', '</th>'), $html);
+	}
+	return $html;
+}
+//
+// Replace strings based on configuration settings.
+//
+function dermatos_replace_config_strings($html) {
+	if (apply_filters('dermatos_admin_remove_server_name_from_urls_filter', DERMATOS_ADMIN_REMOVE_SERVER_NAME_FROM_URLS) == true) {
+		$scheme = 'http';
+		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+			$scheme = 'https';
+		}
+		$html = str_replace($scheme . '://' . $_SERVER['SERVER_NAME'], null, $html);
+	}
+	if (apply_filters('dermatos_admin_remove_scheme_from_urls_filter', DERMATOS_ADMIN_REMOVE_SCHEME_FROM_URLS) == true) {
+		$html = preg_replace('#https?://#', '//', $html);
+	}
+	if (apply_filters('dermatos_admin_remove_dubya_dubya_dubya_from_urls_filter', DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS) == true) {
+		$html = str_replace('//www.', '//', $html);
+	}
+	return trim($html);
+}
+
+//
+// Woocommerce hack to show correct page titles for reports, settings, status and addons admin pages.
+//
+function dermatos_hack_woocommerce_admin_headers($html) {
+	if (strpos($html, '<div class="wrap woocommerce') > 0) {
+		$page = isset($_GET['page']) ? $_GET['page'] : null;
+		if ($page == 'wc-reports' || $page == 'wc-settings' || $page == 'wc-status' || $page == 'wc-addons') {
+			$title = ucwords(get_admin_page_title());
+			if (substr(strtolower($title), 0, 11) <> 'woocommerce') {
+				$title = sprintf('WooCommerce %s', $title);
+			}
+			switch ($page) {
+				case 'wc-reports':
+				case 'wc-settings':
+				case 'wc-status':
+					$html = str_replace('<div class="wrap woocommerce">', sprintf('<div class="wrap woocommerce"><h1>%s</h1>', $title), $html);
+					break;
+				case 'wc-addons':
+					$html = str_replace('<div class="wrap woocommerce wc_addons_wrap">', sprintf('<div class="wrap woocommerce wc_addons_wrap"><h1>%s</h1>', $title), $html);
+					break;
+			}
+		}
+	}
+	return trim($html);
+}
+
+//
+// Lifter LMS hack to show correct page titles for settings, reporting and status admin pages.
+//
+function dermatos_hack_lifterlms_admin_headers($html) {
+	$page = isset($_GET['page']) ? $_GET['page'] : null;
+	if ($page == 'llms-settings' || $page == 'lifterlms' || $page == 'llms-reporting' || $page == 'llms-status') {
+		$title = ucwords(get_admin_page_title());
+		switch ($page) {
+			case 'lifterlms':
+			case 'llms-settings':
+				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $title), $html);
+				break;
+			case 'llms-reporting':
+				if (strpos($html, '<div class="wrap lifterlms llms-reporting tab--students') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--students">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $title), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--sales') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--sales">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $title), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--enrollments') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--enrollments">', sprintf('<div class="wrap lifterlms llms-reporting tab--enrollments"><h1>%s</h1>', $title), $html);
+				}
+				break;
+			case 'llms-status':
+				if (strpos($html, '<div class="wrap lifterlms llms-status llms-status--report') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--report">', sprintf('<div class="wrap lifterlms llms-status llms-status--report"><h1>%s</h1>', $title), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--tools') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--tools">', sprintf('<div class="wrap lifterlms llms-status llms-status--tools"><h1>%s</h1>', $title), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--logs') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--logs">', sprintf('<div class="wrap lifterlms llms-status llms-status--logs"><h1>%s</h1>', $title), $html);
+				}
+				break;
+		}
+	}
+	return trim($html);
+}
+
+//
+// Start output buffering.
+//
+add_action('init', 'dermatos_buffer_start_action', 0);
+function dermatos_buffer_start_action() {
+	if (is_admin() == true) {
+		ob_start('dermatos_buffer_callback');
+	}
+}
+
+//
+// Start output buffering.
+//
+add_action('shutdown', 'dermatos_buffer_stop_action', 8888);
+function dermatos_buffer_stop_action() {
+	if (is_admin() == true) {
+		while (ob_get_level() > 0) {
+			ob_end_flush();
+		}
+	}
 }
 
 ?>
