@@ -29,6 +29,7 @@ define('DERMATOS_REMOVE_ADMINBAR_WORDPRESS_QUICKLINKS', true);
 //
 define('DERMATOS_BASE_PLUGIN_URL', trim(plugin_dir_url(__FILE__), '/'));
 define('DERMATOS_BASE_PLUGIN_PATH', dirname(__FILE__));
+define('DERMATOS_SITENAME', get_bloginfo('name'));
 
 //
 // Default replacement strings.
@@ -47,7 +48,7 @@ function dermatos_replacement_strings() {
 		"MarketPress" => "Marketpress",
 		"MailPoet" => "Mailpoet",
 		"MailChimp" => "Mailchimp",
-		"LifterLMS" => "Lifter LMS",
+		"LifterLMS" => "Lifter",
 		"LearnPress" => "Learnpress",
 		"LearnDash" => "Learndash",
 		"LayerSlider" => "Layerslider",
@@ -314,6 +315,15 @@ function dermatos_customizer_enqueue() {
 }
 
 //
+// Change admin screen page titles.
+//
+add_filter('admin_title', 'dermatos_admin_title_filter', 10, 2);
+function dermatos_admin_title_filter($title, $heading) {
+	$title = sprintf('%s &ndash; %s', ucwords($heading), DERMATOS_SITENAME);
+	return $title;
+}
+
+//
 // Disable colour scheme selector for users.
 //
 add_action('admin_head', 'dermatos_disable_admin_color_schemes');
@@ -415,6 +425,8 @@ function dermatos_hack_lifterlms_admin_headers($html) {
 		$title = ucwords(get_admin_page_title());
 		switch ($page) {
 			case 'lifterlms':
+				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', 'LifterLMS Dashboard'), $html);
+				break;
 			case 'llms-settings':
 				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $title), $html);
 				break;
@@ -439,6 +451,18 @@ function dermatos_hack_lifterlms_admin_headers($html) {
 		}
 	}
 	return trim($html);
+}
+
+//
+// Change Lifter LMS admin screen dashboard page title.
+// TODO: This is a hack and should be removed once the plugin author fixes the bug.
+//
+add_filter('admin_title', 'dermatos_hack_lifterlms_title_filter', 11, 2);
+function dermatos_hack_lifterlms_title_filter($title, $heading) {
+	if (substr($title, 0, 9) == 'Lifterlms') {
+		$title = str_replace('Lifterlms', 'LifterLMS', $title);
+	}
+	return $title;
 }
 
 //
