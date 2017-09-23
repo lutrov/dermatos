@@ -14,6 +14,7 @@ defined('ABSPATH') || die('Ahem.');
 //
 // Constants used by this plugin.
 //
+define('DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES', false);
 define('DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS', true);
 define('DERMATOS_ADMIN_REMOVE_SCHEME_FROM_URLS', true);
 define('DERMATOS_ADMIN_REMOVE_SERVER_NAME_FROM_URLS', true);
@@ -22,6 +23,7 @@ define('DERMATOS_LOGIN_ALLOW_USERNAME', true);
 define('DERMATOS_LOGIN_HIDE_LOST_PASSWORD_LINK', true);
 define('DERMATOS_LOGIN_REDIRECT_NON_ADMINS', true);
 define('DERMATOS_LOGIN_SHOW_ERRORS', true);
+define('DERMATOS_LOWER_HEARTBEAT_INTERVAL', true);
 define('DERMATOS_REMOVE_ADMINBAR_WORDPRESS_QUICKLINKS', true);
 
 //
@@ -212,7 +214,7 @@ function dermatos_change_loginform_text($text) {
 //
 // Add login CSS.
 //
-add_action('login_head', 'dermatos_login_css', 999);
+add_action('login_head', 'dermatos_login_css', 8888);
 function dermatos_login_css() {
 	$path = apply_filters('dermatos_login_logo_path_filter', sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path) == true) {
@@ -293,15 +295,17 @@ function dermatos_meta_favicon() {
 //
 // Custom admin stylesheet.
 //
-add_action('admin_head', 'dermatos_admin_css', 999);
+add_action('admin_head', 'dermatos_admin_css', 8888);
 function dermatos_admin_css() {
-	echo sprintf('<link href="%s/css/style.php?file=admin" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
+	if (apply_filters('dermatos_admin_change_wordpress_styles_filter', DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES) == true) {
+		echo sprintf('<link href="%s/css/style.php?file=admin" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
+	}
 }
 
 //
 // Custom public stylesheet.
 //
-add_action('wp_head', 'dermatos_public_css', 999);
+add_action('wp_head', 'dermatos_public_css', 8888);
 function dermatos_public_css() {
 	echo sprintf('<link href="%s/css/style.php?file=public" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
 }
@@ -338,6 +342,18 @@ function dermatos_disable_admin_color_schemes() {
 add_filter('get_user_option_admin_color', 'dermatos_change_admin_color');
 function dermatos_change_admin_color($result) {
 	return 'fresh';
+}
+
+//
+// Change the Wordpress Heartbeat interval to the highest possible value.
+// http://markomedia.com.au/admin-ajax-php-high-cpu-problem-solved/
+//
+add_filter('heartbeat_settings', 'dermatos_heartbeat_interval_filter', 16);
+function dermatos_heartbeat_interval_filter($settings) {
+	if (apply_filters('dermatos_lower_heartbeat_interval_filter', DERMATOS_LOWER_HEARTBEAT_INTERVAL) == true) {
+		$settings = array_merge($settings, array('interval' => 60));
+	}
+	return $settings;
 }
 
 //
