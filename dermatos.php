@@ -14,7 +14,7 @@ defined('ABSPATH') || die('Ahem.');
 //
 // Constants used by this plugin.
 //
-define('DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES', false);
+define('DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES', true);
 define('DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS', true);
 define('DERMATOS_ADMIN_REMOVE_SCHEME_FROM_URLS', true);
 define('DERMATOS_ADMIN_REMOVE_SERVER_NAME_FROM_URLS', true);
