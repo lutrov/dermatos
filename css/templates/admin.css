@@ -2604,14 +2604,24 @@ a.frm_show_comment:hover {
 
 /* Lifter LMS Support */
 
+.lifterlms_page_llms-status .wrap h1,
+.lifterlms_page_llms-add-ons .wrap h1 {
+	padding-bottom: 25px;
+	border-bottom: 1px solid #e0e0e0 !important;
+	margin-bottom: 25px;
+}
+
+
 #llms-form-wrapper {
+/*
 	padding-top: 25px !important;
 	border-top: 1px solid #e0e0e0 !important;
 	text-align: right !important;
+*/
 }
 
 .llms-nav-tab-wrapper {
-	margin: 10px 0 20px 0 !important;
+	margin: 10px 0 25px 0 !important;
 	background-color: inherit;
 }
 
@@ -2684,19 +2694,16 @@ a.frm_show_comment:hover {
 	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
 }
 
-button#copy-for-support {
-	margin-right: 10px;
-}
-
 .llms-button-secondary:hover {
 	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
 	color: #fff;
 }
 
+button#copy-for-support {
+	margin-right: 10px;
+}
+
 .wrap h1 + .llms-options-page-contents {
-	margin-top: 20px !important;
-	padding: 15px 0 !important;
-	border-top: 1px solid #e0e0e0;
 }
 
 .lifterlms_page_llms-import td .widefat {
