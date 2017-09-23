@@ -29,6 +29,12 @@ This plugin provides an API to to customise the default constant values. See the
 	// ---- Change the Dermatos plugin remove WP adminbar quicklinks value to false.
 	add_filter('dermatos_remove_adminbar_wordpress_quicklinks_filter', '__return_false');
 
+	// ---- Change the Dermatos plugin change WP styles value to false.
+	add_filter('dermatos_admin_change_wordpress_styles_filter', '__return_false');
+
+	// ---- Change the Dermatos plugin lower WP heartbeat value to false.
+	add_filter('dermatos_lower_heartbeat_interval_filter', '__return_false');
+
 	// ---- Change the Dermatos plugin admin replace strings value to false.
 	add_filter('dermatos_admin_replace_strings_filter', '__return_false');
 
@@ -123,16 +129,20 @@ Or if you're using a custom site plugin (as you should be), do it via the `plugi
 	// ---- Change the Dermatos plugin constant values.
 	add_action('plugins_loaded', 'lutrov_custom_dermatos_filters');
 	function lutrov_custom_dermatos_filters() {
-		// Change the show login errors value to false.
+		// ---- Change the show login errors value to false.
 		add_filter('dermatos_login_show_errors_filter', '__return_false');
 		// ---- Change the Dermatos plugin allow logins via username value to false.
 		add_filter('dermatos_login_allow_username_filter', '__return_false');
 		// ---- Change the Dermatos plugin login lost password link value to false.
 		add_filter('dermatos_login_hide_lost_password_link_filter', '__return_false');
-		// Change the Dermatos plugin login redirect non admins value to false.
+		// ---- Change the Dermatos plugin login redirect non admins value to false.
 		add_filter('dermatos_login_redirect_non_admins_filter', '__return_false');
-		// Change the Dermatos plugin remove WP adminbar quicklinks value to false.
+		// ---- Change the Dermatos plugin remove WP adminbar quicklinks value to false.
 		add_filter('dermatos_remove_adminbar_wordpress_quicklinks_filter', '__return_false');
+		// ---- Change the Dermatos plugin change WP styles value to false.
+		add_filter('dermatos_admin_change_wordpress_styles_filter', '__return_false');
+		// ---- Change the Dermatos plugin lower WP heartbeat value to false.
+		add_filter('dermatos_lower_heartbeat_interval_filter', '__return_false');
 		// ---- Change the Dermatos plugin admin replace strings value to false.
 		add_filter('dermatos_admin_replace_strings_filter', '__return_false');
 		// ---- Change the Dermatos plugin login background path.
