@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 9.0
+Version: 10.0
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
