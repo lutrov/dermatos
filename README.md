@@ -12,7 +12,9 @@ This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-lic
 
 ## Documentation
 
-__Please note that the default Wordpress admin styles will only get overriden on devices which are 960 pixels wide, or more.__ This plugin provides an API to to customise the default constant values. See these examples:
+__Please note that the default Wordpress admin styles will only get overriden on devices which are 960 pixels wide, or more.__
+
+This plugin provides an API to to customise the default constant values. See these examples:
 
 	// ---- Change the Dermatos plugin show login errors value to false.
 	add_filter('dermatos_login_show_errors_filter', '__return_false');
