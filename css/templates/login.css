@@ -82,7 +82,7 @@ p.submit {
 }
 
 #login {
-	padding: 5px !important;
+	padding: 40px 5px 0 5px !important;
 	width: 400px !important;
 	max-width: 85% !important;
 }
