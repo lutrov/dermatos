@@ -2631,6 +2631,14 @@ a.frm_show_comment:hover {
 	color: #fff;
 }
 
+.llms-metabox-section {
+	background-color: inherit;
+}
+
+.llms-mb-list .description {
+	padding-bottom: 5px;
+}
+
 .llms-widget {
 	padding: 0;
 }
@@ -2680,6 +2688,29 @@ a.frm_show_comment:hover {
 .llms-button-secondary:hover {
 	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
 	color: #fff;
+}
+
+.llms-button-action.square,
+.llms-button-danger.square,
+.llms-button-primary.square,
+.llms-button-secondary.square {
+	padding: 4px;
+}
+
+.llms-button-action.small,
+.llms-button-danger.small,
+.llms-button-primary.small,
+.llms-button-secondary.small {
+	padding: 4px 12px !important;
+}
+
+.llms-mb-container .tab-content {
+	background-color: inherit !important;
+}
+
+.llms-mb-container .tab-content ul:not(.select2-selection__rendered):not(.chosen-choices):not(.chosen-results) > li {
+	background-color: inherit;
+	border: none;
 }
 
 button#copy-for-support {
@@ -2937,6 +2968,40 @@ button#copy-for-support {
 .postbox.unite-postbox h3 span {
 	color: #444 !important;
 }
+
+/* Sensei Support */
+
+.sensei_page_sensei_grading .grading-selects .select-box {
+	width: auto !important;
+}
+
+.sensei_page_sensei_grading .select2-container {
+	min-width: 200px !important;
+}
+
+.sensei_page_sensei_grading .select2-selection__arrow {
+	height: 28px !important;
+}
+
+.sensei_page_sensei_learners .wrap h1 {
+}
+
+.sensei_page_sensei_learners .wrap h1 a {
+	text-decoration: none !important;
+}
+
+.sensei_page_sensei_learners .tablenav {
+	margin-left: -10px !important;
+}
+
+.sensei_page_sensei_learners .column-updated {
+	background-color: inherit !important;
+}
+
+.sensei_page_sensei_learners .column-actions {
+	text-align: right !important;
+}
+
 
 /* Simple History Support */
 
@@ -3301,6 +3366,11 @@ button#copy-for-support {
 
 .options-permalink-php .form-table.wc-permalink-structure tr:last-of-type td {
 	padding-top: 15px !important;
+}
+
+.woocommerce-BlankState-cta.button {
+	height: 40px !important;
+	line-height: 1 !important;
 }
 
 /* WP Crontrol Support */
