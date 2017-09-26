@@ -531,21 +531,19 @@ function dermatos_replace_config_strings($html) {
 function dermatos_hack_woocommerce_admin_headers($html) {
 	if (strpos($html, '<div class="wrap woocommerce') > 0) {
 		$page = isset($_GET['page']) ? $_GET['page'] : null;
-		if ($page == 'wc-reports' || $page == 'wc-settings' || $page == 'wc-status' || $page == 'wc-addons') {
-			$title = ucwords(get_admin_page_title());
-			if (substr(strtolower($title), 0, 11) <> 'woocommerce') {
-				$title = sprintf('WooCommerce %s', $title);
-			}
-			switch ($page) {
-				case 'wc-reports':
-				case 'wc-settings':
-				case 'wc-status':
-					$html = str_replace('<div class="wrap woocommerce">', sprintf('<div class="wrap woocommerce"><h1>%s</h1>', $title), $html);
-					break;
-				case 'wc-addons':
-					$html = str_replace('<div class="wrap woocommerce wc_addons_wrap">', sprintf('<div class="wrap woocommerce wc_addons_wrap"><h1>%s</h1>', $title), $html);
-					break;
-			}
+		$heading = ucwords(get_admin_page_title());
+		if (substr(strtolower($heading), 0, 11) <> 'woocommerce') {
+			$heading = sprintf('WooCommerce %s', $heading);
+		}
+		switch ($page) {
+			case 'wc-reports':
+			case 'wc-settings':
+			case 'wc-status':
+				$html = str_replace('<div class="wrap woocommerce">', sprintf('<div class="wrap woocommerce"><h1>%s</h1>', $heading), $html);
+				break;
+			case 'wc-addons':
+				$html = str_replace('<div class="wrap woocommerce wc_addons_wrap">', sprintf('<div class="wrap woocommerce wc_addons_wrap"><h1>%s</h1>', $heading), $html);
+				break;
 		}
 	}
 	return trim($html);
@@ -556,34 +554,37 @@ function dermatos_hack_woocommerce_admin_headers($html) {
 //
 function dermatos_hack_lifterlms_admin_headers($html) {
 	$page = isset($_GET['page']) ? $_GET['page'] : null;
-	if ($page == 'llms-settings' || $page == 'lifterlms' || $page == 'llms-reporting' || $page == 'llms-status') {
-		$title = ucwords(get_admin_page_title());
-		switch ($page) {
-			case 'lifterlms':
-				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', 'LifterLMS Dashboard'), $html);
-				break;
-			case 'llms-settings':
-				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $title), $html);
-				break;
-			case 'llms-reporting':
-				if (strpos($html, '<div class="wrap lifterlms llms-reporting tab--students') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--students">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $title), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--sales') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--sales">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $title), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--enrollments') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--enrollments">', sprintf('<div class="wrap lifterlms llms-reporting tab--enrollments"><h1>%s</h1>', $title), $html);
-				}
-				break;
-			case 'llms-status':
-				if (strpos($html, '<div class="wrap lifterlms llms-status llms-status--report') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--report">', sprintf('<div class="wrap lifterlms llms-status llms-status--report"><h1>%s</h1>', $title), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--tools') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--tools">', sprintf('<div class="wrap lifterlms llms-status llms-status--tools"><h1>%s</h1>', $title), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--logs') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--logs">', sprintf('<div class="wrap lifterlms llms-status llms-status--logs"><h1>%s</h1>', $title), $html);
-				}
-				break;
-		}
+	$heading = ucwords(get_admin_page_title());
+	switch ($page) {
+		case 'lifterlms':
+			$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', 'LifterLMS Dashboard'), $html);
+			break;
+		case 'llms-settings':
+			$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $heading), $html);
+			break;
+		case 'llms-reporting':
+			if (strpos($html, '<div class="wrap lifterlms llms-reporting tab--students">') > 0) {
+				$html = str_replace('<div class="wrap lifterlms llms-reporting tab--students">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
+			} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--sales">') > 0) {
+				$html = str_replace('<div class="wrap lifterlms llms-reporting tab--sales">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
+			} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--enrollments">') > 0) {
+				$html = str_replace('<div class="wrap lifterlms llms-reporting tab--enrollments">', sprintf('<div class="wrap lifterlms llms-reporting tab--enrollments"><h1>%s</h1>', $heading), $html);
+			}
+			break;
+		case 'llms-status':
+			if (strpos($html, '<div class="wrap lifterlms llms-status llms-status--report">') > 0) {
+				$html = str_replace('<div class="wrap lifterlms llms-status llms-status--report">', sprintf('<div class="wrap lifterlms llms-status llms-status--report"><h1>%s</h1>', $heading), $html);
+			} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--tools">') > 0) {
+				$html = str_replace('<div class="wrap lifterlms llms-status llms-status--tools">', sprintf('<div class="wrap lifterlms llms-status llms-status--tools"><h1>%s</h1>', $heading), $html);
+			} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--logs">') > 0) {
+				$html = str_replace('<div class="wrap lifterlms llms-status llms-status--logs">', sprintf('<div class="wrap lifterlms llms-status llms-status--logs"><h1>%s</h1>', $heading), $html);
+			}
+			break;
+		case 'llms-add-ons':
+			if (strpos($html, '<div class="wrap lifterlms lifterlms-settings">') > 0) {
+				$html = str_replace('<h1>LifterLMS Add-Ons, Services, and Resources</h1>', sprintf('<h1>%s</h1>', $heading), $html);
+			}
+			break;
 	}
 	return trim($html);
 }
