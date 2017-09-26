@@ -24,7 +24,6 @@ h3,
 h4 {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
-	/*text-transform: capitalize !important;*/
 }
 
 h1 {
@@ -2604,22 +2603,6 @@ a.frm_show_comment:hover {
 
 /* Lifter LMS Support */
 
-.lifterlms_page_llms-status .wrap h1,
-.lifterlms_page_llms-add-ons .wrap h1 {
-	padding-bottom: 25px;
-	border-bottom: 1px solid #e0e0e0 !important;
-	margin-bottom: 25px;
-}
-
-
-#llms-form-wrapper {
-/*
-	padding-top: 25px !important;
-	border-top: 1px solid #e0e0e0 !important;
-	text-align: right !important;
-*/
-}
-
 .llms-nav-tab-wrapper {
 	margin: 10px 0 25px 0 !important;
 	background-color: inherit;
@@ -2703,11 +2686,66 @@ button#copy-for-support {
 	margin-right: 10px;
 }
 
-.wrap h1 + .llms-options-page-contents {
+.lifterlms_page_llms-settings .llms-widget .form-table .llms-table-wrap {
+	margin-left: -15px;
+}
+
+.lifterlms_page_llms-settings .form-table input[type=checkbox] + br + span.description {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.lifterlms_page_llms-settings .llms-widget .form-table th[colspan="2"] {
+	text-align: left !important;
+}
+
+.lifterlms_page_llms-settings .llms-widget .form-table th[colspan="2"] p {
+	margin-top: -5px;
+	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+}
+
+.lifterlms_page_llms-settings .llms-widget .form-table .llms-table th {
+	padding-left: 15px !important;
+	text-align: left !important;
+}
+
+.lifterlms_page_llms-reporting .llms-options-page-contents {
+	padding: 0 !important;
+	margin-top: -40px !important;
+}
+
+.lifterlms_page_llms-reporting .llms-table-header {
+	padding: 0;
+}
+
+.lifterlms_page_llms-import .llms-import-export .llms-options-page-contents {
+	padding-top: 25px !important;
+	border-top: 1px solid #e0e0e0 !important;
+}
+
+.lifterlms_page_llms-import .llms-import-export h1 {
+	padding-bottom: 25px !important;
 }
 
 .lifterlms_page_llms-import td .widefat {
 	border: none !important;
+}
+
+.lifterlms_page_llms-status .wrap h1,
+.lifterlms_page_llms-add-ons .wrap h1 {
+	margin-bottom: 25px;
+}
+
+.lifterlms_page_llms-reporting .wrap h1 + form {
+	border-top: none !important;
+	margin-top: 0 !important;
+}
+
+.toplevel_page_lifterlms #llms-form-wrapper,
+.lifterlms_page_llms-settings #llms-form-wrapper {
+	padding-top: 25px !important;
+	border-top: 1px solid #e0e0e0 !important;
+	text-align: right !important;
 }
 
 
