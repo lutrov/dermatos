@@ -142,6 +142,11 @@ body.iframe {
 	background-color: #fff !important;
 }
 
+html.wp-toolbar {
+	padding-top: 0;
+	background-color: #fff;
+}
+
 .wp-core-ui .button,
 .wp-core-ui .button-secondary,
 .wp-core-ui .notification-dialog .button {
@@ -204,11 +209,6 @@ body.iframe {
 	background-color: #f0f0f0 !important;
 	color: #888 !important;
 	border: 2px solid #e0e0e0 !important;
-}
-
-html.wp-toolbar {
-	padding-top: 0;
-	background-color: #f8f8f8;
 }
 
 #wpwrap {
