@@ -208,7 +208,7 @@ body.iframe {
 
 html.wp-toolbar {
 	padding-top: 0;
-	background-color: #f8f800;
+	background-color: #f8f8f8;
 }
 
 #wpwrap {
@@ -2153,7 +2153,7 @@ a#choose-from-library-link {
 }
 
 .post-type-attachment #attachment_url {
-	background: #fff;
+	background-color: #fff;
 }
 
 .post-type-attachment .misc-pub-attachment label[for=attachment_url] {
