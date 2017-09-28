@@ -958,6 +958,10 @@ p.search-box {
 	line-height: 1.75 !important;
 }
 
+.plugin-install-php .filter-links li:first-of-type > a {
+	margin-left: 0;
+}
+
 h1.nav-tab-wrapper,
 .nav-tab-wrapper,
 .wrap h2.nav-tab-wrapper {
@@ -2722,12 +2726,40 @@ button#copy-for-support {
 }
 
 .lifterlms_page_llms-settings .form-table input[type=checkbox] + br + span.description {
-	display: inline-block;
-	margin-top: 10px;
+	display: block;
+	margin-top: 5px;
+	clear: both;
+}
+
+.lifterlms_page_llms-settings .form-table input[type=text] + span.description,
+.lifterlms_page_llms-settings .form-table input[type=number] + span.description {
+	display: block;
+	margin-top: 5px !important;
+	clear: both;
+}
+
+.lifterlms_page_llms-settings .form-table select + span.description {
+	display: block;
+	margin-top: -5px !important;
+	clear: both;
+}
+
+.lifterlms_page_llms-settings .form-table span.select2 + span.description {
+	display: block;
+	margin-top: -5px !important;
+	clear: both;
 }
 
 .lifterlms_page_llms-settings .llms-widget .form-table th[colspan="2"] {
 	text-align: left !important;
+}
+
+.lifterlms_page_llms-settings .llms-widget .form-table td[colspan="2"] {
+	padding-left: 0 !important;
+}
+
+.lifterlms_page_llms-settings .llms-widget .form-table td[colspan="2"] h3 + p {
+	margin-top: 5px !important;
 }
 
 .lifterlms_page_llms-settings .llms-widget .form-table th[colspan="2"] p {
@@ -2779,6 +2811,17 @@ button#copy-for-support {
 	text-align: right !important;
 }
 
+.lifterlms_page_llms-labs .llms-form-field.type-submit.llms-cols-2.llms-cols-last {
+	padding-top: 25px !important;
+	border-top: 1px solid #e0e0e0 !important;
+	width: 100%;
+	padding-right: 0;
+	text-align: right;
+}
+
+.lifterlms_page_llms-labs .llms-form-field.type-submit.llms-cols-2.llms-cols-last .llms-field-button {
+	max-width: 100px;
+}
 
 /* Members Support */
 
