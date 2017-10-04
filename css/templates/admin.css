@@ -809,6 +809,20 @@ h3.dashboard-widget-title small {
 	color: #444 !important;
 }
 
+.wp-list-table th {
+	vertical-align: top !important;
+}
+
+.tablenav-pages-navspan {
+	height: 26px;
+}
+
+.tablenav-pages .prev-page,
+.tablenav-pages .current-page,
+.tablenav-pages .prev-page,
+.tablenav-pages .last-page {
+	height: 26px;
+}
 
 .sorting-indicator::before {
 	color: #888 !important;
@@ -3185,10 +3199,6 @@ button#copy-for-support {
 	line-height: 1.0 !important;
 }
 
-.wp-list-table th {
-	vertical-align: top !important;
-}
-
 .wc_emails.widefat th {
 	text-align: left !important;
 }
@@ -3415,6 +3425,11 @@ button#copy-for-support {
 .post-type-shop_order .save_order {
 	margin-top: 10px !important;
 	margin-bottom: 10px !important;
+}
+
+.post-type-shop_order .order_actions .tips {
+	width: 26px !important;
+	height: 26px !important;
 }
 
 .options-permalink-php .form-table.wc-permalink-structure td {
