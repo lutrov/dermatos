@@ -39,10 +39,10 @@ label {
 	font-size: 13px !important;
 }
 
-input[type=text],
-input[type=password],
+.ie7 .login form .input,
 .ie8 .login form .input,
-.ie7 .login form .input {
+input[type=password],
+input[type=text] {
 	margin-top: 8px !important;
 	padding: 6px !important;
 	font-family: "[[FONT-FAMILY]]", monospace;
@@ -95,10 +95,10 @@ p.submit {
 	width: 100% !important;
 }
 
-#nav,
 #backtoblog,
+#login .message,
 #login_error,
-#login .message {
+#nav {
 	font-family: "[[FONT-FAMILY]]", monospace !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 	text-align: center !important;
@@ -123,8 +123,8 @@ p.submit {
 	text-align: center! important;
 }
 
-#nav a,
-#backtoblog a {
+#backtoblog a,
+#nav a {
 	margin: 0 2px;
 	color: #fff !important;
 	border-bottom: 1px dotted #bbb;
