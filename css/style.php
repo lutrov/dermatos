@@ -46,7 +46,7 @@ $file = isset($_GET['file']) ? $_GET['file'] : null;
 //
 // Read the CSS from a template and output.
 //
-if ($file == 'admin' || $file == 'login' || $file == 'customizer' || $file == 'public') {
+if ($file == 'admin' || $file == 'hacks' || $file == 'login' || $file == 'customizer' || $file == 'public') {
 	$path = sprintf('%s/templates/%s.css', dirname(__FILE__), $file);
 	if (file_exists($path)) {
 		$css = file_get_contents($path);
