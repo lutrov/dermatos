@@ -412,12 +412,15 @@ function dermatos_meta_favicon() {
 }
 
 //
-// Custom admin stylesheet.
+// Custom admin stylesheets.
 //
 add_action('admin_head', 'dermatos_admin_css', 8888);
 function dermatos_admin_css() {
 	if (apply_filters('dermatos_admin_change_wordpress_styles_filter', DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES) == true) {
 		echo sprintf('<link href="%s/css/style.php?file=admin" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
+	}
+	if (file_exists(DERMATOS_BASE_PLUGIN_PATH . '/css/templates/hacks.css')) {
+		echo sprintf('<link href="%s/css/style.php?file=hacks" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
 	}
 }
 
