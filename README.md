@@ -225,3 +225,32 @@ Or if you're using a custom site plugin (as you should be), do it via the `plugi
 
 
 Note, this second approach will _not_ work from your theme's `functions.php` file.
+
+Dermatos also supports additional custom styling via a `hacks.css` file. This file will get loaded after `admin.css` gets loaded, so it's a handy way of overriding default Dermatos admin styles.
+
+For instance, you could put the following CSS code into `css/templates/hacks.css', and the admin buttons, form labels & legends, subheadings and tabs would be capitalised:
+
+	#custom-background .form-table th[scope=row] + td .button-secondary,
+	#screen-options-wrap label,
+	#screen-options-wrap legend,
+	#ws_menu_editor .ws_main_button,
+	.misc-pub-section #post-status-display,
+	.misc-pub-section #post-visibility-display,
+	.misc-pub-section #timestamp,
+	.wp-core-ui .button-secondary,
+	.wp-core-ui .button,
+	.wp-core-ui .notification-dialog .button,
+	.wrap .add-new-h2,
+	.wrap .page-title-action,
+	form .form-table th label,
+	form .form-table th[scope=row] + td .button-secondary,
+	h1,
+	h2,
+	h3,
+	h4,
+	th label,
+	ul.subsubsub li a {
+		text-transform: capitalize !important;
+	}
+
+If you need professional plugin support from me, the plugin author, contact me via my website at http://lutrov.com
