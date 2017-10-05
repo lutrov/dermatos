@@ -45,8 +45,8 @@
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 }
 
-.wp-customizer button.dashicons,
-.wp-customizer button span.dashicons {
+.wp-customizer button span.dashicons,
+.wp-customizer button.dashicons {
 	display: none !important;
 }
 
