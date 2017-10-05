@@ -45,14 +45,14 @@
 	transition: background-color 2s;
 }
 
-#wpadminbar .quicklinks a,
 #wpadminbar .quicklinks .ab-empty-item,
+#wpadminbar .quicklinks a,
 #wpadminbar .shortlink-input {
 	padding: 0 10px;
 }
 
-#wpadminbar #wp-admin-bar-site-name,
 #wpadminbar #wp-admin-bar-wp-logo,
+#wpadminbar #wp-admin-bar-site-name,
 #wpadminbar #wlcms_admin_logo {
 }
 
@@ -66,9 +66,9 @@
 }
 
 #wpadminbar .ab-empty-item,
-#wpadminbar a.ab-item,
 #wpadminbar > #wp-toolbar span.ab-label,
-#wpadminbar > #wp-toolbar span.noticon {
+#wpadminbar > #wp-toolbar span.noticon,
+#wpadminbar a.ab-item {
 	color: #444;
 }
 
@@ -78,8 +78,8 @@
 	color: #888;
 }
 
-#wpadminbar #wp-admin-bar-new-content .ab-icon::before,
-#wpadminbar #wp-admin-bar-comments .ab-icon::before {
+#wpadminbar #wp-admin-bar-comments .ab-icon::before,
+#wpadminbar #wp-admin-bar-new-content .ab-icon::before {
 	top: 0px;
 }
 
@@ -91,29 +91,29 @@
 	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
-#wpadminbar .ab-top-menu > li:hover > .ab-item,
 #wpadminbar .ab-top-menu > li > .ab-item:focus,
+#wpadminbar .ab-top-menu > li:hover > .ab-item,
 #wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus {
 	background: none;
 	background-color: #f0f0f0 !important;
 }
 
-#wpadminbar .quicklinks > ul > li > a,
-#wpadminbar .quicklinks > ul > li > .ab-empty-item {
+#wpadminbar .quicklinks > ul > li > .ab-empty-item,
+#wpadminbar .quicklinks > ul > li > a {
 	border-right: none;
 }
 
 #wpadminbar .ab-submenu .ab-item,
-#wpadminbar .quicklinks .menupop ul li a,
 #wpadminbar .quicklinks .menupop ul li a strong,
+#wpadminbar .quicklinks .menupop ul li a,
 #wpadminbar .quicklinks .menupop.hover ul li a,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
 	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
-#wpadminbar .ab-top-menu > li > .ab-item:hover,
 #wpadminbar .ab-top-menu > li > .ab-item:hover .ab-icon::before,
-#wpadminbar .ab-top-menu > li > .ab-item:hover .ab-label {
+#wpadminbar .ab-top-menu > li > .ab-item:hover .ab-label,
+#wpadminbar .ab-top-menu > li > .ab-item:hover {
 	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 }
 
@@ -135,13 +135,13 @@
 	float: right;
 }
 
-#wpadminbar .quicklinks .ab-top-secondary > li > a,
-#wpadminbar .quicklinks .ab-top-secondary > li > .ab-empty-item {
+#wpadminbar .quicklinks .ab-top-secondary > li > .ab-empty-item,
+#wpadminbar .quicklinks .ab-top-secondary > li > a {
 	border: none;
 }
 
-#wpadminbar .quicklinks .menupop ul li a,
 #wpadminbar .quicklinks .menupop ul li a strong,
+#wpadminbar .quicklinks .menupop ul li a,
 #wpadminbar .quicklinks .menupop.hover ul li a,
 #wpadminbar.nojs .quicklinks .menupop:hover ul li a {
 	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
