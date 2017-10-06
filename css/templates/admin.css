@@ -3403,36 +3403,68 @@ button#copy-for-support {
 
 .woocommerce_options_panel p.form-field span.description {
 	display: block !important;
-	padding-left: 20px !important;
+	padding-top: 5px !important;
 }
 
-.post-type-shop_order #order_data h2,
-.post-type-shop_order #order_data p.order_number {
+.post-php.post-type-product input[type=number] {
+	padding: 0 5px !important;
+	width: auto !important;
+	min-width: 80px !important;
+}
+
+.post-php.post-type-product select {
+	width: auto !important;
+	min-width: 120px !important;
+}
+
+.woocommerce_options_panel .downloadable_files table .sort,
+.woocommerce_variations .downloadable_files table .sort {
+
+}
+
+.post-php.post-type-product .downloadable_files table .sort {
+	display: none !important;
+}
+
+.post-php.post-type-product .downloadable_files table .file_name {
+	width: 34%;
+}
+
+.post-php.post-type-product .downloadable_files table .file_url {
+	width: 64%;
+}
+
+.post-php.post-type-product .downloadable_files table input {
+	width: 95% !important;
+}
+
+.post-php.post-type-shop_order #order_data h2,
+.post-php.post-type-shop_order #order_data p.order_number {
 	font-family: "[[FONT-FAMILY]]", monospace;
 }
 
-.post-type-shop_order #order_data h2 {
+.post-php.post-type-shop_order #order_data h2 {
 	padding: 10px 0 !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
-.post-type-shop_order #order_data p.order_number {
+.post-php.post-type-shop_order #order_data p.order_number {
 	padding: 10px 0;
 	color: #444;
 	font-weight: [[FONT-WEIGHT-BOLD]];
 	font-size: 14px;
 }
 
-.post-type-shop_order .order_data_column h3 {
+.post-php.post-type-shop_order .order_data_column h3 {
 	padding: 0 10px;
 }
 
-.post-type-shop_order .save_order {
+.post-php.post-type-shop_order .save_order {
 	margin-top: 10px !important;
 	margin-bottom: 10px !important;
 }
 
-.post-type-shop_order .order_actions .tips {
+.post-php.post-type-shop_order .order_actions .tips {
 	width: 26px !important;
 	height: 26px !important;
 }
