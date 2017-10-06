@@ -3212,6 +3212,10 @@ button#copy-for-support {
 	padding-top: 0;
 }
 
+.woocommerce .form-table .select2-container {
+	padding-top: 2px !important;
+}
+
 .woocommerce_page_wc-settings .wrap form .submit {
 	padding-top: 25px !important;
 	border-top: 1px solid #e0e0e0 !important;
