@@ -572,6 +572,18 @@ td strong {
 	text-transform: uppercase;
 }
 
+.about-php .nav-tab,
+.credits-php .nav-tab,
+.freedoms-php .nav-tab {
+	font-size: 14px;
+}
+
+.about-php .nav-tab-wrapper,
+.credits-php .nav-tab-wrapper,
+.freedoms-php .nav-tab-wrapper {
+	padding-top: 0 !important;
+}
+
 #plugin-filter {
 	min-height: 940px;
 }
@@ -2638,6 +2650,29 @@ a.frm_show_comment:hover {
 	background: none;
 }
 
+/* Generatepress Support */
+
+.appearance_page_generate-options #generate_customize_button,
+.appearance_page_generate-options .license-key-button {
+	padding: 0 !important;
+	font-size: 13px !important;
+}
+
+.appearance_page_generate-options .license-key-button {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	min-width: 100% !important;
+	max-width: 100% !important;
+}
+
+.appearance_page_generate-options #generate_license_key_gp_premium {
+	max-width: 100% !important;
+}
+
+.appearance_page_generate-options .postbox.generate-metabox h3 {
+	padding: 10px !important;
+}
+
 /* Lifter LMS Support */
 
 .llms-nav-tab-wrapper {
@@ -3424,6 +3459,29 @@ button#copy-for-support {
 .woocommerce_options_panel .downloadable_files table .sort,
 .woocommerce_variations .downloadable_files table .sort {
 
+}
+
+.post-php.post-type-product ul.wc-tabs {
+	padding: 0 !important;
+	width: 25% !important;
+}
+
+.post-php.post-type-product .woocommerce_options_panel {
+	width: 75% !important;
+}
+
+.post-php.post-type-product ul.wc-tabs li a {
+	padding-left: 0 !important;
+}
+
+.post-php.post-type-product ul.wc-tabs li.active a {
+	background-color: inherit !important;
+}
+
+.post-php.post-type-product ul.wc-tabs li.custom_tab a::before,
+.post-php.post-type-product ul.wc-tabs li.pricing_tab a::before,
+.post-php.post-type-product ul.wc-tabs li.product_tabs_tab a::before {
+	padding-right: 5px !important;
 }
 
 .post-php.post-type-product .downloadable_files table .sort {
