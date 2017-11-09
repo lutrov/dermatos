@@ -18,12 +18,13 @@ body {
 	background-color: #fff !important;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4, h5 {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+}
+
+h2, h3, h4, h5 {
+	text-transform: uppercase !important;
 }
 
 h1 {
@@ -31,16 +32,20 @@ h1 {
 }
 
 h2 {
-	font-size: 20px !important;
+	font-size: 16px !important;
 
 }
 
 h3 {
-	font-size: 15px !important;
+	font-size: 14px !important;
 }
 
 h4 {
-	font-size: 13px !important;
+	font-size: 12px !important;
+}
+
+h5 {
+	font-size: 10px !important;
 }
 
 body,
@@ -121,7 +126,6 @@ textarea:disabled {
 }
 
 label {
-	/*text-transform: capitalize !important;*/
 	white-space: normal;
 }
 
@@ -156,7 +160,6 @@ html.wp-toolbar {
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 	text-decoration: none;
 	text-align: center;
-	/*text-transform: capitalize;*/
 	height: 28px !important;
 	line-height: 26px !important;
 }
@@ -490,19 +493,22 @@ td strong {
 	font-size: 100% !important;
 }
 
+#titlediv #title {
+	line-height: 100%;
+	height: 38px;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
+	font-size: 20px !important;
+}
+
 #titlediv #title-prompt-text {
 	margin-top: -6px !important;
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-BOLD]];
-}
-
-#titlediv #title {
-	line-height: 100%;
-	height: 2em;
+	font-size: 20px !important;
 }
 
 .wp-core-ui #welcome-panel .welcome-panel-content h2 {
-	font-size: 18px !important;
+	font-size: 16px !important;
 }
 
 .wp-core-ui #welcome-panel .button.button-hero,
@@ -568,7 +574,7 @@ td strong {
 }
 
 .nav-menus-php .locations-row-links a {
-	font-size: smaller;
+	font-size: 85% !important;
 	text-transform: uppercase;
 }
 
@@ -929,15 +935,24 @@ p.search-box {
 	color: #444;
 }
 
-.in-widget-title {
-	color: #c8c8c8;
-}
-
 .widget-top .widget-title {
 	padding: 5px 5px;
 	background-color: #f0f0f0;
 	color: #444;
 	border: none;
+}
+
+.widget-title .in-widget-title {
+	display: none;
+}
+
+.widget-content,
+.widget-control-actions {
+	padding: 0 10px;
+}
+
+.widget-control-actions {
+	padding-bottom: 10px;
 }
 
 .widget-content input[type=text],
@@ -1030,6 +1045,7 @@ h1.nav-tab-wrapper,
 	background-color: #fff;
 	color: #444 !important;
 	line-height: 1.25 !important;
+	text-transform: none !important;
 }
 
 .nav-tab-active,
@@ -1047,7 +1063,6 @@ ul.subsubsub {
 ul.subsubsub li a {
 	padding: 0 5px !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
-	/*text-transform: capitalize;*/
 }
 
 ul.subsubsub li:first-of-type a {
@@ -1116,7 +1131,7 @@ ul.subsubsub li a.current {
 #widgets-left .sidebar-name h2,
 #widgets-right .sidebar-name h2 {
 	padding: 15px;
-	font-size: 17px !important;
+	font-size: 16px !important;
 }
 
 .widgets-holder-wrap .widget-inside {
@@ -1157,7 +1172,7 @@ ul.subsubsub li a.current {
 
 .widget-title h3 {
 	padding-left: 10px !important;
-	font-size: 15px !important;
+	font-size: 14px !important;
 }
 
 #post-body-content {
@@ -1190,7 +1205,6 @@ ul.subsubsub li a.current {
 .misc-pub-section #post-status-display,
 .misc-pub-section #post-visibility-display,
 .misc-pub-section #timestamp {
-	/*text-transform: capitalize;*/
 }
 
 .misc-pub-section a {
@@ -1315,8 +1329,10 @@ ul.subsubsub li a.current {
 }
 
 .wp-switch-editor {
+	top: -5px !important;
 	background-color: #f8f8f8 !important;
 	color: #444 !important;
+	height: 28px !important;
 	line-height: 1 !important;
 	border: 1px solid #e0e0e0 !important;
 }
@@ -1331,7 +1347,6 @@ ul.subsubsub li a.current {
 
 #screen-options-wrap legend,
 #screen-options-wrap label {
-	/*text-transform: capitalize !important;*/
 }
 
 #screen-options-link-wrap,
@@ -1504,7 +1519,6 @@ form .form-table th {
 form .form-table th label {
 	margin: 0 !important;
 	display: inline-block !important;
-	/*text-transform: capitalize !important;*/
 	white-space: nowrap;
 }
 
@@ -1573,6 +1587,11 @@ form .form-table td > select {
 
 .options-discussion-php .form-table td.defaultavatarpicker fieldset {
 	margin-top: 2px !important;
+}
+
+.options-discussion-php .form-table td.defaultavatarpicker .avatar {
+	margin: 2px 4px 2px 0;
+	border: 1px solid #e0e0e0;
 }
 
 .options-media-php .form-table td {
@@ -1675,7 +1694,6 @@ form .form-table th[scope=row] + td .button-secondary,
 #custom-background .form-table th[scope=row] + td .button-secondary {
 	margin-top: 10px !important;
 	padding: 5px !important;
-	/*text-transform: capitalize !important;*/
 	text-align: center !important;
 	min-width: 100px !important;
 	line-height: 1 !important;
@@ -2252,7 +2270,6 @@ table.media .column-title .filename {
 	padding: 4px 8px !important;
 	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
-	/*text-transform: capitalize;*/
 }
 
 .wrap .add-new-h2:active,
@@ -2297,7 +2314,7 @@ form#quick-press .submit {
 }
 
 h2 a.nav-tab {
-	font-size: 13px;
+	font-size: 12px;
 }
 
 #TB_ajaxWindowTitle {
@@ -2333,7 +2350,6 @@ h2 a.nav-tab {
 
 #ws_menu_editor .ws_main_button {
 	margin: 0 auto 10px auto;
-	/*text-transform: capitalize;*/
 	width: 120px;
 }
 
@@ -2734,7 +2750,7 @@ a.frm_show_comment:hover {
 .llms-button-primary,
 .llms-button-secondary {
 	height: 28px;
-	line-height: 1;
+	line-height: 1.25;
 	padding: 4px 16px;
 	font-size: 13px;
 }
@@ -2918,16 +2934,15 @@ button#copy-for-support {
 
 .llms-builder-page-header h1.llms-headline .llms-input {
 	color: #444 !important;
-	border: 1px solid #e0e0e0 !important;
-	padding: 0 4px !important;
+	font-weight: [[FONT-WEIGHT-NORMAL]];
 }
 
 .llms-builder-page-header h1.llms-headline .llms-input:focus {
-	border: 1px solid #888 !important;
 }
 
 .llms-builder-tools h2.llms-tools-headline {
 	padding-bottom: 10px; !important
+	text-transform: none !important;
 }
 
 /* Members Support */
