@@ -2863,12 +2863,12 @@ button#copy-for-support {
 }
 
 .lifterlms_page_llms-status .wrap h1,
-.lifterlms_page_llms-add-ons .wrap h1 {
-	margin-bottom: 25px;
+.lifterlms_page_llms-add-ons .wrap h1,
+.lifterlms_page_llms-reporting .wrap h1 {
+	margin-bottom: 20px;
 }
 
 .lifterlms_page_llms-reporting .wrap h1 + form {
-	border-top: none !important;
 	margin-top: 0 !important;
 }
 
@@ -2889,6 +2889,45 @@ button#copy-for-support {
 
 .lifterlms_page_llms-labs .llms-form-field.type-submit.llms-cols-2.llms-cols-last .llms-field-button {
 	max-width: 100px;
+}
+
+.llms-course-builder .llms-builder-tools {
+	background-color: #f0f0f0;
+}
+
+.llms-course-builder .llms-builder-tools .llms-tool-button {
+	background-color: transparent;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]];
+}
+
+.llms-course-builder .llms-builder-tools .llms-tool-button:hover {
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	color: #ffffff;
+}
+
+.llms-course-builder .llms-builder-tools .llms-tool-button .fa {
+	padding: 16px;
+	background-color: [[COLOUR-HIGHLIGHT-PRIMARY]];
+	color: #fff;
+}
+
+.llms-builder-page-header h1.llms-headline {
+	margin: 20px 0;
+}
+
+.llms-builder-page-header h1.llms-headline .llms-input {
+	color: #444 !important;
+	border: 1px solid #e0e0e0 !important;
+	padding: 0 4px !important;
+}
+
+.llms-builder-page-header h1.llms-headline .llms-input:focus {
+	border: 1px solid #888 !important;
+}
+
+.llms-builder-tools h2.llms-tools-headline {
+	padding-bottom: 10px; !important
 }
 
 /* Members Support */
