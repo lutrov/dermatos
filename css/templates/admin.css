@@ -1937,6 +1937,10 @@ form .form-table tr.show-admin-bar td label {
 	min-width: 100px !important;
 }
 
+#upgrade.button {
+	margin-right: 10px;
+}
+
 #add-new-comment .button {
 	margin-top: 10px;
 }
