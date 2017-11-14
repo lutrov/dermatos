@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 10.1
+Version: 11.0
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -605,6 +605,36 @@ function dermatos_hack_lifterlms_title_filter($title, $heading) {
 		$title = str_replace('Lifterlms', 'LifterLMS', $title);
 	}
 	return $title;
+}
+
+//
+// Standardise the default admin menu labels.
+//
+add_action('admin_menu', 'dermatos_change_menu_labels_action', 88);
+function dermatos_change_menu_labels_action() {
+	global $submenu;
+	$items = array(
+		'edit.php?post_type=page', 			// Pages
+		'edit.php', 					// Posts
+		'upload.php', 				// Media Library
+		'edit.php?post_type=course', 		// Lifter Courses
+		'edit.php?post_type=llms_membership', 	// Lifter Memberships
+		'edit.php?post_type=llms_engagement', 	// Lifter Engagements
+		'edit.php?post_type=llms_order', 		// Lifter Orders
+		'plugins.php', 				// Plugins
+		'users.php', 					// Users
+		'tools.php' 					// Tools
+	);
+	foreach ($items as $key) {
+		if (isset($submenu[$key]) == true) {
+			if (isset($submenu[$key][5][0]) == true) {
+				$submenu[$key][5][0] = __('Show All');
+			}
+			if (isset($submenu[$key][10][0]) == true) {
+				$submenu[$key][10][0] = __('Add New');
+			}
+		}
+	}
 }
 
 //
