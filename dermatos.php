@@ -5,7 +5,7 @@ Plugin Name: Dermatos
 Description: A clean and simple admin theme which requires no configuration. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 11.0
+Version: 12.0
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -482,8 +482,8 @@ function dermatos_heartbeat_interval_filter($settings) {
 //  Output buffering functions.
 //
 function dermatos_buffer_callback($html) {
-	$html = dermatos_hack_woocommerce_admin_headers($html);
-	$html = dermatos_hack_lifterlms_admin_headers($html);
+	$html = dermatos_hack_woocommerce_admin_strings($html);
+	$html = dermatos_hack_lifterlms_admin_strings($html);
 	if (apply_filters('dermatos_admin_replace_strings_filter', DERMATOS_ADMIN_REPLACE_STRINGS) == true) {
 		$html = dermatos_replace_strings($html);
 	}
@@ -531,7 +531,7 @@ function dermatos_replace_config_strings($html) {
 //
 // Woocommerce hack to show correct page titles for reports, settings, status and addons admin pages.
 //
-function dermatos_hack_woocommerce_admin_headers($html) {
+function dermatos_hack_woocommerce_admin_strings($html) {
 	if (strpos($html, '<div class="wrap woocommerce') > 0) {
 		$page = isset($_GET['page']) ? $_GET['page'] : null;
 		$heading = ucwords(get_admin_page_title());
@@ -553,44 +553,60 @@ function dermatos_hack_woocommerce_admin_headers($html) {
 }
 
 //
-// Lifter LMS hack to show correct page titles for settings, reporting and status admin pages.
+// Lifter hack to show correct page titles for settings, reporting and status admin pages, as well as "Add New" buttons.
 //
-function dermatos_hack_lifterlms_admin_headers($html) {
+function dermatos_hack_lifterlms_admin_strings($html) {
 	$page = isset($_GET['page']) ? $_GET['page'] : null;
-	$heading = ucwords(get_admin_page_title());
-	switch ($page) {
-		case 'lifterlms':
-			$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', 'LifterLMS Dashboard'), $html);
-			break;
-		case 'llms-settings':
-			$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $heading), $html);
-			break;
-		case 'llms-reporting':
-			if (strpos($html, '<div class="wrap lifterlms llms-reporting tab--students">') > 0) {
-				$html = str_replace('<div class="wrap lifterlms llms-reporting tab--students">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
-			} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--sales">') > 0) {
-				$html = str_replace('<div class="wrap lifterlms llms-reporting tab--sales">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
-			} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--enrollments">') > 0) {
-				$html = str_replace('<div class="wrap lifterlms llms-reporting tab--enrollments">', sprintf('<div class="wrap lifterlms llms-reporting tab--enrollments"><h1>%s</h1>', $heading), $html);
-			}
-			break;
-		case 'llms-import':
-			$html = str_replace('<h1>LifterLMS Importer</h1>', sprintf('<h1>%s</h1>', $heading), $html);
-			break;
-		case 'llms-status':
-			if (strpos($html, '<div class="wrap lifterlms llms-status llms-status--report">') > 0) {
-				$html = str_replace('<div class="wrap lifterlms llms-status llms-status--report">', sprintf('<div class="wrap lifterlms llms-status llms-status--report"><h1>%s</h1>', $heading), $html);
-			} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--tools">') > 0) {
-				$html = str_replace('<div class="wrap lifterlms llms-status llms-status--tools">', sprintf('<div class="wrap lifterlms llms-status llms-status--tools"><h1>%s</h1>', $heading), $html);
-			} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--logs">') > 0) {
-				$html = str_replace('<div class="wrap lifterlms llms-status llms-status--logs">', sprintf('<div class="wrap lifterlms llms-status llms-status--logs"><h1>%s</h1>', $heading), $html);
-			}
-			break;
-		case 'llms-add-ons':
-			if (strpos($html, '<div class="wrap lifterlms lifterlms-settings">') > 0) {
-				$html = str_replace('<h1>LifterLMS Add-Ons, Services, and Resources</h1>', sprintf('<h1>%s</h1>', $heading), $html);
-			}
-			break;
+	if (strlen($page) > 0) {
+		$heading = ucwords(get_admin_page_title());
+		switch ($page) {
+			case 'lifterlms':
+				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', 'LifterLMS Dashboard'), $html);
+				break;
+			case 'llms-settings':
+				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $heading), $html);
+				break;
+			case 'llms-reporting':
+				if (strpos($html, '<div class="wrap lifterlms llms-reporting tab--students">') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--students">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--sales">') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--sales">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--enrollments">') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--enrollments">', sprintf('<div class="wrap lifterlms llms-reporting tab--enrollments"><h1>%s</h1>', $heading), $html);
+				}
+				break;
+			case 'llms-import':
+				$html = str_replace('<h1>LifterLMS Importer</h1>', sprintf('<h1>%s</h1>', $heading), $html);
+				break;
+			case 'llms-status':
+				if (strpos($html, '<div class="wrap lifterlms llms-status llms-status--report">') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--report">', sprintf('<div class="wrap lifterlms llms-status llms-status--report"><h1>%s</h1>', $heading), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--tools">') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--tools">', sprintf('<div class="wrap lifterlms llms-status llms-status--tools"><h1>%s</h1>', $heading), $html);
+				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--logs">') > 0) {
+					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--logs">', sprintf('<div class="wrap lifterlms llms-status llms-status--logs"><h1>%s</h1>', $heading), $html);
+				}
+				break;
+			case 'llms-add-ons':
+				if (strpos($html, '<div class="wrap lifterlms lifterlms-settings">') > 0) {
+					$html = str_replace('<h1>LifterLMS Add-Ons, Services, and Resources</h1>', sprintf('<h1>%s</h1>', $heading), $html);
+				}
+				break;
+		}
+	}
+	$type = isset($_GET['post_type']) ? $_GET['post_type'] : null;
+	if (strlen($type) > 0) {
+		switch ($type) {
+			case 'course':
+				$html = preg_replace('#\b(Add Course)\b#', 'Add New', $html);
+				break;
+			case 'llms_membership':
+				$html = preg_replace('#\b(Add Membership)\b#', 'Add New', $html);
+				break;
+			case 'llms_engagement':
+				$html = preg_replace('#\b(Add Engagement)\b#', 'Add New', $html);
+				break;
+		}
 	}
 	return trim($html);
 }
