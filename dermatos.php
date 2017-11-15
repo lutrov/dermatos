@@ -633,6 +633,8 @@ function dermatos_change_menu_labels_action() {
 		'edit.php?post_type=page', 			// Pages
 		'edit.php', 					// Posts
 		'upload.php', 				// Media Library
+		'edit.php?post_type=product',		// Woocommerce Products
+		'edit.php?post_type=wpsl_stores',		// WP Store Locator
 		'edit.php?post_type=course', 		// Lifter Courses
 		'edit.php?post_type=llms_membership', 	// Lifter Memberships
 		'edit.php?post_type=llms_engagement', 	// Lifter Engagements
@@ -650,6 +652,13 @@ function dermatos_change_menu_labels_action() {
 				$submenu[$key][10][0] = __('Add New');
 			}
 		}
+	}
+	// As we should expect, Ninja Forms (V2.9) have to do their own thing. :-/
+	if (isset($submenu['ninja-forms'][0][0]) == true) {
+		$submenu['ninja-forms'][0][0] = __('Show All');
+	}
+	if (isset($submenu['ninja-forms'][1][0]) == true) {
+		$submenu['ninja-forms'][1][0] = __('Add New');
 	}
 }
 
