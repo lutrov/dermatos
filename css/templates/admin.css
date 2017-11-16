@@ -753,6 +753,8 @@ a,
 #adminmenu .update-plugins {
 	background-color: [[COLOUR-HIGHLIGHT-ACCENT]] !important;
 	border-radius: 50% !important;
+	width: 18px;
+	height: 18px;
 }
 
 div.wp-menu-image {
