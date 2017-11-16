@@ -482,8 +482,9 @@ function dermatos_heartbeat_interval_filter($settings) {
 //  Output buffering functions.
 //
 function dermatos_buffer_callback($html) {
-	$html = dermatos_hack_woocommerce_admin_strings($html);
 	$html = dermatos_hack_lifterlms_admin_strings($html);
+	$html = dermatos_hack_woocommerce_admin_strings($html);
+	$html = dermatos_hack_wordpress_admin_strings($html);
 	if (apply_filters('dermatos_admin_replace_strings_filter', DERMATOS_ADMIN_REPLACE_STRINGS) == true) {
 		$html = dermatos_replace_strings($html);
 	}
@@ -524,30 +525,6 @@ function dermatos_replace_config_strings($html) {
 	}
 	if (apply_filters('dermatos_admin_remove_dubya_dubya_dubya_from_urls_filter', DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS) == true) {
 		$html = str_replace('//www.', '//', $html);
-	}
-	return trim($html);
-}
-
-//
-// Woocommerce hack to show correct page titles for reports, settings, status and addons admin pages.
-//
-function dermatos_hack_woocommerce_admin_strings($html) {
-	if (strpos($html, '<div class="wrap woocommerce') > 0) {
-		$page = isset($_GET['page']) ? $_GET['page'] : null;
-		$heading = ucwords(get_admin_page_title());
-		if (substr(strtolower($heading), 0, 11) <> 'woocommerce') {
-			$heading = sprintf('WooCommerce %s', $heading);
-		}
-		switch ($page) {
-			case 'wc-reports':
-			case 'wc-settings':
-			case 'wc-status':
-				$html = str_replace('<div class="wrap woocommerce">', sprintf('<div class="wrap woocommerce"><h1>%s</h1>', $heading), $html);
-				break;
-			case 'wc-addons':
-				$html = str_replace('<div class="wrap woocommerce wc_addons_wrap">', sprintf('<div class="wrap woocommerce wc_addons_wrap"><h1>%s</h1>', $heading), $html);
-				break;
-		}
 	}
 	return trim($html);
 }
@@ -622,6 +599,44 @@ function dermatos_hack_lifterlms_title_filter($title, $heading) {
 	}
 	return $title;
 }
+
+//
+// Woocommerce hack to show correct page titles for reports, settings, status and addons admin pages.
+//
+function dermatos_hack_woocommerce_admin_strings($html) {
+	if (strpos($html, '<div class="wrap woocommerce') > 0) {
+		$page = isset($_GET['page']) ? $_GET['page'] : null;
+		$heading = ucwords(get_admin_page_title());
+		if (substr(strtolower($heading), 0, 11) <> 'woocommerce') {
+			$heading = sprintf('WooCommerce %s', $heading);
+		}
+		switch ($page) {
+			case 'wc-reports':
+			case 'wc-settings':
+			case 'wc-status':
+				$html = str_replace('<div class="wrap woocommerce">', sprintf('<div class="wrap woocommerce"><h1>%s</h1>', $heading), $html);
+				break;
+			case 'wc-addons':
+				$html = str_replace('<div class="wrap woocommerce wc_addons_wrap">', sprintf('<div class="wrap woocommerce wc_addons_wrap"><h1>%s</h1>', $heading), $html);
+				break;
+		}
+	}
+	return trim($html);
+}
+
+//
+// Miscellaneous WP string replacement hacks.
+//
+function dermatos_hack_wordpress_admin_strings($html) {
+	// Strip username from edit user screen heading
+	if (preg_match('#<h1 class="wp-heading-inline">Edit User (.+)</h1>#', $html, $matches) == 1) {
+		if (isset($matches[1]) == true) {
+			$html = str_replace($matches[0], str_replace($matches[1], null, $matches[0]), $html);
+		}
+	}
+	return trim($html);
+}
+
 
 //
 // Standardise the default admin menu labels.
