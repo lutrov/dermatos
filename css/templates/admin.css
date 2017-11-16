@@ -141,7 +141,7 @@ kbd {
 }
 
 iframe,
-body.iframe {
+iframe * {
 	background-color: #fff !important;
 }
 
@@ -2052,7 +2052,8 @@ label span.description {
 
 .post-php .wrap h1.wp-heading-inline,
 .post-new-php .wrap h1.wp-heading-inline,
-.upload-php .wrap h1.wp-heading-inline {
+.upload-php .wrap h1.wp-heading-inline,
+.update-core-php .wrap h1 {
 	padding-bottom: 20px;
 }
 
