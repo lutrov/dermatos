@@ -650,7 +650,7 @@ function dermatos_change_menu_labels_action() {
 		'upload.php', 				// Media Library
 		'edit.php?post_type=product',		// Woocommerce Products
 		'edit.php?post_type=wpsl_stores',		// WP Store Locator
-		'edit.php?post_type=course', 		// Sensei & Lifter Courses
+		'edit.php?post_type=course', 		// Sensei Courses (Also Lifter Courses)
 		'edit.php?post_type=lesson', 		// Sensei Lessons
 		'edit.php?post_type=question', 		// Sensei Questions
 		'edit.php?post_type=llms_membership', 	// Lifter Memberships
@@ -659,7 +659,7 @@ function dermatos_change_menu_labels_action() {
 		'edit.php?post_type=forum',			// Bbpress Forums
 		'edit.php?post_type=reply',			// Bbpress Replies
 		'edit.php?post_type=topic',			// Bbpress Topics
-		'edit.php?post_type=slide',			// ????
+		'edit.php?post_type=slide',			// Woo Featured Slider
 		'plugins.php', 				// Plugins
 		'users.php', 					// Users
 		'tools.php' 					// Tools
