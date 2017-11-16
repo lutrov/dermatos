@@ -650,10 +650,16 @@ function dermatos_change_menu_labels_action() {
 		'upload.php', 				// Media Library
 		'edit.php?post_type=product',		// Woocommerce Products
 		'edit.php?post_type=wpsl_stores',		// WP Store Locator
-		'edit.php?post_type=course', 		// Lifter Courses
+		'edit.php?post_type=course', 		// Sensei & Lifter Courses
+		'edit.php?post_type=lesson', 		// Sensei Lessons
+		'edit.php?post_type=question', 		// Sensei Questions
 		'edit.php?post_type=llms_membership', 	// Lifter Memberships
 		'edit.php?post_type=llms_engagement', 	// Lifter Engagements
 		'edit.php?post_type=llms_order', 		// Lifter Orders
+		'edit.php?post_type=forum',			// Bbpress Forums
+		'edit.php?post_type=reply',			// Bbpress Replies
+		'edit.php?post_type=topic',			// Bbpress Topics
+		'edit.php?post_type=slide',			// ????
 		'plugins.php', 				// Plugins
 		'users.php', 					// Users
 		'tools.php' 					// Tools
@@ -668,12 +674,16 @@ function dermatos_change_menu_labels_action() {
 			}
 		}
 	}
-	// As we should expect, Ninja Forms (V2.9) have to do their own thing. :-/
+	// Ninja Forms Plugin
 	if (isset($submenu['ninja-forms'][0][0]) == true) {
 		$submenu['ninja-forms'][0][0] = __('Show All');
 	}
 	if (isset($submenu['ninja-forms'][1][0]) == true) {
 		$submenu['ninja-forms'][1][0] = __('Add New');
+	}
+	// Groups Plugin
+	if (isset($submenu['groups-admin'][0][0]) == true) {
+		$submenu['groups-admin'][0][0] = __('Show All');
 	}
 }
 
