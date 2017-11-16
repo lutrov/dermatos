@@ -2048,6 +2048,12 @@ label span.description {
 	font: [[FONT-WEIGHT-NORMAL]] 13px "[[FONT-FAMILY]]", monospace !important;
 }
 
+.post-php .wrap h1.wp-heading-inline,
+.post-new-php .wrap h1.wp-heading-inline,
+.upload-php .wrap h1.wp-heading-inline {
+	padding-bottom: 20px;
+}
+
 .update-core-php form.upgrade a.button {
 	padding: 4px 10px !important;
 	line-height: 1.5 !important;
