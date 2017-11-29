@@ -1743,6 +1743,8 @@ form .form-table tr.show-admin-bar td label {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background-color: #f8f8f8;
 	border: 1px solid #e0e0e0;
+height: 22px !important;
+margin-top: 2px !important;
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -3327,6 +3329,7 @@ button#copy-for-support {
 
 .woocommerce .form-table .select2-container {
 	padding-top: 2px !important;
+	margin-bottom: 8px !important;
 }
 
 .woocommerce_page_wc-settings .wrap form .submit {
@@ -3441,7 +3444,12 @@ button#copy-for-support {
 }
 
 .woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input[type=text] {
-	margin-top: 0 !important;
+	height: 28px !important;
+	margin-top: 2px !important;
+}
+
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input[type="text"].select2-search__field {
+	height: 22px !important;
 }
 
 .woocommerce_page_wc-settings .form-table td.forminp fieldset {
