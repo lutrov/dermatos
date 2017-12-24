@@ -3303,6 +3303,11 @@ button#copy-for-support {
 #woocommerce-order-notes ul.order_notes li.system-note .note_content {
 }
 
+.widefat .column-order_actions a.button {
+	width: 24px !important;
+	height: 24px !important;
+}
+
 .forminp .wc_tax_rates.widefat th,
 .forminp .shippingrows.widefat th,
 .wc_shipping.widefat th {
