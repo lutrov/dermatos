@@ -405,8 +405,8 @@ h2.nav-tab-wrapper a {
 }
 
 h2.hndle.ui-sortable-handle {
-	font-size: 16px !important;
 	border-bottom: 1px solid #e0e0e0;
+	font-size: 16px !important;
 }
 
 #adminmenu a.wp-has-submenu,
@@ -2501,6 +2501,31 @@ table.acf_input tbody tr td.label label {
 
 .acf-columns-2 .acf-column-2 {
 	display: none !important;
+}
+
+/* Code Snippets Support */
+
+.snippets_page_add-snippet .wrap h1 + form,
+.snippets_page_edit-snippet .wrap h1 + form {
+	padding-top: 0 !important;
+	border-top: none;
+}
+
+.snippets_page_add-snippet form .form-table th,
+.snippets_page_edit-snippet form .form-table th {
+	width: auto !important;
+	text-align: left !important;
+}
+
+.snippets_page_add-snippet .tagit,
+.snippets_page_edit-snippet .tagit {
+	border-style: none;
+	border-width: 0;
+}
+
+.snippets_page_add-snippet .tagit .tagit-new,
+.snippets_page_edit-snippet .tagit .tagit-new {
+	margin-left: -5px;
 }
 
 /* Custom Permalinks Support */
