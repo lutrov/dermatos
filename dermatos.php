@@ -646,24 +646,25 @@ add_action('admin_menu', 'dermatos_change_menu_labels_action', 88);
 function dermatos_change_menu_labels_action() {
 	global $submenu;
 	$items = array(
-		'edit.php?post_type=page', 			// Pages
-		'edit.php', 					// Posts
-		'upload.php', 				// Media Library
-		'edit.php?post_type=product',		// Woocommerce Products
-		'edit.php?post_type=wpsl_stores',		// WP Store Locator
-		'edit.php?post_type=course', 		// Sensei Courses (Also Lifter Courses)
-		'edit.php?post_type=lesson', 		// Sensei Lessons
-		'edit.php?post_type=question', 		// Sensei Questions
-		'edit.php?post_type=llms_membership', 	// Lifter Memberships
-		'edit.php?post_type=llms_engagement', 	// Lifter Engagements
-		'edit.php?post_type=llms_order', 		// Lifter Orders
-		'edit.php?post_type=forum',			// Bbpress Forums
-		'edit.php?post_type=reply',			// Bbpress Replies
-		'edit.php?post_type=topic',			// Bbpress Topics
-		'edit.php?post_type=slide',			// Woo Featured Slider
-		'plugins.php', 				// Plugins
-		'users.php', 					// Users
-		'tools.php' 					// Tools
+		'edit.php?post_type=page', 			 // Pages
+		'edit.php', 					 // Posts
+		'upload.php', 				 // Media Library
+		'edit.php?post_type=product',		 // Woocommerce Products
+		'edit.php?post_type=wpsl_stores',		 // WP Store Locator
+		'edit.php?post_type=generate_page_header', // Generatepress Premium
+		'edit.php?post_type=course', 		 // Sensei Courses (Also Lifter Courses)
+		'edit.php?post_type=lesson', 		 // Sensei Lessons
+		'edit.php?post_type=question', 		 // Sensei Questions
+		'edit.php?post_type=llms_membership', 	 // Lifter Memberships
+		'edit.php?post_type=llms_engagement', 	 // Lifter Engagements
+		'edit.php?post_type=llms_order', 		 // Lifter Orders
+		'edit.php?post_type=forum',			 // Bbpress Forums
+		'edit.php?post_type=reply',			 // Bbpress Replies
+		'edit.php?post_type=topic',			 // Bbpress Topics
+		'edit.php?post_type=slide',			 // Woo Featured Slider
+		'plugins.php', 				 // Plugins
+		'users.php', 					 // Users
+		'tools.php' 					 // Tools
 	);
 	foreach ($items as $key) {
 		if (isset($submenu[$key]) == true) {
