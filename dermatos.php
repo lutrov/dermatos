@@ -6,7 +6,7 @@ Description: A clean and simple admin theme which requires no configuration. Cus
 Plugin URI: https://github.com/lutrov/dermatos
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 12.1
+Version: 12.2
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -685,6 +685,10 @@ function dermatos_change_menu_labels_action() {
 	// Groups Plugin
 	if (isset($submenu['groups-admin'][0][0]) == true) {
 		$submenu['groups-admin'][0][0] = __('Show All');
+	}
+	// Code Snippets Plugin
+	if (isset($submenu['snippets'][0][0]) == true) {
+		$submenu['snippets'][0][0] = __('Show All');
 	}
 }
 
