@@ -6,7 +6,7 @@ Description: A clean and simple admin theme which requires no configuration. Cus
 Plugin URI: https://github.com/lutrov/dermatos
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 12.2
+Version: 12.3
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -79,6 +79,7 @@ function dermatos_replacement_strings() {
 		"StudioBlue" => "Studioblue",
 		"SophisticatedFolio" => "Sophisticatedfolio",
 		"SmartCrawl" => "Smartcrawl",
+		"SkyVerge" => "Skyverge",
 		"SiteGround" => "Siteground",
 		"SimpleSlider" => "Simpleslider",
 		"SimplePress" => "Simplepress",
@@ -131,6 +132,7 @@ function dermatos_replacement_strings() {
 		"InStyle" => "Instyle",
 		"InReview" => "Inreview",
 		"iMac" => "Imac",
+		"IgniteWoo.com" => "Ignitewoo",
 		"Howdy" => "Hello",
 		"GrungeMag" => "Grungemag",
 		"GridPress" => "Gridpress",
@@ -192,6 +194,7 @@ function dermatos_replacement_strings() {
 		"AppThemes" => "Appthemes",
 		"AffiliateWP" => "Affiliate WP",
 		"AdWords" => "Adwords",
+		"AdEspresso" => "Adespresso"
 	);
 	return $strings;
 }
