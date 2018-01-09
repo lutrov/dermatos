@@ -3604,8 +3604,19 @@ button#copy-for-support {
 	padding-right: 5px !important;
 }
 
-.post-php.post-type-product ul.wc-tabs li.attributes_tab a[href="#woocommerce_groups"]::before {
+.post-php.post-type-product ul.wc-tabs li.attributes_tab a[href="#woocommerce_groups"]::before,
+.post-new-php.post-type-product ul.wc-tabs li.attributes_tab a[href="#woocommerce_groups"]::before {
 	padding-right: 10px !important;
+}
+
+.post-php.post-type-product ul.wc-tabs li.advanced_tab a[href="#ign_forms"]::before,
+.post-new-php.post-type-product ul.wc-tabs li.advanced_tab a[href="#ign_forms"]::before {
+	padding-right: 10px !important;
+}
+
+.post-php.post-type-product ul.wc-tabs li.gift_cert_settings a[href="#gift_certificates"]::before,
+.post-new-php.post-type-product ul.wc-tabs li.gift_cert_settings a[href="#gift_certificates"]::before {
+	padding-right: 5px !important;
 }
 
 .post-php.post-type-product .downloadable_files table .sort {
