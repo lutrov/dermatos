@@ -6,7 +6,7 @@ Description: A clean and simple admin theme which requires no configuration. Cus
 Plugin URI: https://github.com/lutrov/dermatos
 Author: Ivan Lutrov
 Author URI: http://lutrov.com/
-Version: 12.3
+Version: 12.4
 Notes: This plugin provides an API to customise the default constant values. See the "readme.md" file for more.
 */
 
@@ -486,8 +486,9 @@ function dermatos_heartbeat_interval_filter($settings) {
 //  Output buffering functions.
 //
 function dermatos_buffer_callback($html) {
-	$html = dermatos_hack_lifterlms_admin_strings($html);
-	$html = dermatos_hack_woocommerce_admin_strings($html);
+	if (dermatos_is_plugin_active('woocommerce/woocommerce.php') == true) {
+		$html = dermatos_hack_woocommerce_admin_strings($html);
+	}
 	$html = dermatos_hack_wordpress_admin_strings($html);
 	if (apply_filters('dermatos_admin_replace_strings_filter', DERMATOS_ADMIN_REPLACE_STRINGS) == true) {
 		$html = dermatos_replace_strings($html);
@@ -513,6 +514,7 @@ function dermatos_replace_strings($html) {
 	}
 	return $html;
 }
+
 //
 // Replace strings based on configuration settings.
 //
@@ -531,77 +533,6 @@ function dermatos_replace_config_strings($html) {
 		$html = str_replace('//www.', '//', $html);
 	}
 	return trim($html);
-}
-
-//
-// Lifter hack to show correct page titles for settings, reporting and status admin pages, as well as "Add New" buttons.
-//
-function dermatos_hack_lifterlms_admin_strings($html) {
-	$page = isset($_GET['page']) ? $_GET['page'] : null;
-	if (strlen($page) > 0) {
-		$heading = ucwords(get_admin_page_title());
-		switch ($page) {
-			case 'lifterlms':
-				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', 'LifterLMS Dashboard'), $html);
-				break;
-			case 'llms-settings':
-				$html = str_replace('<div class="wrap lifterlms lifterlms-settings">', sprintf('<div class="wrap lifterlms lifterlms-settings"><h1>%s</h1>', $heading), $html);
-				break;
-			case 'llms-reporting':
-				if (strpos($html, '<div class="wrap lifterlms llms-reporting tab--students">') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--students">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--sales">') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--sales">', sprintf('<div class="wrap lifterlms llms-reporting tab--students"><h1>%s</h1>', $heading), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-reporting tab--enrollments">') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-reporting tab--enrollments">', sprintf('<div class="wrap lifterlms llms-reporting tab--enrollments"><h1>%s</h1>', $heading), $html);
-				}
-				break;
-			case 'llms-import':
-				$html = str_replace('<h1>LifterLMS Importer</h1>', sprintf('<h1>%s</h1>', $heading), $html);
-				break;
-			case 'llms-status':
-				if (strpos($html, '<div class="wrap lifterlms llms-status llms-status--report">') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--report">', sprintf('<div class="wrap lifterlms llms-status llms-status--report"><h1>%s</h1>', $heading), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--tools">') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--tools">', sprintf('<div class="wrap lifterlms llms-status llms-status--tools"><h1>%s</h1>', $heading), $html);
-				} elseif (strpos($html, '<div class="wrap lifterlms llms-status llms-status--logs">') > 0) {
-					$html = str_replace('<div class="wrap lifterlms llms-status llms-status--logs">', sprintf('<div class="wrap lifterlms llms-status llms-status--logs"><h1>%s</h1>', $heading), $html);
-				}
-				break;
-			case 'llms-add-ons':
-				if (strpos($html, '<div class="wrap lifterlms lifterlms-settings">') > 0) {
-					$html = str_replace('<h1>LifterLMS Add-Ons, Services, and Resources</h1>', sprintf('<h1>%s</h1>', $heading), $html);
-				}
-				break;
-		}
-	}
-	$type = isset($_GET['post_type']) ? $_GET['post_type'] : null;
-	if (strlen($type) > 0) {
-		switch ($type) {
-			case 'course':
-				$html = preg_replace('#\b(Add Course)\b#', 'Add New', $html);
-				break;
-			case 'llms_membership':
-				$html = preg_replace('#\b(Add Membership)\b#', 'Add New', $html);
-				break;
-			case 'llms_engagement':
-				$html = preg_replace('#\b(Add Engagement)\b#', 'Add New', $html);
-				break;
-		}
-	}
-	return trim($html);
-}
-
-//
-// Change Lifter LMS admin screen dashboard page title.
-// TODO: This is a hack and should be removed once the plugin author fixes the bug.
-//
-add_filter('admin_title', 'dermatos_hack_lifterlms_title_filter', 11, 2);
-function dermatos_hack_lifterlms_title_filter($title, $heading) {
-	if (substr($title, 0, 9) == 'Lifterlms') {
-		$title = str_replace('Lifterlms', 'LifterLMS', $title);
-	}
-	return $title;
 }
 
 //
