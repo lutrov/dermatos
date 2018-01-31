@@ -1488,6 +1488,7 @@ legend {
 .wrap h1 + form,
 .wrap h1 + div + form,
 .wrap h1 + div + p + form,
+.wrap h1 + p + form,
 .wrap h1 + hr + form,
 .wrap h1 + a + hr + form {
 	margin-top: 20px !important;
@@ -1498,6 +1499,7 @@ legend {
 .wrap h1 + form .submit,
 .wrap h1 + div + form .submit,
 .wrap h1 + div + p + form .submit,
+.wrap h1 + p + form .submit,
 .wrap h1 + hr + form .submit,
 .wrap h1 + a + hr + form .submit {
 	padding-top: 25px !important;
@@ -3007,6 +3009,12 @@ button#copy-for-support {
 	text-transform: none !important;
 }
 
+/* Memberpress Support */
+
+.wrap .icon32 {
+	display: none;
+}
+
 /* Members Support */
 
 .users_page_roles .widefat.members-roles-select td.column-cap strong,
@@ -3417,7 +3425,6 @@ button#copy-for-support {
 }
 
 .product_page_product_importer label {
-	text-transform: capitalize !important;
 }
 
 .woo-nav-tab-wrapper {
@@ -3833,6 +3840,106 @@ button#copy-for-support {
 .woocommerce-BlankState-cta.button {
 	height: 40px !important;
 	line-height: 1 !important;
+}
+
+.woocommerce-exporter-wrapper,
+.woocommerce-importer-wrapper,
+.woocommerce-progress-form-wrapper {
+	max-width: none;
+	margin: 0;
+	text-align: left;
+}
+
+.woocommerce-exporter-options,
+.woocommerce-importer-options {
+	margin-bottom: 20px !important;
+}
+
+.woocommerce-exporter-wrapper .button,
+.woocommerce-importer-wrapper .button,
+.woocommerce-progress-form-wrapper .button {
+	font-size: inherit;
+	line-height: 1 !important;
+}
+
+.woocommerce-exporter header,
+.woocommerce-importer header {
+	padding: 25px 0 !important;
+}
+
+.woocommerce-exporter header h2,
+.woocommerce-importer header h2 {
+	display: none;
+}
+
+.woocommerce-exporter header p:nth-of-type(1) ,
+.woocommerce-importer header p:nth-of-type(1) {
+	margin: -10px 0 -20px 0 !important;
+}
+
+.woocommerce-progress-form-wrapper .wc-progress-steps {
+	margin-top: 20px;
+}
+
+.woocommerce-exporter-wrapper .wc-actions,
+.woocommerce-importer-wrapper .wc-actions,
+.woocommerce-progress-form-wrapper .wc-actions {
+	padding-right: 0;
+}
+
+.select2-search .select2-search__field,
+.select2-search .select2-search__field:focus {
+	border: none !important;
+}
+
+.woocommerce_page_wc_dynamic_pricing .tab_top {
+	padding-left: 0;
+}
+
+.woocommerce_page_wc_dynamic_pricing #woocommerce-pricing-rules-wrap {
+	margin-left: -10px;
+}
+
+/* WP All Export Support */
+
+.wpallexport-plugin h2,
+.wpallexport-plugin h3 {
+	color: #444;
+	border-bottom: none;
+}
+
+.wpallexport-plugin a.wpallexport-import-from span {
+	margin-top: -5px;
+}
+
+.wpallexport-plugin .back {
+	height: 28px;
+	line-height: 2.2 !important;
+}
+
+.wpallexport-plugin .wp_all_export_btn_with_note .button {
+	height: 30px !important;
+}
+
+.wpallexport-plugin #wp_all_export_add_rule {
+	height: 30px !important;
+	padding: 4px 40px;
+	background-color: transparent;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.wpallexport-plugin .wpallexport-title h3 {
+	margin-top: 0 !important;
+	border-bottom: none;
+}
+
+.wpallexport-plugin .form-table th[scope="row"] + td .button-secondary {
+	margin-top: -4px !important;
+}
+
+.wpallexport-plugin .wpallexport-free-edition-notice {
+	display: none;
 }
 
 /* WP Crontrol Support */
