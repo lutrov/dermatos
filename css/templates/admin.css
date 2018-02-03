@@ -1023,6 +1023,23 @@ p.search-box {
 	line-height: 1.75 !important;
 }
 
+.theme-install-php .theme-browser .theme .theme-id-container {
+	padding: 20px 0;
+}
+
+.theme-install-php .theme-browser .theme .theme-name {
+	padding: 0 15px;
+	font-size: 15px !important;
+}
+
+.theme-install-php .theme-browser .theme .theme-actions {
+	background-color: inherit;
+}
+
+.theme-install-php .theme-actions a.button {
+	padding: 0 18px !important;
+}
+
 .plugin-install-php .filter-links li:first-of-type > a {
 	margin-left: 0;
 }
@@ -2107,6 +2124,8 @@ label span.description {
 	background-color: #f0f0f0;
 	color: #444;
 	line-height: 40px;
+	font-size: 15px !important;
+	font-weight: bold;
 }
 
 .themes-php .theme-browser .theme .theme-actions {
