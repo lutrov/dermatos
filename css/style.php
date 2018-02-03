@@ -73,7 +73,7 @@ if ($file == 'admin' || $file == 'hacks' || $file == 'login' || $file == 'custom
 				apply_filters('dermatos_font_weight_bold_filter', DERMATOS_FONT_WEIGHT_BOLD),
 				apply_filters('dermatos_font_weight_extra_bold_filter', DERMATOS_FONT_WEIGHT_EXTRA_BOLD),
 			),
-			str_replace(array("\x09", "\x0A", "\x0D", ': ', ', ', '{ ', ' {', '; ', ';}', ' }', '} ', ' !'), array(null, null, null, ':', ',', '{', '{', ';', '}', '}', '}', '!'), preg_replace(array('#/\*[^*]*\*+([^/][^*]*\*+)*/#', '#\s[\s]+#'), array(null, ' '), $css))
+			str_replace(array("\x09", "\x0A", "\x0D", ': ', ', ', '{ ', ' {', '; ', ';}', ' }', '} ', ' !', ' + ', ' > '), array(null, null, null, ':', ',', '{', '{', ';', '}', '}', '}', '!', '+', '>'), preg_replace(array('#/\*[^*]*\*+([^/][^*]*\*+)*/#', '#\s[\s]+#'), array(null, ' '), $css))
 		);
 		// Output the correct mime type and set expiry header to 1 hour
 		header('Content-Type: text/css; charset: UTF-8');
