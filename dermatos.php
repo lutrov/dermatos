@@ -78,6 +78,7 @@ function dermatos_replacement_strings() {
 		"StudioPress" => "Studiopress",
 		"StudioBlue" => "Studioblue",
 		"SophisticatedFolio" => "Sophisticatedfolio",
+		"SomewhereWarm" => "Somewherewarm",
 		"SmartCrawl" => "Smartcrawl",
 		"SkyVerge" => "Skyverge",
 		"SiteGround" => "Siteground",
@@ -554,9 +555,10 @@ function dermatos_hack_woocommerce_admin_strings($html) {
 			case 'wc-addons':
 				$html = str_replace('<div class="wrap woocommerce wc_addons_wrap">', sprintf('<div class="wrap woocommerce wc_addons_wrap"><h1>%s</h1>', $heading), $html);
 				break;
+			// Woocommerce extensions
 			case 'checkout_field_editor':
 			case 'wc_dynamic_pricing':
-				// Woocommerce extensions
+			case 'woocommerce_pdf':
 				$html = str_replace('<div class="wrap woocommerce">', sprintf('<div class="wrap woocommerce"><h1>%s</h1>', $heading), $html);
 				break;
 		}
