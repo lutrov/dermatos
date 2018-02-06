@@ -3030,6 +3030,10 @@ button#copy-for-support {
 
 /* Memberpress Support */
 
+#mepr-stats-logo {
+	display: none;
+}
+
 .wrap .icon32 {
 	display: none;
 }
