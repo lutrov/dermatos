@@ -55,6 +55,19 @@
 	padding-bottom: 8px;
 }
 
+.wp-customizer .wp-picker-container .wp-color-result.button {
+	padding: 0 !important;
+	background-color: white !important;
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+	border: 1px solid [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.wp-customizer .wp-picker-container .wp-color-result.button .wp-color-result-text {
+	background-color: inherit !important;
+	color: inherit !important;
+	border: none !important;
+}
+
 .wp-customizer #customize-footer-actions button {
 	color: #444 !important;
 }
