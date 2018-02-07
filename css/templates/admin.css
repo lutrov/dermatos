@@ -593,6 +593,10 @@ td strong {
 	padding-top: 0 !important;
 }
 
+.about-php .changelog h3 {
+	clear: left;
+}
+
 #plugin-filter {
 	min-height: 940px;
 }
