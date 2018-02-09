@@ -77,6 +77,7 @@ function dermatos_replacement_strings() {
 		"StumbleUpon" => "Stumbleupon",
 		"StudioPress" => "Studiopress",
 		"StudioBlue" => "Studioblue",
+		"StoreApps" => "Storeapps",
 		"SophisticatedFolio" => "Sophisticatedfolio",
 		"SomewhereWarm" => "Somewherewarm",
 		"SmartCrawl" => "Smartcrawl",
