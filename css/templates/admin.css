@@ -1319,13 +1319,20 @@ ul.subsubsub li a.current {
 	width: 67% !important;
 }
 
+.edit-tags-php #col-left .col-wrap {
+}
+
 .edit-tags-php .col-wrap h2 {
-	margin-left: 5px !important;
-	margin-top: 25px !important;
+	margin-top: 10px !important;
+}
+
+.edit-tags-php .col-wrap p:first-of-type {
+	padding: 0 10px 10px 0 !important;
 }
 
 .edit-tags-php .col-wrap .submit {
 	text-align: left !important;
+	margin-top: 20px;
 }
 
 .edit-tags-php .col-wrap .tagcloud {
@@ -1512,7 +1519,7 @@ legend {
 .wrap h1 + p + form,
 .wrap h1 + hr + form,
 .wrap h1 + a + hr + form {
-	margin-top: 20px !important;
+	margin-top: 15px !important;
 	padding: 15px 0 !important;
 	border-top: 1px solid #e0e0e0;
 }
@@ -3323,6 +3330,11 @@ button#copy-for-support {
 
 /* Woocommerce Support */
 
+.edit-tags-php #product_cat_thumbnail img,
+.term-php #product_cat_thumbnail img {
+	border: 1px solid #e0e0e0;
+}
+
 .post-type-product h1,
 .post-type-product .page-title-action,
 .post-type-product .button,
@@ -3683,6 +3695,16 @@ button#copy-for-support {
 	margin-bottom: 0 !important;
 }
 
+.term-php .banner_url_form_field label {
+	float: none;
+}
+
+.term-php .edit-tag-actions {
+	padding: 25px 0 0 0;
+	border-top: 1px solid #e0e0e0;
+	text-align: right;
+}
+
 .user-edit-php #fieldset-billing.form-table th,
 .user-edit-php #fieldset-shipping.form-table th {
 	padding-top: 15px !important;
@@ -3711,8 +3733,9 @@ button#copy-for-support {
 	font-size: 12px;
 }
 
-#woocommerce-product-data .hndle label {
-	text-transform: none;
+#woocommerce-product-data .hndle label,
+.term-php .form-field input + label {
+	text-transform: none !important;
 }
 
 #woocommerce-product-data .hndle label:first-child {
