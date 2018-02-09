@@ -845,6 +845,10 @@ h3.dashboard-widget-title small {
 	vertical-align: top !important;
 }
 
+.wp-list-table tbody td.column-handle::before {
+	margin-left: -10px !important;
+}
+
 .tablenav-pages-navspan {
 	height: 26px;
 }
