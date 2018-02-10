@@ -564,6 +564,9 @@ function dermatos_hack_woocommerce_admin_strings($html) {
 				break;
 		}
 	}
+	if (isset($_GET['post_type']) == true && $_GET['post_type'] == 'product') {
+		$html = str_replace(array('Virtual:', 'Downloadable:'), array('Virtual', 'Downloadable'), $html);
+	}
 	return trim($html);
 }
 
