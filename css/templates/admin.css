@@ -1787,12 +1787,16 @@ form .form-table tr.show-admin-bar td label {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background-color: #f8f8f8;
 	border: 1px solid #e0e0e0;
-height: 22px !important;
-margin-top: 2px !important;
+	height: 22px !important;
+	margin-top: 2px !important;
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
 	line-height: 28px !important;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+	margin-top: -5px;
 }
 
 .selectize-dropdown,
@@ -3470,6 +3474,19 @@ button#copy-for-support {
 .product_page_product_importer label {
 }
 
+#woocommerce-coupon-data ul.wc-tabs,
+#woocommerce-product-data ul.wc-tabs,
+.woocommerce ul.wc-tabs {
+	width: 25%;
+}
+
+#woocommerce-coupon-data .wc-metaboxes-wrapper,
+#woocommerce-coupon-data .woocommerce_options_panel,
+#woocommerce-product-data .wc-metaboxes-wrapper,
+#woocommerce-product-data .woocommerce_options_panel {
+	width: 75%;
+}
+
 .woo-nav-tab-wrapper {
 	clear: right;
 }
@@ -3747,8 +3764,18 @@ button#copy-for-support {
 	border-right: none;
 }
 
+.woocommerce_options_panel label,
+.woocommerce_options_panel legend {
+	width: 150px !important;
+}
+
+.woocommerce_options_panel fieldset.form-field,
+.woocommerce_options_panel p.form-field {
+	padding-left: 150px !important;
+}
+
 .woocommerce_options_panel label {
-	padding-right: 20px;
+	padding-right: 10px;
 	font-weight: [[FONT-WEIGHT-BOLD]] !important;
 	text-transform: capitialize;
 	text-align: right;
@@ -3757,7 +3784,6 @@ button#copy-for-support {
 .woocommerce_options_panel input,
 .woocommerce_options_panel select,
 .woocommerce_options_panel textarea {
-	width: auto !important;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
 }
 
@@ -3952,6 +3978,19 @@ button#copy-for-support {
 
 .woocommerce_page_wc_dynamic_pricing #woocommerce-pricing-rules-wrap {
 	margin-left: -10px;
+}
+
+#dynamic_pricing_data.woocommerce_options_panel .woocommerce_pricing_ruleset {
+	background-color: inherit;
+}
+
+#dynamic_pricing_data.woocommerce_options_panel table thead th {
+	background-color: inherit;
+	padding: 0 9px;
+}
+
+#dynamic_pricing_data.woocommerce_options_panel label {
+	padding-right: 10px;
 }
 
 /* WP All Export Support */
