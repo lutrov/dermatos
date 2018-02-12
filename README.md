@@ -4,7 +4,7 @@ A clean and simple admin theme which requires no configuration and allows basic 
 
 ## Plugins
 
-Dermatos supports a wide range of populra Wordpress plugins, including:
+Dermatos supports a wide range of popular Wordpress plugins, including:
 
 * Admin Menu Editor
 * Advanced Custom Fields
