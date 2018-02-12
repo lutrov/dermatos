@@ -2,6 +2,46 @@
 
 A clean and simple admin theme which requires no configuration and allows basic branding. This plugin will only override the Wordpress styles on devices wider than 960 pixels. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 
+## Plugins
+
+Dermatos supports a wide range of populra Wordpress plugins, including:
+
+* Admin Menu Editor
+* Advanced Custom Fields
+* Code Snippets
+* Custom Permalinks
+* Display Widgets
+* Easy Social Sharing
+* Email Plugin
+* Formidable Forms
+* Genesis
+* Genesis Responsive Slider
+* Genesis Simple Share
+* Groups
+* Generatepress
+* Lifter LMS
+* Memberpress
+* Members
+* Nextgen Gallery
+* P3 Plugin Profiler
+* Paid Memberships Pro
+* Replace Media
+* Restrict Content Pro
+* Revolution Slider
+* Sensei
+* Simple History
+* Simple Social Icons
+* Sucuri
+* Widget Context Plugin
+* Woocommerce
+* WP All Export
+* WP Crontrol
+* WP Document Revisions
+* WP Migrate DB
+* WP Rocket
+* WP Updates Notifier
+* Yoast SEO
+
 ## Professional Support
 
 If you need professional plugin support from me, the plugin author, contact me via my website at http://lutrov.com
