@@ -2511,12 +2511,49 @@ table.acf_input tbody tr td.label label {
 	border: none !important;
 }
 
+.acf-field-object.open > .handle .acf-icon {
+	border-color: #e0e0e0 !important;
+	color: #444 !important;
+}
+
+.acf-field-object.open > .handle a {
+	color: [[COLOUR-HIGHLIGHT-PRIMARY]] !important;
+}
+
+.acf-table.-clear > tbody > tr > td,
+.acf-table.-clear > thead > tr > td,
+.acf-table.-clear > tbody > tr > th,
+.acf-table.-clear > thead > tr > th {
+	background: #f8f8f8 !important;
+}
+
+.acf-table.-clear > tbody > tr > td:first-of-type,
+.acf-table.-clear > thead > tr > td:first-of-type,
+.acf-table.-clear > tbody > tr > th:first-of-type,
+.acf-table.-clear > thead > tr > th:first-of-type {
+	padding-left: 0;
+}
+
+.acf-table.-clear > tbody > tr > td .acf-icon {
+	background: transparent !important;
+}
+
+.acf-table.-clear > thead > tr > td > select {
+	width: 100% !important;
+}
+
 .acf-input .edit-field {
 	line-height: 2.25 !important;
 }
 
 .acf-url input[type=url] {
 	padding-left: 25px !important;
+}
+
+.acf-input-prepend,
+.acf-input-append {
+	height: 28px;
+	line-height: 20px;
 }
 
 .acf-postbox > .hndle .acf-hndle-cog {
@@ -2532,9 +2569,30 @@ table.acf_input tbody tr td.label label {
 	text-align: center !important;
 }
 
+.acf-hl.acf-thead {
+	margin-top: 10px !important;
+}
+
+.acf-hl.acf-tfoot {
+	margin-bottom: 10px !important;
+}
+
 #acf-field-group-wrap .subsubsub {
 	margin-bottom: 0 !important;
 	width: 98% !important;
+}
+
+#acf-field-group-fields .inside {
+	padding: 0 !important;
+}
+
+.acf-thead,
+.acf-field-list-wrap .no-fields-message {
+	background: inherit !important;
+}
+
+.acf-thead > li {
+	font-family: inherit !important;
 }
 
 .acf-columns-2 {
