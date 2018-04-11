@@ -82,13 +82,13 @@ p.submit {
 }
 
 #login {
-	padding: 40px 5px 0 5px !important;
+	padding: 4% 0 !important;
 	width: 400px !important;
 	max-width: 85% !important;
 }
 
 #login h1 {
-	margin: 40px 0 20px 0 !important;
+	padding: 10px 0 !important;
 }
 
 #login h1 a {
