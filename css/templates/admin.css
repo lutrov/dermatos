@@ -764,6 +764,10 @@ a,
 	height: 18px;
 }
 
+#adminmenu #collapse-button {
+	margin-left: 10px;
+}
+
 div.wp-menu-image {
 	position: relative;
 	top: 8px;
@@ -2826,6 +2830,30 @@ a.frm_show_comment:hover {
 	background: none;
 }
 
+.toplevel_page_groups-admin .page-title-action img,
+.groups_page_groups-admin-capabilities .page-title-action img {
+	display: none;
+}
+
+.toplevel_page_groups-admin .row-actions .edit a img,
+.toplevel_page_groups-admin .row-actions .remove a img,
+.groups_page_groups-admin-capabilities .row-actions .edit a img,
+.groups_page_groups-admin-capabilities .row-actions .remove a img {
+	display: none;
+}
+
+.toplevel_page_groups-admin .group.edit .field:last-of-type {
+	padding-top: 25px;
+	border-top: 1px solid #e0e0e0;
+	text-align: right;
+}
+
+.toplevel_page_groups-admin .manage-groups .required,
+.toplevel_page_groups-admin .manage-capabilities .required {
+	background: none !important;
+	padding-left: 0 !important;
+}
+
 /* Generatepress Support */
 
 .appearance_page_generate-options #generate_customize_button,
@@ -3413,7 +3441,7 @@ button#copy-for-support {
 .post-type-product .form-field label,
 .post-type-product .metabox-prefs label,
 .post-type-product th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .post-type-shop_order h1,
@@ -3427,7 +3455,7 @@ button#copy-for-support {
 .post-type-shop_order .form-field label,
 .post-type-shop_order .metabox-prefs label,
 .post-type-shop_order th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .post-type-shop_coupon h1,
@@ -3441,7 +3469,7 @@ button#copy-for-support {
 .post-type-shop_coupon .form-field label,
 .post-type-shop_coupon .metabox-prefs label,
 .post-type-shop_coupon th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
  
 .post-type-shop_subscription h1,
@@ -3455,7 +3483,7 @@ button#copy-for-support {
 .post-type-shop_subscription .form-field label,
 .post-type-shop_subscription .metabox-prefs label,
 .post-type-shop_subscription th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .post-type-wc_user_membership h1,
@@ -3469,7 +3497,7 @@ button#copy-for-support {
 .post-type-wc_user_membership .form-field label,
 .post-type-wc_user_membership .metabox-prefs label,
 .post-type-wc_user_membership th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .post-type-wc_membership_plan h1,
@@ -3483,7 +3511,7 @@ button#copy-for-support {
 .post-type-wc_membership_plan .form-field label,
 .post-type-wc_membership_plan .metabox-prefs label,
 .post-type-wc_membership_plan th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .woocommerce_page_wc-reports h1,
@@ -3497,7 +3525,7 @@ button#copy-for-support {
 .woocommerce_page_wc-reports .form-field label,
 .woocommerce_page_wc-reports .metabox-prefs label,
 .woocommerce_page_wc-reports th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .woocommerce_page_wc-settings h1,
@@ -3511,7 +3539,7 @@ button#copy-for-support {
 .woocommerce_page_wc-settings .form-field label,
 .woocommerce_page_wc-settings .metabox-prefs label,
 .woocommerce_page_wc-settings th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 
@@ -3526,7 +3554,7 @@ button#copy-for-support {
 .woocommerce_page_wc-status .form-field label,
 .woocommerce_page_wc-status .metabox-prefs label,
 .woocommerce_page_wc-status th {
-	text-transform: capitalize !important;
+	/*text-transform: capitalize !important;*/
 }
 
 .product_page_product_importer label {
