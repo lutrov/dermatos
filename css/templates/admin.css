@@ -3528,6 +3528,10 @@ button#copy-for-support {
 	/*text-transform: capitalize !important;*/
 }
 
+.woocommerce_page_wc-reports .woocommerce-reports-wide {
+	border: none !important;
+}
+
 .woocommerce_page_wc-settings h1,
 .woocommerce_page_wc-settings .page-title-action,
 .woocommerce_page_wc-settings .button,
