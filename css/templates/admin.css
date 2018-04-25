@@ -1526,7 +1526,8 @@ legend {
 .wrap h1 + div + p + form,
 .wrap h1 + p + form,
 .wrap h1 + hr + form,
-.wrap h1 + a + hr + form {
+.wrap h1 + a + hr + form,
+.wrap h1 + nav {
 	margin-top: 15px !important;
 	padding: 15px 0 !important;
 	border-top: 1px solid #e0e0e0;
@@ -3657,9 +3658,8 @@ button#copy-for-support {
 	padding-top: 0;
 }
 
-.woocommerce .form-table .select2-container {
-	padding-top: 2px !important;
-	margin-bottom: 8px !important;
+.woocommerce_page_wc-reports nav.woo-nav-tab-wrapper {
+	padding-top: 25px !important;
 }
 
 .woocommerce_page_wc-settings .wrap form .submit {
