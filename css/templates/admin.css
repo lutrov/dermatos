@@ -91,6 +91,10 @@ select {
 	width: auto !important;
 }
 
+input[type=number].tiny-text {
+	width: 45px !important;
+}
+
 select {
 	padding: 0 5px !important;
 	height: 28px !important;
@@ -1908,8 +1912,8 @@ form .form-table tr.show-admin-bar td label {
 	width: 100%;
 }
 
-.update-core-php .widefat thead td input[type="checkbox"],
-.update-core-php .widefat tfoot td input[type="checkbox"] {
+.update-core-php .widefat thead td input[type=checkbox],
+.update-core-php .widefat tfoot td input[type=checkbox] {
 	margin-top: -4px !important;
 }
 
@@ -3209,11 +3213,11 @@ button#copy-for-support {
 /* Nextgen Gallery Support */
 
 #ngg_page_content select,
-#ngg_page_content input[type="number"],
-#ngg_page_content input[type="text"],
+#ngg_page_content input[type=number],
+#ngg_page_content input[type=text],
 .gallery_page_ngg_display_settings select,
-.gallery_page_ngg_display_settings input[type="number"],
-.gallery_page_ngg_display_settings input[type="text"] {
+.gallery_page_ngg_display_settings input[type=number],
+.gallery_page_ngg_display_settings input[type=text] {
 	height: 30px !important;
 	text-align: left !important;
 }
@@ -3778,7 +3782,7 @@ button#copy-for-support {
 	margin-top: 2px !important;
 }
 
-.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input[type="text"].select2-search__field {
+.woocommerce_page_wc-settings .form-table th.titledesc + td.forminp input[type=text].select2-search__field {
 	height: 22px !important;
 }
 
