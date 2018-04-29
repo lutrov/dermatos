@@ -4083,6 +4083,10 @@ button#copy-for-support {
 	padding-right: 10px;
 }
 
+.post-type-wc_memberships_team #team-actions #publish {
+	text-align: center;
+}
+
 /* WP All Export Support */
 
 .wpallexport-plugin h2,
