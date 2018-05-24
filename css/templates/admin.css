@@ -1775,7 +1775,8 @@ form .form-table tr.show-admin-bar td label {
 .select2-container .select2-selection--multiple {
 	border: 1px solid #e0e0e0 !important;
 	color: #444 !important;
-	height: 28px !important;
+	min-height: 28px !important;
+	height: auto;
 }
 
 .select2-container .select2-selection--single:focus,
@@ -1796,7 +1797,7 @@ form .form-table tr.show-admin-bar td label {
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
 	background-color: #f8f8f8;
 	border: 1px solid #e0e0e0;
-	height: 22px !important;
+	height: 26px !important;
 	margin-top: 2px !important;
 }
 
@@ -1906,6 +1907,11 @@ form .form-table tr.show-admin-bar td label {
 .users-php .widefat td.username img {
 	width: 24px !important;
 	height: 24px !important;
+}
+
+.users-php .widefat td.username strong a {
+	font-size: 85% !important;
+	text-transform: uppercase !important;
 }
 
 .import-php .widefat {
@@ -4136,9 +4142,12 @@ button#copy-for-support {
 /* WP Crontrol Support */
 
 .tools_page_crontrol_admin_manage_page .wrap h1 {
-	margin-bottom: 30px !important;
-	padding-bottom: 20px !important;
-	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 20px !important;
+	padding-bottom: 0 !important;
+}
+
+.tools_page_crontrol_admin_manage_page .wrap h1 + form {
+	padding-top: 25px !important;
 }
 
 .tools_page_crontrol_admin_manage_page .submit {
