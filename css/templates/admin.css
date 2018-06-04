@@ -3738,7 +3738,7 @@ button#copy-for-support {
 
 .woocommerce_page_wc-settings .form-table th .woocommerce-help-tip,
 .woocommerce_page_wc-settings .form-table th img.help_tip {
-	margin: 6px -20px 0 0 !important;
+	margin-top: -6px !important;
 }
 
 .woocommerce_page_wc-settings .form-table td.forminp-text {
