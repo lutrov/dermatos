@@ -3376,6 +3376,15 @@ button#copy-for-support {
 	text-align: right !important;
 }
 
+.post-type-lesson .select2-container {
+	margin-bottom: 2px !important;
+}
+
+.post-type-lesson .select2-container .select2-selection--single .select2-selection__arrow,
+.post-type-lesson .select2-container .select2-selection--multiple .select2-selection__arrow {
+	height: 28px !important;
+}
+
 
 /* Simple History Support */
 
@@ -3824,6 +3833,36 @@ button#copy-for-support {
 	padding: 25px 0 0 0;
 	border-top: 1px solid #e0e0e0;
 	text-align: right;
+}
+
+.woocommerce_page_wc-settings .wc_gateways th,
+.woocommerce_page_wc-settings .wc_gateways td {
+	padding-left: 0 !important;
+	text-align: left !important;
+}
+
+.woocommerce_page_wc-settings .wc_gateways .sort {
+	width: 5% !important;
+}
+
+.woocommerce_page_wc-settings .wc_gateways .name {
+	width: 25% !important;
+}
+
+.woocommerce_page_wc-settings .wc_gateways .status {
+	width: 5% !important;
+}
+
+.woocommerce_page_wc-settings .wc_gateways .description {
+	width: 45% !important;
+}
+
+.woocommerce_page_wc-settings .wc_gateways .renewals {
+	width: 10% !important;
+}
+
+.woocommerce_page_wc-settings .wc_gateways .action {
+	width: 10% !important;
 }
 
 .user-edit-php #fieldset-billing.form-table th,
