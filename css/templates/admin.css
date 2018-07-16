@@ -3930,6 +3930,12 @@ button#copy-for-support {
 	width: 4em !important;
 }
 
+.woocommerce_options_panel .usage_limit_field input[type=number].short,
+.woocommerce_options_panel .limit_usage_to_x_items_field input[type=number].short,
+.woocommerce_options_panel .usage_limit_per_user_field input[type=number].short {
+	width: 16em !important;
+}
+
 .woocommerce_options_panel p.form-field span.description {
 	display: block !important;
 	padding-top: 5px !important;
