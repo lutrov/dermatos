@@ -21,6 +21,7 @@ body {
 h1, h2, h3, h4, h5 {
 	font-family: "[[FONT-FAMILY]]", monospace;
 	font-weight: [[FONT-WEIGHT-NORMAL]] !important;
+	clear: both;
 }
 
 h1 {
@@ -3520,6 +3521,14 @@ button#copy-for-support {
 	/*text-transform: capitalize !important;*/
 }
 
+.post-type-wc_user_membership .user_membership_actions .wide {
+	padding-top: 16px;
+}
+
+.post-type-wc_user_membership #delete-action {
+	margin-top: 0 !important;
+}
+
 .post-type-wc_membership_plan h1,
 .post-type-wc_membership_plan .page-title-action,
 .post-type-wc_membership_plan .button,
@@ -4285,6 +4294,29 @@ input.regular-text {
 	color: #333;
 	font-size: 13px;
 }
+
+/* WP Utility Script Runner Support */
+
+/*
+.tools_page_wp-utility-script-runner .wp-utility {
+	background-color: #f0f0f0;
+	max-width: 98%;
+}
+
+.tools_page_wp-utility-script-runner hr {
+	margin: 20px 0;
+}
+
+.tools_page_wp-utility-script-runner .wp_util_button_run {
+	width: 120px !important;
+	margin-bottom: 10px;
+}
+
+.tools_page_wp-utility-script-runner .response {
+	height: auto;
+	min-height: 120px;
+}
+*/
 
 /* Yoast SEO Support */
 
