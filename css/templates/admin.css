@@ -1488,6 +1488,10 @@ ul.subsubsub li a.current {
 	color: #888 !important;
 }
 
+.js .postbox#slugdiv input[type=text] {
+	width: 100%;
+}
+
 #wpbody .open-label span {
 	color: #fff;
 }
