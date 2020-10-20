@@ -53,106 +53,106 @@ __Please note that the default Wordpress admin styles will only get overriden on
 This plugin provides an API to to customise the default constant values. See these examples:
 
 	// ---- Change the Dermatos plugin show login errors value to false.
-	add_filter('dermatos_login_show_errors_filter', '__return_false');
+	add_filter('dermatos_login_show_errors', '__return_false');
 
 	// ---- Change the Dermatos plugin allow logins via username value to false.
-	add_filter('dermatos_login_allow_username_filter', '__return_false');
+	add_filter('dermatos_login_allow_username', '__return_false');
 
 	// ---- Change the Dermatos plugin login lost password link value to false.
-	add_filter('dermatos_login_hide_lost_password_link_filter', '__return_false');
+	add_filter('dermatos_login_hide_lost_password_link', '__return_false');
 
 	// ---- Change the Dermatos plugin login redirect non admins value to false.
-	add_filter('dermatos_login_redirect_non_admins_filter', '__return_false');
+	add_filter('dermatos_login_redirect_non_admins', '__return_false');
 
 	// ---- Change the Dermatos plugin remove WP adminbar quicklinks value to false.
-	add_filter('dermatos_remove_adminbar_wordpress_quicklinks_filter', '__return_false');
+	add_filter('dermatos_remove_adminbar_wordpress_quicklinks', '__return_false');
 
 	// ---- Change the Dermatos plugin change WP styles value to false.
-	add_filter('dermatos_admin_change_wordpress_styles_filter', '__return_false');
+	add_filter('dermatos_admin_change_wordpress_styles', '__return_false');
 
 	// ---- Change the Dermatos plugin lower WP heartbeat value to false.
-	add_filter('dermatos_lower_heartbeat_interval_filter', '__return_false');
+	add_filter('dermatos_lower_heartbeat_interval', '__return_false');
 
 	// ---- Change the Dermatos plugin admin replace strings value to false.
-	add_filter('dermatos_admin_replace_strings_filter', '__return_false');
+	add_filter('dermatos_admin_replace_strings', '__return_false');
 
 	// ---- Change the Dermatos plugin login background path.
-	add_filter('dermatos_login_background_path_filter', 'lutrov_dermatos_login_background_path_filter');
+	add_filter('dermatos_login_background_path', 'lutrov_dermatos_login_background_path_filter');
 	function lutrov_dermatos_login_background_path_filter($path) {
 		$path = sprintf('%s/wp-content/uploads/2017/04/login-background.jpg', ABSPATH);
 		return $path;
 	}
 
 	// ---- Change the Dermatos plugin login logo path.
-	add_filter('dermatos_login_logo_path_filter', 'lutrov_dermatos_login_logo_path_filter');
+	add_filter('dermatos_login_logo_path', 'lutrov_dermatos_login_logo_path_filter');
 	function lutrov_dermatos_login_logo_path_filter($path) {
 		$path = sprintf('%s/wp-content/uploads/2017/04/login-logo.png', ABSPATH);
 		return $path;
 	}
 
 	// ---- Change the Dermatos plugin meta favicon path.
-	add_filter('dermatos_meta_favicon_path_filter', 'lutrov_dermatos_meta_favicon_path_filter');
+	add_filter('dermatos_meta_favicon_path', 'lutrov_dermatos_meta_favicon_path_filter');
 	function lutrov_dermatos_meta_favicon_path_filter($path) {
 		$path = sprintf('%s/wp-content/uploads/2017/04/meta-favicon.png', ABSPATH);
 		return $path;
 	}
 
 	// ---- Change the Dermatos plugin highlight primary colour.
-	add_filter('dermatos_colour_highlight_primary_filter', 'lutrov_dermatos_colour_highlight_primary_filter')
+	add_filter('dermatos_colour_highlight_primary', 'lutrov_dermatos_colour_highlight_primary_filter')
 	function lutrov_dermatos_colour_highlight_primary_filter($value) {
 		return 'green';
 	}
 
 	// ---- Change the Dermatos plugin highlight accent colour.
-	add_filter('dermatos_colour_highlight_accent_filter', 'lutrov_dermatos_colour_highlight_accent_filter')
+	add_filter('dermatos_colour_highlight_accent', 'lutrov_dermatos_colour_highlight_accent_filter')
 	function lutrov_dermatos_colour_highlight_accent_filter($value) {
 		return 'blue';
 	}
 
 	// ---- Change the Dermatos plugin delete action colour.
-	add_filter('dermatos_colour_delete_action_filter', 'lutrov_dermatos_colour_delete_action_filter')
+	add_filter('dermatos_colour_delete_action', 'lutrov_dermatos_colour_delete_action_filter')
 	function lutrov_dermatos_colour_delete_action_filter($value) {
 		return 'red';
 	}
 
 	// ---- Change the Dermatos plugin font family.
-	add_filter('dermatos_font_family_filter', 'lutrov_dermatos_font_family_filter');
+	add_filter('dermatos_font_family', 'lutrov_dermatos_font_family_filter');
 	function lutrov_dermatos_font_family_filter($value) {
 		return 'Open Sans';
 	}
 
 	// ---- Change the Dermatos plugin escaped font family.
-	add_filter('dermatos_font_family_escaped_filter', 'lutrov_dermatos_font_family_escaped_filter')
+	add_filter('dermatos_font_family_escaped', 'lutrov_dermatos_font_family_escaped_filter')
 	function lutrov_dermatos_font_family_escaped_filter($value) {
 		return 'Open+Sans';
 	}
 
 	// ---- Change the Dermatos plugin normal font weight.	
-	add_filter('dermatos_font_weight_normal_filter', 'lutrov_dermatos_font_weight_normal_filter')
+	add_filter('dermatos_font_weight_normal', 'lutrov_dermatos_font_weight_normal_filter')
 	function lutrov_dermatos_font_weight_normal_filter($value) {
 		return '400';
 	}
 
 	// ---- Change the Dermatos plugin bold font weight.	
-	add_filter('dermatos_font_weight_bold_filter', 'lutrov_dermatos_font_weight_bold_filter')
+	add_filter('dermatos_font_weight_bold', 'lutrov_dermatos_font_weight_bold_filter')
 	function lutrov_dermatos_font_weight_bold_filter($value) {
 		return '800';
 	}
 
 	// ---- Change the Dermatos plugin extra bold font weight.	
-	add_filter('dermatos_font_weight_extra_bold_filter', 'lutrov_dermatos_font_weight_extra_bold_filter')
+	add_filter('dermatos_font_weight_extra_bold', 'lutrov_dermatos_font_weight_extra_bold_filter')
 	function lutrov_dermatos_font_weight_extra_bold_filter($value) {
 		return '900';
 	}
 
 	// ---- Change the Dermatos plugin cache expiry seconds.
-	add_filter('dermatos_cache_expiry_seconds_filter', 'lutrov_dermatos_cache_expiry_seconds_filter')
+	add_filter('dermatos_cache_expiry_seconds', 'lutrov_dermatos_cache_expiry_seconds_filter')
 	function lutrov_dermatos_cache_expiry_seconds_filter($value) {
 		return '86400';
 	}
 
 	// ---- Change the Dermatos plugin replacement strings array.
-	add_filter('dermatos_admin_replacement_strings_array_filter', 'lutrov_dermatos_admin_replacement_strings_array_filter');
+	add_filter('dermatos_admin_replacement_strings_array', 'lutrov_dermatos_admin_replacement_strings_array_filter');
 	function lutrov_dermatos_admin_replacement_strings_array_filter($array) {
 		return array(
 			'WooCommerce' => 'Woocommerce',
