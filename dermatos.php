@@ -227,7 +227,7 @@ function dermatos_url_from_abspath($path = null) {
 //
 add_filter('login_errors', 'dermatos_login_supress_errors');
 function dermatos_login_supress_errors($error) {
-	if (apply_filters('dermatos_login_show_errors_filter', DERMATOS_LOGIN_SHOW_ERRORS) == false) {
+	if (apply_filters('dermatos_login_show_errors', DERMATOS_LOGIN_SHOW_ERRORS) == false) {
 		$error = null;
 	}
 	return $error;
@@ -247,7 +247,7 @@ function dermatos_login_remove_wobble() {
 add_filter('login_redirect', 'dermatos_login_redirect_non_admins', 10, 3);
 function dermatos_login_redirect_non_admins($location, $request, $user) {
 	global $user;
-	if (apply_filters('dermatos_login_redirect_non_admins_filter', DERMATOS_LOGIN_REDIRECT_NON_ADMINS) == true) {
+	if (apply_filters('dermatos_login_redirect_non_admins', DERMATOS_LOGIN_REDIRECT_NON_ADMINS) == true) {
 		if (isset($user->roles) == true && is_array($user->roles) == true) {
 			if (in_array('administrator', $user->roles) == false) {
 				$location = home_url('/');
@@ -263,7 +263,7 @@ function dermatos_login_redirect_non_admins($location, $request, $user) {
 add_filter('wp_before_admin_bar_render', 'dermatos_remove_adminbar_wordpress_quicklinks');
 function dermatos_remove_adminbar_wordpress_quicklinks() {
 	global $wp_admin_bar;
-	if (apply_filters('dermatos_remove_adminbar_wordpress_quicklinks_filter', DERMATOS_REMOVE_ADMINBAR_WORDPRESS_QUICKLINKS) == true) {
+	if (apply_filters('dermatos_remove_adminbar_wordpress_quicklinks', DERMATOS_REMOVE_ADMINBAR_WORDPRESS_QUICKLINKS) == true) {
 		$wp_admin_bar->add_menu(
 			array('id' => 'wp-logo', 'title' => null, 'href' => null, 'meta' => array('title' => null))
 		);
@@ -302,7 +302,7 @@ function dermatos_change_loginform_text($text) {
 		$temp = strtoupper(trim(strip_tags($text), '.?:'));
 		switch (true) {
 			case ($temp == 'LOST YOUR PASSWORD'):
-				if (apply_filters('dermatos_login_hide_lost_password_link_filter', DERMATOS_LOGIN_HIDE_LOST_PASSWORD_LINK) == true) {
+				if (apply_filters('dermatos_login_hide_lost_password_link', DERMATOS_LOGIN_HIDE_LOST_PASSWORD_LINK) == true) {
 					$text = null;
 				}
 				break;
@@ -341,7 +341,7 @@ function dermatos_change_loginform_text($text) {
 //
 add_action('login_head', 'dermatos_login_css', 8888);
 function dermatos_login_css() {
-	$path = apply_filters('dermatos_login_logo_path_filter', sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH));
+	$path = apply_filters('dermatos_login_logo_path', sprintf('%s/css/images/logo.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path) == true) {
 		$w = 0; $h = 0; $s = getimagesize($path);
 		if (count($s) > 2) {
@@ -358,7 +358,7 @@ function dermatos_login_css() {
 	} else {
 		$style = ' background-image: none ';
 	}
-	$path = apply_filters('dermatos_login_background_path_filter', null);
+	$path = apply_filters('dermatos_login_background_path', null);
 	if (strlen($path) > 0) {
 		$style = sprintf('html {background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(%s); background-size: cover; background-position: center top; background-color: #222} %s', dermatos_url_from_abspath($path), $style);
 	}
@@ -371,7 +371,7 @@ function dermatos_login_css() {
 //
 add_action('init', 'dermatos_maybe_allow_logins_via_username_action');
 function dermatos_maybe_allow_logins_via_username_action() {
-	if (apply_filters('dermatos_login_allow_username_filter', DERMATOS_LOGIN_ALLOW_USERNAME) == false) {
+	if (apply_filters('dermatos_login_allow_username', DERMATOS_LOGIN_ALLOW_USERNAME) == false) {
 		// Remove the default WP login authentication filter
 		remove_filter('authenticate', 'wp_authenticate_username_password', 20, 3);
 		// Add the custom WP login authentication filter
@@ -411,7 +411,7 @@ function dermatos_login_rememberme_checked() {
 add_action('admin_head', 'dermatos_meta_favicon');
 add_action('login_head', 'dermatos_meta_favicon');
 function dermatos_meta_favicon() {
-	$path = apply_filters('dermatos_meta_favicon_path_filter', sprintf('%s/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
+	$path = apply_filters('dermatos_meta_favicon_path', sprintf('%s/images/icon.png', DERMATOS_BASE_PLUGIN_PATH));
 	if (file_exists($path) == true) {
 		echo sprintf('<link href="%s" rel="icon" type="image/png">', dermatos_url_from_abspath($path));
 	}
@@ -422,7 +422,7 @@ function dermatos_meta_favicon() {
 //
 add_action('admin_head', 'dermatos_admin_css', 8888);
 function dermatos_admin_css() {
-	if (apply_filters('dermatos_admin_change_wordpress_styles_filter', DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES) == true) {
+	if (apply_filters('dermatos_admin_change_wordpress_styles', DERMATOS_ADMIN_CHANGE_WORDPRESS_STYLES) == true) {
 		echo sprintf('<link href="%s/css/style.php?file=admin" media="screen and (min-width:960px)" rel="stylesheet" type="text/css">', DERMATOS_BASE_PLUGIN_URL);
 	}
 	if (file_exists(DERMATOS_BASE_PLUGIN_PATH . '/css/templates/hacks.css')) {
@@ -478,7 +478,7 @@ function dermatos_change_admin_color($result) {
 //
 add_filter('heartbeat_settings', 'dermatos_heartbeat_interval_filter', 16);
 function dermatos_heartbeat_interval_filter($settings) {
-	if (apply_filters('dermatos_lower_heartbeat_interval_filter', DERMATOS_LOWER_HEARTBEAT_INTERVAL) == true) {
+	if (apply_filters('dermatos_lower_heartbeat_interval', DERMATOS_LOWER_HEARTBEAT_INTERVAL) == true) {
 		$settings = array_merge($settings, array('interval' => 60));
 	}
 	return $settings;
@@ -492,7 +492,7 @@ function dermatos_buffer_callback($html) {
 		$html = dermatos_hack_woocommerce_admin_strings($html);
 	}
 	$html = dermatos_hack_wordpress_admin_strings($html);
-	if (apply_filters('dermatos_admin_replace_strings_filter', DERMATOS_ADMIN_REPLACE_STRINGS) == true) {
+	if (apply_filters('dermatos_admin_replace_strings', DERMATOS_ADMIN_REPLACE_STRINGS) == true) {
 		$html = dermatos_replace_strings($html);
 	}
 	return trim($html);
@@ -502,7 +502,7 @@ function dermatos_buffer_callback($html) {
 // Replace all global strings.
 //
 function dermatos_replace_strings($html) {
-	$strings = apply_filters('dermatos_admin_replacement_strings_array_filter', dermatos_replacement_strings());
+	$strings = apply_filters('dermatos_admin_replacement_strings_array', dermatos_replacement_strings());
 	if (count($strings) > 0) {
 		$temp = array();
 		$i = 0;
@@ -521,17 +521,17 @@ function dermatos_replace_strings($html) {
 // Replace strings based on configuration settings.
 //
 function dermatos_replace_config_strings($html) {
-	if (apply_filters('dermatos_admin_remove_server_name_from_urls_filter', DERMATOS_ADMIN_REMOVE_SERVER_NAME_FROM_URLS) == true) {
+	if (apply_filters('dermatos_admin_remove_server_name_from_urls', DERMATOS_ADMIN_REMOVE_SERVER_NAME_FROM_URLS) == true) {
 		$scheme = 'http';
 		if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
 			$scheme = 'https';
 		}
 		$html = str_replace($scheme . '://' . $_SERVER['SERVER_NAME'], null, $html);
 	}
-	if (apply_filters('dermatos_admin_remove_scheme_from_urls_filter', DERMATOS_ADMIN_REMOVE_SCHEME_FROM_URLS) == true) {
+	if (apply_filters('dermatos_admin_remove_scheme_from_urls', DERMATOS_ADMIN_REMOVE_SCHEME_FROM_URLS) == true) {
 		$html = preg_replace('#https?://#', '//', $html);
 	}
-	if (apply_filters('dermatos_admin_remove_dubya_dubya_dubya_from_urls_filter', DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS) == true) {
+	if (apply_filters('dermatos_admin_remove_dubya_dubya_dubya_from_urls', DERMATOS_ADMIN_REMOVE_DUBYA_DUBYA_DUBYA_FROM_URLS) == true) {
 		$html = str_replace('//www.', '//', $html);
 	}
 	return trim($html);
