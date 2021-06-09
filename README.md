@@ -1,5 +1,7 @@
 # Dermatos
 
+__Note: This plugin is probably not compatible with Wordpress 5.__
+
 A clean and simple admin theme which requires no configuration and allows basic branding. This plugin will only override the Wordpress styles on devices wider than 960 pixels. Customisation is possible via the Wordpress hooks API. Why this plugin name? Dermatos means "skin" in Greek.
 
 ## Plugins
